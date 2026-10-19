@@ -1,0 +1,165 @@
+import React, { useState, useEffect } from 'react';
+import { ArrowUp, MessageSquare, Linkedin, Globe, Sparkles } from 'lucide-react';
+import { CONTACT_INFO } from '../data/portfolioData.ts';
+
+interface FooterProps {
+  onNavigate: (section: string) => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const [currentTime, setCurrentTime] = useState<string>('');
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      // Formatted in PKT (UTC+5)
+      const options: Intl.DateTimeFormatOptions = {
+        timeZone: 'Asia/Karachi',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      setCurrentTime(new Intl.DateTimeFormat('en-US', options).format(now));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <footer className="relative pt-20 pb-12 border-t border-white/[0.08] bg-[#050508]/80 backdrop-blur-2xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/[0.08]">
+          {/* Brand & Mission */}
+          <div className="md:col-span-5 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-9 h-9 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center font-display font-black text-sm text-gradient">
+                M
+              </div>
+              <span className="font-display font-bold text-base text-white">
+                Muhammad Mujahid
+              </span>
+            </div>
+            <p className="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed">
+              Founder at Axorks. Crafting cinematic web products, mission-critical distributed platforms, and high-framerate user interfaces.
+            </p>
+            <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              <span>Karachi, PK (UTC+5): {currentTime || 'Loading...'}</span>
+            </div>
+          </div>
+
+          {/* Featured Works */}
+          <div className="md:col-span-3 space-y-3">
+            <div className="text-xs font-mono text-zinc-300 uppercase tracking-wider">
+              Flagship Projects
+            </div>
+            <ul className="space-y-2 text-xs text-zinc-400">
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('projects')}
+                  className="hover:text-cyan-300 transition-colors cursor-pointer"
+                >
+                  AgroTrace — AI Farm Telemetry
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('projects')}
+                  className="hover:text-cyan-300 transition-colors cursor-pointer"
+                >
+                  MediVerse — Clinical Health EHR
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('projects')}
+                  className="hover:text-cyan-300 transition-colors cursor-pointer"
+                >
+                  FUME Fragrances — Luxury Scent Store
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => onNavigate('projects')}
+                  className="hover:text-cyan-300 transition-colors cursor-pointer"
+                >
+                  PHSS School — Campus ERP
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Direct Verified Links */}
+          <div className="md:col-span-4 space-y-3">
+            <div className="text-xs font-mono text-zinc-300 uppercase tracking-wider">
+              Verified Executive Channels
+            </div>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <a
+                  href={CONTACT_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2 transition-colors"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>WhatsApp: {CONTACT_INFO.whatsapp}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CONTACT_INFO.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-300 hover:text-cyan-300 flex items-center gap-2 transition-colors"
+                >
+                  <Linkedin className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>LinkedIn: {CONTACT_INFO.linkedin}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={CONTACT_INFO.agencyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-300 hover:text-cyan-300 flex items-center gap-2 transition-colors"
+                >
+                  <Globe className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Axorks Studio: axorks.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom copyright & Back to top */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-zinc-500">
+          <div>
+            © {new Date().getFullYear()} Muhammad Mujahid • Axorks Studio. All rights reserved.
+          </div>
+
+          <button
+            type="button"
+            onClick={scrollToTop}
+            aria-label="Back to Top"
+            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 text-zinc-300 hover:text-white transition cursor-pointer"
+          >
+            <span>Back to top</span>
+            <ArrowUp className="w-3.5 h-3.5 text-cyan-400" />
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+};
