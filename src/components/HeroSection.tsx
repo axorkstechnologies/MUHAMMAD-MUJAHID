@@ -156,7 +156,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
             {/* Main Headline with 2026 Kinetic Text Reveal */}
             <div className="space-y-1">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
                   text="Engineering Mission-Critical Systems"
                   className="block text-white"
@@ -373,13 +373,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
           variants={metricsContainerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-16 pt-10 border-t border-white/[0.08] grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/[0.08] grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6"
         >
           {EXECUTIVE_METRICS.map((metric, idx) => (
             <motion.div key={idx} variants={metricCardVariants}>
               <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.15)">
-                <div className="glass-panel p-5 rounded-2xl border border-white/[0.06] relative overflow-hidden group hover:border-white/20 transition-all duration-300 h-full">
-                  <div className="text-3xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors">
+                <div className="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/[0.06] relative overflow-hidden group hover:border-white/20 transition-all duration-300 h-full">
+                  <div className="text-2xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors">
                     <RollingCounter value={metric.value} />
                   </div>
                   <div className="text-sm font-semibold text-zinc-200 mt-1">

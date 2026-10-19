@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles, TrendingUp, Cpu, ShieldCheck, MessageSquare, Chec
 import { Link, useNavigate } from 'react-router-dom';
 import { HeroSection } from '../components/HeroSection.tsx';
 import { Card3D } from '../components/Card3D.tsx';
+import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
 import { CONTACT_INFO, PROJECTS_DATA, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 
 export const HomePage: React.FC = () => {
@@ -288,7 +289,10 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Direct Conversion Dialogue Hook */}
+      {/* 5. AEO & GEO Direct Knowledge & FAQ Section */}
+      <AeoGeoSection />
+
+      {/* 6. Direct Conversion Dialogue Hook */}
       <section className="py-20 border-t border-white/[0.08]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">

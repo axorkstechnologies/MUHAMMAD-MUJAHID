@@ -247,7 +247,7 @@ I would like to initiate an engineering consultation.
                         placeholder="e.g. Elena Vance"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
 
@@ -261,7 +261,7 @@ I would like to initiate an engineering consultation.
                         placeholder="e.g. elena@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                   </div>
@@ -274,7 +274,7 @@ I would like to initiate an engineering consultation.
                       <select
                         value={formData.projectType}
                         onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
                         <option value="Full Visibility Package (SEO + AEO + GEO) — $950/mo">⭐ Full Visibility Package (SEO + AEO + GEO) — $950/mo</option>
                         <option value="AI & Search Visibility: SEO ($250/mo)">SEO (Search Engine Optimization) — $250/mo</option>
@@ -298,7 +298,7 @@ I would like to initiate an engineering consultation.
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
                         <option value="$950 / month (Full SEO + AEO + GEO Retainer)">$950 / month (Full Visibility Package)</option>
                         <option value="$250 - $550 / month (Individual AI Search Retainer)">$250 - $550 / month (SEO / AEO / GEO)</option>
@@ -321,7 +321,7 @@ I would like to initiate an engineering consultation.
                       placeholder="Outline your primary goals, key requirements, target timeline, or reference systems..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400 resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400 resize-none"
                     />
                   </div>
 

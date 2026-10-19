@@ -83,7 +83,7 @@ export const Card3D: React.FC<Card3DProps> = ({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onClick={onClick}
-      style={style}
+      style={{ ...style, touchAction: 'pan-y' }}
       className={`relative will-change-transform transform-gpu ${className}`}
     >
       {/* 2026 Chromatic Dispersion Edge Sheen */}

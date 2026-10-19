@@ -449,3 +449,13 @@
   border-right: 1.5px solid rgba(56, 189, 248, 0.6);
 }
 
+/* Hide scrollbar utility for clean mobile carousels and pill navigators */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+

@@ -15,6 +15,7 @@ import { ServicesPage } from './pages/ServicesPage.tsx';
 import { ExperiencePage } from './pages/ExperiencePage.tsx';
 import { AxorksPage } from './pages/AxorksPage.tsx';
 import { ContactPage } from './pages/ContactPage.tsx';
+import { SEOHead } from './components/SEOHead.tsx';
 
 // Reset scroll position on route change
 function ScrollToTop() {
@@ -104,6 +105,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SEOHead />
       <AnimatedAppContent />
     </BrowserRouter>
   );

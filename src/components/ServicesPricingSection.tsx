@@ -162,29 +162,29 @@ export const ServicesPricingSection: React.FC = () => {
         </MotionSection>
 
         {/* Quick Jump Service Navigator for Instant Conversion */}
-        <MotionSection delay={0.12} className="flex flex-wrap items-center justify-center gap-2.5 mb-20">
+        <MotionSection delay={0.12} className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-2 -mx-4 sm:mx-0 px-4 sm:px-0 mb-16 sm:mb-20 scroll-smooth">
           <a
             href="#category-intelligent-systems"
-            className="px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-indigo-400/40 transition cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-indigo-400/40 transition cursor-pointer"
           >
             1. Intelligent Systems ($8k+)
           </a>
           <a
             href="#category-ai-visibility"
-            className="px-4 py-2 rounded-full text-xs font-mono bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/35 transition cursor-pointer flex items-center gap-1.5 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/35 transition cursor-pointer flex items-center gap-1.5 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]"
           >
             <Sparkles className="w-3 h-3 text-emerald-400" />
             <span>2. AI & Search Visibility (SEO/AEO/GEO)</span>
           </a>
           <a
             href="#category-web-apps"
-            className="px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-cyan-400/40 transition cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-cyan-400/40 transition cursor-pointer"
           >
             3. Web Apps ($3.5k+) & Sites ($1.2k+)
           </a>
           <a
             href="#pricing-calculator"
-            className="px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer"
           >
             4. Scope Estimator ↓
           </a>
@@ -1140,7 +1140,7 @@ export const ServicesPricingSection: React.FC = () => {
                         placeholder="e.g. Alex Henderson"
                         value={clientName}
                         onChange={(e) => setClientName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                     <div>
@@ -1150,7 +1150,7 @@ export const ServicesPricingSection: React.FC = () => {
                         placeholder="e.g. alex@company.com"
                         value={clientEmail}
                         onChange={(e) => setClientEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                     <div className="sm:col-span-2">
@@ -1160,7 +1160,7 @@ export const ServicesPricingSection: React.FC = () => {
                         placeholder="Briefly describe your product goals, timeline, or reference ideas..."
                         value={clientNotes}
                         onChange={(e) => setClientNotes(e.target.value)}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400"
                       />
                     </div>
                   </div>

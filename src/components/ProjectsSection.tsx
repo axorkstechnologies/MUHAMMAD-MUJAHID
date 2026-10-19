@@ -256,7 +256,7 @@ export const ProjectsSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.22, 1, 0.36, 1] as const }}
-            className="flex flex-wrap gap-2"
+            className="flex items-center gap-2 overflow-x-auto no-scrollbar py-2 -mx-4 sm:mx-0 px-4 sm:px-0 sm:flex-wrap scroll-smooth"
           >
             {categories.map((cat, idx) => (
               <motion.button
@@ -266,7 +266,7 @@ export const ProjectsSection: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4, delay: 0.25 + idx * 0.06 }}
-                className={`px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 cursor-pointer ${
+                className={`shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono transition-all duration-300 cursor-pointer ${
                   selectedCategory === cat
                     ? 'bg-white text-zinc-950 font-bold shadow-[0_0_20px_rgba(255,255,255,0.4)]'
                     : 'bg-white/[0.03] text-zinc-400 hover:text-white border border-white/10 hover:bg-white/[0.06]'

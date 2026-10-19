@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Sparkles, TrendingUp, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ServicesPricingSection } from '../components/ServicesPricingSection.tsx';
+import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
 
 export const ServicesPage: React.FC = () => {
@@ -49,6 +50,9 @@ export const ServicesPage: React.FC = () => {
 
       {/* Main Services, AI Visibility, and Estimator Component */}
       <ServicesPricingSection />
+
+      {/* AEO & GEO Deep Knowledge & Entity FAQ Section */}
+      <AeoGeoSection />
 
       {/* Bottom Conversion Action Hook */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
