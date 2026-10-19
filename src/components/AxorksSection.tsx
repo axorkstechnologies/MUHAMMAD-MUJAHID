@@ -22,7 +22,7 @@ export const AxorksSection: React.FC = () => {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
-      transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] as const }
     }
   };
 
@@ -32,7 +32,7 @@ export const AxorksSection: React.FC = () => {
       opacity: 1,
       x: 0,
       filter: 'blur(0px)',
-      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }
     }
   };
 
@@ -43,7 +43,7 @@ export const AxorksSection: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <Card3D maxTilt={2.5} glowColor="rgba(56, 189, 248, 0.15)">
             <div className="glass-panel glass-panel-glow rounded-3xl p-8 sm:p-12 border border-white/15 relative overflow-hidden shadow-2xl">

@@ -56,7 +56,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       filter: 'blur(0px)',
       transition: {
         duration: 0.7,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
@@ -69,7 +69,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       filter: 'blur(0px)',
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
+        ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
@@ -83,7 +83,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       transition: {
         duration: 0.9,
         delay: 0.35,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
@@ -107,7 +107,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       scale: 1,
       transition: {
         duration: 0.65,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };

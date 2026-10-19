@@ -49,7 +49,7 @@ const MotionSection: React.FC<{ children: React.ReactNode; className?: string; d
       ref={ref}
       initial={{ opacity: 0, y: 36 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 36 }}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] as const }}
       className={className}
     >
       {children}
