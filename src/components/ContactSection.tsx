@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   MessageSquare, 
-  Linkedin, 
   Globe, 
   Mail, 
   Send, 
@@ -11,6 +10,12 @@ import {
   Clock, 
   ArrowUpRight 
 } from 'lucide-react';
+
+const LinkedinIcon: React.FC<{ className?: string }> = ({ className = "w-5 h-5" }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46v-8.37M7.85 6.45a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28" />
+  </svg>
+);
 import { CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
 
@@ -122,7 +127,7 @@ I would like to initiate an engineering consultation.
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="p-2.5 rounded-2xl bg-cyan-500/10 text-cyan-400">
-                      <Linkedin className="w-5 h-5" />
+                      <LinkedinIcon className="w-5 h-5" />
                     </div>
                     <div>
                       <div className="text-xs font-mono text-zinc-400 uppercase">Professional Network</div>

@@ -6,15 +6,25 @@ interface PhotoPlaceholderProps {
   variant?: 'hero' | 'about' | 'badge';
   className?: string;
   label?: string;
+  defaultPhoto?: string;
 }
 
 export const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({
   id = 'executive-photo',
   variant = 'hero',
   className = '',
-  label = 'Executive Portrait Placeholder'
+  label = 'Executive Portrait Placeholder',
+  defaultPhoto = '/Images/Founder and CEO SOFTWARE ENGINEER.jpeg'
 }) => {
-  const [photoUrl, setPhotoUrl] = useState<string | null>(null);
+  const [photoUrl, setPhotoUrl] = useState<string | null>(() => {
+    try {
+      const saved = localStorage.getItem(`portfolio_photo_${id}`);
+      if (saved) return saved;
+    } catch {
+      // ignore
+    }
+    return defaultPhoto || null;
+  });
   const [showUploadModal, setShowUploadModal] = useState(false);
   const [inputUrl, setInputUrl] = useState('');
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -27,11 +37,13 @@ export const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({
       const saved = localStorage.getItem(`portfolio_photo_${id}`);
       if (saved) {
         setPhotoUrl(saved);
+      } else if (defaultPhoto) {
+        setPhotoUrl(defaultPhoto);
       }
     } catch {
       // ignore in restricted iframe
     }
-  }, [id]);
+  }, [id, defaultPhoto]);
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -79,7 +91,7 @@ export const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({
 
   const handleReset = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setPhotoUrl(null);
+    setPhotoUrl(defaultPhoto || null);
     try {
       localStorage.removeItem(`portfolio_photo_${id}`);
     } catch {
