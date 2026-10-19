@@ -34,6 +34,7 @@ import {
 import { PRICING_PLANS, PRICING_ADDONS, calculateCustomEstimate, formatWhatsAppQuoteMessage } from '../utils/pricing.ts';
 import { CONTACT_INFO, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
+import { AiConnectivityMesh } from './motion/AiConnectivityMesh.tsx';
 
 // Reusable scroll-triggered animated section wrapper
 const MotionSection: React.FC<{ children: React.ReactNode; className?: string; delay?: number }> = ({ 
@@ -442,6 +443,11 @@ export const ServicesPricingSection: React.FC = () => {
                     <span className="text-[10px] text-zinc-400 border-l border-white/15 pl-1.5">{plat.type}</span>
                   </div>
                 ))}
+              </div>
+
+              {/* 2026 Interactive AI & Search Engine Connectivity Motion Graphics Mesh */}
+              <div className="my-8 max-w-4xl mx-auto">
+                <AiConnectivityMesh />
               </div>
 
               {/* Explainer Glossary Card */}

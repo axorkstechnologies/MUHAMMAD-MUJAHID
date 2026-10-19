@@ -19,6 +19,9 @@ import { Link } from 'react-router-dom';
 import { Card3D } from '../components/Card3D.tsx';
 import { PhotoPlaceholder } from '../components/PhotoPlaceholder.tsx';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
+import { RollingCounter } from '../components/motion/RollingCounter.tsx';
+import { MagneticWrapper } from '../components/motion/MagneticWrapper.tsx';
+import { HudCorners } from '../components/motion/HudElements.tsx';
 
 export const AboutPage: React.FC = () => {
   const coreCompetencies = [
@@ -96,12 +99,12 @@ export const AboutPage: React.FC = () => {
               Unlike traditional agencies where your requirements get passed down to juniors, I operate with founder-level accountability: direct technical leadership, rigorous architectural standards, and rapid execution.
             </p>
 
-            {/* Quick Metrics Bar */}
+            {/* Quick Metrics Bar with 2026 Rolling Numbers */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
               {EXECUTIVE_METRICS.map((metric, idx) => (
                 <div key={idx} className="p-3.5 rounded-xl glass-panel border border-white/10 bg-white/[0.02]">
                   <div className="text-xl sm:text-2xl font-black text-white font-display tracking-tight">
-                    {metric.value}
+                    <RollingCounter value={metric.value} />
                   </div>
                   <div className="text-[11px] font-mono text-cyan-400 font-semibold">{metric.label}</div>
                   <div className="text-[10px] text-zinc-400 truncate">{metric.caption}</div>
@@ -109,36 +112,43 @@ export const AboutPage: React.FC = () => {
               ))}
             </div>
 
-            {/* Action CTA Buttons */}
+            {/* Action CTA Buttons with Magnetic Physics */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
-              <a
-                href={CONTACT_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105"
-              >
-                <MessageSquare className="w-4 h-4" />
-                <span>Direct WhatsApp Consultation</span>
-              </a>
+              <MagneticWrapper strength={0.22}>
+                <a
+                  href={CONTACT_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Direct WhatsApp Consultation</span>
+                </a>
+              </MagneticWrapper>
 
-              <Link
-                to="/projects"
-                className="px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 text-white font-semibold text-xs tracking-wider flex items-center gap-2 transition-all duration-300"
-              >
-                <span>View Flagship Projects</span>
-                <ArrowRight className="w-4 h-4 text-cyan-400" />
-              </Link>
+              <MagneticWrapper strength={0.18}>
+                <Link
+                  to="/projects"
+                  className="px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 text-white font-semibold text-xs tracking-wider flex items-center gap-2 transition-all duration-300"
+                >
+                  <span>View Flagship Projects</span>
+                  <ArrowRight className="w-4 h-4 text-cyan-400" />
+                </Link>
+              </MagneticWrapper>
             </div>
           </div>
 
-          {/* Right Column: Fixed 3D Portrait */}
+          {/* Right Column: Fixed 3D Portrait with Cybernetic Reticle */}
           <div className="lg:col-span-5 flex justify-center">
             <div className="w-full max-w-md">
               <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.25)">
-                <PhotoPlaceholder
-                  variant="hero"
-                  defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
-                />
+                <div className="relative rounded-3xl overflow-hidden">
+                  <HudCorners color="rgba(56, 189, 248, 0.45)" size={14} className="z-30" />
+                  <PhotoPlaceholder
+                    variant="hero"
+                    defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
+                  />
+                </div>
               </Card3D>
             </div>
           </div>

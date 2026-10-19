@@ -16,6 +16,10 @@ import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { PhotoPlaceholder } from './PhotoPlaceholder.tsx';
 import { FloatingMonolith3D } from './FloatingMonolith3D.tsx';
 import { Card3D } from './Card3D.tsx';
+import { KineticText } from './motion/KineticText.tsx';
+import { RollingCounter } from './motion/RollingCounter.tsx';
+import { MagneticWrapper } from './motion/MagneticWrapper.tsx';
+import { HudOscilloscope, HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
@@ -137,32 +141,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             animate={isInView ? "visible" : "hidden"}
             className="lg:col-span-7 flex flex-col items-start space-y-6"
           >
-            {/* Ambient Top Tag with 3D Depth */}
+            {/* Ambient Top Tag with 3D Depth & Live Oscilloscope */}
             <motion.div 
               variants={itemFadeUp}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] tech-reticle"
             >
               <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
               <span className="text-xs font-mono text-zinc-300 tracking-wider uppercase">
                 Executive Systems Engineer & Founder
               </span>
+              <span className="h-3 w-px bg-white/20 mx-0.5" />
+              <HudOscilloscope bars={4} />
             </motion.div>
 
-            {/* Main Headline with Staggered Line Reveal */}
+            {/* Main Headline with 2026 Kinetic Text Reveal */}
             <div className="space-y-1">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display">
-                <motion.span 
-                  variants={headlineLineVariants} 
-                  className="text-white block"
-                >
-                  Engineering
-                </motion.span>
-                <motion.span 
-                  variants={headlineLineVariants} 
-                  className="text-gradient block"
-                >
-                  Mission-Critical Systems
-                </motion.span>
+                <KineticText
+                  text="Engineering Mission-Critical Systems"
+                  className="block text-white"
+                  highlightWords={['Mission-Critical', 'Systems']}
+                  highlightClassName="text-gradient block"
+                  delay={0.1}
+                />
                 <motion.span 
                   variants={headlineLineVariants} 
                   className="text-zinc-400 font-normal text-3xl sm:text-4xl lg:text-5xl block mt-1"
@@ -189,43 +190,49 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               . I architect high-concurrency web platforms, autonomous AI pipelines, and bespoke liquid glass interfaces designed to scale effortlessly and command industry authority.
             </motion.p>
 
-            {/* Primary Action Buttons - Optimized for High Client Conversion */}
+            {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
             <motion.div 
               variants={itemFadeUp}
               className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto"
             >
-              <motion.a
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                href={CONTACT_INFO.whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
-              >
-                <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
-                <span>Start a Project (WhatsApp)</span>
-                <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              <MagneticWrapper strength={0.25} className="w-full sm:w-auto">
+                <motion.a
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  href={CONTACT_INFO.whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
+                >
+                  <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
+                  <span>Start a Project (WhatsApp)</span>
+                  <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
+                </motion.a>
+              </MagneticWrapper>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="button"
-                onClick={() => onNavigate('services')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Services & Pricing</span>
-              </motion.button>
+              <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="button"
+                  onClick={() => onNavigate('services')}
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <span>Services & Pricing</span>
+                </motion.button>
+              </MagneticWrapper>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="button"
-                onClick={() => onNavigate('projects')}
-                className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <span>Flagship Systems</span>
-              </motion.button>
+              <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  type="button"
+                  onClick={() => onNavigate('projects')}
+                  className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                >
+                  <span>Flagship Systems</span>
+                </motion.button>
+              </MagneticWrapper>
             </motion.div>
 
             {/* Instant Trust & Conversion Signals */}
@@ -307,34 +314,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 </div>
               </div>
 
-              {/* Viewport Frame with Soft 3D Perspective */}
-              <Card3D maxTilt={6} glowColor="rgba(56, 189, 248, 0.2)">
-                {heroMode === 'portrait' ? (
-                  <PhotoPlaceholder
-                    id="executive-hero-portrait"
-                    variant="hero"
-                    label="Muhammad Mujahid - Executive Portrait"
-                    defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
-                  />
-                ) : (
-                  <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-glow border border-cyan-500/20 flex flex-col justify-between p-6 bg-gradient-to-b from-cyan-950/20 via-zinc-950 to-indigo-950/20">
-                    <div className="flex items-center justify-between text-xs font-mono text-zinc-400 z-10">
-                      <span className="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
-                        THREE.JS ENGINE: ACTIVE
-                      </span>
-                      <span>60 FPS GYRO</span>
-                    </div>
+              {/* Viewport Frame with Soft 3D Perspective & Cybernetic Reticle */}
+              <Card3D maxTilt={6} glowColor="rgba(56, 189, 248, 0.25)">
+                <div className="relative rounded-3xl overflow-hidden">
+                  <HudCorners color="rgba(56, 189, 248, 0.4)" size={14} className="z-30" />
+                  <ScanlineOverlay className="z-20" />
+                  {heroMode === 'portrait' ? (
+                    <PhotoPlaceholder
+                      id="executive-hero-portrait"
+                      variant="hero"
+                      label="Muhammad Mujahid - Executive Portrait"
+                      defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
+                    />
+                  ) : (
+                    <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-glow border border-cyan-500/20 flex flex-col justify-between p-6 bg-gradient-to-b from-cyan-950/20 via-zinc-950 to-indigo-950/20">
+                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400 z-10">
+                        <span className="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
+                          THREE.JS ENGINE: ACTIVE
+                        </span>
+                        <span>60 FPS GYRO</span>
+                      </div>
 
-                    <div className="w-full h-full flex items-center justify-center">
-                      <FloatingMonolith3D />
-                    </div>
+                      <div className="w-full h-full flex items-center justify-center">
+                        <FloatingMonolith3D />
+                      </div>
 
-                    <div className="text-center z-10">
-                      <div className="text-xs font-mono text-cyan-400">Interactive Spatial Geometry</div>
-                      <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Move cursor to distort gyroscopic orbit</div>
+                      <div className="text-center z-10">
+                        <div className="text-xs font-mono text-cyan-400">Interactive Spatial Geometry</div>
+                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Move cursor to distort gyroscopic orbit</div>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
+                </div>
               </Card3D>
               
               {/* Quick Info Under Card */}
@@ -357,7 +368,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
           </motion.div>
         </div>
 
-        {/* Executive Metrics Bar with 3D Soft Tilt Cards & Staggered Scroll Animation */}
+        {/* Executive Metrics Bar with 3D Soft Tilt Cards & 2026 Rolling Numbers */}
         <motion.div 
           variants={metricsContainerVariants}
           initial="hidden"
@@ -366,10 +377,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
         >
           {EXECUTIVE_METRICS.map((metric, idx) => (
             <motion.div key={idx} variants={metricCardVariants}>
-              <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.12)">
+              <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.15)">
                 <div className="glass-panel p-5 rounded-2xl border border-white/[0.06] relative overflow-hidden group hover:border-white/20 transition-all duration-300 h-full">
                   <div className="text-3xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors">
-                    {metric.value}
+                    <RollingCounter value={metric.value} />
                   </div>
                   <div className="text-sm font-semibold text-zinc-200 mt-1">
                     {metric.label}

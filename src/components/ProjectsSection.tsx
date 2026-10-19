@@ -19,6 +19,8 @@ import { PROJECTS_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Project } from '../types.ts';
 import { ProjectModal } from './ProjectModal.tsx';
 import { Card3D } from './Card3D.tsx';
+import { HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
+import { RollingCounter } from './motion/RollingCounter.tsx';
 
 // Map project IDs to real screenshot images
 const PROJECT_IMAGES: Record<string, string> = {
@@ -313,17 +315,19 @@ export const ProjectsSection: React.FC = () => {
                       {project.description}
                     </p>
 
-                    {/* Interactive Simulated Visual Preview Banner with Real Screenshot */}
+                    {/* Interactive Simulated Visual Preview Banner with Real Screenshot & 2026 HUD */}
                     <div className="relative aspect-[16/8] rounded-2xl overflow-hidden mb-6 border border-white/12 shadow-inner group-hover:border-cyan-500/40 transition-all duration-500">
+                      <HudCorners color="rgba(56, 189, 248, 0.45)" size={12} className="z-30" />
+                      <ScanlineOverlay className="z-20" />
                       {renderProjectVisual(project.id)}
                     </div>
 
-                    {/* Metrics Highlights */}
+                    {/* Metrics Highlights with 2026 Rolling Counter */}
                     <div className="grid grid-cols-3 gap-2 sm:gap-3 py-3 px-4 rounded-2xl bg-white/[0.02] border border-white/[0.06] mb-6">
                       {project.metrics.map((m, mIdx) => (
                         <div key={mIdx} className="text-center">
                           <div className="text-base sm:text-lg font-bold text-white font-display group-hover:text-cyan-300 transition-colors">
-                            {m.value}
+                            <RollingCounter value={m.value} />
                           </div>
                           <div className="text-[10px] font-mono text-zinc-400 truncate">
                             {m.label}

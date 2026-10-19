@@ -3,6 +3,7 @@ import { motion, useInView } from 'motion/react';
 import { Sparkles, Calendar, MapPin, CheckCircle, ExternalLink } from 'lucide-react';
 import { EXPERIENCE_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
+import { HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
 
 export const ExperienceSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -41,6 +42,8 @@ export const ExperienceSection: React.FC = () => {
 
                   {/* Main Container */}
                   <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/15 shadow-[0_24px_60px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center">
+                    <HudCorners color="rgba(56, 189, 248, 0.45)" size={14} className="z-20" />
+                    <ScanlineOverlay className="z-10" />
                     <img
                       src="/Images/Focused Work in a Moody Tech Office.png"
                       alt="Muhammad Mujahid - Executive Portrait"
