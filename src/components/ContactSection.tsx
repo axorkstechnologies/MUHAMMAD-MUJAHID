@@ -6,7 +6,6 @@ import {
   Send, 
   Check, 
   Copy, 
-  Sparkles, 
   Clock, 
   ArrowUpRight 
 } from 'lucide-react';
@@ -56,8 +55,8 @@ I would like to initiate an engineering consultation.
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>INITIATE COLLABORATION</span>
+            <Send className="w-3.5 h-3.5" />
+            <span>Direct Communication Channel</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
             Direct Executive Channel

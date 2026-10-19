@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, MessageSquare, ArrowRight, ShieldCheck, CheckCircle } from 'lucide-react';
+import { Layers, Terminal, MessageSquare, ArrowRight, ShieldCheck, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ProjectsSection } from '../components/ProjectsSection.tsx';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
@@ -18,8 +18,8 @@ export const ProjectsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>CASE STUDIES & PRODUCTION SYSTEMS</span>
+            <Layers className="w-3.5 h-3.5" />
+            <span>Case Studies & Production Architectures</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
@@ -40,7 +40,7 @@ export const ProjectsPage: React.FC = () => {
             </span>
             <span>•</span>
             <span className="flex items-center gap-1.5 text-indigo-400">
-              <Sparkles className="w-3.5 h-3.5" /> Zero Boilerplate
+              <Terminal className="w-3.5 h-3.5" /> Zero Boilerplate
             </span>
           </div>
         </div>

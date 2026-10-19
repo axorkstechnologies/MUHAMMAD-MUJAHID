@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
-import { ExternalLink, Sparkles, Terminal, CheckCircle2, ShieldCheck, Zap, ArrowRight, Box } from 'lucide-react';
+import { ExternalLink, Terminal, CheckCircle2, ShieldCheck, Zap, ArrowRight, Box } from 'lucide-react';
 import { AXORKS_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
 
@@ -59,8 +59,8 @@ export const AxorksSection: React.FC = () => {
                   className="lg:col-span-7 space-y-6"
                 >
                   <motion.div variants={itemFadeUp} className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-                    <Sparkles className="w-3.5 h-3.5" />
-                    <span>STUDIO FLAGSHIP</span>
+                    <Terminal className="w-3.5 h-3.5" />
+                    <span>Engineering Studio Flagship</span>
                   </motion.div>
 
                   <motion.div variants={itemFadeUp} className="space-y-2">

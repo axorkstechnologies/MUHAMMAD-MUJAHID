@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, TrendingUp, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight } from 'lucide-react';
+import { TrendingUp, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ServicesPricingSection } from '../components/ServicesPricingSection.tsx';
 import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
@@ -19,8 +19,8 @@ export const ServicesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>EXECUTIVE SERVICES & COMMERCIAL PRICING</span>
+            <TrendingUp className="w-3.5 h-3.5" />
+            <span>Executive Services & Commercial Pricing</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">

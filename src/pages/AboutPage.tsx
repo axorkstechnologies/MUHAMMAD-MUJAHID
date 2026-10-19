@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { 
-  Sparkles, 
   ShieldCheck, 
   Terminal, 
   Cpu, 
@@ -28,7 +27,7 @@ import { PhotoPlaceholder } from '../components/PhotoPlaceholder.tsx';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { RollingCounter } from '../components/motion/RollingCounter.tsx';
 import { MagneticWrapper } from '../components/motion/MagneticWrapper.tsx';
-import { HudCorners } from '../components/motion/HudElements.tsx';
+import { HudCorners, TechCrosshair, TelemetryBadge, HairlineRuler } from '../components/motion/HudElements.tsx';
 
 export const AboutPage: React.FC = () => {
   const coreCompetencies = [
@@ -90,8 +89,8 @@ export const AboutPage: React.FC = () => {
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>PRINCIPAL ARCHITECT & FOUNDER</span>
+              <Terminal className="w-3.5 h-3.5" />
+              <span>Founder & Principal Systems Architect</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight leading-[1.08]">
@@ -164,9 +163,11 @@ export const AboutPage: React.FC = () => {
         {/* Technical Mastery & Core Capabilities */}
         <section className="space-y-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono">
-              <Code2 className="w-3.5 h-3.5" />
-              <span>CORE CAPABILITIES</span>
+            <div className="flex items-center gap-2">
+              <TechCrosshair label="CORE DISCIPLINES // HIGH CONCURRENCY" />
+              <span className="text-[11px] font-mono text-indigo-300 font-semibold uppercase tracking-wider">
+                SYSTEM MASTERY
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white font-display tracking-tight">
               Engineering Disciplines & System Mastery
@@ -211,9 +212,9 @@ export const AboutPage: React.FC = () => {
         {/* Architectural Principles */}
         <section className="space-y-8">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-              <Workflow className="w-3.5 h-3.5" />
-              <span>THE ARCHITECTURAL STANDARD</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Engineering Governance & Standards</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white font-display tracking-tight">
               Why High-Growth Founders Partner With Us

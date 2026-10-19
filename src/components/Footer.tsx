@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUp, MessageSquare, Globe, Sparkles } from 'lucide-react';
+import { ArrowUp, MessageSquare, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
 

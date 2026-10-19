@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Calendar, MapPin, CheckCircle, ExternalLink, MessageSquare, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle, ExternalLink, MessageSquare, ArrowRight, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ExperienceSection } from '../components/ExperienceSection.tsx';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
@@ -19,8 +19,8 @@ export const ExperiencePage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>CAREER TRACK RECORD & LEADERSHIP</span>
+            <Briefcase className="w-3.5 h-3.5" />
+            <span>Career Track Record & Leadership</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">

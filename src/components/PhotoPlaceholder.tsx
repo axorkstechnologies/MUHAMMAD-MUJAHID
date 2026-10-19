@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ShieldCheck } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
 
 interface PhotoPlaceholderProps {
   id?: string;

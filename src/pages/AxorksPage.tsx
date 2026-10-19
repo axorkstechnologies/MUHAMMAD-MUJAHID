@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Sparkles, Globe, ShieldCheck, Zap, ArrowRight, MessageSquare, Building2, CheckCircle2 } from 'lucide-react';
+import { Globe, ShieldCheck, Zap, ArrowRight, MessageSquare, Building2, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AxorksSection } from '../components/AxorksSection.tsx';
 import { AXORKS_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from '../components/Card3D.tsx';
+import { TechCrosshair, TelemetryBadge } from '../components/motion/HudElements.tsx';
 
 export const AxorksPage: React.FC = () => {
   return (
@@ -19,8 +20,8 @@ export const AxorksPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>DIGITAL ENGINEERING BOUTIQUE</span>
+            <Building2 className="w-3.5 h-3.5" />
+            <span>Digital Engineering Studio</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
@@ -54,9 +55,9 @@ export const AxorksPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono">
-              <Building2 className="w-3.5 h-3.5" />
-              <span>THE STUDIO ENVIRONMENT</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono">
+              <Building2 className="w-3.5 h-3.5 text-indigo-400" />
+              <span>Studio Workspace & Culture</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-black text-white font-display tracking-tight">

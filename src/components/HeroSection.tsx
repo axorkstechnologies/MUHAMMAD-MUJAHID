@@ -4,13 +4,8 @@ import {
   ArrowRight, 
   MessageSquare, 
   ExternalLink, 
-  Code2, 
-  Cpu, 
-  Shield, 
-  Sparkles, 
   Box, 
-  User, 
-  Compass 
+  User 
 } from 'lucide-react';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { PhotoPlaceholder } from './PhotoPlaceholder.tsx';
@@ -19,7 +14,7 @@ import { Card3D } from './Card3D.tsx';
 import { KineticText } from './motion/KineticText.tsx';
 import { RollingCounter } from './motion/RollingCounter.tsx';
 import { MagneticWrapper } from './motion/MagneticWrapper.tsx';
-import { HudOscilloscope, HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
+import { HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
 
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
@@ -141,26 +136,32 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             animate={isInView ? "visible" : "hidden"}
             className="lg:col-span-7 flex flex-col items-start space-y-6"
           >
-            {/* Ambient Top Tag with 3D Depth & Live Oscilloscope */}
+            {/* Refined Executive Status & Identity Indicator */}
             <motion.div 
               variants={itemFadeUp}
-              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] tech-reticle"
+              className="flex flex-wrap items-center gap-3"
             >
-              <span className="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-              <span className="text-xs font-mono text-zinc-300 tracking-wider uppercase">
-                Executive Systems Engineer & Founder
-              </span>
-              <span className="h-3 w-px bg-white/20 mx-0.5" />
-              <HudOscilloscope bars={4} />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md text-xs font-mono shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="text-zinc-200 font-medium">Muhammad Mujahid</span>
+                <span className="text-zinc-600">•</span>
+                <span className="text-cyan-400">Principal Systems Engineer</span>
+              </div>
+              <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400">
+                <span className="text-zinc-600">|</span>
+                <span>Karachi (UTC+5)</span>
+                <span className="text-zinc-600">|</span>
+                <span className="text-emerald-400 font-medium">40k+ Active Seats Supported</span>
+              </div>
             </motion.div>
 
             {/* Main Headline with 2026 Kinetic Text Reveal */}
             <div className="space-y-1">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
-                  text="Engineering Mission-Critical Systems"
+                  text="Architecting Sovereign Software Systems"
                   className="block text-white"
-                  highlightWords={['Mission-Critical', 'Systems']}
+                  highlightWords={['Sovereign', 'Software', 'Systems']}
                   highlightClassName="text-gradient block"
                   delay={0.1}
                 />
@@ -168,26 +169,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   variants={headlineLineVariants} 
                   className="text-zinc-400 font-normal text-3xl sm:text-4xl lg:text-5xl block mt-1"
                 >
-                  with Cinematic Craft.
+                  with Engineering Rigor.
                 </motion.span>
               </h1>
             </div>
 
-            {/* Subtext */}
+            {/* Subtext - Clear Personal Authority */}
             <motion.p 
               variants={itemFadeUp}
               className="text-base sm:text-lg text-zinc-300 max-w-2xl font-light leading-relaxed"
             >
-              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Founder of{' '}
+              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Principal Software Systems Engineer and Founder of{' '}
               <a 
                 href={CONTACT_INFO.agencyUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-cyan-300 underline underline-offset-4 decoration-cyan-500/50 hover:decoration-cyan-300 transition-colors"
+                className="text-cyan-300 underline underline-offset-4 decoration-cyan-500/50 hover:decoration-cyan-300 transition-colors font-medium"
               >
                 Axorks
               </a>
-              . I architect high-concurrency web platforms, autonomous AI pipelines, and bespoke liquid glass interfaces designed to scale effortlessly and command industry authority.
+              . I architect high-concurrency distributed platforms, zero-downtime academic campus ERPs, sovereign financial management cores, and bespoke liquid-glass interfaces with founder-direct technical leadership.
             </motion.p>
 
             {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
@@ -205,7 +206,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
-                  <span>Start a Project (WhatsApp)</span>
+                  <span>Start WhatsApp Dialogue</span>
                   <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                 </motion.a>
               </MagneticWrapper>
@@ -218,7 +219,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('services')}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Services & Pricing</span>
+                  <span>Services & Pricing ($1.2k - $12k+)</span>
                 </motion.button>
               </MagneticWrapper>
 
@@ -235,31 +236,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </MagneticWrapper>
             </motion.div>
 
-            {/* Instant Trust & Conversion Signals */}
+            {/* Verified Trust Signals */}
             <motion.div 
               variants={itemFadeUp}
-              className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-400 font-mono"
+              className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-mono text-zinc-400"
             >
               <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Direct reply &lt; 2 hours</span>
+                <span>Direct reply within 2 hours</span>
               </div>
               <div className="flex items-center gap-1.5 text-zinc-300">
-                <Shield className="w-3.5 h-3.5 text-cyan-400" />
+                <span className="w-1 h-1 rounded-full bg-cyan-400" />
                 <span>100% Code & IP Ownership</span>
               </div>
               <div className="flex items-center gap-1.5 text-zinc-300">
-                <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-                <span>Founder-Direct Engineering</span>
+                <span className="w-1 h-1 rounded-full bg-indigo-400" />
+                <span>Zero Junior Handoffs</span>
               </div>
             </motion.div>
 
-            {/* Verified Tech Badges */}
+            {/* Core Tech Stack Badges */}
             <motion.div 
               variants={itemFadeUp}
               className="pt-4 flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400"
             >
-              <span className="text-zinc-500 text-[11px] uppercase tracking-wider mr-1">Core Mastery:</span>
+              <span className="text-zinc-500 text-[11px] uppercase tracking-wider mr-1">Stack:</span>
               {['TypeScript', 'React / Next.js', 'Node.js', 'PostgreSQL', 'AI Pipelines', 'Cloud Infra'].map((tech) => (
                 <motion.span
                   whileHover={{ y: -2, borderColor: 'rgba(56, 189, 248, 0.4)' }}
@@ -280,11 +281,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             className="lg:col-span-5 flex flex-col items-center"
           >
             <div className="w-full max-w-sm sm:max-w-md">
-              {/* Top View Mode Switcher */}
+              {/* View Mode Switcher */}
               <div className="flex items-center justify-between mb-3 px-2">
-                <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <Compass className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Viewport Dimension</span>
+                <span className="text-xs font-mono text-zinc-400">
+                  Perspective
                 </span>
                 <div className="flex items-center gap-1 p-1 rounded-xl bg-black/60 border border-white/10 backdrop-blur-md">
                   <button
@@ -292,11 +292,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     onClick={() => setHeroMode('portrait')}
                     className={`px-3 py-1 rounded-lg text-xs font-mono transition cursor-pointer flex items-center gap-1.5 ${
                       heroMode === 'portrait'
-                        ? 'bg-white/15 text-white font-semibold shadow'
+                        ? 'bg-white/15 text-white font-medium shadow-sm'
                         : 'text-zinc-400 hover:text-white'
                     }`}
                   >
-                    <User className="w-3 h-3 text-cyan-400" />
+                    <User className="w-3.5 h-3.5 text-cyan-400" />
                     <span>Portrait</span>
                   </button>
                   <button
@@ -304,17 +304,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     onClick={() => setHeroMode('monolith3d')}
                     className={`px-3 py-1 rounded-lg text-xs font-mono transition cursor-pointer flex items-center gap-1.5 ${
                       heroMode === 'monolith3d'
-                        ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-semibold shadow'
+                        ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-medium shadow-sm'
                         : 'text-zinc-400 hover:text-white'
                     }`}
                   >
-                    <Box className="w-3 h-3 text-cyan-400" />
-                    <span>3D Core</span>
+                    <Box className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>3D</span>
                   </button>
                 </div>
               </div>
 
-              {/* Viewport Frame with Soft 3D Perspective & Cybernetic Reticle */}
+              {/* Viewport Frame with Soft 3D Perspective */}
               <Card3D maxTilt={6} glowColor="rgba(56, 189, 248, 0.25)">
                 <div className="relative rounded-3xl overflow-hidden">
                   <HudCorners color="rgba(56, 189, 248, 0.4)" size={14} className="z-30" />
@@ -330,9 +330,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-glow border border-cyan-500/20 flex flex-col justify-between p-6 bg-gradient-to-b from-cyan-950/20 via-zinc-950 to-indigo-950/20">
                       <div className="flex items-center justify-between text-xs font-mono text-zinc-400 z-10">
                         <span className="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
-                          THREE.JS ENGINE: ACTIVE
+                          WebGL Canvas
                         </span>
-                        <span>60 FPS GYRO</span>
+                        <span>Interactive 3D</span>
                       </div>
 
                       <div className="w-full h-full flex items-center justify-center">
@@ -340,8 +340,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                       </div>
 
                       <div className="text-center z-10">
-                        <div className="text-xs font-mono text-cyan-400">Interactive Spatial Geometry</div>
-                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Move cursor to distort gyroscopic orbit</div>
+                        <div className="text-xs font-mono text-cyan-400">Interactive Spatial Model</div>
+                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Move cursor to rotate perspective</div>
                       </div>
                     </div>
                   )}

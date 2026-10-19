@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'motion/react';
-import { Sparkles, Calendar, MapPin, CheckCircle, ExternalLink } from 'lucide-react';
+import { Briefcase, Calendar, MapPin, CheckCircle, ExternalLink } from 'lucide-react';
 import { EXPERIENCE_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
 import { HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
@@ -20,9 +20,9 @@ export const ExperienceSection: React.FC = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>THE ARCHITECT</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
+              <Briefcase className="w-3.5 h-3.5" />
+              <span>Principal Systems Architect</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-black text-white font-display tracking-tight">

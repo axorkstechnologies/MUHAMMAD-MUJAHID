@@ -68,3 +68,61 @@ export const ScanlineOverlay: React.FC<{ className?: string }> = ({ className = 
     </div>
   );
 };
+
+export const TechCrosshair: React.FC<{ label?: string; className?: string }> = ({
+  label,
+  className = ''
+}) => {
+  return (
+    <div className={`inline-flex items-center gap-1.5 font-mono text-[10px] text-zinc-500 tracking-wider uppercase select-none ${className}`}>
+      <span className="text-cyan-400 font-light">+</span>
+      {label && <span>{label}</span>}
+      <span className="text-cyan-400 font-light">+</span>
+    </div>
+  );
+};
+
+export const TelemetryBadge: React.FC<{
+  code: string;
+  label: string;
+  status?: string;
+  statusColor?: string;
+  className?: string;
+}> = ({
+  code,
+  label,
+  status = 'ONLINE',
+  statusColor = 'bg-emerald-400',
+  className = ''
+}) => {
+  return (
+    <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/[0.03] border border-white/10 backdrop-blur-md font-mono text-[11px] shadow-sm select-none ${className}`}>
+      <span className="text-cyan-400 font-semibold">{code}</span>
+      <span className="text-zinc-500">//</span>
+      <span className="text-zinc-300 uppercase tracking-wider">{label}</span>
+      {status && (
+        <span className="inline-flex items-center gap-1 pl-1 border-l border-white/10 text-[9px] text-zinc-400">
+          <span className={`w-1.5 h-1.5 rounded-full ${statusColor} animate-pulse`} />
+          <span>{status}</span>
+        </span>
+      )}
+    </div>
+  );
+};
+
+export const HairlineRuler: React.FC<{ className?: string }> = ({ className = '' }) => {
+  return (
+    <div className={`w-full flex items-center justify-between text-[9px] font-mono text-zinc-600 select-none py-1 border-y border-white/[0.04] ${className}`}>
+      <span>00.00</span>
+      <span className="text-zinc-700">|</span>
+      <span>25.00</span>
+      <span className="text-zinc-700">|</span>
+      <span className="text-cyan-500/60 font-semibold">50.00 // SYS.MID</span>
+      <span className="text-zinc-700">|</span>
+      <span>75.00</span>
+      <span className="text-zinc-700">|</span>
+      <span>100.00</span>
+    </div>
+  );
+};
+

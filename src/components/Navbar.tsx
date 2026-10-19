@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, ArrowUpRight, Menu, X, Sparkles } from 'lucide-react';
+import { MessageSquare, ArrowUpRight, Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
 
