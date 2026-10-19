@@ -150,6 +150,48 @@ I would like to initiate an engineering consultation.
               </div>
             </Card3D>
 
+            {/* Direct Email Card */}
+            <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.15)">
+              <div className="p-6 rounded-3xl glass-panel border border-white/10 hover:border-indigo-500/30 transition-all space-y-3 shadow-lg">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-2xl bg-indigo-500/10 text-indigo-400">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-mono text-zinc-400 uppercase">Direct Email</div>
+                      <div className="text-base font-bold text-white font-display">Executive Inbox</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-2xl bg-black/50 border border-white/10 text-xs font-mono">
+                  <span className="text-zinc-200 truncate pr-2">{CONTACT_INFO.email}</span>
+                  <button
+                    type="button"
+                    onClick={() => handleCopy(CONTACT_INFO.email, 'email')}
+                    className="text-zinc-400 hover:text-white flex items-center gap-1 cursor-pointer shrink-0"
+                  >
+                    {copiedField === 'email' ? (
+                      <span className="text-emerald-400 flex items-center gap-1">
+                        <Check className="w-3 h-3" /> Copied
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1">
+                        <Copy className="w-3 h-3" /> Copy
+                      </span>
+                    )}
+                  </button>
+                </div>
+                <a
+                  href={`mailto:${CONTACT_INFO.email}?subject=Project%20Inquiry%20-%20Engineering%20Consultation`}
+                  className="w-full py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white font-semibold text-xs flex items-center justify-center gap-2 transition cursor-pointer"
+                >
+                  <span>Compose Email Direct</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400" />
+                </a>
+              </div>
+            </Card3D>
+
             {/* Axorks Studio Card */}
             <Card3D maxTilt={4} glowColor="rgba(129, 140, 248, 0.15)">
               <div className="p-6 rounded-3xl glass-panel border border-white/10 hover:border-white/20 transition-all space-y-3 shadow-lg">
@@ -227,17 +269,25 @@ I would like to initiate an engineering consultation.
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-1.5">
-                        Engagement Type
+                        Selected Service or Scope
                       </label>
                       <select
                         value={formData.projectType}
                         onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
-                        <option value="Strategic MVP Build ($3,500)">Strategic MVP Build ($3,500)</option>
-                        <option value="Flagship Digital Product ($7,500)">Flagship Digital Product ($7,500)</option>
-                        <option value="Fractional Engineering Retainer ($4,200/mo)">Fractional Retainer ($4,200/mo)</option>
-                        <option value="Custom Enterprise Architecture">Custom Enterprise Architecture</option>
+                        <option value="Full Visibility Package (SEO + AEO + GEO) — $950/mo">⭐ Full Visibility Package (SEO + AEO + GEO) — $950/mo</option>
+                        <option value="AI & Search Visibility: SEO ($250/mo)">SEO (Search Engine Optimization) — $250/mo</option>
+                        <option value="AI & Search Visibility: AEO ($450/mo)">AEO (Answer Engine Optimization) — $450/mo</option>
+                        <option value="AI & Search Visibility: GEO ($550/mo)">GEO (Generative Engine Optimization) — $550/mo</option>
+                        <option value="Custom LMS for Schools & Universities (From $8,000)">Custom LMS for Schools & Universities — From $8,000</option>
+                        <option value="Banking / Financial Management System (From $12,000)">Banking / Financial Management System — From $12,000</option>
+                        <option value="Custom Web Application Development (From $3,500)">Custom Web Application Development — From $3,500</option>
+                        <option value="Professional Website Development (From $1,200)">Professional Website Development — From $1,200</option>
+                        <option value="Flagship Digital Product ($7,500)">Flagship Digital Product Sprint — $7,500</option>
+                        <option value="Strategic MVP Build ($3,500)">Strategic MVP Build — $3,500</option>
+                        <option value="Fractional Engineering Retainer ($4,200/mo)">Fractional Engineering Retainer — $4,200/mo</option>
+                        <option value="Custom Enterprise Architecture Consultation">Custom Enterprise Architecture Consultation</option>
                       </select>
                     </div>
 
@@ -248,12 +298,15 @@ I would like to initiate an engineering consultation.
                       <select
                         value={formData.budget}
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400"
+                        className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
-                        <option value="$3,500 - $5,000">$3,500 - $5,000</option>
-                        <option value="$5,000 - $10,000">$5,000 - $10,000</option>
-                        <option value="$10,000 - $25,000">$10,000 - $25,000</option>
-                        <option value="$25,000+ Enterprise">$25,000+ Enterprise</option>
+                        <option value="$950 / month (Full SEO + AEO + GEO Retainer)">$950 / month (Full Visibility Package)</option>
+                        <option value="$250 - $550 / month (Individual AI Search Retainer)">$250 - $550 / month (SEO / AEO / GEO)</option>
+                        <option value="$1,200 - $3,500 (Website Development)">$1,200 - $3,500 (Website Development)</option>
+                        <option value="$3,500 - $7,500 (MVP / Web Application)">$3,500 - $7,500 (MVP / Web App)</option>
+                        <option value="$8,000 - $12,000 (LMS / Custom Intelligent System)">$8,000 - $12,000 (LMS / Intelligent System)</option>
+                        <option value="$12,000 - $25,000 (Banking / Financial Core)">$12,000 - $25,000 (Banking / Financial System)</option>
+                        <option value="$25,000+ Enterprise Infrastructure">$25,000+ (Enterprise Sovereign Platform)</option>
                       </select>
                     </div>
                   </div>
@@ -265,7 +318,7 @@ I would like to initiate an engineering consultation.
                     <textarea
                       rows={4}
                       required
-                      placeholder="Outline key milestones, existing tech stack if any, and target timeline..."
+                      placeholder="Outline your primary goals, key requirements, target timeline, or reference systems..."
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-cyan-400 resize-none"
@@ -274,15 +327,19 @@ I would like to initiate an engineering consultation.
 
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-xl bg-white hover:bg-zinc-100 text-zinc-950 font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(255,255,255,0.2)] transition cursor-pointer"
+                    className="w-full py-4 rounded-xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all duration-300 cursor-pointer"
                   >
-                    <Send className="w-4 h-4" />
-                    <span>Transmit Project Brief to Muhammad Mujahid</span>
+                    <MessageSquare className="w-4 h-4 text-black" />
+                    <span>Send Project Brief to WhatsApp (Fastest Response &lt; 2 hrs)</span>
                   </button>
 
+                  <p className="text-[11px] font-mono text-center text-zinc-500 pt-1">
+                    🔒 Direct connection with Founder Muhammad Mujahid • NDA signed upon request
+                  </p>
+
                   {submitted && (
-                    <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 text-xs text-center">
-                      Brief formatted and forwarded to WhatsApp! We will respond within 2 hours.
+                    <div className="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs text-center font-medium">
+                      ✓ Brief compiled and forwarded to WhatsApp! Muhammad will respond within 2 hours.
                     </div>
                   )}
                 </form>

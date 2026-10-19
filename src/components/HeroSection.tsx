@@ -189,32 +189,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               . I architect high-concurrency web platforms, autonomous AI pipelines, and bespoke liquid glass interfaces designed to scale effortlessly and command industry authority.
             </motion.p>
 
-            {/* Primary Action Buttons */}
+            {/* Primary Action Buttons - Optimized for High Client Conversion */}
             <motion.div 
               variants={itemFadeUp}
-              className="flex flex-wrap items-center gap-4 pt-2 w-full sm:w-auto"
+              className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto"
             >
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                type="button"
-                onClick={() => onNavigate('projects')}
-                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_35px_rgba(255,255,255,0.4)] transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
-              >
-                <span>View Selected Work</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-
               <motion.a
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href={CONTACT_INFO.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-zinc-900/80 hover:bg-zinc-800 border border-white/10 hover:border-emerald-500/40 text-emerald-300 font-semibold text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
               >
-                <MessageSquare className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-                <span>WhatsApp Consultation</span>
+                <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
+                <span>Start a Project (WhatsApp)</span>
+                <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
               </motion.a>
 
               <motion.button
@@ -222,10 +212,39 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 whileTap={{ scale: 0.98 }}
                 type="button"
                 onClick={() => onNavigate('services')}
-                className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Services & Pricing</span>
               </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                type="button"
+                onClick={() => onNavigate('projects')}
+                className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+              >
+                <span>Flagship Systems</span>
+              </motion.button>
+            </motion.div>
+
+            {/* Instant Trust & Conversion Signals */}
+            <motion.div 
+              variants={itemFadeUp}
+              className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-zinc-400 font-mono"
+            >
+              <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Direct reply &lt; 2 hours</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-zinc-300">
+                <Shield className="w-3.5 h-3.5 text-cyan-400" />
+                <span>100% Code & IP Ownership</span>
+              </div>
+              <div className="flex items-center gap-1.5 text-zinc-300">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
+                <span>Founder-Direct Engineering</span>
+              </div>
             </motion.div>
 
             {/* Verified Tech Badges */}

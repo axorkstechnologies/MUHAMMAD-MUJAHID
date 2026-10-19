@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageSquare, ArrowUpRight, Menu, X } from 'lucide-react';
+import { MessageSquare, ArrowUpRight, Menu, X, Sparkles } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
 
-interface NavbarProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
+export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,22 +18,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
   }, []);
 
   const navItems = [
-    { id: 'hero', label: 'Overview' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'services', label: 'Services & Pricing' },
-    { id: 'axorks', label: 'Axorks Studio' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'contact', label: 'Contact' }
+    { path: '/', label: 'Overview' },
+    { path: '/about', label: 'About' },
+    { path: '/projects', label: 'Projects' },
+    { path: '/services', label: 'Services & Pricing' },
+    { path: '/experience', label: 'Experience' },
+    { path: '/axorks', label: 'Axorks Studio' },
+    { path: '/contact', label: 'Contact' }
   ];
-
-  const handleNavClick = (id: string) => {
-    setActiveSection(id);
-    setMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <motion.header
@@ -45,18 +34,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-40 px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
         isScrolled
-          ? 'py-3 bg-zinc-950/80 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]'
+          ? 'py-3 bg-zinc-950/85 backdrop-blur-2xl border-b border-white/[0.08] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.8)]'
           : 'py-5 bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Brand / Logo */}
-        <motion.button
-          type="button"
-          onClick={() => handleNavClick('hero')}
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        {/* Brand / Logo linking to Home */}
+        <Link
+          to="/"
           className="flex items-center gap-3 group text-left cursor-pointer"
+          onClick={() => setMobileMenuOpen(false)}
         >
           <div className="w-10 h-10 rounded-2xl bg-white/[0.04] border border-white/10 group-hover:border-cyan-400/40 flex items-center justify-center backdrop-blur-xl shadow-lg transition-all duration-300">
             <span className="font-display font-black text-base text-gradient tracking-wider">M</span>
@@ -74,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
               </span>
             </div>
           </div>
-        </motion.button>
+        </Link>
 
         {/* Desktop Navigation Floating Pill with LayoutId Animated Indicator */}
         <nav
@@ -86,15 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
           }`}
         >
           {navItems.map((item) => {
-            const isActive = activeSection === item.id;
+            const isActive = location.pathname === item.path;
             return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => handleNavClick(item.id)}
-                className={`relative px-4 py-2 rounded-full text-xs font-medium tracking-wide transition-colors duration-200 cursor-pointer ${
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`relative px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wide transition-colors duration-200 cursor-pointer ${
                   isActive
-                    ? 'text-white'
+                    ? 'text-white font-semibold'
                     : 'text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.04]'
                 }`}
               >
@@ -107,7 +93,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                   />
                 )}
                 {item.label}
-              </button>
+              </Link>
             );
           })}
         </nav>
@@ -158,20 +144,23 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
             className="md:hidden mt-3 p-4 rounded-3xl bg-zinc-950/95 border border-white/15 backdrop-blur-3xl shadow-2xl space-y-2"
           >
             <div className="flex flex-col gap-1">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handleNavClick(item.id)}
-                  className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition cursor-pointer ${
-                    activeSection === item.id
-                      ? 'bg-white/10 text-white font-semibold'
-                      : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {navItems.map((item) => {
+                const isActive = location.pathname === item.path;
+                return (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`w-full text-left px-4 py-3 rounded-xl text-sm font-medium transition cursor-pointer ${
+                      isActive
+                        ? 'bg-white/10 text-white font-semibold'
+                        : 'text-zinc-400 hover:text-white hover:bg-white/[0.05]'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </div>
 
             <div className="pt-3 border-t border-white/10 space-y-2">

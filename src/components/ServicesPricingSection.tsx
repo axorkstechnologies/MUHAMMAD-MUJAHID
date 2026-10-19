@@ -160,11 +160,41 @@ export const ServicesPricingSection: React.FC = () => {
           ))}
         </MotionSection>
 
+        {/* Quick Jump Service Navigator for Instant Conversion */}
+        <MotionSection delay={0.12} className="flex flex-wrap items-center justify-center gap-2.5 mb-20">
+          <a
+            href="#category-intelligent-systems"
+            className="px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-indigo-400/40 transition cursor-pointer"
+          >
+            1. Intelligent Systems ($8k+)
+          </a>
+          <a
+            href="#category-ai-visibility"
+            className="px-4 py-2 rounded-full text-xs font-mono bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/35 transition cursor-pointer flex items-center gap-1.5 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]"
+          >
+            <Sparkles className="w-3 h-3 text-emerald-400" />
+            <span>2. AI & Search Visibility (SEO/AEO/GEO)</span>
+          </a>
+          <a
+            href="#category-web-apps"
+            className="px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-cyan-400/40 transition cursor-pointer"
+          >
+            3. Web Apps ($3.5k+) & Sites ($1.2k+)
+          </a>
+          <a
+            href="#pricing-calculator"
+            className="px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer"
+          >
+            4. Scope Estimator ↓
+          </a>
+        </MotionSection>
+
 
         {/* ========================================================================= */}
         {/* 1. CUSTOM INTELLIGENT SYSTEMS (Hero Tier - Most Impressive) */}
         {/* ========================================================================= */}
-        <MotionSection delay={0.15} className="mb-28">
+        <MotionSection delay={0.15} className="mb-28 scroll-mt-24">
+          <div id="category-intelligent-systems">
           {/* Category Header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-5 border-b border-white/[0.08]">
             <div>
@@ -358,13 +388,15 @@ export const ServicesPricingSection: React.FC = () => {
               </div>
             </Card3D>
           </div>
+          </div>
         </MotionSection>
 
 
         {/* ========================================================================= */}
         {/* 2. HIGH-PRIORITY: AI & SEARCH VISIBILITY SERVICES (SEO / AEO / GEO) */}
         {/* ========================================================================= */}
-        <MotionSection delay={0.2} className="mb-28">
+        <MotionSection delay={0.2} className="mb-28 scroll-mt-24">
+          <div id="category-ai-visibility">
           {/* Dominant Hero Banner Showcase Container */}
           <div className="relative rounded-3xl p-6 sm:p-10 lg:p-12 border border-emerald-500/35 bg-gradient-to-b from-emerald-950/30 via-zinc-950/90 to-cyan-950/20 shadow-[0_24px_80px_rgba(16,185,129,0.18)] overflow-hidden">
             
@@ -707,13 +739,15 @@ export const ServicesPricingSection: React.FC = () => {
               </Card3D>
             </div>
           </div>
+          </div>
         </MotionSection>
 
 
         {/* ========================================================================= */}
         {/* 3 & 4: WEB APPLICATION DEVELOPMENT & WEBSITE DEVELOPMENT */}
         {/* ========================================================================= */}
-        <MotionSection delay={0.25} className="mb-28">
+        <MotionSection delay={0.25} className="mb-28 scroll-mt-24">
+          <div id="category-web-apps">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
             
             {/* 3. Custom Web Application Development */}
@@ -845,6 +879,7 @@ export const ServicesPricingSection: React.FC = () => {
                 </div>
               </div>
             </Card3D>
+          </div>
           </div>
         </MotionSection>
 
