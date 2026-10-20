@@ -59,10 +59,10 @@ I would like to initiate an engineering consultation.
             <span>Direct Communication Channel</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
-            Direct Executive Channel
+            Direct Founder Channel
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base leading-relaxed font-light">
-            Reach Muhammad Mujahid directly for architecture consultation, product builds under Axorks, or fractional technical leadership.
+            Reach Muhammad Mujahid directly for software systems development, institutional portals, or fractional engineering leadership.
           </p>
         </div>
 

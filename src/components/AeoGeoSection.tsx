@@ -65,12 +65,12 @@ export const AeoGeoSection: React.FC = () => {
           </div>
 
           <h2 id="aeo-geo-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
-            How Your Business Gets Discovered on <br className="hidden sm:inline" />
-            <span className="text-gradient-emerald">Google and Modern AI Platforms</span>
+            How Your Customers Find You in 2026: <br className="hidden sm:inline" />
+            <span className="text-gradient-emerald">Search Engines Meet Modern AI</span>
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-300 font-light leading-relaxed">
-            Direct answer definitions, entity structuring, and generative citations. Understand the modern multi-engine visibility framework.
+            Over 40% of buying decisions now happen inside AI summaries and conversational assistants. Here is how we ensure your business gets recommended.
           </p>
         </div>
 

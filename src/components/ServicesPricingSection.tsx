@@ -113,14 +113,14 @@ export const ServicesPricingSection: React.FC = () => {
         <MotionSection className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
             <TrendingUp className="w-3.5 h-3.5" />
-            <span>Investment Suite & Engineering Tiers</span>
+            <span>Core Services & Fixed-Scope Pricing</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
             Software Systems Engineering & <br className="hidden sm:inline" />
-            <span className="text-gradient-cyan">Omni-Channel AI Visibility</span>
+            <span className="text-gradient-cyan">Search & AI Visibility</span>
           </h2>
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
-            Direct executive engineering with Muhammad Mujahid. From sovereign institutional software systems (LMS $8k+, Banking $12k+) to full-scale AI platform visibility (SEO, AEO, GEO from $250 - $950/mo). Zero boilerplate, 100% intellectual property transfer.
+            Direct founder execution with Muhammad Mujahid. From custom business ERPs and web applications to comprehensive AI platform visibility (SEO, AEO, GEO from $250 - $950/mo). Zero fluff, 100% intellectual property transfer.
           </p>
         </MotionSection>
 

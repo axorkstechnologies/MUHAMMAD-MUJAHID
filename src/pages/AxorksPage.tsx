@@ -29,7 +29,7 @@ export const AxorksPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            {AXORKS_DATA.tagline}. An elite software engineering studio dedicated to crafting cinematic web products, mission-critical backends, and AI workflows for international ventures.
+            High-Impact Software Engineering & Product Studio. Founded by Muhammad Mujahid to build reliable web applications, institutional ERPs, and search visibility with direct founder delivery.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-zinc-400 pt-2">

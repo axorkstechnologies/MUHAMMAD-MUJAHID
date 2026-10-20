@@ -19,15 +19,15 @@ export const ProjectsPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
             <Layers className="w-3.5 h-3.5" />
-            <span>Case Studies & Production Architectures</span>
+            <span>Featured Case Studies & Proven Results</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Flagship Engineering <span className="text-gradient">Portfolio</span>
+            Production Systems & <span className="text-gradient">Real Results</span>
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Explore live production architectures, mission-critical healthcare engines, agricultural telemetry pipelines, and luxury digital flagship stores designed and built by Muhammad Mujahid.
+            Explore live production platforms, clinical healthcare systems, agricultural telemetry networks, and campus ERPs engineered directly by Muhammad Mujahid.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-zinc-400 pt-2">

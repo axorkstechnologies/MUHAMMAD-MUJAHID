@@ -56,23 +56,23 @@ export const AboutPage: React.FC = () => {
   const architecturalPrinciples = [
     {
       step: '01',
-      title: 'Zero-Slop Engineering',
-      desc: 'No generic boilerplate or unvetted dependencies. Every line of code is deliberate, typed, and battle-tested for high reliability.'
+      title: 'Founder-Direct Execution',
+      desc: 'No junior handoffs or account managers. You work directly with the founder and principal architect from kickoff to production deployment.'
     },
     {
       step: '02',
       title: '100% IP & Source Ownership',
-      desc: 'You own every repository, migration script, and asset from day one. No vendor lock-in, no hidden proprietary licensing.'
+      desc: 'You own every repository, migration script, and design asset from day one. Zero vendor lock-in and no recurring proprietary license fees.'
     },
     {
       step: '03',
-      title: 'Direct Principal Access',
-      desc: 'No junior handoffs or account managers. You work directly with the founder and principal architect from kickoff to deployment.'
+      title: 'Built for Production Reliability',
+      desc: 'Strict TypeScript typing, resilient database schemas, automated testing, and fault-tolerant architecture built to run smoothly without babysitting.'
     },
     {
       step: '04',
-      title: 'Predictable Rapid Cadence',
-      desc: 'Weekly deployable increments, continuous integration, and transparent milestones. Real progress you can click and test every Friday.'
+      title: 'Predictable Weekly Cadence',
+      desc: 'Weekly deployable increments and transparent milestones. Real, working software you can click, test, and verify every single Friday.'
     }
   ];
 
@@ -94,15 +94,15 @@ export const AboutPage: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight leading-[1.08]">
-              Architecting Sovereign Software for <span className="text-gradient">Visionary Ventures</span>
+              Building Mission-Critical Software With <span className="text-gradient">Founder-Direct Accountability</span>
             </h1>
 
             <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Founder of Axorks and Principal Full-Stack Software Architect. Over the past several years, I have engineered mission-critical digital systems, scalable enterprise backends, and cinematic web products that serve over 40,000 active users globally.
+              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Founder of Axorks and Principal Systems Architect. Over the past several years, I have engineered production-grade software platforms, campus ERPs, and cloud backends that reliably support over 40,000 active users.
             </p>
 
             <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-light">
-              Unlike traditional agencies where your requirements get passed down to juniors, I operate with founder-level accountability: direct technical leadership, rigorous architectural standards, and rapid execution.
+              Unlike traditional agencies where your requirements get passed down through layers of account managers and junior developers, I operate with founder-level accountability: direct architectural leadership, strict engineering standards, and rapid weekly shipping.
             </p>
 
             {/* Quick Metrics Bar with 2026 Rolling Numbers */}
@@ -137,7 +137,7 @@ export const AboutPage: React.FC = () => {
                   to="/projects"
                   className="px-6 py-3.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 text-white font-semibold text-xs tracking-wider flex items-center gap-2 transition-all duration-300"
                 >
-                  <span>View Flagship Projects</span>
+                  <span>View Case Studies</span>
                   <ArrowRight className="w-4 h-4 text-cyan-400" />
                 </Link>
               </MagneticWrapper>
@@ -164,16 +164,16 @@ export const AboutPage: React.FC = () => {
         <section className="space-y-8">
           <div className="space-y-3">
             <div className="flex items-center gap-2">
-              <TechCrosshair label="CORE DISCIPLINES // HIGH CONCURRENCY" />
-              <span className="text-[11px] font-mono text-indigo-300 font-semibold uppercase tracking-wider">
-                SYSTEM MASTERY
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+              <span className="text-[11px] font-mono text-cyan-300 font-semibold uppercase tracking-wider">
+                CORE DISCIPLINES
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white font-display tracking-tight">
-              Engineering Disciplines & System Mastery
+              Core Technical Capabilities
             </h2>
             <p className="text-sm sm:text-base text-zinc-400 max-w-2xl font-light">
-              Precision execution across the modern technology spectrum—from hardware telemetry to responsive user interfaces.
+              Hands-on engineering across the entire modern stack — from cloud databases and ERP logic to high-framerate interactive interfaces.
             </p>
           </div>
 

@@ -145,13 +145,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-zinc-200 font-medium">Muhammad Mujahid</span>
                 <span className="text-zinc-600">•</span>
-                <span className="text-cyan-400">Principal Systems Engineer</span>
+                <span className="text-cyan-400">Founder & Systems Architect</span>
               </div>
               <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400">
                 <span className="text-zinc-600">|</span>
                 <span>Karachi (UTC+5)</span>
                 <span className="text-zinc-600">|</span>
-                <span className="text-emerald-400 font-medium">40k+ Active Seats Supported</span>
+                <span className="text-emerald-400 font-medium">40k+ Active Users Supported</span>
               </div>
             </motion.div>
 
@@ -159,9 +159,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             <div className="space-y-1">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
-                  text="Architecting Sovereign Software Systems"
+                  text="Software systems built to run your business."
                   className="block text-white"
-                  highlightWords={['Sovereign', 'Software', 'Systems']}
+                  highlightWords={['Software', 'systems', 'business.']}
                   highlightClassName="text-gradient block"
                   delay={0.1}
                 />
@@ -169,7 +169,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   variants={headlineLineVariants} 
                   className="text-zinc-400 font-normal text-3xl sm:text-4xl lg:text-5xl block mt-1"
                 >
-                  with Engineering Rigor.
+                  Engineered without the agency fluff.
                 </motion.span>
               </h1>
             </div>
@@ -179,7 +179,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               variants={itemFadeUp}
               className="text-base sm:text-lg text-zinc-300 max-w-2xl font-light leading-relaxed"
             >
-              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Principal Software Systems Engineer and Founder of{' '}
+              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Founder of{' '}
               <a 
                 href={CONTACT_INFO.agencyUrl} 
                 target="_blank" 
@@ -187,8 +187,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 className="text-cyan-300 underline underline-offset-4 decoration-cyan-500/50 hover:decoration-cyan-300 transition-colors font-medium"
               >
                 Axorks
-              </a>
-              . I architect high-concurrency distributed platforms, zero-downtime academic campus ERPs, sovereign financial management cores, and bespoke liquid-glass interfaces with founder-direct technical leadership.
+              </a>{' '}
+              and Principal Systems Architect. I design and build production-ready digital systems: school ERPs, healthcare platforms, custom web applications, and intelligent search visibility. When you hire me, you work directly with the senior engineer building your product — with guaranteed timelines, transparent pricing, and 100% code ownership.
             </motion.p>
 
             {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
@@ -206,7 +206,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
-                  <span>Start WhatsApp Dialogue</span>
+                  <span>Message on WhatsApp</span>
                   <ArrowRight className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
                 </motion.a>
               </MagneticWrapper>
@@ -231,7 +231,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('projects')}
                   className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Flagship Systems</span>
+                  <span>Case Studies</span>
                 </motion.button>
               </MagneticWrapper>
             </motion.div>
@@ -251,7 +251,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </div>
               <div className="flex items-center gap-1.5 text-zinc-300">
                 <span className="w-1 h-1 rounded-full bg-indigo-400" />
-                <span>Zero Junior Handoffs</span>
+                <span>Direct Founder Delivery</span>
               </div>
             </motion.div>
 
@@ -320,12 +320,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   <HudCorners color="rgba(56, 189, 248, 0.4)" size={14} className="z-30" />
                   <ScanlineOverlay className="z-20" />
                   {heroMode === 'portrait' ? (
-                    <PhotoPlaceholder
-                      id="executive-hero-portrait"
-                      variant="hero"
-                      label="Muhammad Mujahid - Executive Portrait"
-                      defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
-                    />
+                    <div className="relative">
+                      <PhotoPlaceholder
+                        id="executive-hero-portrait"
+                        variant="hero"
+                        label="Muhammad Mujahid - Systems Architect"
+                        defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
+                      />
+                      <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-zinc-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs z-20 shadow-xl">
+                        <div className="flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                          <span className="text-white font-medium">Muhammad Mujahid</span>
+                        </div>
+                        <span className="text-[11px] font-mono text-cyan-300">Founder & Systems Architect</span>
+                      </div>
+                    </div>
                   ) : (
                     <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-glow border border-cyan-500/20 flex flex-col justify-between p-6 bg-gradient-to-b from-cyan-950/20 via-zinc-950 to-indigo-950/20">
                       <div className="flex items-center justify-between text-xs font-mono text-zinc-400 z-10">

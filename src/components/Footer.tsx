@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed">
-              Founder at Axorks. Crafting cinematic web products, mission-critical distributed platforms, and high-framerate user interfaces.
+              Founder at Axorks. Building reliable software systems, campus ERPs, and high-performance digital platforms with founder-direct delivery.
             </p>
             <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -71,12 +71,12 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/about" className="hover:text-cyan-300 transition-colors">
-                  About the Architect
+                  About
                 </Link>
               </li>
               <li>
                 <Link to="/projects" className="hover:text-cyan-300 transition-colors">
-                  Flagship Projects
+                  Case Studies
                 </Link>
               </li>
               <li>
@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/experience" className="hover:text-cyan-300 transition-colors">
-                  Experience & Track Record
+                  Experience
                 </Link>
               </li>
               <li>

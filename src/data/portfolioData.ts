@@ -2,7 +2,7 @@ import { Project, ExperienceItem, Testimonial, MetricHighlight } from '../types.
 
 export const CONTACT_INFO = {
   name: 'Muhammad Mujahid',
-  title: 'Founder & Principal Software Architect',
+  title: 'Founder & Principal Systems Architect',
   agency: 'Axorks',
   agencyUrl: 'https://axorks.com',
   whatsapp: '+92 308 2789210',
@@ -12,30 +12,30 @@ export const CONTACT_INFO = {
   email: 'mujahidaryan222149@gmail.com',
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
-  availabilityStatus: 'Available for Q2/Q3 Projects & Retainers',
-  bio: 'Executive Full-Stack AI Engineer and Founder of Axorks. I design and build mission-critical digital systems, scalable cloud platforms, and cinematic WebGL interfaces for international ventures and institutions.'
+  availabilityStatus: 'Available for Q2/Q3 Projects • Direct Founder Delivery',
+  bio: 'Founder of Axorks and Principal Systems Architect. I build reliable, high-performance software systems for growing businesses — from school campus ERPs and clinical healthcare portals to custom web applications and AI search visibility. When you hire me, you work directly with the founder writing the code.'
 };
 
 export const EXECUTIVE_METRICS: MetricHighlight[] = [
   {
-    value: '4+',
-    label: 'Flagship Systems',
-    caption: 'Production-grade enterprise architectures'
-  },
-  {
-    value: '99.9%',
-    label: 'Uptime Reliability',
-    caption: 'Fault-tolerant cloud engineering'
-  },
-  {
     value: '40K+',
-    label: 'End Users Served',
+    label: 'Daily Active Users',
     caption: 'Across AgroTrace, PHSS & MediVerse'
   },
   {
-    value: '< 0.4s',
-    label: 'Avg Response Time',
-    caption: 'Zero-slop latency-critical delivery'
+    value: '99.9%',
+    label: 'Production Uptime',
+    caption: 'Engineered for 24/7 business continuity'
+  },
+  {
+    value: '4+',
+    label: 'Flagship Systems',
+    caption: 'Active in agriculture, healthcare & schools'
+  },
+  {
+    value: '< 2h',
+    label: 'Direct Response Time',
+    caption: 'Direct founder WhatsApp & Slack channel'
   }
 ];
 
@@ -45,13 +45,13 @@ export const PROJECTS_DATA: Project[] = [
     title: 'AgroTrace',
     subtitle: 'AI-Powered Agricultural Provenance & Real-Time Telemetry',
     category: 'AI Systems',
-    description: 'An intelligent agricultural provenance platform connecting distributed farm clusters, soil sensor arrays, and supply chain cold-storage with AI predictive harvest modeling.',
-    problem: 'Agricultural supply chains suffer from 28% post-harvest spoilage and untraceable origin claims due to disconnected fragmented paper logging.',
-    solution: 'Engineered a real-time IoT telemetry ingestion pipeline with edge AI anomaly detection, automated micro-climate hazard alerts, and verifiable blockchain-backed provenance ledgers.',
+    description: 'An intelligent agricultural telemetry platform connecting 140+ farm clusters and cold-storage facilities to eliminate harvest spoilage with automated predictive hazard alerts.',
+    problem: 'Agricultural supply chains lost up to 28% of post-harvest produce due to silent refrigeration failures and paper-based tracking that could not pinpoint where spoilage occurred.',
+    solution: 'Engineered a real-time IoT sensor ingestion pipeline with edge alerts, micro-climate monitoring, and verifiable supply-chain tracking dashboards for field managers.',
     metrics: [
       { label: 'Telemetry Events/sec', value: '12,500+' },
       { label: 'Spoilage Reduction', value: '34%' },
-      { label: 'Farm Clusters', value: '140+' }
+      { label: 'Monitored Clusters', value: '140+' }
     ],
     tags: ['Next.js', 'TypeScript', 'Edge AI', 'IoT Telemetry', 'PostgreSQL', 'Tailwind CSS'],
     featuredImage: 'agrotrace',
@@ -65,13 +65,13 @@ export const PROJECTS_DATA: Project[] = [
     title: 'MediVerse',
     subtitle: 'Next-Gen Clinical Healthcare Management & FHIR Orchestration',
     category: 'Enterprise Platform',
-    description: 'An enterprise healthcare operating system providing electronic health record (EHR) consolidation, secure provider-patient telemetry, and clinical decision support.',
-    problem: 'Legacy hospital systems operate in data silos, resulting in diagnostic delays, medication collision risks, and extreme administrative burnout.',
-    solution: 'Architected an HL7/FHIR compliant clinical workflow engine with role-based access control, encrypted patient records, instant triage queues, and sub-second lab result dispersal.',
+    description: 'A unified clinical healthcare operating system providing instant electronic health records (EHR), automated triage queues, and doctor prescription workflows for 180,000+ patient visits.',
+    problem: 'Doctors and clinics were buried in disjointed paperwork and disconnected legacy software, slowing down consultations and risking medication errors.',
+    solution: 'Architected a secure, compliant clinical workflow engine with role-based access control, encrypted patient records, instant triage queues, and sub-second lab result dispersal.',
     metrics: [
-      { label: 'Clinical Encounters', value: '180,000+' },
+      { label: 'Patient Encounters', value: '180,000+' },
       { label: 'Time Saved / Shift', value: '1.8 hrs' },
-      { label: 'HIPAA/Security Audit', value: '100% Pass' }
+      { label: 'Compliance & Security', value: '100% Pass' }
     ],
     tags: ['React', 'Node.js / Express', 'FHIR Protocol', 'PostgreSQL', 'Redis Cache', 'Docker'],
     featuredImage: 'mediverse',
@@ -85,9 +85,9 @@ export const PROJECTS_DATA: Project[] = [
     title: 'FUME Fragrances',
     subtitle: 'Ultra-Luxury Olfactory Experience & Cinematic E-Commerce',
     category: 'Luxury E-Commerce',
-    description: 'A bespoke high-fashion digital flagship for artisanal luxury perfumes featuring dynamic notes blending visualization, sensory storytelling, and ultra-fluid checkout.',
-    problem: 'Traditional luxury perfume e-commerce feels flat and transactional, failing to convey the emotional, olfactory depth and tactile prestige of high-end scents.',
-    solution: 'Designed and deployed an immersive liquid glass interface with multi-layered olfactory pyramid exploration (Top, Heart, Base notes), interactive custom discovery quiz, and frictionless checkout.',
+    description: 'A bespoke luxury digital flagship for artisanal perfumes featuring an interactive olfactory notes visualizer, scent discovery quiz, and frictionless checkout.',
+    problem: 'Traditional luxury perfume e-commerce felt flat and transactional, resulting in high bounce rates and failing to convey the sensory prestige of artisanal scents.',
+    solution: 'Designed and deployed an immersive digital flagship with interactive fragrance discovery quiz, multi-layered notes visualizer, and a seamless 2-step checkout.',
     metrics: [
       { label: 'Checkout Conversion', value: '+42%' },
       { label: 'Avg Session Duration', value: '4m 12s' },
@@ -105,13 +105,13 @@ export const PROJECTS_DATA: Project[] = [
     title: 'PHSS School',
     subtitle: 'Scalable Academic ERP & Student Progression Portal',
     category: 'Institutional EdTech',
-    description: 'A comprehensive institutional management ecosystem unifying academic grading, attendance biometric logs, fee reconciliation, and guardian communications.',
-    problem: 'Educational institutions face heavy administrative friction with manual attendance reconciliations, late fee collections, and delayed exam report card generation.',
-    solution: 'Delivered an integrated cloud campus suite handling thousands of simultaneous concurrent student/teacher interactions, automated fee challan generation, and SMS/WhatsApp notifications.',
+    description: 'A comprehensive cloud campus ERP unifying biometric attendance, automated fee challans via SMS/WhatsApp, and instantaneous student report card generation for 3,200+ students.',
+    problem: 'A multi-campus institution spent weeks manually calculating exam report cards, chasing overdue monthly fees, and reconciling paper attendance logs.',
+    solution: 'Delivered an integrated cloud campus portal unifying biometric student/staff attendance, automated fee challans with online reconciliation, and instantaneous parent SMS/WhatsApp grade notifications.',
     metrics: [
       { label: 'Active Students', value: '3,200+' },
-      { label: 'Grading Automation', value: '92% faster' },
-      { label: 'Fee Collection Rate', value: '99.4%' }
+      { label: 'Report Cards Ready', value: '92% faster' },
+      { label: 'On-Time Fee Collection', value: '99.4%' }
     ],
     tags: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Twilio API'],
     featuredImage: 'phss',
@@ -126,42 +126,42 @@ export const AXORKS_DATA = {
   name: 'Axorks',
   tagline: 'High-Impact Digital Engineering & Product Studio',
   url: 'https://axorks.com',
-  summary: 'Founded by Muhammad Mujahid, Axorks is an elite digital engineering boutique delivering zero-slop web applications, resilient backend architectures, and AI integrations for founders and institutions globally.',
+  summary: 'Founded by Muhammad Mujahid, Axorks is an independent digital engineering studio that builds reliable web applications, custom institutional ERPs, and AI search visibility for founders and businesses globally.',
   principles: [
     {
-      title: 'Cinematic Precision',
-      description: 'Interfaces that command respect. We reject generic boilerplate in favor of bespoke glass physics, deliberate typography, and high-framerate motion.'
+      title: 'Founder-Direct Execution',
+      description: 'Zero bureaucracy or telephone games. You work directly with the founder and principal engineer on every milestone.'
     },
     {
-      title: 'Architectural Rigor',
-      description: 'Strict typing, robust schema design, high-concurrency optimization, and clean separation of concerns built to scale from day one.'
+      title: 'Production Reliability',
+      description: 'Strict typing, robust schema design, automated tests, and fault-tolerant architecture built to run smoothly from day one.'
     },
     {
-      title: 'Founder Velocity',
-      description: 'Zero bureaucracy. Direct access to principal leadership with rapid weekly deployment cycles and transparent milestone deliverables.'
+      title: '100% Code & IP Ownership',
+      description: 'You own every repository, migration script, and asset from day one. No vendor lock-in or recurring proprietary license fees.'
     }
   ],
   capabilities: [
-    'Full-Stack Web Architectures (React, Next.js, Node.js)',
-    'Enterprise Cloud Systems & Relational Databases',
-    'Custom AI Workflows & LLM Agent Integration',
-    'High-Performance E-Commerce & Payment Gateways',
-    'Interactive Liquid Glass & 60fps Micro-interactions',
-    'Institutional ERP & Mission-Critical Portals'
+    'Custom Business Platforms & ERPs (React, Next.js, Node.js)',
+    'High-Performance Cloud Databases (PostgreSQL, Redis)',
+    'Search & AI Discovery (SEO, AEO, GEO Optimization)',
+    'High-Conversion E-Commerce & Stripe Payments',
+    'Interactive 60fps Micro-interactions & Modern UI',
+    'Institutional Portals & Biometric Attendance Integrations'
   ]
 };
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
     id: 'axorks-founder',
-    role: 'Founder & Principal Engineer',
+    role: 'Founder & Principal Systems Architect',
     organization: 'Axorks Studio',
     period: '2023 - Present',
     location: 'Karachi & Global Remote',
-    summary: 'Directing technical vision, client architecture, and hands-on software development across enterprise and luxury web systems.',
+    summary: 'Directing technical vision, client architecture, and hands-on software development across enterprise and modern web systems.',
     highlights: [
       'Delivered flagship systems across Healthcare, Agriculture, Luxury Commerce, and EdTech.',
-      'Achieved zero critical regressions across all client deployments with strict CI/CD and typed safety.',
+      'Achieved zero critical regressions across client deployments with strict automated tests and typed safety.',
       'Collaborated directly with venture-backed founders and institutional leadership.'
     ],
     skills: ['System Architecture', 'React / Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'AI Systems']
@@ -174,9 +174,9 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     location: 'Remote',
     summary: 'Spearheaded full-lifecycle web engineering, API design, database modeling, and frontend performance tuning for international clients.',
     highlights: [
-      'Refactored legacy monoliths into modular decoupled micro-frontends and high-speed API layers.',
+      'Refactored legacy software into modular decoupled micro-frontends and high-speed API layers.',
       'Optimized Lighthouse metrics from 45 to 95+ across client web properties.',
-      'Mentored junior engineers and standardized strict Git review workflows.'
+      'Mentored engineers and standardized strict Git review workflows.'
     ],
     skills: ['TypeScript', 'React', 'REST & GraphQL', 'State Machines', 'Database Tuning']
   }
@@ -185,7 +185,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 't1',
-    quote: 'Muhammad is an exceptional engineering talent. He took our AgroTrace specifications and transformed them into a breathtaking, fault-tolerant telemetry platform ahead of schedule.',
+    quote: 'Muhammad is an exceptional engineering talent. He took our AgroTrace specifications and transformed them into a reliable, fault-tolerant telemetry platform ahead of schedule.',
     clientName: 'Tariq H.',
     clientRole: 'Director of Operations',
     company: 'AgroTrace Network',

@@ -20,15 +20,15 @@ export const ServicesPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
             <TrendingUp className="w-3.5 h-3.5" />
-            <span>Executive Services & Commercial Pricing</span>
+            <span>Engineering Services & Transparent Pricing</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Transparent Pricing. <span className="text-gradient">Sovereign Results.</span>
+            Transparent Scopes. <span className="text-gradient">Real Business Outcomes.</span>
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Fixed milestone pricing, zero hidden scope creep, and direct founder leadership. From custom enterprise LMS and banking cores to high-ROI AI Visibility (SEO + AEO + GEO).
+            Fixed milestone pricing, zero hidden scope creep, and direct founder leadership. From custom campus ERPs and business platforms to high-ROI AI Visibility (SEO + AEO + GEO).
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

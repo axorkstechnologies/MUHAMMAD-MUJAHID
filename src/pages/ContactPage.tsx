@@ -18,15 +18,15 @@ export const ContactPage: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Direct Executive Communication</span>
+            <span>Direct Founder Access</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Initiate Direct <span className="text-gradient">Dialogue</span>
+            Start a Direct <span className="text-gradient">Conversation</span>
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Skip the agency middlemen. Speak directly with Muhammad Mujahid to evaluate system requirements, timeline projections, or architectural feasibility.
+            Skip the agency middlemen. Speak directly with Muhammad Mujahid to evaluate project scope, timelines, or ballpark budgets.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

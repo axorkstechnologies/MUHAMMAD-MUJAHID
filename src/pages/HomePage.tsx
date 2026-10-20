@@ -80,11 +80,11 @@ export const HomePage: React.FC = () => {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                 <span className="text-[11px] font-mono text-cyan-400 font-semibold tracking-wider uppercase">
-                  Core Capabilities & Investment
+                  Services & Transparent Pricing
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                Architectural Disciplines & Capital Tiers
+                What I Build & Transparent Pricing
               </h2>
             </div>
             <div className="text-xs font-mono text-zinc-400 flex items-center gap-2">
@@ -116,9 +116,9 @@ export const HomePage: React.FC = () => {
                         </div>
                         <div>
                           <span className="text-[10px] font-mono text-indigo-300 font-semibold uppercase tracking-wider block">
-                            Enterprise Platforms
+                            Custom Business Platforms & ERPs
                           </span>
-                          <span className="text-xs font-mono text-zinc-400">High-Concurrency Infrastructure</span>
+                          <span className="text-xs font-mono text-zinc-400">Fixed-Scope Delivery • 6-10 Weeks</span>
                         </div>
                       </div>
                       <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
@@ -128,36 +128,36 @@ export const HomePage: React.FC = () => {
 
                     <div className="space-y-2">
                       <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight group-hover:text-indigo-200 transition-colors">
-                        Custom Intelligent Systems
+                        Custom Business Platforms & Institutional ERPs
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
-                        Mission-critical software platforms engineered from the ground up: custom Academic LMS/ERP ecosystems for educational institutions and double-entry sovereign banking cores for financial institutions.
+                        Complete, tailor-made software systems that replace messy spreadsheets, fragmented tools, and slow manual paperwork with one unified, secure platform built specifically for your operations.
                       </p>
                     </div>
 
                     {/* Architectural Specifications Readout */}
                     <div className="p-4 rounded-2xl bg-black/50 border border-white/10 space-y-3 font-mono">
                       <div className="flex items-center justify-between text-[11px] text-zinc-400 border-b border-white/[0.06] pb-2">
-                        <span className="text-indigo-300 font-semibold">Engineered System Benchmarks</span>
-                        <span className="text-emerald-400">100% IP Ownership</span>
+                        <span className="text-indigo-300 font-semibold">System Performance Standards</span>
+                        <span className="text-emerald-400">100% Code Ownership</span>
                       </div>
                       
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
                         <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">CONCURRENCY</div>
+                          <div className="text-[9px] text-zinc-500">CAPACITY</div>
                           <div className="font-bold text-white">10K+ Seats</div>
                         </div>
                         <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">LATENCY</div>
-                          <div className="font-bold text-cyan-400">&lt; 38ms RPC</div>
+                          <div className="text-[9px] text-zinc-500">SPEED</div>
+                          <div className="font-bold text-cyan-400">&lt; 40ms RPC</div>
                         </div>
                         <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">LEDGER</div>
-                          <div className="font-bold text-emerald-400">Zero Drift</div>
+                          <div className="text-[9px] text-zinc-500">INTEGRITY</div>
+                          <div className="font-bold text-emerald-400">Zero Loss</div>
                         </div>
                         <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">DATABASE</div>
-                          <div className="font-bold text-indigo-300">PostgreSQL/Redis</div>
+                          <div className="text-[9px] text-zinc-500">STACK</div>
+                          <div className="font-bold text-indigo-300">TypeScript / Postgres</div>
                         </div>
                       </div>
                     </div>
@@ -166,19 +166,19 @@ export const HomePage: React.FC = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300">
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Custom LMS & ERP (From $8,000)</span>
+                        <span>Academic Campus ERPs (From $8,000)</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Banking & Financial Cores (From $12,000)</span>
+                        <span>Clinical & Healthcare Platforms (From $10,000)</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Biometric & RFID Hardware Telemetry</span>
+                        <span>Biometric Attendance & Telemetry Bridges</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Cryptographic Ledger Reconciliations</span>
+                        <span>Automated Billing, Fees & WhatsApp Alerts</span>
                       </div>
                     </div>
                   </div>
@@ -189,12 +189,12 @@ export const HomePage: React.FC = () => {
                       to="/services"
                       className="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(99,102,241,0.35)] transition-all cursor-pointer"
                     >
-                      <span>Explore Intelligent Systems Scope</span>
+                      <span>Explore Custom Systems Scope</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
 
                     <span className="text-[11px] font-mono text-zinc-400 text-center sm:text-right">
-                      Turnkey delivery: 6 - 12 weeks
+                      Turnkey delivery: 6 - 10 weeks
                     </span>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ export const HomePage: React.FC = () => {
                           <TrendingUp className="w-4 h-4" />
                         </div>
                         <span className="text-[10px] font-mono text-emerald-300 font-bold uppercase tracking-wider">
-                          Search & AI Visibility
+                          Search & AI Discovery
                         </span>
                       </div>
                       <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
@@ -224,10 +224,10 @@ export const HomePage: React.FC = () => {
 
                     <div className="space-y-1">
                       <h4 className="text-xl font-bold text-white font-display">
-                        AI & Search Visibility Suite
+                        Search Engine & AI Discovery Suite
                       </h4>
                       <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                        Get found on Google and get cited whenever prospective clients ask ChatGPT, Perplexity, Gemini, and Claude for recommendations.
+                        Don't just rank on Google. Make sure modern AI assistants (ChatGPT, Perplexity, Gemini, Claude) actively recommend your company by name to prospective buyers.
                       </p>
                     </div>
 
@@ -257,10 +257,10 @@ export const HomePage: React.FC = () => {
                       to="/services"
                       className="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5 transition-colors"
                     >
-                      <span>Review Visibility Matrix</span>
+                      <span>See How AI Search Works</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-                    <span className="text-[10px] font-mono text-zinc-500">Per Month Retainer</span>
+                    <span className="text-[10px] font-mono text-zinc-500">Monthly Retainer</span>
                   </div>
                 </div>
               </Card3D>
@@ -275,18 +275,18 @@ export const HomePage: React.FC = () => {
                           <ShieldCheck className="w-4 h-4" />
                         </div>
                         <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider">
-                          Engineering Studio
+                          Product Studio & Fractional CTO
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-zinc-400">Zero Slop Standard</span>
+                      <span className="text-[10px] font-mono text-emerald-400 font-semibold">Founder-Direct</span>
                     </div>
 
                     <div className="space-y-1">
                       <h4 className="text-xl font-bold text-white font-display">
-                        Axorks Product Studio
+                        Axorks Web Apps & Fractional Tech Lead
                       </h4>
                       <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                        Direct founder accountability. No junior handoffs, no bureaucratic agency layers. Custom web apps (from $3,500) and fractional technical leadership ($4,200/mo).
+                        High-velocity development for ambitious products. We build fast, modern web applications that look and feel like $50k products. MVPs from $3,500 and Fractional CTO at $4,200/mo.
                       </p>
                     </div>
 
@@ -328,14 +328,14 @@ export const HomePage: React.FC = () => {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                 <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
-                  Featured Case Studies
+                  Production Case Studies
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
-                Production Systems & Flagship Architectures
+                Production Systems & Proven Case Studies
               </h2>
               <p className="text-sm text-zinc-400 max-w-2xl font-light">
-                Mission-critical architectures engineered under Axorks leadership. Real-time telemetry, zero-downtime databases, and verifiable commercial results.
+                Real platforms solving real operational problems across agriculture, healthcare, and education. Tested under daily production load.
               </p>
             </div>
 
@@ -343,7 +343,7 @@ export const HomePage: React.FC = () => {
               to="/projects"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 text-white text-xs font-mono transition group cursor-pointer"
             >
-              <span>Explore All Flagship Systems ({PROJECTS_DATA.length})</span>
+              <span>Explore All Case Studies ({PROJECTS_DATA.length})</span>
               <ArrowRight className="w-3.5 h-3.5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -494,7 +494,7 @@ export const HomePage: React.FC = () => {
                     to="/projects"
                     className="text-xs font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1 font-semibold"
                   >
-                    <span>View Healthcare Architecture</span>
+                    <span>Explore Healthcare Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                   <span className="text-[10px] font-mono text-zinc-500">180K+ Encounters</span>
@@ -552,7 +552,7 @@ export const HomePage: React.FC = () => {
                     to="/projects"
                     className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1 font-semibold"
                   >
-                    <span>View Campus ERP Architecture</span>
+                    <span>Explore Campus ERP Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                   <span className="text-[10px] font-mono text-zinc-500">3,200+ Active Seats</span>
@@ -571,15 +571,15 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
             <MessageSquare className="w-3.5 h-3.5" />
-            <span>Direct Technical Leadership</span>
+            <span>Direct Founder Consultation</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight max-w-3xl mx-auto">
-            Ready to Architect Your Next System With Direct Founder Leadership?
+            Have a project in mind? Let's discuss it directly.
           </h2>
 
           <p className="text-sm sm:text-base text-zinc-300 max-w-xl mx-auto font-light leading-relaxed">
-            Skip agency account managers. Discuss system scope, concurrency targets, and fixed timelines directly with Muhammad Mujahid.
+            No sales reps, no discovery decks. Send me a quick WhatsApp message to discuss your timeline, scope, and ballpark budget.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -590,7 +590,7 @@ export const HomePage: React.FC = () => {
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>Direct WhatsApp: {CONTACT_INFO.whatsapp}</span>
+              <span>Message Muhammad on WhatsApp: {CONTACT_INFO.whatsapp}</span>
             </a>
 
             <Link
