@@ -13,7 +13,7 @@ export const CONTACT_INFO = {
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
   availabilityStatus: 'Available for Q2/Q3 Projects • Direct Founder Delivery',
-  bio: 'Founder of Axorks and Principal Systems Architect. I build reliable, high-performance software systems for growing businesses — from school campus ERPs and clinical healthcare portals to custom web applications and AI search visibility. When you hire me, you work directly with the founder writing the code.'
+  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in two core areas: custom web platforms and intelligent visibility systems (SEO, AEO, and GEO). I also architect production enterprise systems (campus ERPs, healthcare platforms, and e-commerce) delivered through Axorks Studio. When you hire me, you work directly with the founder writing the code.'
 };
 
 export const EXECUTIVE_METRICS: MetricHighlight[] = [
@@ -58,7 +58,9 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Production Live',
     liveUrl: 'https://axorks.com',
     year: '2025',
-    role: 'Principal System Architect & Full-Stack Lead'
+    role: 'Principal System Architect & Full-Stack Lead',
+    deliveryModel: 'Axorks Studio Delivery',
+    architectTag: 'Architected by Muhammad Mujahid · Delivered through Axorks Studio'
   },
   {
     id: 'mediverse',
@@ -78,7 +80,9 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Enterprise Active',
     liveUrl: 'https://axorks.com',
     year: '2024 - 2025',
-    role: 'Lead Architect'
+    role: 'Lead Architect',
+    deliveryModel: 'Axorks Studio Delivery',
+    architectTag: 'Architected by Muhammad Mujahid · Delivered through Axorks Studio'
   },
   {
     id: 'fume',
@@ -98,7 +102,9 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Client Deployed',
     liveUrl: 'https://axorks.com',
     year: '2024',
-    role: 'Creative Director & Lead Developer'
+    role: 'Creative Director & Lead Developer',
+    deliveryModel: 'Axorks Studio Delivery',
+    architectTag: 'Architected by Muhammad Mujahid · Delivered through Axorks Studio'
   },
   {
     id: 'phss',
@@ -118,7 +124,9 @@ export const PROJECTS_DATA: Project[] = [
     status: 'Production Live',
     liveUrl: 'https://axorks.com',
     year: '2023 - 2024',
-    role: 'Lead Full-Stack Engineer'
+    role: 'Lead Full-Stack Engineer',
+    deliveryModel: 'Axorks Studio Delivery',
+    architectTag: 'Architected by Muhammad Mujahid · Delivered through Axorks Studio'
   }
 ];
 

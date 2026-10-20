@@ -47,8 +47,8 @@ export const AeoGeoSection: React.FC = () => {
       category: 'GEO'
     },
     {
-      question: 'Who delivers these services at Axorks Studio?',
-      answer: 'All visibility strategies and implementations are delivered directly by Muhammad Mujahid, Founder & Principal Software Architect at Axorks. Clients receive direct founder execution, verified JSON-LD schema implementation, entity graph registration, and bi-weekly performance reports with zero junior handoffs.',
+      question: 'Who delivers these visibility services?',
+      answer: 'All visibility strategies and implementations are delivered directly by Muhammad Mujahid, Founder & Principal Systems Architect. Clients receive direct founder execution, verified JSON-LD schema implementation, entity graph registration, and bi-weekly performance reports with zero junior handoffs.',
       category: 'AEO'
     }
   ];

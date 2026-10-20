@@ -9,8 +9,8 @@ interface RouteSEO {
 
 const ROUTE_SEO: Record<string, RouteSEO> = {
   '/': {
-    title: 'Muhammad Mujahid | Principal Software Architect & Founder of Axorks',
-    description: 'Portfolio of Muhammad Mujahid, Founder of Axorks. Building custom business platforms (LMS from $8k, Banking from $12k), AI & search visibility (SEO, AEO, GEO from $250–$950/mo), and high-performance web applications — with direct founder delivery.',
+    title: 'Muhammad Mujahid | Custom Web Platforms & Intelligent AI Visibility',
+    description: 'High-end specialist portfolio of Muhammad Mujahid, Founder & Principal Systems Architect. Founder-led Custom Web Platforms & Intelligent Visibility (SEO + AEO + GEO from $250-$950/mo), with enterprise systems delivered via Axorks Studio.',
     canonical: 'https://axorks.com/'
   },
   '/about': {
@@ -24,8 +24,8 @@ const ROUTE_SEO: Record<string, RouteSEO> = {
     canonical: 'https://axorks.com/projects'
   },
   '/services': {
-    title: 'Services & Pricing: Custom LMS, Banking & AI Visibility (SEO/AEO/GEO) | Axorks',
-    description: 'Transparent executive pricing: Custom LMS for universities from $8,000, Banking Systems from $12,000, SEO ($250/mo), AEO ($450/mo), GEO ($550/mo), Full Visibility Package ($950/mo), and Custom Web Apps from $3,500.',
+    title: 'Services & Pricing: Custom Web Platforms & Intelligent Visibility | Muhammad Mujahid',
+    description: 'Transparent pricing & scopes: Custom Web Platforms & MVPs from $3,500, AI Visibility (SEO $250/mo, AEO $450/mo, GEO $550/mo, Full Flagship $950/mo), and Axorks Studio Enterprise Systems from $8,000.',
     canonical: 'https://axorks.com/services'
   },
   '/experience': {

@@ -13,6 +13,8 @@ export interface Project {
   liveUrl?: string;
   year: string;
   role: string;
+  architectTag?: string;
+  deliveryModel?: string;
 }
 
 export interface ExperienceItem {

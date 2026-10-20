@@ -112,14 +112,14 @@ export const ServicesPricingSection: React.FC = () => {
         <MotionSection className="text-center max-w-3xl mx-auto space-y-4 mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
             <TrendingUp className="w-3.5 h-3.5" />
-            <span>Core Services & Fixed-Scope Pricing</span>
+            <span>DIRECT SPECIALIST & STUDIO ARCHITECTURE</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
-            Software Systems Engineering & <br className="hidden sm:inline" />
-            <span className="text-gradient-cyan">Search & AI Visibility</span>
+            Custom Web Platforms & <br className="hidden sm:inline" />
+            <span className="text-gradient-cyan">Intelligent Visibility</span>
           </h2>
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
-            Direct founder execution with Muhammad Mujahid. From custom business ERPs and web applications to comprehensive AI platform visibility (SEO, AEO, GEO from $250 - $950/mo). Zero fluff, 100% intellectual property transfer.
+            Direct founder execution with Muhammad Mujahid for custom software platforms and modern AI search visibility (SEO, AEO, GEO from $250 – $950/mo), supported by enterprise-grade vertical platforms deployed through Axorks Studio.
           </p>
         </MotionSection>
 
@@ -171,10 +171,11 @@ export const ServicesPricingSection: React.FC = () => {
         {/* Quick Jump Service Navigator for Instant Conversion */}
         <MotionSection delay={0.12} className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-2 -mx-4 sm:mx-0 px-4 sm:px-0 mb-16 sm:mb-20 scroll-smooth">
           <a
-            href="#category-intelligent-systems"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-indigo-400/40 transition cursor-pointer"
+            href="#category-web-apps"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/35 transition cursor-pointer flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(56,189,248,0.25)]"
           >
-            1. Intelligent Systems ($8k+)
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse inline-block" />
+            <span>1. Custom Web Platforms (Direct)</span>
           </a>
           <a
             href="#category-ai-visibility"
@@ -184,22 +185,21 @@ export const ServicesPricingSection: React.FC = () => {
             <span>2. AI & Search Visibility (SEO/AEO/GEO)</span>
           </a>
           <a
-            href="#category-web-apps"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 hover:text-white border border-white/10 hover:border-cyan-400/40 transition cursor-pointer"
+            href="#category-intelligent-systems"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-300 border border-indigo-500/35 transition cursor-pointer flex items-center gap-2 font-bold"
           >
-            3. Web Apps ($3.5k+) & Sites ($1.2k+)
+            <span>3. Axorks Studio Systems ($8k+)</span>
           </a>
           <a
             href="#pricing-calculator"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 border border-white/10 transition cursor-pointer"
           >
-            4. Scope Estimator ↓
+            <span>4. Scope Estimator ↓</span>
           </a>
         </MotionSection>
 
-
         {/* ========================================================================= */}
-        {/* 1. CUSTOM INTELLIGENT SYSTEMS (Hero Tier - Most Impressive) */}
+        {/* 1. AXORKS STUDIO VERTICAL SYSTEMS (ERP, Clinical, Banking)               */}
         {/* ========================================================================= */}
         <MotionSection delay={0.15} className="mb-28 scroll-mt-24">
           <div id="category-intelligent-systems">
@@ -207,19 +207,19 @@ export const ServicesPricingSection: React.FC = () => {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono mb-2">
-                  <Cpu className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Institutional & Enterprise Platforms</span>
+                  <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Axorks Studio Vertical Systems</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Custom Intelligent Systems
+                  Turnkey Production Platforms & Institutional ERPs
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Mission-critical platforms built for institutional scale, high reliability, and complete data ownership.
+                  Pre-architected operating systems deployed under Muhammad Mujahid's direct architectural oversight with institutional SLAs, full staff onboarding, and complete code ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
-                <span className="text-xs font-mono text-indigo-400/90 block">Tier-1 Institutional Infrastructure</span>
-                <span className="text-[11px] text-zinc-500 font-mono">Custom Enterprise Deployments</span>
+                <span className="text-xs font-mono text-cyan-400/90 block">Architected by Muhammad Mujahid</span>
+                <span className="text-[11px] text-zinc-500 font-mono">Delivered via Axorks Studio</span>
               </div>
             </div>
 
@@ -789,18 +789,18 @@ export const ServicesPricingSection: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
                   <Code className="w-3.5 h-3.5" />
-                  <span>Web Applications & Modern Platforms</span>
+                  <span>DIRECT SPECIALIST OFFER • FOUNDER-LED</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Web Applications & Flagship Websites
+                  Custom Web Platforms & SaaS Applications
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Tailor-crafted full-stack architectures and high-conversion brand flagships engineered with rigorous type safety and 60fps micro-interactions.
+                  Founder-led custom development for serious businesses, funded startups, and leadership teams. 100% direct founder execution, strict TypeScript, and complete code ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
-                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing & Zero Boilerplate</span>
-                <span className="text-[11px] text-zinc-500 font-mono">From $1,200 to $3,500+</span>
+                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing & Zero Junior Handoffs</span>
+                <span className="text-[11px] text-zinc-500 font-mono">From $1,200 to $7,500+</span>
               </div>
             </div>
 

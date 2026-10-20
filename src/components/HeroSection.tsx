@@ -161,36 +161,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             <div className="space-y-1">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
-                  text="Software systems built to run your business."
+                  text="Custom Web Platforms & Intelligent AI Visibility."
                   className="block text-white"
-                  highlightWords={['Software', 'systems', 'business.']}
+                  highlightWords={['Custom', 'Web', 'Platforms', 'Intelligent', 'Visibility.']}
                   highlightClassName="text-gradient block"
                   delay={0.1}
                 />
                 <motion.span 
                   variants={headlineLineVariants} 
-                  className="text-zinc-400 font-normal text-3xl sm:text-4xl lg:text-5xl block mt-1"
+                  className="text-zinc-400 font-normal text-2xl sm:text-3xl lg:text-4xl block mt-2"
                 >
-                  Engineered without the agency fluff.
+                  Engineered to Run Your Business.
                 </motion.span>
               </h1>
             </div>
 
-            {/* Subtext - Clear Personal Authority */}
+            {/* Subtext - Clear Strategic Positioning */}
             <motion.p 
               variants={itemFadeUp}
               className="text-base sm:text-lg text-zinc-300 max-w-2xl font-light leading-relaxed"
             >
-              I am <span className="text-white font-medium">Muhammad Mujahid</span>, Founder of{' '}
-              <a 
-                href={CONTACT_INFO.agencyUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-cyan-300 underline underline-offset-4 decoration-cyan-500/50 hover:decoration-cyan-300 transition-colors font-medium"
-              >
-                Axorks
-              </a>{' '}
-              and Principal Systems Architect. I design and build production-ready digital systems: school ERPs, healthcare platforms, custom web applications, and intelligent search visibility. When you hire me, you work directly with the senior engineer building your product — with guaranteed timelines, transparent pricing, and 100% code ownership.
+              I design and build high-performance web platforms and modern AI search discovery systems for serious companies. You work directly with me—no agency account managers, no junior developers, and 100% ownership of every line of code.
             </motion.p>
 
             {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
@@ -221,7 +212,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('services')}
                   className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Services & Pricing ($1.2k - $12k+)</span>
+                  <span>Services & Pricing</span>
                 </motion.button>
               </MagneticWrapper>
 

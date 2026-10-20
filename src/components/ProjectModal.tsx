@@ -104,7 +104,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         {/* CTA Footer */}
         <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
           <div className="text-xs font-mono text-zinc-400">
-            Engineered by <span className="text-white font-medium">Muhammad Mujahid</span> at Axorks
+            <span className="text-cyan-300 font-medium">Architected by Muhammad Mujahid</span> · Delivered through Axorks Studio
           </div>
 
           <div className="flex items-center gap-3">

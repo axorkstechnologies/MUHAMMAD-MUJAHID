@@ -79,12 +79,15 @@ export const HomePage: React.FC = () => {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
                 <span className="text-[11px] font-mono text-cyan-400 font-semibold tracking-wider uppercase">
-                  Services & Transparent Pricing
+                  TWO WAYS TO WORK TOGETHER
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                What I Build & Transparent Pricing
+                Direct Specialist Engagements & Vertical Studio Systems
               </h2>
+              <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-2xl">
+                Choose direct founder execution for custom software and modern AI search visibility, or deploy proven vertical platforms through Axorks Studio.
+              </p>
             </div>
             <div className="text-xs font-mono text-zinc-400 flex items-center gap-2">
               <span className="text-emerald-400 flex items-center gap-1.5">
@@ -99,38 +102,38 @@ export const HomePage: React.FC = () => {
           {/* Asymmetric 7-Col vs 5-Col Bento Architecture */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            {/* Primary Focal Anchor (7 Cols): Custom Intelligent Systems */}
+            {/* Primary Focal Anchor (7 Cols): Custom Web Platforms & Intelligent Systems (Direct with Muhammad) */}
             <div className="lg:col-span-7">
-              <Card3D maxTilt={3} glowColor="rgba(99, 102, 241, 0.2)" className="h-full">
-                <div className="rounded-3xl p-7 sm:p-9 glass-panel-glow border border-indigo-500/30 bg-gradient-to-b from-indigo-950/25 via-zinc-950/90 to-zinc-950 flex flex-col justify-between h-full shadow-[0_20px_60px_rgba(79,70,229,0.15)] group hover:border-indigo-400/50 transition-all duration-500 relative overflow-hidden">
+              <Card3D maxTilt={3} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
+                <div className="rounded-3xl p-7 sm:p-9 glass-panel-glow border border-cyan-500/30 bg-gradient-to-b from-cyan-950/25 via-zinc-950/90 to-zinc-950 flex flex-col justify-between h-full shadow-[0_20px_60px_rgba(56,189,248,0.15)] group hover:border-cyan-400/50 transition-all duration-500 relative overflow-hidden">
                   
                   {/* Subtle Background Circuit Glow */}
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
 
                   <div className="space-y-6 relative z-10">
                     <div className="flex items-center justify-between pb-4 border-b border-white/10">
                       <div className="flex items-center gap-2">
-                        <div className="p-2 rounded-xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400">
+                        <div className="p-2 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400">
                           <Cpu className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-[10px] font-mono text-indigo-300 font-semibold uppercase tracking-wider block">
-                            Custom Business Platforms & ERPs
+                          <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider block">
+                            DIRECT ENGAGEMENT • FOUNDER-LED
                           </span>
-                          <span className="text-xs font-mono text-zinc-400">Fixed-Scope Delivery • 6-10 Weeks</span>
+                          <span className="text-xs font-mono text-zinc-400">Fixed-Scope Sprints • 3-6 Weeks</span>
                         </div>
                       </div>
                       <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
-                        From $8,000
+                        From $3,500
                       </span>
                     </div>
 
                     <div className="space-y-2">
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight group-hover:text-indigo-200 transition-colors">
-                        Custom Business Platforms & Institutional ERPs
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight group-hover:text-cyan-200 transition-colors">
+                        Custom Web Platforms & Intelligent Software Systems
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
-                        Complete, tailor-made software systems that replace messy spreadsheets, fragmented tools, and slow manual paperwork with one unified, secure platform built specifically for your operations.
+                        Purpose-built web applications, SaaS platforms, and internal business operating engines that off-the-shelf software cannot solve. Engineered directly with strict TypeScript, clean architecture, and rapid deployment.
                       </p>
                     </div>
 
@@ -164,20 +167,20 @@ export const HomePage: React.FC = () => {
                     {/* Systems Included List */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300">
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Academic Campus ERPs (From $8,000)</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        <span>Custom Web Applications & Portals</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Clinical & Healthcare Platforms (From $10,000)</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        <span>SaaS Platforms & Internal Operations</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Biometric Attendance & Hardware Integration</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        <span>Strict TypeScript & Modular Test Suites</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Automated Billing, Fees & WhatsApp Alerts</span>
+                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                        <span>100% Repository & Database Ownership</span>
                       </div>
                     </div>
                   </div>
@@ -186,14 +189,14 @@ export const HomePage: React.FC = () => {
                   <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <Link
                       to="/services"
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(99,102,241,0.35)] transition-all cursor-pointer"
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition-all cursor-pointer"
                     >
-                      <span>Explore Custom Systems Scope</span>
+                      <span>Explore Custom Platforms</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
 
                     <span className="text-[11px] font-mono text-zinc-400 text-center sm:text-right">
-                      Turnkey delivery: 6 - 10 weeks
+                      Fixed sprints: 3 - 6 weeks
                     </span>
                   </div>
                 </div>
@@ -264,51 +267,62 @@ export const HomePage: React.FC = () => {
                 </div>
               </Card3D>
 
-              {/* Module 2: Axorks Studio & Direct Technical Leadership */}
-              <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.18)" className="flex-1">
-                <div className="rounded-3xl p-6 sm:p-7 glass-panel border border-white/10 bg-zinc-950/80 h-full flex flex-col justify-between shadow-lg hover:border-cyan-400/40 transition-all">
+              {/* Module 2: Axorks Studio Vertical Systems */}
+              <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.2)" className="flex-1">
+                <div className="rounded-3xl p-6 sm:p-7 glass-panel border border-indigo-500/30 bg-zinc-950/85 h-full flex flex-col justify-between shadow-lg hover:border-indigo-400/50 transition-all">
                   <div className="space-y-4">
                     <div className="flex items-center justify-between pb-3 border-b border-white/10">
                       <div className="flex items-center gap-2">
-                        <div className="p-1.5 rounded-lg bg-cyan-500/15 text-cyan-400">
-                          <ShieldCheck className="w-4 h-4" />
+                        <div className="p-1.5 rounded-lg bg-indigo-500/15 text-indigo-400">
+                          <Layers className="w-4 h-4" />
                         </div>
-                        <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider">
-                          Product Studio & Fractional CTO
+                        <span className="text-[10px] font-mono text-indigo-300 font-semibold uppercase tracking-wider">
+                          Axorks Studio Systems
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono text-emerald-400 font-semibold">Founder-Direct</span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
+                        TURNKEY PLATFORMS
+                      </span>
                     </div>
 
                     <div className="space-y-1">
                       <h4 className="text-xl font-bold text-white font-display">
-                        Axorks Web Apps & Fractional Tech Lead
+                        Proven Industry Systems Architected for Scale
                       </h4>
                       <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                        High-velocity development for ambitious products. We build fast, modern web applications that look and feel like $50k products. MVPs from $3,500 and Fractional CTO at $4,200/mo.
+                        Turnkey operating systems deployed through Axorks Studio: PHSS Campus ERP (3,200+ students), MediVerse Healthcare EHR (FHIR R4), and AgroTrace IoT.
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-4 text-xs font-mono text-zinc-400 pt-1">
-                      <span className="flex items-center gap-1 text-cyan-300">
-                        <Terminal className="w-3.5 h-3.5" /> Strict TypeScript
-                      </span>
-                      <span>•</span>
-                      <span className="flex items-center gap-1 text-emerald-300">
-                        <Shield className="w-3.5 h-3.5" /> 30-Day SLA Warranty
-                      </span>
+                    <div className="space-y-2 pt-1 text-xs font-mono text-zinc-300">
+                      <div className="flex items-center justify-between py-1 border-b border-white/[0.04]">
+                        <span className="text-zinc-400">School & Campus ERPs</span>
+                        <span className="text-indigo-300 font-bold">From $8,000</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1 border-b border-white/[0.04]">
+                        <span className="text-zinc-400">Clinical Healthcare EHRs</span>
+                        <span className="text-indigo-300 font-bold">From $10,000</span>
+                      </div>
+                      <div className="flex items-center justify-between py-1">
+                        <span className="text-zinc-400">IoT & Commerce Platforms</span>
+                        <span className="text-indigo-300 font-bold">From $5,000</span>
+                      </div>
+                    </div>
+
+                    <div className="text-[10px] font-mono text-zinc-400 pt-1">
+                      <span className="text-cyan-400">Architected by Muhammad Mujahid</span> • Delivered through Axorks Studio
                     </div>
                   </div>
 
                   <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                     <Link
-                      to="/axorks"
-                      className="text-xs font-mono text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-1.5 transition-colors"
+                      to="/services"
+                      className="text-xs font-mono text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-1.5 transition-colors"
                     >
-                      <span>Explore Axorks Philosophy</span>
+                      <span>Explore Studio Platforms</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-                    <span className="text-[10px] font-mono text-zinc-500">axorks.com</span>
+                    <span className="text-[10px] font-mono text-zinc-500">Institutional SLA</span>
                   </div>
                 </div>
               </Card3D>
@@ -370,6 +384,10 @@ export const HomePage: React.FC = () => {
                     <p className="text-xs sm:text-sm font-mono text-cyan-300 mt-1">
                       {agrotrace.subtitle}
                     </p>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[10px] font-mono text-zinc-300 mt-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                      <span>Architected by Muhammad Mujahid • Axorks Studio Delivery</span>
+                    </div>
                   </div>
 
                   <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
@@ -471,6 +489,10 @@ export const HomePage: React.FC = () => {
                       {mediverse.title}
                     </h4>
                     <p className="text-xs text-zinc-400 font-mono mt-0.5">{mediverse.subtitle}</p>
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.04] border border-white/10 text-[9px] font-mono text-zinc-400 mt-2">
+                      <span className="w-1 h-1 rounded-full bg-indigo-400" />
+                      <span>Architected by Muhammad Mujahid • Axorks Studio</span>
+                    </div>
                     <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
                       {mediverse.description}
                     </p>
@@ -529,6 +551,10 @@ export const HomePage: React.FC = () => {
                       {phss.title}
                     </h4>
                     <p className="text-xs text-zinc-400 font-mono mt-0.5">{phss.subtitle}</p>
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.04] border border-white/10 text-[9px] font-mono text-zinc-400 mt-2">
+                      <span className="w-1 h-1 rounded-full bg-cyan-400" />
+                      <span>Architected by Muhammad Mujahid • Axorks Studio</span>
+                    </div>
                     <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
                       {phss.description}
                     </p>

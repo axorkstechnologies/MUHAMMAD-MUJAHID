@@ -313,15 +313,15 @@ export const AboutPage: React.FC = () => {
               {[
                 {
                   q: 'Who is Muhammad Mujahid?',
-                  a: 'Muhammad Mujahid is a software engineer and founder of Axorks, specializing in custom institutional systems, high-concurrency architectures, and omni-channel AI search optimization (AEO/GEO).'
+                  a: 'Muhammad Mujahid is a software engineer and founder of Axorks Studio, specializing as a high-end specialist in Custom Web Platforms and Intelligent Visibility (SEO + AEO + GEO), alongside architecting turnkey production platforms for healthcare, education, and commerce.'
                 },
                 {
-                  q: 'What types of systems does he build?',
-                  a: 'Custom campus ERP and LMS platforms for educational institutions (from $8,000), secure banking & financial systems (from $12,000), modern web applications (from $3,500), and comprehensive visibility engines across Google, ChatGPT, Perplexity, and Claude.'
+                  q: 'What are his personal core offers?',
+                  a: 'Directly with Muhammad: 1) Custom Web Platforms & SaaS development (founder-led, from $3,500), and 2) Intelligent Visibility Systems (getting your brand cited across Google Search, ChatGPT, Perplexity, Gemini, and Claude from $250-$950/mo).'
                 },
                 {
-                  q: 'How does client engagement work?',
-                  a: 'Clients work directly with Muhammad without junior handoffs. Engagements feature milestone-based escrow, full code handover upon delivery, and guaranteed SLA warranties.'
+                  q: 'What systems are delivered through Axorks Studio?',
+                  a: 'Under studio delivery, Muhammad architects turnkey vertical platforms including Campus & School ERPs (such as PHSS serving 3,200+ students), Clinical Healthcare EHRs (MediVerse), and Luxury Commerce storefronts.'
                 }
               ].map((qa, qIdx) => (
                 <Card3D key={qIdx} maxTilt={2.5} glowColor="rgba(16, 185, 129, 0.12)">

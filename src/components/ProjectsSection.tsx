@@ -303,6 +303,10 @@ export const ProjectsSection: React.FC = () => {
                       <p className="text-xs sm:text-sm font-mono text-cyan-300">
                         {filteredProjects[0].subtitle}
                       </p>
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[10px] font-mono text-zinc-300 my-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                        <span>{filteredProjects[0].architectTag || 'Architected by Muhammad Mujahid · Delivered through Axorks Studio'}</span>
+                      </div>
                       <p className="text-sm text-zinc-300 leading-relaxed font-light">
                         {filteredProjects[0].description}
                       </p>
@@ -392,9 +396,13 @@ export const ProjectsSection: React.FC = () => {
                         <h3 className="text-xl font-extrabold text-white font-display tracking-tight group-hover:text-cyan-300 transition-colors">
                           {project.title}
                         </h3>
-                        <p className="text-xs font-mono text-zinc-400 mt-0.5 mb-2">
+                        <p className="text-xs font-mono text-zinc-400 mt-0.5 mb-1.5">
                           {project.subtitle}
                         </p>
+                        <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.04] border border-white/10 text-[9px] font-mono text-zinc-400 mb-2">
+                          <span className="w-1 h-1 rounded-full bg-cyan-400" />
+                          <span>{project.architectTag || 'Architected by Muhammad Mujahid · Axorks Studio'}</span>
+                        </div>
                         <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-light line-clamp-3">
                           {project.description}
                         </p>

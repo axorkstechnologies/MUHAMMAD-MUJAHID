@@ -28,7 +28,7 @@ export const ServicesPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Fixed milestone pricing, zero hidden scope creep, and direct founder leadership. From custom campus ERPs and business platforms to high-ROI AI Visibility (SEO + AEO + GEO).
+            Fixed milestone pricing, zero hidden scope creep, and direct founder leadership. From custom web applications and intelligent AI visibility (SEO + AEO + GEO) to proven enterprise systems delivered via Axorks Studio.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
