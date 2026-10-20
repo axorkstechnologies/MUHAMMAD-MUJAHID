@@ -422,33 +422,6 @@
   }
 }
 
-.tech-reticle {
-  position: relative;
-}
-
-.tech-reticle::before,
-.tech-reticle::after {
-  content: "";
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  pointer-events: none;
-}
-
-.tech-reticle::before {
-  top: 8px;
-  left: 8px;
-  border-top: 1.5px solid rgba(56, 189, 248, 0.6);
-  border-left: 1.5px solid rgba(56, 189, 248, 0.6);
-}
-
-.tech-reticle::after {
-  bottom: 8px;
-  right: 8px;
-  border-bottom: 1.5px solid rgba(56, 189, 248, 0.6);
-  border-right: 1.5px solid rgba(56, 189, 248, 0.6);
-}
-
 /* Hide scrollbar utility for clean mobile carousels and pill navigators */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -476,36 +449,6 @@
 .hairline-rule {
   height: 1px;
   background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.15) 30%, rgba(56, 189, 248, 0.3) 50%, rgba(255, 255, 255, 0.15) 70%, transparent 100%);
-}
-
-.crosshair-corner {
-  position: relative;
-}
-
-.crosshair-corner::before {
-  content: "+";
-  position: absolute;
-  top: -8px;
-  left: -8px;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  line-height: 1;
-  color: rgba(56, 189, 248, 0.5);
-  pointer-events: none;
-  font-weight: 300;
-}
-
-.crosshair-corner::after {
-  content: "+";
-  position: absolute;
-  bottom: -8px;
-  right: -8px;
-  font-family: var(--font-mono);
-  font-size: 14px;
-  line-height: 1;
-  color: rgba(56, 189, 248, 0.5);
-  pointer-events: none;
-  font-weight: 300;
 }
 
 .spec-badge {

@@ -152,7 +152,7 @@ export const ServicesPricingSection: React.FC = () => {
             }
           ].map((item, idx) => (
             <Card3D key={idx} maxTilt={4} glowColor="rgba(255,255,255,0.08)">
-              <div className="p-4 sm:p-5 rounded-2xl glass-panel border border-white/[0.08] flex flex-col justify-between h-full shadow-lg hover:border-white/20 transition-all duration-300 relative crosshair-corner">
+              <div className="p-4 sm:p-5 rounded-2xl glass-panel border border-white/[0.08] flex flex-col justify-between h-full shadow-lg hover:border-white/20 transition-all duration-300 relative">
                 <div className="flex items-center justify-between pb-2 border-b border-white/[0.06] mb-3">
                   <div className="p-2 rounded-xl bg-white/[0.04] border border-white/10 shrink-0">
                     {item.icon}
@@ -199,209 +199,164 @@ export const ServicesPricingSection: React.FC = () => {
         </MotionSection>
 
         {/* ========================================================================= */}
-        {/* 1. AXORKS STUDIO VERTICAL SYSTEMS (ERP, Clinical, Banking)               */}
+        {/* 1. CUSTOM WEB PLATFORMS & SAAS APPLICATIONS (DIRECT SPECIALIST) */}
         {/* ========================================================================= */}
         <MotionSection delay={0.15} className="mb-28 scroll-mt-24">
-          <div id="category-intelligent-systems">
+          <div id="category-web-apps">
             {/* Category Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono mb-2">
-                  <Layers className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Axorks Studio Vertical Systems</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
+                  <Code className="w-3.5 h-3.5" />
+                  <span>DIRECT SPECIALIST OFFER • FOUNDER-LED</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Turnkey Production Platforms & Institutional ERPs
+                  Custom Web Platforms & SaaS Applications
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Pre-architected operating systems deployed under Muhammad Mujahid's direct architectural oversight with institutional SLAs, full staff onboarding, and complete code ownership.
+                  Founder-led custom development for serious businesses, funded startups, and leadership teams. 100% direct founder execution, strict TypeScript, and complete code ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
-                <span className="text-xs font-mono text-cyan-400/90 block">Architected by Muhammad Mujahid</span>
-                <span className="text-[11px] text-zinc-500 font-mono">Delivered via Axorks Studio</span>
+                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing & Zero Junior Handoffs</span>
+                <span className="text-[11px] text-zinc-500 font-mono">From $1,200 to $7,500+</span>
               </div>
             </div>
 
-            {/* Asymmetric Cards Grid (5-col LMS vs 7-col Banking Core) */}
+            {/* Asymmetric Grid: 7-col Web App vs 5-col Professional Site */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               
-              {/* LMS System Card (5 cols) */}
-              <div className="lg:col-span-5 h-full">
-                <Card3D maxTilt={6} glowColor="rgba(99, 102, 241, 0.2)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between h-full glass-panel-glow border border-indigo-500/30 bg-gradient-to-b from-indigo-950/20 via-zinc-950/80 to-zinc-950/90 shadow-[0_20px_50px_rgba(79,70,229,0.15)] group hover:border-indigo-400/50 transition-all duration-500">
-                    
-                    {/* Accent Header Ribbon */}
-                    <div>
-                      <div className="flex items-center justify-between gap-3 mb-4">
-                        <div className="flex items-center gap-2.5">
-                          <div className="p-2.5 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.3)]">
-                            <GraduationCap className="w-5 h-5" />
-                          </div>
-                          <span className="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/25 text-[11px] font-mono text-indigo-300 font-medium">
-                            Schools & Universities
-                          </span>
-                        </div>
-                        <span className="text-xs font-mono text-zinc-400 flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-zinc-500" />
-                          ~6-10 Weeks
-                        </span>
-                      </div>
-
-                      <h4 className="text-xl sm:text-2xl font-extrabold text-white font-display">
-                        Custom LMS & Academic Campus ERP
-                      </h4>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        End-to-end academic operating ecosystem unifying multi-role student progression, faculty administration, biometric RFID attendance, and automated financial reconciliations.
-                      </p>
-
-                      {/* Price Banner */}
-                      <div className="my-6 p-4 rounded-2xl bg-indigo-500/[0.06] border border-indigo-500/20 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-indigo-300 uppercase tracking-wider block">Institutional Package</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $8,000</span>
-                            <span className="text-xs font-mono text-zinc-400">turnkey build</span>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-medium">
-                            <Check className="w-3 h-3" />
-                            10,000+ Concurrency
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Capabilities List */}
-                      <div className="space-y-3 mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
-                          Architectural Capabilities Included:
-                        </div>
-                        {[
-                          'Multi-Tier Portals: Dedicated dashboards for Chancellor, Faculty, Student, and Parent',
-                          'Automated Grading Engine: Continuous GPA computation & instant digital report cards',
-                          'Biometric & RFID Ingestion: Campus entry logs with automated SMS/WhatsApp alerts',
-                          'Fee Challan & Billing Automation: Dynamic barcode vouchers & online bank reconciliation',
-                          'Digital Course Repositories: Syllabus distribution, assignment submissions & forums',
-                          'Fault-Tolerant Infrastructure: PostgreSQL cluster, Redis caching & 99.9% uptime SLA'
-                        ].map((feature, fIdx) => (
-                          <div key={fIdx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                            <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                            <span>{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Card CTA */}
-                    <div className="pt-6 border-t border-white/[0.08]">
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Custom%20LMS%20for%20our%20School%20%2F%20University%20(Starting%20at%20%248%2C000)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3.5 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(99,102,241,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        <span>Request LMS Architecture Scope</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </a>
-                      <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">
-                        Verified architecture referenced from PHSS Institutional deployment
-                      </p>
-                    </div>
-                  </div>
-                </Card3D>
-              </div>
-
-              {/* Banking System Card (7 cols - Dominant Enterprise Flagship) */}
+              {/* 3. Custom Web Application Development (7 cols) */}
               <div className="lg:col-span-7 h-full">
-                <Card3D maxTilt={6} glowColor="rgba(16, 185, 129, 0.25)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel-glow border-2 border-emerald-500/40 bg-gradient-to-b from-emerald-950/25 via-zinc-950/85 to-zinc-950 shadow-[0_24px_60px_rgba(16,185,129,0.2)] group hover:border-emerald-400/60 transition-all duration-500">
-                    
-                    {/* Enterprise Ribbon */}
-                    <div className="absolute top-0 right-6 sm:right-10 px-4 py-1 rounded-b-xl bg-emerald-500/20 border-b border-x border-emerald-500/40 text-[10px] font-mono text-emerald-300 uppercase tracking-widest font-bold">
-                      ENTERPRISE CORE // TIER-0
-                    </div>
-
-                    {/* Accent Header Ribbon */}
+                <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
+                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-cyan-500/25 bg-gradient-to-b from-cyan-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(6,182,212,0.12)] hover:border-cyan-400/40 transition-all duration-300">
                     <div>
-                      <div className="flex items-center justify-between gap-3 mb-4 pt-2">
-                        <div className="flex items-center gap-2.5">
-                          <div className="p-2.5 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-                            <Landmark className="w-5 h-5" />
-                          </div>
-                          <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-[11px] font-mono text-emerald-300 font-medium">
-                            Fintech & Financial Institutions
-                          </span>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
+                          <Code className="w-3.5 h-3.5 text-cyan-400" />
+                          <span>CATEGORY 03 // FULL-STACK</span>
                         </div>
-                        <span className="text-xs font-mono text-zinc-400 flex items-center gap-1">
-                          <Clock className="w-3.5 h-3.5 text-zinc-500" />
-                          ~8-14 Weeks
+                        <span className="text-xs font-mono text-zinc-400">~4-6 Weeks</span>
+                      </div>
+
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
+                        Custom Web Application Development
+                      </h3>
+                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
+                        Custom SaaS platforms, real-time analytics dashboards, and multi-tenant operational applications built on modern typed architectures with high-velocity deployment.
+                      </p>
+
+                      <div className="my-6 p-4 rounded-2xl bg-cyan-500/[0.06] border border-cyan-500/20 flex items-baseline justify-between">
+                        <div>
+                          <span className="text-[11px] font-mono text-cyan-300 uppercase tracking-wider block">Custom Application Scope</span>
+                          <div className="flex items-baseline gap-2 mt-0.5">
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $3,500</span>
+                            <span className="text-xs font-mono text-zinc-400">fixed sprint delivery</span>
+                          </div>
+                        </div>
+                        <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-[10px] font-mono">
+                          React + Node/Postgres
                         </span>
                       </div>
 
-                      <h4 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-display">
-                        Banking & Financial Management Core
-                      </h4>
-                      <p className="text-xs sm:text-sm text-zinc-300 mt-2 font-light leading-relaxed">
-                        Fault-tolerant core financial orchestration engineered with cryptographic double-entry ledger integrity, real-time settlement, automated KYC/AML, and multi-tenant compliance.
-                      </p>
-
-                      {/* Price Banner */}
-                      <div className="my-6 p-4 rounded-2xl bg-emerald-500/[0.08] border border-emerald-500/25 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-emerald-300 uppercase tracking-wider block">Enterprise Financial Core</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $12,000</span>
-                            <span className="text-xs font-mono text-zinc-400">custom architecture</span>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-medium">
-                            <Shield className="w-3 h-3" />
-                            Zero-Drift Ledger
-                          </span>
-                        </div>
-                      </div>
-
-                      {/* Capabilities List (2-column layout for rich dominant space) */}
-                      <div className="mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mb-3">
-                          Architectural Capabilities Included:
-                        </div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div className="space-y-3 mb-8">
+                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                           {[
-                            'Immutable Double-Entry Ledger: Mathematically verified debit/credit reconciliation engine',
-                            'Multi-Currency & FX Layer: Dynamic currency wallets, real-time rates & spread margins',
-                            'KYC & AML Automation: Customer verification pipelines & automated fraud detection',
-                            'Bank-Grade Encryption: AES-256-GCM data layer, HSM key vaults & SOC2 audit compliance',
-                            'Multi-Signature Approvals: Maker-Checker transaction workflows & non-repudiation audit trails',
-                            'High-Throughput Clearing Layer: Sub-400ms transaction dispatch & automated webhooks'
-                          ].map((feature, fIdx) => (
-                            <div key={fIdx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                              <span>{feature}</span>
+                            'Modern interactive UI with smooth animations and responsive design',
+                            'Full-Stack API architecture (Node.js/Express, REST/GraphQL, WebSockets)',
+                            'Robust PostgreSQL database schema design with automated migrations',
+                            'Authentication with Role-Based Access Control (RBAC) & session security',
+                            'Automated CI/CD deployment pipelines & cloud hosting configuration',
+                            '100% intellectual property transfer & complete clean repository'
+                          ].map((item, idx) => (
+                            <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
+                              <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                              <span>{item}</span>
                             </div>
                           ))}
                         </div>
                       </div>
                     </div>
 
-                    {/* Card CTA */}
                     <div className="pt-6 border-t border-white/[0.08]">
                       <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Banking%20%2F%20Financial%20Management%20System%20(Starting%20at%20%2412%2C000)."
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Application%20Development%20(From%20%243%2C500)."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-4 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
+                        className="w-full py-3.5 px-5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition-all duration-300 cursor-pointer"
                       >
                         <MessageSquare className="w-4 h-4" />
-                        <span>Request Financial System Scope</span>
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        <span>Discuss Web Application Build</span>
+                        <ArrowRight className="w-4 h-4" />
                       </a>
-                      <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">
-                        Direct executive consultation under NDA with full IP transfer
+                    </div>
+                  </div>
+                </Card3D>
+              </div>
+
+              {/* 4. Professional Website Development (5 cols) */}
+              <div className="lg:col-span-5 h-full">
+                <Card3D maxTilt={5} glowColor="rgba(244, 114, 182, 0.2)" className="h-full">
+                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-pink-500/25 bg-gradient-to-b from-pink-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(244,114,182,0.12)] hover:border-pink-400/40 transition-all duration-300">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-mono">
+                          <Globe className="w-3.5 h-3.5 text-pink-400" />
+                          <span>CATEGORY 04 // WEB PRESENCE</span>
+                        </div>
+                        <span className="text-xs font-mono text-zinc-400">~2-3 Weeks</span>
+                      </div>
+
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
+                        Professional Website Development
+                      </h3>
+                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
+                        High-conversion corporate websites, portfolio showcases, and brand platforms crafted with polished visual design, 60fps micro-interactions, and 95+ Lighthouse speed.
                       </p>
+
+                      <div className="my-6 p-4 rounded-2xl bg-pink-500/[0.06] border border-pink-500/20 flex items-baseline justify-between">
+                        <div>
+                          <span className="text-[11px] font-mono text-pink-300 uppercase tracking-wider block">Professional Web Build</span>
+                          <div className="flex items-baseline gap-2 mt-0.5">
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $1,200</span>
+                            <span className="text-xs font-mono text-zinc-400">rapid turnaround</span>
+                          </div>
+                        </div>
+                        <span className="px-2.5 py-1 rounded-md bg-pink-500/15 border border-pink-500/30 text-pink-300 text-[10px] font-mono">
+                          Lighthouse 95+
+                        </span>
+                      </div>
+
+                      <div className="space-y-3 mb-8">
+                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
+                        {[
+                          '100% custom UI/UX design (zero boilerplate or cookie-cutter templates)',
+                          'Fluid micro-interactions and smooth scroll motion physics',
+                          'Lighthouse 95+ performance, mobile responsiveness & accessibility tuning',
+                          'On-page technical SEO & OpenGraph social preview configuration',
+                          'Integrated contact forms, WhatsApp lead hooks & analytics setup',
+                          'Domain routing, SSL certificate setup & 30 days post-launch support'
+                        ].map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
+                            <CheckCircle2 className="w-4 h-4 text-pink-400 shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-6 border-t border-white/[0.08]">
+                      <a
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Professional%20Website%20Development%20(From%20%241%2C200)."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3.5 px-5 rounded-2xl bg-pink-500 hover:bg-pink-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(244,114,182,0.35)] transition-all duration-300 cursor-pointer"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Discuss Website Project</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </a>
                     </div>
                   </div>
                 </Card3D>
@@ -780,164 +735,209 @@ export const ServicesPricingSection: React.FC = () => {
 
 
         {/* ========================================================================= */}
-        {/* 3 & 4: WEB APPLICATION DEVELOPMENT & WEBSITE DEVELOPMENT */}
+        {/* 3. AXORKS STUDIO VERTICAL SYSTEMS (ERP, Clinical, Banking)               */}
         {/* ========================================================================= */}
         <MotionSection delay={0.25} className="mb-28 scroll-mt-24">
-          <div id="category-web-apps">
+          <div id="category-intelligent-systems">
             {/* Category Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
-                  <Code className="w-3.5 h-3.5" />
-                  <span>DIRECT SPECIALIST OFFER • FOUNDER-LED</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono mb-2">
+                  <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Axorks Studio Vertical Systems</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Custom Web Platforms & SaaS Applications
+                  Turnkey Production Platforms & Institutional ERPs
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Founder-led custom development for serious businesses, funded startups, and leadership teams. 100% direct founder execution, strict TypeScript, and complete code ownership.
+                  Pre-architected operating systems deployed under Muhammad Mujahid's direct architectural oversight with institutional SLAs, full staff onboarding, and complete code ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
-                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing & Zero Junior Handoffs</span>
-                <span className="text-[11px] text-zinc-500 font-mono">From $1,200 to $7,500+</span>
+                <span className="text-xs font-mono text-cyan-400/90 block">Architected by Muhammad Mujahid</span>
+                <span className="text-[11px] text-zinc-500 font-mono">Delivered via Axorks Studio</span>
               </div>
             </div>
 
-            {/* Asymmetric Grid: 7-col Web App vs 5-col Professional Site */}
+            {/* Asymmetric Cards Grid (5-col LMS vs 7-col Banking Core) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               
-              {/* 3. Custom Web Application Development (7 cols) */}
-              <div className="lg:col-span-7 h-full">
-                <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-cyan-500/25 bg-gradient-to-b from-cyan-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(6,182,212,0.12)] hover:border-cyan-400/40 transition-all duration-300">
+              {/* LMS System Card (5 cols) */}
+              <div className="lg:col-span-5 h-full">
+                <Card3D maxTilt={6} glowColor="rgba(99, 102, 241, 0.2)" className="h-full">
+                  <div className="relative rounded-3xl p-7 sm:p-8 flex flex-col justify-between h-full glass-panel-glow border border-indigo-500/30 bg-gradient-to-b from-indigo-950/20 via-zinc-950/80 to-zinc-950/90 shadow-[0_20px_50px_rgba(79,70,229,0.15)] group hover:border-indigo-400/50 transition-all duration-500">
+                    
+                    {/* Accent Header Ribbon */}
                     <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
-                          <Code className="w-3.5 h-3.5 text-cyan-400" />
-                          <span>CATEGORY 03 // FULL-STACK</span>
-                        </div>
-                        <span className="text-xs font-mono text-zinc-400">~4-6 Weeks</span>
-                      </div>
-
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
-                        Custom Web Application Development
-                      </h3>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        Custom SaaS platforms, real-time analytics dashboards, and multi-tenant operational applications built on modern typed architectures with high-velocity deployment.
-                      </p>
-
-                      <div className="my-6 p-4 rounded-2xl bg-cyan-500/[0.06] border border-cyan-500/20 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-cyan-300 uppercase tracking-wider block">Custom Application Scope</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $3,500</span>
-                            <span className="text-xs font-mono text-zinc-400">fixed sprint delivery</span>
+                      <div className="flex items-center justify-between gap-3 mb-4">
+                        <div className="flex items-center gap-2.5">
+                          <div className="p-2.5 rounded-2xl bg-indigo-500/15 border border-indigo-500/30 text-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.3)]">
+                            <GraduationCap className="w-5 h-5" />
                           </div>
+                          <span className="px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/25 text-[11px] font-mono text-indigo-300 font-medium">
+                            Schools & Universities
+                          </span>
                         </div>
-                        <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-[10px] font-mono">
-                          React + Node/Postgres
+                        <span className="text-xs font-mono text-zinc-400 flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-zinc-500" />
+                          ~6-10 Weeks
                         </span>
                       </div>
 
+                      <h4 className="text-xl sm:text-2xl font-extrabold text-white font-display">
+                        Custom LMS & Academic Campus ERP
+                      </h4>
+                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
+                        End-to-end academic operating ecosystem unifying multi-role student progression, faculty administration, biometric RFID attendance, and automated financial reconciliations.
+                      </p>
+
+                      {/* Price Banner */}
+                      <div className="my-6 p-4 rounded-2xl bg-indigo-500/[0.06] border border-indigo-500/20 flex items-baseline justify-between">
+                        <div>
+                          <span className="text-[11px] font-mono text-indigo-300 uppercase tracking-wider block">Institutional Package</span>
+                          <div className="flex items-baseline gap-2 mt-0.5">
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $8,000</span>
+                            <span className="text-xs font-mono text-zinc-400">turnkey build</span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-medium">
+                            <Check className="w-3 h-3" />
+                            10,000+ Concurrency
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Capabilities List */}
                       <div className="space-y-3 mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">
+                          Architectural Capabilities Included:
+                        </div>
+                        {[
+                          'Multi-Tier Portals: Dedicated dashboards for Chancellor, Faculty, Student, and Parent',
+                          'Automated Grading Engine: Continuous GPA computation & instant digital report cards',
+                          'Biometric & RFID Ingestion: Campus entry logs with automated SMS/WhatsApp alerts',
+                          'Fee Challan & Billing Automation: Dynamic barcode vouchers & online bank reconciliation',
+                          'Digital Course Repositories: Syllabus distribution, assignment submissions & forums',
+                          'Fault-Tolerant Infrastructure: PostgreSQL cluster, Redis caching & 99.9% uptime SLA'
+                        ].map((feature, fIdx) => (
+                          <div key={fIdx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
+                            <CheckCircle2 className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Card CTA */}
+                    <div className="pt-6 border-t border-white/[0.08]">
+                      <a
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Custom%20LMS%20for%20our%20School%20%2F%20University%20(Starting%20at%20%248%2C000)."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-3.5 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(99,102,241,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
+                      >
+                        <MessageSquare className="w-4 h-4" />
+                        <span>Request LMS Architecture Scope</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                      </a>
+                      <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">
+                        Verified architecture referenced from PHSS Institutional deployment
+                      </p>
+                    </div>
+                  </div>
+                </Card3D>
+              </div>
+
+              {/* Banking System Card (7 cols - Dominant Enterprise Flagship) */}
+              <div className="lg:col-span-7 h-full">
+                <Card3D maxTilt={6} glowColor="rgba(16, 185, 129, 0.25)" className="h-full">
+                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel-glow border-2 border-emerald-500/40 bg-gradient-to-b from-emerald-950/25 via-zinc-950/85 to-zinc-950 shadow-[0_24px_60px_rgba(16,185,129,0.2)] group hover:border-emerald-400/60 transition-all duration-500">
+                    
+                    {/* Enterprise Ribbon */}
+                    <div className="absolute top-0 right-6 sm:right-10 px-4 py-1 rounded-b-xl bg-emerald-500/20 border-b border-x border-emerald-500/40 text-[10px] font-mono text-emerald-300 uppercase tracking-widest font-bold">
+                      ENTERPRISE CORE // TIER-0
+                    </div>
+
+                    {/* Accent Header Ribbon */}
+                    <div>
+                      <div className="flex items-center justify-between gap-3 mb-4 pt-2">
+                        <div className="flex items-center gap-2.5">
+                          <div className="p-2.5 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
+                            <Landmark className="w-5 h-5" />
+                          </div>
+                          <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-[11px] font-mono text-emerald-300 font-medium">
+                            Fintech & Financial Institutions
+                          </span>
+                        </div>
+                        <span className="text-xs font-mono text-zinc-400 flex items-center gap-1">
+                          <Clock className="w-3.5 h-3.5 text-zinc-500" />
+                          ~8-14 Weeks
+                        </span>
+                      </div>
+
+                      <h4 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-display">
+                        Banking & Financial Management Core
+                      </h4>
+                      <p className="text-xs sm:text-sm text-zinc-300 mt-2 font-light leading-relaxed">
+                        Fault-tolerant core financial orchestration engineered with cryptographic double-entry ledger integrity, real-time settlement, automated KYC/AML, and multi-tenant compliance.
+                      </p>
+
+                      {/* Price Banner */}
+                      <div className="my-6 p-4 rounded-2xl bg-emerald-500/[0.08] border border-emerald-500/25 flex items-baseline justify-between">
+                        <div>
+                          <span className="text-[11px] font-mono text-emerald-300 uppercase tracking-wider block">Enterprise Financial Core</span>
+                          <div className="flex items-baseline gap-2 mt-0.5">
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $12,000</span>
+                            <span className="text-xs font-mono text-zinc-400">custom architecture</span>
+                          </div>
+                        </div>
+                        <div className="text-right">
+                          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-medium">
+                            <Shield className="w-3 h-3" />
+                            Zero-Drift Ledger
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Capabilities List (2-column layout for rich dominant space) */}
+                      <div className="mb-8">
+                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mb-3">
+                          Architectural Capabilities Included:
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {[
-                            'Modern interactive UI with smooth animations and responsive design',
-                            'Full-Stack API architecture (Node.js/Express, REST/GraphQL, WebSockets)',
-                            'Robust PostgreSQL database schema design with automated migrations',
-                            'Authentication with Role-Based Access Control (RBAC) & session security',
-                            'Automated CI/CD deployment pipelines & cloud hosting configuration',
-                            '100% intellectual property transfer & complete clean repository'
-                          ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                              <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                              <span>{item}</span>
+                            'Immutable Double-Entry Ledger: Mathematically verified debit/credit reconciliation engine',
+                            'Multi-Currency & FX Layer: Dynamic currency wallets, real-time rates & spread margins',
+                            'KYC & AML Automation: Customer verification pipelines & automated fraud detection',
+                            'Bank-Grade Encryption: AES-256-GCM data layer, HSM key vaults & SOC2 audit compliance',
+                            'Multi-Signature Approvals: Maker-Checker transaction workflows & non-repudiation audit trails',
+                            'High-Throughput Clearing Layer: Sub-400ms transaction dispatch & automated webhooks'
+                          ].map((feature, fIdx) => (
+                            <div key={fIdx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
+                              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                              <span>{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
                     </div>
 
+                    {/* Card CTA */}
                     <div className="pt-6 border-t border-white/[0.08]">
                       <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Application%20Development%20(From%20%243%2C500)."
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Banking%20%2F%20Financial%20Management%20System%20(Starting%20at%20%2412%2C000)."
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full py-3.5 px-5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition-all duration-300 cursor-pointer"
+                        className="w-full py-4 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
                       >
                         <MessageSquare className="w-4 h-4" />
-                        <span>Discuss Web Application Build</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <span>Request Financial System Scope</span>
+                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </a>
-                    </div>
-                  </div>
-                </Card3D>
-              </div>
-
-              {/* 4. Professional Website Development (5 cols) */}
-              <div className="lg:col-span-5 h-full">
-                <Card3D maxTilt={5} glowColor="rgba(244, 114, 182, 0.2)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-pink-500/25 bg-gradient-to-b from-pink-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(244,114,182,0.12)] hover:border-pink-400/40 transition-all duration-300">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-mono">
-                          <Globe className="w-3.5 h-3.5 text-pink-400" />
-                          <span>CATEGORY 04 // WEB PRESENCE</span>
-                        </div>
-                        <span className="text-xs font-mono text-zinc-400">~2-3 Weeks</span>
-                      </div>
-
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
-                        Professional Website Development
-                      </h3>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        High-conversion corporate websites, portfolio showcases, and brand platforms crafted with polished visual design, 60fps micro-interactions, and 95+ Lighthouse speed.
+                      <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">
+                        Direct executive consultation under NDA with full IP transfer
                       </p>
-
-                      <div className="my-6 p-4 rounded-2xl bg-pink-500/[0.06] border border-pink-500/20 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-pink-300 uppercase tracking-wider block">Professional Web Build</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $1,200</span>
-                            <span className="text-xs font-mono text-zinc-400">rapid turnaround</span>
-                          </div>
-                        </div>
-                        <span className="px-2.5 py-1 rounded-md bg-pink-500/15 border border-pink-500/30 text-pink-300 text-[10px] font-mono">
-                          Lighthouse 95+
-                        </span>
-                      </div>
-
-                      <div className="space-y-3 mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
-                        {[
-                          '100% custom UI/UX design (zero boilerplate or cookie-cutter templates)',
-                          'Fluid micro-interactions and smooth scroll motion physics',
-                          'Lighthouse 95+ performance, mobile responsiveness & accessibility tuning',
-                          'On-page technical SEO & OpenGraph social preview configuration',
-                          'Integrated contact forms, WhatsApp lead hooks & analytics setup',
-                          'Domain routing, SSL certificate setup & 30 days post-launch support'
-                        ].map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                            <CheckCircle2 className="w-4 h-4 text-pink-400 shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="pt-6 border-t border-white/[0.08]">
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Professional%20Website%20Development%20(From%20%241%2C200)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3.5 px-5 rounded-2xl bg-pink-500 hover:bg-pink-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(244,114,182,0.35)] transition-all duration-300 cursor-pointer"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        <span>Discuss Website Project</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
                     </div>
                   </div>
                 </Card3D>

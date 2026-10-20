@@ -69,7 +69,7 @@ export const HomePage: React.FC = () => {
       {/* 2. Asymmetric Bento Grid System */}
       <section className="py-20 border-y border-white/[0.08] bg-[#050508]/80 relative overflow-hidden">
         {/* Subtle Engineering Blueprint Grid */}
-        <div className="absolute inset-0 blueprint-grid opacity-30 pointer-events-none" />
+        <div className="absolute inset-0 blueprint-grid opacity-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
           
@@ -394,6 +394,22 @@ export const HomePage: React.FC = () => {
                     {agrotrace.description}
                   </p>
 
+                  {/* 3-Part Operational Architecture Monograph */}
+                  <div className="space-y-2 py-3 px-3.5 rounded-2xl bg-black/50 border border-white/[0.08] text-xs font-mono">
+                    <div className="flex items-start gap-2 text-zinc-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
+                      <span><strong className="text-amber-300 font-medium">Challenge:</strong> 28% spoilage in post-harvest transit from silent refrigeration failure.</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-zinc-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
+                      <span><strong className="text-cyan-300 font-medium">System:</strong> Edge sensor telemetry handling 12,500+ events/sec with offline-first buffer.</span>
+                    </div>
+                    <div className="flex items-start gap-2 text-zinc-300">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                      <span><strong className="text-emerald-300 font-medium">Impact:</strong> 34% spoilage reduction · $380,000+ perishable inventory saved.</span>
+                    </div>
+                  </div>
+
                   {/* Production Metrics */}
                   <div className="grid grid-cols-3 gap-2 py-3 border-y border-white/10 font-mono">
                     {agrotrace.metrics.map((m, idx) => (
@@ -496,6 +512,13 @@ export const HomePage: React.FC = () => {
                     <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
                       {mediverse.description}
                     </p>
+
+                    {/* Operational Summary */}
+                    <div className="space-y-1.5 p-3 rounded-xl bg-black/40 border border-white/[0.06] text-[11px] font-mono mt-3">
+                      <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Bottleneck:</span> 18-min manual lookup delay per patient visit</div>
+                      <div className="text-zinc-300"><span className="text-indigo-400 font-semibold">• Solution:</span> FHIR R4 encrypted event bus & 0.2s ER queue</div>
+                      <div className="text-emerald-400 font-medium"><span>• Impact:</span> -1.8 hrs/shift saved · 100% security audit pass</div>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.06] text-center font-mono">
@@ -558,6 +581,13 @@ export const HomePage: React.FC = () => {
                     <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
                       {phss.description}
                     </p>
+
+                    {/* Operational Summary */}
+                    <div className="space-y-1.5 p-3 rounded-xl bg-black/40 border border-white/[0.06] text-[11px] font-mono mt-3">
+                      <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Bottleneck:</span> 3 weeks overtime on manual report cards & fee loss</div>
+                      <div className="text-zinc-300"><span className="text-cyan-400 font-semibold">• Solution:</span> Instant GPA engine + biometric parent WhatsApp alerts</div>
+                      <div className="text-emerald-400 font-medium"><span>• Impact:</span> 3,200+ students · 92% faster grading · 99.4% fee recovery</div>
+                    </div>
                   </div>
 
                   <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.06] text-center font-mono">

@@ -311,6 +311,13 @@ export const ProjectsSection: React.FC = () => {
                         {filteredProjects[0].description}
                       </p>
 
+                      {/* 3-Part Operational Architecture Monograph */}
+                      <div className="space-y-1.5 py-2.5 px-3 rounded-xl bg-black/50 border border-white/[0.08] text-xs font-mono">
+                        <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Challenge:</span> 28% post-harvest produce spoilage across regional transit</div>
+                        <div className="text-zinc-300"><span className="text-cyan-400 font-semibold">• Architecture:</span> 12,500+ events/sec edge telemetry with offline-first buffer</div>
+                        <div className="text-emerald-400 font-medium"><span>• Impact:</span> 34% spoilage reduction · $380,000+ perishable inventory saved</div>
+                      </div>
+
                       {/* Metrics */}
                       <div className="grid grid-cols-3 gap-2 py-3 px-4 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
                         {filteredProjects[0].metrics.map((m, mIdx) => (
@@ -403,9 +410,17 @@ export const ProjectsSection: React.FC = () => {
                           <span className="w-1 h-1 rounded-full bg-cyan-400" />
                           <span>{project.architectTag || 'Architected by Muhammad Mujahid · Axorks Studio'}</span>
                         </div>
-                        <p className="text-xs text-zinc-300 leading-relaxed mb-4 font-light line-clamp-3">
+                        <p className="text-xs text-zinc-300 leading-relaxed mb-3 font-light line-clamp-2">
                           {project.description}
                         </p>
+
+                        {/* Operational Anatomy */}
+                        {project.challengePoints && project.impactPoints && (
+                          <div className="space-y-1 p-2.5 rounded-xl bg-black/40 border border-white/[0.06] text-[10px] font-mono mb-3">
+                            <div className="text-zinc-300 truncate"><span className="text-amber-400 font-semibold">• Challenge:</span> {project.challengePoints[0]}</div>
+                            <div className="text-emerald-400 font-medium truncate"><span>• Outcome:</span> {project.impactPoints[0]}</div>
+                          </div>
+                        )}
 
                         <div className="grid grid-cols-3 gap-1.5 py-2 px-3 rounded-xl bg-white/[0.02] border border-white/[0.06] mb-4 text-center font-mono">
                           {project.metrics.map((m, mIdx) => (
@@ -473,13 +488,26 @@ export const ProjectsSection: React.FC = () => {
                       <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight group-hover:text-cyan-300 transition-colors">
                         {project.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-mono text-zinc-400 mt-1 mb-4">
+                      <p className="text-xs sm:text-sm font-mono text-zinc-400 mt-1 mb-2">
                         {project.subtitle}
                       </p>
 
-                      <p className="text-sm text-zinc-300 leading-relaxed mb-6 font-light">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[10px] font-mono text-zinc-300 mb-4">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                        <span>{project.architectTag || 'Architected by Muhammad Mujahid · Axorks Studio'}</span>
+                      </div>
+
+                      <p className="text-sm text-zinc-300 leading-relaxed mb-4 font-light">
                         {project.description}
                       </p>
+
+                      {/* Operational Anatomy */}
+                      {project.challengePoints && project.impactPoints && (
+                        <div className="space-y-1.5 p-3 rounded-xl bg-black/40 border border-white/[0.06] text-xs font-mono mb-6">
+                          <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Challenge:</span> {project.challengePoints[0]}</div>
+                          <div className="text-emerald-400 font-medium"><span>• Impact:</span> {project.impactPoints[0]}</div>
+                        </div>
+                      )}
 
                       <div className="relative aspect-[16/8] rounded-2xl overflow-hidden mb-6 border border-white/12 shadow-inner group-hover:border-cyan-500/40 transition-all duration-500">
                         {renderProjectVisual(project.id)}

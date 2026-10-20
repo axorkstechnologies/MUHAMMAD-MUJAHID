@@ -15,6 +15,9 @@ export interface Project {
   role: string;
   architectTag?: string;
   deliveryModel?: string;
+  challengePoints?: string[];
+  architecturePoints?: string[];
+  impactPoints?: string[];
 }
 
 export interface ExperienceItem {

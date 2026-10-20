@@ -117,7 +117,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
     <section 
       ref={sectionRef}
       id="hero" 
-      className="relative min-h-[92vh] pt-32 pb-20 flex flex-col justify-center overflow-hidden"
+      className="relative min-h-[90vh] pt-28 sm:pt-32 pb-16 sm:pb-20 flex flex-col justify-center overflow-hidden"
     >
       {/* Subtle Parallax Background Glows */}
       <motion.div 
@@ -187,7 +187,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
             <motion.div 
               variants={itemFadeUp}
-              className="flex flex-wrap items-center gap-3.5 pt-2 w-full sm:w-auto"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full"
             >
               <MagneticWrapper strength={0.25} className="w-full sm:w-auto">
                 <motion.a
@@ -204,29 +204,31 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 </motion.a>
               </MagneticWrapper>
 
-              <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="button"
-                  onClick={() => onNavigate('services')}
-                  className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Services & Pricing</span>
-                </motion.button>
-              </MagneticWrapper>
+              <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 w-full sm:w-auto">
+                <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    type="button"
+                    onClick={() => onNavigate('services')}
+                    className="w-full px-5 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-xs sm:text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                  >
+                    <span>Services & Pricing</span>
+                  </motion.button>
+                </MagneticWrapper>
 
-              <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="button"
-                  onClick={() => onNavigate('projects')}
-                  className="w-full sm:w-auto px-5 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Case Studies</span>
-                </motion.button>
-              </MagneticWrapper>
+                <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                  <motion.button
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    type="button"
+                    onClick={() => onNavigate('projects')}
+                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-xs sm:text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                  >
+                    <span>Case Studies</span>
+                  </motion.button>
+                </MagneticWrapper>
+              </div>
             </motion.div>
 
             {/* Verified Trust Signals */}

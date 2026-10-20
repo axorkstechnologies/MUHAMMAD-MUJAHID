@@ -92,7 +92,7 @@ function AnimatedAppContent() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Direct WhatsApp Consultation"
-        className="fixed bottom-6 right-6 z-40 group flex items-center gap-2.5 px-4 py-3 rounded-full bg-zinc-950/90 hover:bg-zinc-900 border border-emerald-500/40 hover:border-emerald-400 text-white shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.35)] backdrop-blur-2xl transition-all duration-300 hover:scale-105 cursor-pointer"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 group flex items-center gap-2.5 px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-full bg-zinc-950/90 hover:bg-zinc-900 border border-emerald-500/40 hover:border-emerald-400 text-white shadow-[0_8px_32px_rgba(0,0,0,0.8),0_0_25px_rgba(16,185,129,0.35)] backdrop-blur-2xl transition-all duration-300 hover:scale-105 cursor-pointer"
       >
         <div className="relative">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 block" />

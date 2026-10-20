@@ -48,6 +48,21 @@ export const PROJECTS_DATA: Project[] = [
     description: 'An intelligent agricultural platform connecting 140+ farm clusters and cold-storage facilities to eliminate harvest spoilage with automated predictive hazard alerts.',
     problem: 'Agricultural supply chains lost up to 28% of post-harvest produce due to silent refrigeration failures and paper-based tracking that could not pinpoint where spoilage occurred.',
     solution: 'Engineered a real-time IoT sensor ingestion pipeline with edge alerts, micro-climate monitoring, and verifiable supply-chain tracking dashboards for field managers.',
+    challengePoints: [
+      '28% post-harvest produce loss across regional transit and cold-storage',
+      'Fragmented paper logs prevented locating points of temperature failure',
+      'Harsh rural field environments with intermittent cellular connectivity'
+    ],
+    architecturePoints: [
+      'Edge telemetry pipeline processing 12,500+ sensor telemetry events/sec',
+      'Fault-tolerant offline-first sync cache with local SQLite buffer',
+      'Automated predictive ML models evaluating spoilage thresholds in <24ms'
+    ],
+    impactPoints: [
+      '34% reduction in verified cold-chain spoilage across 140+ clusters',
+      'Over $380,000 in perishable inventory saved within first 6 months',
+      '99.98% telemetry uptime across rural nodes with sub-minute alert dispatch'
+    ],
     metrics: [
       { label: 'Events Processed/sec', value: '12,500+' },
       { label: 'Spoilage Reduction', value: '34%' },
@@ -70,6 +85,21 @@ export const PROJECTS_DATA: Project[] = [
     description: 'A unified clinical healthcare operating system providing instant electronic health records (EHR), automated triage queues, and doctor prescription workflows for 180,000+ patient visits.',
     problem: 'Doctors and clinics were buried in disjointed paperwork and disconnected legacy software, slowing down consultations and risking medication errors.',
     solution: 'Architected a secure, compliant clinical workflow engine with role-based access control, encrypted patient records, instant triage queues, and sub-second lab result dispersal.',
+    challengePoints: [
+      'Average 18-minute manual lookup delay per patient visit in legacy records',
+      'High risk of contraindicated prescriptions due to disconnected pharmacy systems',
+      'Strict regulatory compliance requirements (HIPAA, FHIR R4 interoperability)'
+    ],
+    architecturePoints: [
+      'FHIR R4 compliant REST & WebSocket event bus for instant record dispersal',
+      'AES-256 field-level encrypted patient records with cryptographic audit logs',
+      'Sub-second triage priority queue syncing ER desks and doctor tablets'
+    ],
+    impactPoints: [
+      '180,000+ patient encounters processed with zero data leakage',
+      'Saved 1.8 hours per physician shift in administrative data entry',
+      '100% compliance audit pass with sub-second prescription verification'
+    ],
     metrics: [
       { label: 'Patient Encounters', value: '180,000+' },
       { label: 'Time Saved / Shift', value: '1.8 hrs' },
@@ -92,6 +122,21 @@ export const PROJECTS_DATA: Project[] = [
     description: 'A custom luxury digital flagship for artisanal perfumes featuring an interactive olfactory notes visualizer, scent discovery quiz, and frictionless checkout.',
     problem: 'Traditional luxury perfume e-commerce felt flat and transactional, resulting in high bounce rates and failing to convey the sensory prestige of artisanal scents.',
     solution: 'Designed and deployed an immersive digital flagship with interactive fragrance discovery quiz, multi-layered notes visualizer, and a seamless 2-step checkout.',
+    challengePoints: [
+      '68% bounce rate on static catalog pages unable to convey sensory notes',
+      'High mobile checkout abandonment on multi-step legacy e-commerce forms',
+      'Slow asset delivery degrading the premium emotional brand experience'
+    ],
+    architecturePoints: [
+      'Interactive 60fps WebGL olfactory pyramid visualizer for top, heart, and base notes',
+      'Algorithmic scent profile quiz mapping consumer preferences to matching scents',
+      'Optimized headless architecture with sub-800ms Time-to-Interactive on mobile'
+    ],
+    impactPoints: [
+      '+42% checkout conversion lift within 30 days post-launch',
+      'Average session duration increased from 48 seconds to 4 minutes 12 seconds',
+      '98/100 Google Lighthouse mobile performance score with zero layout shift'
+    ],
     metrics: [
       { label: 'Checkout Conversion', value: '+42%' },
       { label: 'Avg Session Duration', value: '4m 12s' },
@@ -114,6 +159,21 @@ export const PROJECTS_DATA: Project[] = [
     description: 'A comprehensive cloud campus ERP unifying biometric attendance, automated fee challans via SMS/WhatsApp, and instantaneous student report card generation for 3,200+ students.',
     problem: 'A multi-campus institution spent weeks manually calculating exam report cards, chasing overdue monthly fees, and reconciling paper attendance logs.',
     solution: 'Delivered an integrated cloud campus portal unifying biometric student/staff attendance, automated fee challans with online reconciliation, and instantaneous parent SMS/WhatsApp grade notifications.',
+    challengePoints: [
+      '3+ weeks of manual faculty overtime required every exam term to generate report cards',
+      'Up to 15% unpaid fees due to manual paper challans easily misplaced by students',
+      'Zero real-time communication channel between parents and academic administration'
+    ],
+    architecturePoints: [
+      'Automated grading engine computing cumulative GPAs and PDF reports in seconds',
+      'Biometric hardware bridge syncing turnstile check-ins to parent WhatsApp/SMS',
+      'Dynamic fee voucher generator with unique QR codes and automated bank reconciliation'
+    ],
+    impactPoints: [
+      '3,200+ active students and 180+ faculty members onboarded seamlessly',
+      'Term report generation time cut by 92% (from 3 weeks to under 4 hours)',
+      'On-time tuition fee collection reached 99.4% through automated notifications'
+    ],
     metrics: [
       { label: 'Active Students', value: '3,200+' },
       { label: 'Report Cards Ready', value: '92% faster' },
