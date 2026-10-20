@@ -24,7 +24,6 @@ import { HeroSection } from '../components/HeroSection.tsx';
 import { Card3D } from '../components/Card3D.tsx';
 import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
 import { CONTACT_INFO, PROJECTS_DATA } from '../data/portfolioData.ts';
-import { TelemetryBadge, TechCrosshair, HairlineRuler, HudCorners, ScanlineOverlay } from '../components/motion/HudElements.tsx';
 import { RollingCounter } from '../components/motion/RollingCounter.tsx';
 
 export const HomePage: React.FC = () => {
@@ -64,10 +63,10 @@ export const HomePage: React.FC = () => {
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className="relative"
     >
-      {/* 1. Cinematic Hero Section */}
+      {/* 1. Hero Section */}
       <HeroSection onNavigate={handleHeroNavigate} />
 
-      {/* 2. Asymmetric Architectural Bento System ($10k+ Bespoke Tier) */}
+      {/* 2. Asymmetric Bento Grid System */}
       <section className="py-20 border-y border-white/[0.08] bg-[#050508]/80 relative overflow-hidden">
         {/* Subtle Engineering Blueprint Grid */}
         <div className="absolute inset-0 blueprint-grid opacity-30 pointer-events-none" />
@@ -174,7 +173,7 @@ export const HomePage: React.FC = () => {
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
-                        <span>Biometric Attendance & Telemetry Bridges</span>
+                        <span>Biometric Attendance & Hardware Integration</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0" />
@@ -360,7 +359,7 @@ export const HomePage: React.FC = () => {
                     </span>
                     <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
                       <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      ACTIVE IN PRODUCTION
+                      Live in Production
                     </span>
                   </div>
 
@@ -377,7 +376,7 @@ export const HomePage: React.FC = () => {
                     {agrotrace.description}
                   </p>
 
-                  {/* Telemetry Metrics */}
+                  {/* Production Metrics */}
                   <div className="grid grid-cols-3 gap-2 py-3 border-y border-white/10 font-mono">
                     {agrotrace.metrics.map((m, idx) => (
                       <div key={idx} className="p-2 rounded-xl bg-white/[0.02] text-center">
@@ -404,35 +403,33 @@ export const HomePage: React.FC = () => {
                 {/* Right: Panoramic Interactive Visual */}
                 <div className="lg:col-span-7">
                   <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-950">
-                    <HudCorners color="rgba(16, 185, 129, 0.4)" size={14} className="z-30" />
-                    <ScanlineOverlay className="z-20" />
                     
                     <img
                       src="/Images/Agrotrace.jpeg"
-                      alt="AgroTrace AI Telemetry Engine"
+                      alt="AgroTrace AI Agricultural Platform"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
 
-                    {/* Live Telemetry Overlay */}
+                    {/* Clean Status Overlay */}
                     <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between text-[11px] font-mono">
                       <span className="px-2.5 py-1 rounded bg-black/70 border border-white/15 text-emerald-400 backdrop-blur-md flex items-center gap-1.5">
                         <Activity className="w-3.5 h-3.5 animate-pulse" />
-                        STREAM: 12.5K EVT/SEC
+                        LIVE • 12.5K Events/sec
                       </span>
                       <span className="px-2.5 py-1 rounded bg-black/70 border border-white/15 text-zinc-300 backdrop-blur-md">
-                        LATENCY: &lt; 24MS
+                        Response: &lt; 24ms
                       </span>
                     </div>
 
                     <div className="absolute bottom-4 left-4 right-4 z-20 flex items-end justify-between">
                       <div className="space-y-1">
-                        <div className="text-[10px] font-mono text-zinc-400 uppercase">SYSTEM DOMAIN</div>
-                        <div className="text-sm font-bold text-white font-mono">IoT Agronomy Telemetry & Yield AI</div>
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase">Platform</div>
+                        <div className="text-sm font-bold text-white font-mono">IoT Agronomy & AI Yield Prediction</div>
                       </div>
                       <span className="text-xs font-mono text-emerald-400 font-semibold px-2.5 py-1 rounded-lg bg-black/60 border border-emerald-500/30">
-                        98.4% Confidence Score
+                        98.4% Accuracy
                       </span>
                     </div>
                   </div>

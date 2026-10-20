@@ -27,7 +27,7 @@ export const ProjectsPage: React.FC = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Explore live production platforms, clinical healthcare systems, agricultural telemetry networks, and campus ERPs engineered directly by Muhammad Mujahid.
+            Explore live production platforms, clinical healthcare systems, agricultural IoT networks, and campus ERPs engineered directly by Muhammad Mujahid.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-zinc-400 pt-2">
@@ -56,13 +56,13 @@ export const ProjectsPage: React.FC = () => {
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
             <div className="space-y-3 text-center lg:text-left">
               <span className="px-3 py-1 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 text-xs font-mono font-semibold">
-                BESPOKE SYSTEM DEVELOPMENT
+                CUSTOM SYSTEM DEVELOPMENT
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white font-display tracking-tight">
                 Have a Complex Technical Project in Mind?
               </h3>
               <p className="text-sm text-zinc-300 max-w-xl font-light">
-                Whether you need a custom AI telemetry platform, high-concurrency healthcare EHR, or luxury commercial storefront, we provide architecture proposals and fixed milestone estimates.
+                Whether you need a custom AI platform, high-performance healthcare EHR, or luxury commercial storefront, we provide architecture proposals and fixed milestone estimates.
               </p>
             </div>
 

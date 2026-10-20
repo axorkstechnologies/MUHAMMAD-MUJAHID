@@ -10,17 +10,17 @@ interface RouteSEO {
 const ROUTE_SEO: Record<string, RouteSEO> = {
   '/': {
     title: 'Muhammad Mujahid | Principal Software Architect & Founder of Axorks',
-    description: 'Executive cinematic portfolio of Muhammad Mujahid, Founder of Axorks. Specializing in Custom Intelligent Systems (LMS from $8k, Banking from $12k), AI & Search Visibility (SEO, AEO, GEO from $250-$950/mo), and Web Applications.',
+    description: 'Portfolio of Muhammad Mujahid, Founder of Axorks. Building custom business platforms (LMS from $8k, Banking from $12k), AI & search visibility (SEO, AEO, GEO from $250–$950/mo), and high-performance web applications — with direct founder delivery.',
     canonical: 'https://axorks.com/'
   },
   '/about': {
     title: 'About Muhammad Mujahid | Founder & Principal Architect at Axorks',
-    description: 'Learn about Muhammad Mujahid, Founder of Axorks Studio and Principal Software Architect. Engineering philosophy, architectural principles, zero-slop delivery, and over 40,000 active end-users served.',
+    description: 'Learn about Muhammad Mujahid, Founder of Axorks Studio and Principal Software Architect. Engineering philosophy, delivery principles, and over 40,000 active end-users served across education, healthcare, and agriculture.',
     canonical: 'https://axorks.com/about'
   },
   '/projects': {
-    title: 'Flagship Engineering Projects & Case Studies | Muhammad Mujahid',
-    description: 'Explore live enterprise architectures engineered by Muhammad Mujahid: AgroTrace (AI agriculture telemetry), MediVerse (healthcare EHR), FUME Fragrances (luxury commerce), and PHSS School ERP.',
+    title: 'Production Systems & Case Studies | Muhammad Mujahid',
+    description: 'Explore production systems built by Muhammad Mujahid: AgroTrace (AI agriculture platform), MediVerse (healthcare EHR), FUME Fragrances (luxury e-commerce), and PHSS (school campus ERP). Real results, live in production.',
     canonical: 'https://axorks.com/projects'
   },
   '/services': {

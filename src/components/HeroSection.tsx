@@ -14,8 +14,6 @@ import { Card3D } from './Card3D.tsx';
 import { KineticText } from './motion/KineticText.tsx';
 import { RollingCounter } from './motion/RollingCounter.tsx';
 import { MagneticWrapper } from './motion/MagneticWrapper.tsx';
-import { HudCorners, ScanlineOverlay } from './motion/HudElements.tsx';
-
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
 }
@@ -117,7 +115,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
       id="hero" 
       className="relative min-h-[92vh] pt-32 pb-20 flex flex-col justify-center overflow-hidden"
     >
-      {/* Subtle Cinematic Parallax Background Glows */}
+      {/* Subtle Parallax Background Glows */}
       <motion.div 
         style={{ y: parallaxBg1, opacity: parallaxOpacity }}
         className="absolute top-1/4 -left-48 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
@@ -316,9 +314,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
               {/* Viewport Frame with Soft 3D Perspective */}
               <Card3D maxTilt={6} glowColor="rgba(56, 189, 248, 0.25)">
-                <div className="relative rounded-3xl overflow-hidden">
-                  <HudCorners color="rgba(56, 189, 248, 0.4)" size={14} className="z-30" />
-                  <ScanlineOverlay className="z-20" />
+                <div className="relative rounded-3xl overflow-hidden border border-white/15">
                   {heroMode === 'portrait' ? (
                     <div className="relative">
                       <PhotoPlaceholder

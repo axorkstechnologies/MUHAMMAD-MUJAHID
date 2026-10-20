@@ -35,7 +35,6 @@ import { PRICING_PLANS, PRICING_ADDONS, calculateCustomEstimate, formatWhatsAppQ
 import { CONTACT_INFO, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
 import { Card3D } from './Card3D.tsx';
 import { AiConnectivityMesh } from './motion/AiConnectivityMesh.tsx';
-import { TechCrosshair, TelemetryBadge, HairlineRuler } from './motion/HudElements.tsx';
 
 // Reusable scroll-triggered animated section wrapper
 const MotionSection: React.FC<{ children: React.ReactNode; className?: string; delay?: number }> = ({ 
@@ -103,7 +102,7 @@ export const ServicesPricingSection: React.FC = () => {
 
   return (
     <section id="services" className="relative py-28 scroll-mt-20 overflow-hidden">
-      {/* Cinematic Ambient Background Glows */}
+      {/* Ambient Background Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-cyan-500/10 via-indigo-500/10 to-purple-500/5 blur-[140px] pointer-events-none rounded-full" />
       <div className="absolute top-2/3 right-[-10%] w-[550px] h-[550px] bg-emerald-500/10 blur-[150px] pointer-events-none rounded-full" />
 
@@ -143,7 +142,7 @@ export const ServicesPricingSection: React.FC = () => {
               icon: <Code className="w-4 h-4 text-indigo-400" />,
               code: 'TYPE.STRICT',
               title: 'Strict TypeScript Core',
-              desc: 'Zero-slop typed codebase, modular tests & 95+ Lighthouse performance'
+              desc: 'Strictly typed codebase, modular tests & 95+ Lighthouse performance'
             },
             {
               icon: <FileCheck className="w-4 h-4 text-amber-400" />,
@@ -209,18 +208,18 @@ export const ServicesPricingSection: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono mb-2">
                   <Cpu className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Sovereign Institutional Architectures</span>
+                  <span>Institutional & Enterprise Platforms</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
                   Custom Intelligent Systems
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Mission-critical, high-concurrency operating platforms architected for institutional scale, zero downtime, and sovereign data governance.
+                  Mission-critical platforms built for institutional scale, high reliability, and complete data ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
                 <span className="text-xs font-mono text-indigo-400/90 block">Tier-1 Institutional Infrastructure</span>
-                <span className="text-[11px] text-zinc-500 font-mono">Bespoke Enterprise Deployments</span>
+                <span className="text-[11px] text-zinc-500 font-mono">Custom Enterprise Deployments</span>
               </div>
             </div>
 
@@ -253,7 +252,7 @@ export const ServicesPricingSection: React.FC = () => {
                         Custom LMS & Academic Campus ERP
                       </h4>
                       <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        End-to-end academic operating ecosystem unifying multi-role student progression, faculty administration, biometric RFID telemetry, and automated financial reconciliations.
+                        End-to-end academic operating ecosystem unifying multi-role student progression, faculty administration, biometric RFID attendance, and automated financial reconciliations.
                       </p>
 
                       {/* Price Banner */}
@@ -279,7 +278,7 @@ export const ServicesPricingSection: React.FC = () => {
                           Architectural Capabilities Included:
                         </div>
                         {[
-                          'Multi-Tier Portals: Sovereign dashboards for Chancellor, Faculty, Student, and Parent',
+                          'Multi-Tier Portals: Dedicated dashboards for Chancellor, Faculty, Student, and Parent',
                           'Automated Grading Engine: Continuous GPA computation & instant digital report cards',
                           'Biometric & RFID Ingestion: Campus entry logs with automated SMS/WhatsApp alerts',
                           'Fee Challan & Billing Automation: Dynamic barcode vouchers & online bank reconciliation',
@@ -374,7 +373,7 @@ export const ServicesPricingSection: React.FC = () => {
                           {[
                             'Immutable Double-Entry Ledger: Mathematically verified debit/credit reconciliation engine',
                             'Multi-Currency & FX Layer: Dynamic currency wallets, real-time rates & spread margins',
-                            'KYC & AML Automation: Customer verification pipelines & suspicious telemetry flagging',
+                            'KYC & AML Automation: Customer verification pipelines & automated fraud detection',
                             'Bank-Grade Encryption: AES-256-GCM data layer, HSM key vaults & SOC2 audit compliance',
                             'Multi-Signature Approvals: Maker-Checker transaction workflows & non-repudiation audit trails',
                             'High-Throughput Clearing Layer: Sub-400ms transaction dispatch & automated webhooks'
@@ -630,7 +629,7 @@ export const ServicesPricingSection: React.FC = () => {
                             'On-page Schema.org semantic tagging',
                             'Keyword research & topical clustering',
                             'High-authority backlink profiling',
-                            'Google Search Console telemetry'
+                            'Google Search Console & analytics tracking'
                           ].map((item, idx) => (
                             <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
                               <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
@@ -788,11 +787,9 @@ export const ServicesPricingSection: React.FC = () => {
             {/* Category Header */}
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
               <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <TechCrosshair label="SPEC.03 // DIGITAL PRODUCTS" />
-                  <span className="text-xs font-mono text-cyan-300 font-semibold uppercase tracking-wider">
-                    BESPOKE WEB ENGINEERING
-                  </span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
+                  <Code className="w-3.5 h-3.5" />
+                  <span>Web Applications & Modern Platforms</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
                   Web Applications & Flagship Websites
@@ -827,7 +824,7 @@ export const ServicesPricingSection: React.FC = () => {
                         Custom Web Application Development
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        Bespoke SaaS platforms, real-time telemetry dashboards, and multi-tenant operational applications built on modern typed architectures with high-velocity deployment.
+                        Custom SaaS platforms, real-time analytics dashboards, and multi-tenant operational applications built on modern typed architectures with high-velocity deployment.
                       </p>
 
                       <div className="my-6 p-4 rounded-2xl bg-cyan-500/[0.06] border border-cyan-500/20 flex items-baseline justify-between">
@@ -847,7 +844,7 @@ export const ServicesPricingSection: React.FC = () => {
                         <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                           {[
-                            'Bespoke frontend UI with liquid glassmorphism & responsive physics',
+                            'Modern interactive UI with smooth animations and responsive design',
                             'Full-Stack API architecture (Node.js/Express, REST/GraphQL, WebSockets)',
                             'Robust PostgreSQL database schema design with automated migrations',
                             'Authentication with Role-Based Access Control (RBAC) & session security',
@@ -896,7 +893,7 @@ export const ServicesPricingSection: React.FC = () => {
                         Professional Website Development
                       </h3>
                       <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        High-conversion corporate flagships, portfolio showcases, and brand platforms crafted with cinematic liquid glass aesthetics, 60fps micro-interactions, and 95+ Lighthouse speed.
+                        High-conversion corporate websites, portfolio showcases, and brand platforms crafted with polished visual design, 60fps micro-interactions, and 95+ Lighthouse speed.
                       </p>
 
                       <div className="my-6 p-4 rounded-2xl bg-pink-500/[0.06] border border-pink-500/20 flex items-baseline justify-between">
@@ -1297,7 +1294,10 @@ export const ServicesPricingSection: React.FC = () => {
         {/* ========================================================================= */}
         <MotionSection delay={0.4}>
           <div className="flex items-center justify-center gap-2 mb-3">
-            <TechCrosshair label="VERIFIED.CLIENTS // PRODUCTION ENDORSEMENTS" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Verified Client Endorsements</span>
+            </div>
           </div>
           <h3 className="text-2xl sm:text-3xl font-black text-white font-display text-center mb-8">
             Executive Partner Endorsements

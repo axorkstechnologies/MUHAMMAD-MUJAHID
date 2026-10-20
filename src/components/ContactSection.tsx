@@ -305,7 +305,7 @@ I would like to initiate an engineering consultation.
                         <option value="$3,500 - $7,500 (MVP / Web Application)">$3,500 - $7,500 (MVP / Web App)</option>
                         <option value="$8,000 - $12,000 (LMS / Custom Intelligent System)">$8,000 - $12,000 (LMS / Intelligent System)</option>
                         <option value="$12,000 - $25,000 (Banking / Financial Core)">$12,000 - $25,000 (Banking / Financial System)</option>
-                        <option value="$25,000+ Enterprise Infrastructure">$25,000+ (Enterprise Sovereign Platform)</option>
+                        <option value="$25,000+ Enterprise Infrastructure">$25,000+ (Enterprise Platform)</option>
                       </select>
                     </div>
                   </div>

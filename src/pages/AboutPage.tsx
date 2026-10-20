@@ -27,7 +27,6 @@ import { PhotoPlaceholder } from '../components/PhotoPlaceholder.tsx';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { RollingCounter } from '../components/motion/RollingCounter.tsx';
 import { MagneticWrapper } from '../components/motion/MagneticWrapper.tsx';
-import { HudCorners, TechCrosshair, TelemetryBadge, HairlineRuler } from '../components/motion/HudElements.tsx';
 
 export const AboutPage: React.FC = () => {
   const coreCompetencies = [
@@ -37,8 +36,8 @@ export const AboutPage: React.FC = () => {
       tags: ['Node.js', 'PostgreSQL', 'Redis', 'Docker', 'Microservices']
     },
     {
-      title: 'Cinematic Modern Web Interfaces',
-      description: 'Crafting 60fps liquid-glass interfaces with bespoke 3D physics, deliberate typographic hierarchy, and zero performance drag.',
+      title: 'High-Performance Modern Web Interfaces',
+      description: 'Building interactive, 60fps web interfaces with refined typography, smooth animations, and zero performance drag.',
       tags: ['React 19', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Motion']
     },
     {
@@ -148,8 +147,7 @@ export const AboutPage: React.FC = () => {
           <div className="lg:col-span-5 flex justify-center">
             <div className="w-full max-w-md">
               <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.25)">
-                <div className="relative rounded-3xl overflow-hidden">
-                  <HudCorners color="rgba(56, 189, 248, 0.45)" size={14} className="z-30" />
+                <div className="relative rounded-3xl overflow-hidden border border-white/15">
                   <PhotoPlaceholder
                     variant="hero"
                     defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
@@ -220,7 +218,7 @@ export const AboutPage: React.FC = () => {
               Why High-Growth Founders Partner With Us
             </h2>
             <p className="text-sm sm:text-base text-zinc-400 max-w-2xl font-light">
-              Engineering without compromise. We protect your product timeline, data sovereignty, and technical sanity.
+              Engineering without compromise. We protect your product timeline, data privacy, and technical sanity.
             </p>
           </div>
 
@@ -319,7 +317,7 @@ export const AboutPage: React.FC = () => {
                 },
                 {
                   q: 'What types of systems does he build?',
-                  a: 'Custom campus ERP and LMS platforms for educational institutions (from $8,000), sovereign banking & financial systems (from $12,000), modern web applications (from $3,500), and comprehensive visibility engines across Google, ChatGPT, Perplexity, and Claude.'
+                  a: 'Custom campus ERP and LMS platforms for educational institutions (from $8,000), secure banking & financial systems (from $12,000), modern web applications (from $3,500), and comprehensive visibility engines across Google, ChatGPT, Perplexity, and Claude.'
                 },
                 {
                   q: 'How does client engagement work?',

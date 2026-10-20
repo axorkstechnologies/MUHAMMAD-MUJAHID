@@ -26,7 +26,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     baseWeeks: 3,
     deliverables: [
       'Full-Stack Architecture (React/Next.js + Node/Postgres)',
-      'Responsive Liquid Glass UI with Micro-interactions',
+      'Responsive Modern UI with Micro-interactions',
       'Core Authentication, Roles & RBAC',
       'Essential API Integrations & Database Schema',
       'Production Deployment with CI/CD Pipeline',
@@ -37,12 +37,12 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'flagship',
     name: 'Flagship Digital Product',
-    tagline: 'End-to-end bespoke system engineered for performance and scale',
+    tagline: 'End-to-end custom system engineered for performance and scale',
     basePrice: 7500,
     baseWeeks: 5,
     isPopular: true,
     deliverables: [
-      'Bespoke Cinematic UI/UX with Custom Motion & Micro-interactions',
+      'Custom UI/UX Design with Motion & Micro-interactions',
       'Enterprise-Grade Modular Architecture & Strict Typing',
       'Custom AI/LLM Workflow or Real-Time Engine Integration',
       'Comprehensive Data Layer, Caching & Search Engine Indexing',
@@ -82,7 +82,7 @@ export const PRICING_ADDONS: PricingAddon[] = [
     name: 'Real-Time Sync & WebSocket Layer',
     price: 1200,
     weeks: 1,
-    description: 'Instant collaborative state, live telemetry or streaming notifications'
+    description: 'Instant collaborative state, live data dashboards or streaming notifications'
   },
   {
     id: 'pwa_offline',

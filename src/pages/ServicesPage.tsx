@@ -64,7 +64,7 @@ export const ServicesPage: React.FC = () => {
                 CUSTOM CONTRACTS AVAILABLE
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white font-display tracking-tight">
-                Need a Bespoke Engagement or Architecture Retainer?
+                Need a Custom Engagement or Architecture Retainer?
               </h3>
               <p className="text-sm text-zinc-300 max-w-xl font-light">
                 We craft tailored engineering agreements, fractional CTO arrangements, and phased system rollouts adapted to your capital allocation.

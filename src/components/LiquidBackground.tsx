@@ -144,7 +144,7 @@ export const LiquidBackground: React.FC = () => {
         className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:28px_28px]" 
         aria-hidden="true" 
       />
-      {/* Cinematic top vignette */}
+      {/* Top vignette */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#050508]/70 via-transparent to-[#050508] pointer-events-none" />
     </div>
   );

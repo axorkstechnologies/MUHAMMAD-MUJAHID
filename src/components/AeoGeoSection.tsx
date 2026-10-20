@@ -38,7 +38,7 @@ export const AeoGeoSection: React.FC = () => {
     },
     {
       question: 'What is included in the Full Visibility Package ($950 / month)?',
-      answer: 'The Full Visibility Package unites traditional SEO ($250/mo), Answer Engine Optimization ($450/mo), and Generative Engine Optimization ($550/mo) into an all-in-one monthly plan for $950/month (saving $300/month). It provides complete cross-platform authority across Google Search, Perplexity AI, ChatGPT, Gemini, and Claude with monthly rank and citation telemetry.',
+      answer: 'The Full Visibility Package unites traditional SEO ($250/mo), Answer Engine Optimization ($450/mo), and Generative Engine Optimization ($550/mo) into an all-in-one monthly plan for $950/month (saving $300/month). It provides complete cross-platform authority across Google Search, Perplexity AI, ChatGPT, Gemini, and Claude with monthly ranking and AI citation reporting.',
       category: 'Pricing'
     },
     {
@@ -48,7 +48,7 @@ export const AeoGeoSection: React.FC = () => {
     },
     {
       question: 'Who delivers these services at Axorks Studio?',
-      answer: 'All visibility architectures are engineered directly by Muhammad Mujahid, Founder & Principal Software Architect at Axorks. Clients receive direct technical execution, verified JSON-LD schema implementation, entity graph registration, and bi-weekly performance telemetry with zero junior handoffs.',
+      answer: 'All visibility strategies and implementations are delivered directly by Muhammad Mujahid, Founder & Principal Software Architect at Axorks. Clients receive direct founder execution, verified JSON-LD schema implementation, entity graph registration, and bi-weekly performance reports with zero junior handoffs.',
       category: 'AEO'
     }
   ];

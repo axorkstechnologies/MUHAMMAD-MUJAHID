@@ -43,17 +43,17 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'agrotrace',
     title: 'AgroTrace',
-    subtitle: 'AI-Powered Agricultural Provenance & Real-Time Telemetry',
+    subtitle: 'AI-Powered Agricultural IoT & Real-Time Monitoring',
     category: 'AI Systems',
-    description: 'An intelligent agricultural telemetry platform connecting 140+ farm clusters and cold-storage facilities to eliminate harvest spoilage with automated predictive hazard alerts.',
+    description: 'An intelligent agricultural platform connecting 140+ farm clusters and cold-storage facilities to eliminate harvest spoilage with automated predictive hazard alerts.',
     problem: 'Agricultural supply chains lost up to 28% of post-harvest produce due to silent refrigeration failures and paper-based tracking that could not pinpoint where spoilage occurred.',
     solution: 'Engineered a real-time IoT sensor ingestion pipeline with edge alerts, micro-climate monitoring, and verifiable supply-chain tracking dashboards for field managers.',
     metrics: [
-      { label: 'Telemetry Events/sec', value: '12,500+' },
+      { label: 'Events Processed/sec', value: '12,500+' },
       { label: 'Spoilage Reduction', value: '34%' },
       { label: 'Monitored Clusters', value: '140+' }
     ],
-    tags: ['Next.js', 'TypeScript', 'Edge AI', 'IoT Telemetry', 'PostgreSQL', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'Edge AI', 'IoT Systems', 'PostgreSQL', 'Tailwind CSS'],
     featuredImage: 'agrotrace',
     status: 'Production Live',
     liveUrl: 'https://axorks.com',
@@ -83,9 +83,9 @@ export const PROJECTS_DATA: Project[] = [
   {
     id: 'fume',
     title: 'FUME Fragrances',
-    subtitle: 'Ultra-Luxury Olfactory Experience & Cinematic E-Commerce',
+    subtitle: 'Ultra-Luxury Olfactory Experience & Premium E-Commerce',
     category: 'Luxury E-Commerce',
-    description: 'A bespoke luxury digital flagship for artisanal perfumes featuring an interactive olfactory notes visualizer, scent discovery quiz, and frictionless checkout.',
+    description: 'A custom luxury digital flagship for artisanal perfumes featuring an interactive olfactory notes visualizer, scent discovery quiz, and frictionless checkout.',
     problem: 'Traditional luxury perfume e-commerce felt flat and transactional, resulting in high bounce rates and failing to convey the sensory prestige of artisanal scents.',
     solution: 'Designed and deployed an immersive digital flagship with interactive fragrance discovery quiz, multi-layered notes visualizer, and a seamless 2-step checkout.',
     metrics: [
@@ -185,7 +185,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
 export const TESTIMONIALS_DATA: Testimonial[] = [
   {
     id: 't1',
-    quote: 'Muhammad is an exceptional engineering talent. He took our AgroTrace specifications and transformed them into a reliable, fault-tolerant telemetry platform ahead of schedule.',
+    quote: 'Muhammad is an exceptional engineering talent. He took our AgroTrace specifications and transformed them into a reliable, fault-tolerant platform ahead of schedule.',
     clientName: 'Tariq H.',
     clientRole: 'Director of Operations',
     company: 'AgroTrace Network',

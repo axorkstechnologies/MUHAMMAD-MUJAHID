@@ -45,7 +45,7 @@ export const PhotoPlaceholder: React.FC<PhotoPlaceholderProps> = ({
           loading="eager"
         />
 
-        {/* Cinematic Vignette Overlay */}
+        {/* Vignette Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/25 to-transparent opacity-85 pointer-events-none" />
 
         {/* Top Status Pill */}

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import { AxorksSection } from '../components/AxorksSection.tsx';
 import { AXORKS_DATA, CONTACT_INFO } from '../data/portfolioData.ts';
 import { Card3D } from '../components/Card3D.tsx';
-import { TechCrosshair, TelemetryBadge } from '../components/motion/HudElements.tsx';
 
 export const AxorksPage: React.FC = () => {
   return (
@@ -65,7 +64,7 @@ export const AxorksPage: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-              Axorks was built from the ground up to solve the friction inherent in large agencies. We maintain a hyper-focused engineering footprint, investing our energy into deep architectural research, code profiling, and bespoke UI interactions.
+              Axorks was built from the ground up to solve the friction inherent in large agencies. We maintain a hyper-focused engineering footprint, investing our energy into deep architectural research, code profiling, and refined UI interactions.
             </p>
 
             <ul className="space-y-3 text-xs sm:text-sm text-zinc-300">
