@@ -46,9 +46,9 @@ export const AboutPage: React.FC = () => {
       tags: ['Google Gemini API', 'LLM Agents', 'AEO / GEO Engine', 'Vector Embeddings']
     },
     {
-      title: 'Mission-Critical Institutional Platforms',
-      description: 'Architecting custom LMS and banking/financial software with institutional-grade data privacy, RBAC security, and audit trails.',
-      tags: ['FinTech Cores', 'Institutional LMS', 'HIPAA/FHIR Compliance', 'Zero-Trust']
+      title: 'Enterprise Business & Healthcare Platforms',
+      description: 'Architecting campus ERPs and clinical healthcare software with strict data privacy, FHIR R4 compliance, RBAC security, and audit trails.',
+      tags: ['Campus ERPs', 'Healthcare EHRs', 'HIPAA/FHIR Standards', 'Zero-Trust']
     }
   ];
 
@@ -282,7 +282,7 @@ export const AboutPage: React.FC = () => {
                         { label: 'Executive Role', value: 'Founder & Principal Full-Stack Software Architect' },
                         { label: 'Operating Studio', value: 'Axorks (Axorks Technologies • axorks.com)' },
                         { label: 'Primary Base', value: 'Karachi, Sindh, Pakistan (UTC+5) • 100% Global Remote Delivery' },
-                        { label: 'Core System Specialties', value: 'Custom LMS ($8k+), Banking Systems ($12k+), Web Apps ($3.5k+), AI Visibility (SEO/AEO/GEO from $250/mo)' },
+                        { label: 'Core System Specialties', value: 'Custom Web Platforms ($3,500+), Intelligent Visibility (SEO+AEO+GEO from $250/mo), Campus ERPs ($8k+), Healthcare Platforms ($10k+)' },
                         { label: 'Flagship Deliveries', value: 'AgroTrace (AgriTech AI), MediVerse (FHIR R4 EHR), FUME (Luxury Commerce), PHSS (Institutional ERP)' },
                         { label: 'Intellectual Property', value: '100% Client Source Code & Database Ownership (Zero Vendor Lock-in)' },
                         { label: 'Direct Official Channels', value: 'WhatsApp (+92 308 2789210), LinkedIn (/in/muhammad-mujahid-axorks)' }

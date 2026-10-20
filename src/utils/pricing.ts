@@ -71,6 +71,13 @@ export const PRICING_PLANS: PricingPlan[] = [
 
 export const PRICING_ADDONS: PricingAddon[] = [
   {
+    id: 'ai_visibility_suite',
+    name: 'All-In AI Visibility Suite (SEO + AEO + GEO)',
+    price: 950,
+    weeks: 1,
+    description: 'Knowledge Graph integration, Schema JSON-LD markup, and ChatGPT/Perplexity citation pipeline'
+  },
+  {
     id: 'ai_engine',
     name: 'Proprietary AI / LLM Workflows',
     price: 1800,

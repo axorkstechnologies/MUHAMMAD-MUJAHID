@@ -292,7 +292,7 @@ export const ProjectsSection: React.FC = () => {
                           <span>FLAGSHIP // {filteredProjects[0].category}</span>
                         </div>
                         <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                           {filteredProjects[0].status}
                         </span>
                       </div>
@@ -365,10 +365,24 @@ export const ProjectsSection: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Right Column: Visual Preview */}
+                    {/* Right Column: Visual Preview with Browser Frame */}
                     <div className="lg:col-span-7">
-                      <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-950">
-                        {renderProjectVisual(filteredProjects[0].id)}
+                      <div className="browser-frame relative aspect-[16/10] flex flex-col">
+                        <div className="h-8 bg-[#0a0b14] border-b border-white/[0.06] px-3 flex items-center justify-between text-xs font-mono shrink-0 select-none">
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                            <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                            <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                            <span className="text-zinc-500 text-[10px] ml-1.5 hidden sm:inline">agrotrace.network/live</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                            <span className="text-emerald-400 text-[10px]">12.5K Evt/sec</span>
+                          </div>
+                        </div>
+                        <div className="relative flex-1 overflow-hidden">
+                          {renderProjectVisual(filteredProjects[0].id)}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -396,8 +410,16 @@ export const ProjectsSection: React.FC = () => {
                           <span className="text-[11px] font-mono text-emerald-400">{project.status}</span>
                         </div>
 
-                        <div className="relative aspect-[16/9] rounded-2xl overflow-hidden mb-4 border border-white/12 shadow-inner group-hover:border-cyan-500/40 transition-all duration-500">
-                          {renderProjectVisual(project.id)}
+                        <div className="browser-frame relative aspect-[16/9] flex flex-col mb-4">
+                          <div className="h-7 bg-[#0a0b14] border-b border-white/[0.06] px-2.5 flex items-center gap-1.5 shrink-0 select-none">
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-zinc-700" />
+                            <span className="text-zinc-600 text-[9px] font-mono ml-1 hidden sm:inline">{project.id}.network/portal</span>
+                          </div>
+                          <div className="relative flex-1 overflow-hidden">
+                            {renderProjectVisual(project.id)}
+                          </div>
                         </div>
 
                         <h3 className="text-xl font-extrabold text-white font-display tracking-tight group-hover:text-cyan-300 transition-colors">

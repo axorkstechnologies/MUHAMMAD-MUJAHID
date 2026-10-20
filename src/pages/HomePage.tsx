@@ -79,25 +79,28 @@ export const HomePage: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Section Header — Refined */}
+          {/* Section Header — Refined & Focused on Locked Positioning */}
           <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
             <div className="flex items-center gap-2.5">
               <span className="w-8 h-px bg-cyan-400/60" />
               <span className="text-[11px] font-mono text-cyan-400 font-medium tracking-widest uppercase">
-                How We Work Together
+                Core Service Hierarchy
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white font-display tracking-tight leading-[1.15]">
-              Choose your engagement model.
+              Three structured layers.
               <br />
-              <span className="text-zinc-400 font-normal">Direct specialist work, or turnkey studio systems.</span>
+              <span className="text-zinc-400 font-normal">Led directly by the systems architect.</span>
             </h2>
+            <p className="text-sm text-zinc-400 font-light leading-relaxed max-w-2xl">
+              Primary focus on custom web platforms and intelligent AI visibility, with production enterprise platforms delivered under direct architectural oversight.
+            </p>
           </div>
 
           {/* Asymmetric 7-Col vs 5-Col Bento */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
             
-            {/* Primary: Custom Platforms (7 Cols) */}
+            {/* Primary Offer (7 Cols): Custom Web Platforms & Business Systems */}
             <div className="lg:col-span-7">
               <Card3D maxTilt={3} glowColor="rgba(56, 189, 248, 0.15)" className="h-full">
                 <div className="rounded-[1.75rem] p-8 sm:p-10 bg-gradient-to-b from-cyan-950/20 via-[#07070f] to-[#07070f] border border-white/[0.08] hover:border-cyan-500/25 flex flex-col justify-between h-full transition-all duration-500 relative overflow-hidden group">
@@ -111,10 +114,10 @@ export const HomePage: React.FC = () => {
                           <Cpu className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-[10px] font-mono text-cyan-300/80 font-medium uppercase tracking-wider block">
-                            Direct with Muhammad Mujahid
+                          <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider block">
+                            PRIMARY OFFER • DIRECT WITH MUHAMMAD
                           </span>
-                          <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3–6 weeks</span>
+                          <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3–6 weeks delivery</span>
                         </div>
                       </div>
                       <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono">
@@ -123,23 +126,23 @@ export const HomePage: React.FC = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <h3 className="text-2xl sm:text-[1.75rem] font-bold text-white font-display tracking-tight leading-tight">
-                        Custom Web Platforms &amp; Intelligent Software Systems
+                      <h3 className="text-2xl sm:text-[1.85rem] font-bold text-white font-display tracking-tight leading-tight">
+                        Custom Web Platforms &amp; Business Systems
                       </h3>
-                      <p className="text-sm text-zinc-400 leading-relaxed max-w-lg">
-                        Purpose-built web applications and internal operating systems for businesses that have outgrown off-the-shelf tools. Strict TypeScript, clean architecture, rapid deployment.
+                      <p className="text-sm text-zinc-300 leading-relaxed max-w-xl font-light">
+                        Purpose-built web platforms, SaaS applications, and internal operating engines for companies that have outgrown off-the-shelf software. Architected with strict TypeScript, resilient databases, and rapid weekly milestones.
                       </p>
                     </div>
 
-                    {/* Performance Standards — Quieter */}
+                    {/* Performance Standards */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-[11px] font-mono">
                       <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
                         <div className="text-[9px] text-zinc-500 mb-1">CAPACITY</div>
-                        <div className="font-semibold text-white">10K+ Users</div>
+                        <div className="font-semibold text-white">10K+ Seats</div>
                       </div>
                       <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
                         <div className="text-[9px] text-zinc-500 mb-1">SPEED</div>
-                        <div className="font-semibold text-cyan-400">&lt; 40ms</div>
+                        <div className="font-semibold text-cyan-400">&lt; 40ms RPC</div>
                       </div>
                       <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
                         <div className="text-[9px] text-zinc-500 mb-1">INTEGRITY</div>
@@ -154,13 +157,13 @@ export const HomePage: React.FC = () => {
                     {/* Capabilities */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[13px] text-zinc-300">
                       {[
-                        'Custom Web Applications & Portals',
-                        'SaaS Platforms & Internal Ops',
-                        'Strict TypeScript & Modular Tests',
-                        '100% Repository & IP Ownership'
+                        'Custom Web Platforms & Client Portals',
+                        'SaaS Operating Engines & Internal Ops',
+                        'Strict TypeScript & Modular Test Suites',
+                        '100% Repository & Database Ownership'
                       ].map((item) => (
                         <div key={item} className="flex items-center gap-2.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400/70 shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400/80 shrink-0" />
                           <span>{item}</span>
                         </div>
                       ))}
@@ -187,7 +190,7 @@ export const HomePage: React.FC = () => {
             {/* Secondary Stacked Modules (5 Cols) */}
             <div className="lg:col-span-5 flex flex-col justify-between gap-6">
               
-              {/* AI Visibility Suite */}
+              {/* Secondary Offer: Intelligent Visibility (SEO + AEO + GEO) */}
               <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.15)" className="flex-1">
                 <div className="rounded-[1.75rem] p-7 sm:p-8 bg-gradient-to-b from-emerald-950/15 via-[#07070f] to-[#07070f] border border-white/[0.08] hover:border-emerald-500/25 h-full flex flex-col justify-between transition-all duration-500">
                   <div className="space-y-5">
@@ -196,21 +199,21 @@ export const HomePage: React.FC = () => {
                         <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                           <TrendingUp className="w-4 h-4" />
                         </div>
-                        <span className="text-[10px] font-mono text-emerald-300/80 font-medium uppercase tracking-wider">
-                          Search &amp; AI Discovery
+                        <span className="text-[10px] font-mono text-emerald-300 font-semibold uppercase tracking-wider">
+                          SECONDARY OFFER • SEARCH & AI
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300/80 border border-emerald-500/20">
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
                         Save $300/mo
                       </span>
                     </div>
 
                     <div className="space-y-2">
                       <h4 className="text-xl font-bold text-white font-display tracking-tight">
-                        Intelligent Visibility Suite
+                        Intelligent Visibility (SEO + AEO + GEO)
                       </h4>
-                      <p className="text-xs text-zinc-400 leading-relaxed">
-                        Make sure AI assistants (ChatGPT, Perplexity, Gemini) actively recommend your company by name to prospective buyers.
+                      <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                        Make sure conversational AI assistants (ChatGPT, Perplexity, Gemini, Claude) actively recommend your company by name to prospective buyers.
                       </p>
                     </div>
 
@@ -243,7 +246,7 @@ export const HomePage: React.FC = () => {
                 </div>
               </Card3D>
 
-              {/* Axorks Studio Systems */}
+              {/* Third Layer: Intelligent Business Systems (Axorks Studio) */}
               <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.12)" className="flex-1">
                 <div className="rounded-[1.75rem] p-7 sm:p-8 bg-[#07070f] border border-white/[0.08] hover:border-indigo-500/20 h-full flex flex-col justify-between transition-all duration-500">
                   <div className="space-y-5">
@@ -252,39 +255,39 @@ export const HomePage: React.FC = () => {
                         <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
                           <Layers className="w-4 h-4" />
                         </div>
-                        <span className="text-[10px] font-mono text-indigo-300/80 font-medium uppercase tracking-wider">
-                          Axorks Studio Systems
+                        <span className="text-[10px] font-mono text-indigo-300 font-semibold uppercase tracking-wider">
+                          THIRD LAYER • AXORKS STUDIO
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300/80 border border-indigo-500/20">
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
                         Turnkey
                       </span>
                     </div>
 
                     <div className="space-y-2">
                       <h4 className="text-xl font-bold text-white font-display tracking-tight">
-                        Proven Vertical Platforms
+                        Intelligent Business Systems
                       </h4>
-                      <p className="text-xs text-zinc-400 leading-relaxed">
-                        Turnkey systems for schools, clinics, and commerce — deployed through Axorks Studio.
+                      <p className="text-xs text-zinc-400 leading-relaxed font-light">
+                        Turnkey enterprise platforms deployed under Muhammad's oversight: Campus ERPs, Healthcare EHRs, and Business Automations.
                       </p>
                     </div>
 
                     <div className="space-y-0 text-xs font-mono">
                       {[
-                        { label: 'School & Campus ERPs', price: 'From $8,000' },
+                        { label: 'Campus & School ERPs', price: 'From $8,000' },
                         { label: 'Clinical Healthcare EHRs', price: 'From $10,000' },
-                        { label: 'IoT & Commerce Platforms', price: 'From $5,000' }
+                        { label: 'Business Automations & IoT', price: 'From $6,000' }
                       ].map((item, i) => (
                         <div key={item.label} className={`flex items-center justify-between py-3 ${i < 2 ? 'border-b border-white/[0.04]' : ''}`}>
                           <span className="text-zinc-400">{item.label}</span>
-                          <span className="text-indigo-300/80 font-medium">{item.price}</span>
+                          <span className="text-indigo-300 font-medium">{item.price}</span>
                         </div>
                       ))}
                     </div>
 
                     <div className="text-[10px] font-mono text-zinc-500">
-                      <span className="text-cyan-400/70">Architected by Muhammad Mujahid</span> · Delivered through Axorks Studio
+                      <span className="text-cyan-400/80">Architected by Muhammad Mujahid</span> · Delivered through Axorks Studio
                     </div>
                   </div>
 

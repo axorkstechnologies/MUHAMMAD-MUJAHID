@@ -66,7 +66,7 @@ export const ExperienceSection: React.FC = () => {
                         <div className="text-[11px] font-mono text-cyan-300">Founder • Axorks</div>
                       </div>
                       <span className="px-2.5 py-1 rounded-full bg-black/70 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 backdrop-blur-md flex items-center gap-1.5 shadow-md">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                         Active Lead
                       </span>
                     </div>

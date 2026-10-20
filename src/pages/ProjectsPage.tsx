@@ -15,19 +15,22 @@ export const ProjectsPage: React.FC = () => {
       className="relative pt-24 pb-20"
     >
       {/* Page Title & Context Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono">
-            <Layers className="w-3.5 h-3.5" />
-            <span>Featured Case Studies & Proven Results</span>
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="w-8 h-px bg-cyan-400/60" />
+            <span className="text-[11px] font-mono text-cyan-400 font-medium tracking-widest uppercase">
+              Production Case Studies
+            </span>
+            <span className="w-8 h-px bg-cyan-400/60" />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Production Systems & <span className="text-gradient">Real Results</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
+            Real systems. Proven commercial impact.
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Explore live production platforms, clinical healthcare systems, agricultural IoT networks, and campus ERPs engineered directly by Muhammad Mujahid.
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-light max-w-2xl mx-auto">
+            Explore live production platforms, clinical healthcare operating systems, IoT agricultural networks, and campus ERPs architected by Muhammad Mujahid.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-zinc-400 pt-2">
@@ -35,12 +38,12 @@ export const ProjectsPage: React.FC = () => {
               <CheckCircle className="w-3.5 h-3.5" /> 100% Production Tested
             </span>
             <span>•</span>
-            <span className="flex items-center gap-1.5 text-cyan-400">
-              <ShieldCheck className="w-3.5 h-3.5" /> Real Verifiable Metrics
+            <span className="flex items-center gap-1.5 text-zinc-300">
+              <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" /> Verifiable ROI Metrics
             </span>
             <span>•</span>
-            <span className="flex items-center gap-1.5 text-indigo-400">
-              <Terminal className="w-3.5 h-3.5" /> Zero Boilerplate
+            <span className="flex items-center gap-1.5 text-zinc-300">
+              <Terminal className="w-3.5 h-3.5 text-indigo-400" /> 100% Code Handover
             </span>
           </div>
         </div>

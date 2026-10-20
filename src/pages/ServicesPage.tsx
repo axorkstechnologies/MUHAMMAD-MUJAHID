@@ -18,29 +18,32 @@ export const ServicesPage: React.FC = () => {
       {/* Page Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-            <TrendingUp className="w-3.5 h-3.5" />
-            <span>Engineering Services & Transparent Pricing</span>
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="w-8 h-px bg-cyan-400/60" />
+            <span className="text-[11px] font-mono text-cyan-400 font-medium tracking-widest uppercase">
+              Three-Tier Service Architecture
+            </span>
+            <span className="w-8 h-px bg-cyan-400/60" />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Transparent Scopes. <span className="text-gradient">Real Business Outcomes.</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight leading-tight">
+            Engineering services &amp; transparent investment.
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            Fixed milestone pricing, zero hidden scope creep, and direct founder leadership. From custom web applications and intelligent AI visibility (SEO + AEO + GEO) to proven enterprise systems delivered via Axorks Studio.
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-light max-w-2xl mx-auto">
+            Fixed milestone pricing, weekly deployable progress, and direct founder leadership. Three structured layers: Custom Web Platforms &amp; Business Systems (primary), Intelligent Visibility (SEO + AEO + GEO), and Turnkey Enterprise Systems.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-xs font-mono text-zinc-300 flex items-center gap-1.5">
+            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-xs font-mono text-zinc-300 flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
-              100% Code Ownership
+              100% Code &amp; IP Ownership
             </span>
-            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-xs font-mono text-zinc-300 flex items-center gap-1.5">
+            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-xs font-mono text-zinc-300 flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400" />
-              Weekly Deployments
+              Weekly Live Deployments
             </span>
-            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/10 text-xs font-mono text-zinc-300 flex items-center gap-1.5">
+            <span className="px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] text-xs font-mono text-zinc-300 flex items-center gap-1.5">
               <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" />
               Direct Founder Access
             </span>

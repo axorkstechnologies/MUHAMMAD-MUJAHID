@@ -161,17 +161,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             <div className="space-y-1">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
-                  text="Custom Web Platforms & Intelligent AI Visibility."
+                  text="Custom Web Platforms & Business Systems."
                   className="block text-white"
-                  highlightWords={['Custom', 'Web', 'Platforms', 'Intelligent', 'Visibility.']}
+                  highlightWords={['Custom', 'Web', 'Platforms', 'Business', 'Systems.']}
                   highlightClassName="text-white block"
                   delay={0.1}
                 />
                 <motion.span 
                   variants={headlineLineVariants} 
-                  className="text-zinc-500 font-light text-xl sm:text-2xl lg:text-3xl block mt-3"
+                  className="text-zinc-400 font-normal text-xl sm:text-2xl lg:text-3xl block mt-3"
                 >
-                  Engineered to Run Your Business.
+                  Engineered to run your company with founder-direct precision.
                 </motion.span>
               </h1>
             </div>
@@ -181,7 +181,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               variants={itemFadeUp}
               className="text-base sm:text-lg text-zinc-300 max-w-2xl font-light leading-relaxed"
             >
-              I design and build high-performance web platforms and modern AI search discovery systems for serious companies. You work directly with me—no agency account managers, no junior developers, and 100% ownership of every line of code.
+              I architect high-performance custom web platforms and modern AI search visibility for companies ready to scale. You work directly with me—from initial database schema to production deployment, with 100% code ownership.
             </motion.p>
 
             {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}

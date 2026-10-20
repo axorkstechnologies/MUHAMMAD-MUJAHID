@@ -29,7 +29,8 @@ import {
   Shield,
   CheckCheck,
   DollarSign,
-  Quote
+  Quote,
+  HeartPulse
 } from 'lucide-react';
 import { PRICING_PLANS, PRICING_ADDONS, calculateCustomEstimate, formatWhatsAppQuoteMessage } from '../utils/pricing.ts';
 import { CONTACT_INFO, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
@@ -172,27 +173,28 @@ export const ServicesPricingSection: React.FC = () => {
         <MotionSection delay={0.12} className="flex items-center justify-start sm:justify-center gap-2 overflow-x-auto no-scrollbar py-2 -mx-4 sm:mx-0 px-4 sm:px-0 mb-16 sm:mb-20 scroll-smooth">
           <a
             href="#category-web-apps"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-500/35 transition cursor-pointer flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(56,189,248,0.25)]"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 transition cursor-pointer flex items-center gap-2 font-semibold"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse inline-block" />
-            <span>1. Custom Web Platforms (Direct)</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 inline-block" />
+            <span>1. Custom Web Platforms &amp; Business Systems (Primary)</span>
           </a>
           <a
             href="#category-ai-visibility"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/35 transition cursor-pointer flex items-center gap-2 font-bold shadow-[0_0_15px_rgba(16,185,129,0.25)]"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition cursor-pointer flex items-center gap-2 font-semibold"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
-            <span>2. AI & Search Visibility (SEO/AEO/GEO)</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+            <span>2. Intelligent Visibility: SEO + AEO + GEO (Secondary)</span>
           </a>
           <a
             href="#category-intelligent-systems"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-indigo-500/15 hover:bg-indigo-500/25 text-indigo-300 border border-indigo-500/35 transition cursor-pointer flex items-center gap-2 font-bold"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 transition cursor-pointer flex items-center gap-2 font-semibold"
           >
-            <span>3. Axorks Studio Systems ($8k+)</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block" />
+            <span>3. Intelligent Business Systems (Third Layer)</span>
           </a>
           <a
             href="#pricing-calculator"
-            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.04] hover:bg-white/[0.08] text-zinc-300 border border-white/10 transition cursor-pointer"
+            className="shrink-0 whitespace-nowrap px-4 py-2 rounded-full text-xs font-mono bg-white/[0.03] hover:bg-white/[0.06] text-zinc-400 hover:text-white border border-white/[0.08] transition cursor-pointer"
           >
             <span>4. Scope Estimator ↓</span>
           </a>
@@ -208,13 +210,13 @@ export const ServicesPricingSection: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
                   <Code className="w-3.5 h-3.5" />
-                  <span>DIRECT SPECIALIST OFFER • FOUNDER-LED</span>
+                  <span>PRIMARY OFFER • DIRECT FOUNDER EXECUTION</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Custom Web Platforms & SaaS Applications
+                  Custom Web Platforms &amp; Business Systems
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Founder-led custom development for serious businesses, funded startups, and leadership teams. 100% direct founder execution, strict TypeScript, and complete code ownership.
+                  Founder-led custom software for businesses that have outgrown off-the-shelf tools. 100% direct founder execution, strict TypeScript, and complete IP ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
@@ -735,7 +737,7 @@ export const ServicesPricingSection: React.FC = () => {
 
 
         {/* ========================================================================= */}
-        {/* 3. AXORKS STUDIO VERTICAL SYSTEMS (ERP, Clinical, Banking)               */}
+        {/* 3. THIRD LAYER: INTELLIGENT BUSINESS SYSTEMS (AXORKS STUDIO)              */}
         {/* ========================================================================= */}
         <MotionSection delay={0.25} className="mb-28 scroll-mt-24">
           <div id="category-intelligent-systems">
@@ -744,13 +746,13 @@ export const ServicesPricingSection: React.FC = () => {
               <div>
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-mono mb-2">
                   <Layers className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Axorks Studio Vertical Systems</span>
+                  <span>THIRD LAYER • AXORKS STUDIO VERTICAL SYSTEMS</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                  Turnkey Production Platforms & Institutional ERPs
+                  Intelligent Business Systems (ERPs &amp; Healthcare)
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Pre-architected operating systems deployed under Muhammad Mujahid's direct architectural oversight with institutional SLAs, full staff onboarding, and complete code ownership.
+                  Turnkey enterprise platforms architected by Muhammad Mujahid and delivered through Axorks Studio: Institutional Campus ERPs, Clinical Healthcare Platforms (EHR), and Business Operating Automations.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
@@ -759,7 +761,7 @@ export const ServicesPricingSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Asymmetric Cards Grid (5-col LMS vs 7-col Banking Core) */}
+            {/* Asymmetric Cards Grid (5-col LMS vs 7-col Healthcare EHR) */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               
               {/* LMS System Card (5 cols) */}
@@ -785,7 +787,7 @@ export const ServicesPricingSection: React.FC = () => {
                       </div>
 
                       <h4 className="text-xl sm:text-2xl font-extrabold text-white font-display">
-                        Custom LMS & Academic Campus ERP
+                        Custom LMS &amp; Academic Campus ERP
                       </h4>
                       <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
                         End-to-end academic operating ecosystem unifying multi-role student progression, faculty administration, biometric RFID attendance, and automated financial reconciliations.
@@ -803,7 +805,7 @@ export const ServicesPricingSection: React.FC = () => {
                         <div className="text-right">
                           <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-medium">
                             <Check className="w-3 h-3" />
-                            10,000+ Concurrency
+                            3,200+ Active Seats
                           </span>
                         </div>
                       </div>
@@ -838,7 +840,7 @@ export const ServicesPricingSection: React.FC = () => {
                         className="w-full py-3.5 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(99,102,241,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
                       >
                         <MessageSquare className="w-4 h-4" />
-                        <span>Request LMS Architecture Scope</span>
+                        <span>Request Campus ERP Scope</span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </a>
                       <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">
@@ -849,14 +851,14 @@ export const ServicesPricingSection: React.FC = () => {
                 </Card3D>
               </div>
 
-              {/* Banking System Card (7 cols - Dominant Enterprise Flagship) */}
+              {/* Healthcare EHR System Card (7 cols - Dominant Production Flagship) */}
               <div className="lg:col-span-7 h-full">
                 <Card3D maxTilt={6} glowColor="rgba(16, 185, 129, 0.25)" className="h-full">
                   <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel-glow border-2 border-emerald-500/40 bg-gradient-to-b from-emerald-950/25 via-zinc-950/85 to-zinc-950 shadow-[0_24px_60px_rgba(16,185,129,0.2)] group hover:border-emerald-400/60 transition-all duration-500">
                     
                     {/* Enterprise Ribbon */}
                     <div className="absolute top-0 right-6 sm:right-10 px-4 py-1 rounded-b-xl bg-emerald-500/20 border-b border-x border-emerald-500/40 text-[10px] font-mono text-emerald-300 uppercase tracking-widest font-bold">
-                      ENTERPRISE CORE // TIER-0
+                      HEALTHCARE CLINICAL CORE // FHIR R4
                     </div>
 
                     {/* Accent Header Ribbon */}
@@ -864,38 +866,38 @@ export const ServicesPricingSection: React.FC = () => {
                       <div className="flex items-center justify-between gap-3 mb-4 pt-2">
                         <div className="flex items-center gap-2.5">
                           <div className="p-2.5 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.3)]">
-                            <Landmark className="w-5 h-5" />
+                            <HeartPulse className="w-5 h-5" />
                           </div>
                           <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-[11px] font-mono text-emerald-300 font-medium">
-                            Fintech & Financial Institutions
+                            Clinics &amp; Hospital Networks
                           </span>
                         </div>
                         <span className="text-xs font-mono text-zinc-400 flex items-center gap-1">
                           <Clock className="w-3.5 h-3.5 text-zinc-500" />
-                          ~8-14 Weeks
+                          ~8-12 Weeks
                         </span>
                       </div>
 
                       <h4 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white font-display">
-                        Banking & Financial Management Core
+                        Clinical Healthcare &amp; Hospital EHR System
                       </h4>
                       <p className="text-xs sm:text-sm text-zinc-300 mt-2 font-light leading-relaxed">
-                        Fault-tolerant core financial orchestration engineered with cryptographic double-entry ledger integrity, real-time settlement, automated KYC/AML, and multi-tenant compliance.
+                        Mission-critical clinical healthcare orchestration engineered with FHIR R4 interoperability, field-level patient data encryption, sub-second ER triage queues, and digital prescriptions.
                       </p>
 
                       {/* Price Banner */}
                       <div className="my-6 p-4 rounded-2xl bg-emerald-500/[0.08] border border-emerald-500/25 flex items-baseline justify-between">
                         <div>
-                          <span className="text-[11px] font-mono text-emerald-300 uppercase tracking-wider block">Enterprise Financial Core</span>
+                          <span className="text-[11px] font-mono text-emerald-300 uppercase tracking-wider block">Enterprise Healthcare Core</span>
                           <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $12,000</span>
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $10,000</span>
                             <span className="text-xs font-mono text-zinc-400">custom architecture</span>
                           </div>
                         </div>
                         <div className="text-right">
                           <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-[10px] font-mono font-medium">
                             <Shield className="w-3 h-3" />
-                            Zero-Drift Ledger
+                            180,000+ Encounters
                           </span>
                         </div>
                       </div>
@@ -907,12 +909,12 @@ export const ServicesPricingSection: React.FC = () => {
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                           {[
-                            'Immutable Double-Entry Ledger: Mathematically verified debit/credit reconciliation engine',
-                            'Multi-Currency & FX Layer: Dynamic currency wallets, real-time rates & spread margins',
-                            'KYC & AML Automation: Customer verification pipelines & automated fraud detection',
-                            'Bank-Grade Encryption: AES-256-GCM data layer, HSM key vaults & SOC2 audit compliance',
-                            'Multi-Signature Approvals: Maker-Checker transaction workflows & non-repudiation audit trails',
-                            'High-Throughput Clearing Layer: Sub-400ms transaction dispatch & automated webhooks'
+                            'FHIR R4 Event Bus: Instant record sync between triage desks, doctor tablets, and nursing stations',
+                            'Field-Level Encryption: AES-256 patient data encryption with immutable audit logs',
+                            'Dynamic Triage Priority Engine: Sub-second ER patient intake queue routing',
+                            'Digital Prescription & Pharmacy: Real-time contraindicated drug cross-checking',
+                            'Laboratory & Diagnostics Bridge: Direct integration with medical imaging and pathology feeds',
+                            'Zero-Downtime High Availability: Multi-region PostgreSQL replication & automated failover'
                           ].map((feature, fIdx) => (
                             <div key={fIdx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
                               <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
@@ -926,13 +928,13 @@ export const ServicesPricingSection: React.FC = () => {
                     {/* Card CTA */}
                     <div className="pt-6 border-t border-white/[0.08]">
                       <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Banking%20%2F%20Financial%20Management%20System%20(Starting%20at%20%2412%2C000)."
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Clinical%20Healthcare%20or%20Hospital%20EHR%20Platform%20(Starting%20at%20%2410%2C000)."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-4 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"
                       >
                         <MessageSquare className="w-4 h-4" />
-                        <span>Request Financial System Scope</span>
+                        <span>Request Healthcare EHR Scope</span>
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </a>
                       <p className="text-[11px] font-mono text-center text-zinc-500 mt-2">

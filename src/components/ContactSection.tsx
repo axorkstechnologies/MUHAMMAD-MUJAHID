@@ -23,7 +23,7 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: 'Flagship Digital Product',
+    projectType: 'Custom Web Platform / SaaS Build — From $3,500',
     budget: '$5,000 - $10,000',
     message: ''
   });
@@ -275,18 +275,24 @@ I would like to initiate an engineering consultation.
                         onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
-                        <option value="Full Visibility Package (SEO + AEO + GEO) — $950/mo">⭐ Full Visibility Package (SEO + AEO + GEO) — $950/mo</option>
-                        <option value="AI & Search Visibility: SEO ($250/mo)">SEO (Search Engine Optimization) — $250/mo</option>
-                        <option value="AI & Search Visibility: AEO ($450/mo)">AEO (Answer Engine Optimization) — $450/mo</option>
-                        <option value="AI & Search Visibility: GEO ($550/mo)">GEO (Generative Engine Optimization) — $550/mo</option>
-                        <option value="Custom LMS for Schools & Universities (From $8,000)">Custom LMS for Schools & Universities — From $8,000</option>
-                        <option value="Banking / Financial Management System (From $12,000)">Banking / Financial Management System — From $12,000</option>
-                        <option value="Custom Web Application Development (From $3,500)">Custom Web Application Development — From $3,500</option>
-                        <option value="Professional Website Development (From $1,200)">Professional Website Development — From $1,200</option>
-                        <option value="Flagship Digital Product ($7,500)">Flagship Digital Product Sprint — $7,500</option>
-                        <option value="Strategic MVP Build ($3,500)">Strategic MVP Build — $3,500</option>
-                        <option value="Fractional Engineering Retainer ($4,200/mo)">Fractional Engineering Retainer — $4,200/mo</option>
-                        <option value="Custom Enterprise Architecture Consultation">Custom Enterprise Architecture Consultation</option>
+                        <optgroup label="1. Primary Offer • Custom Platforms & Web Systems">
+                          <option value="Custom Web Platform / SaaS Build — From $3,500">Custom Web Platform / SaaS Build — From $3,500</option>
+                          <option value="Flagship Digital Product Sprint — $7,500">Flagship Digital Product Sprint — $7,500</option>
+                          <option value="Strategic MVP Build — $3,500">Strategic MVP Build — $3,500</option>
+                          <option value="Fractional Engineering Lead Retainer — $4,200/mo">Fractional Engineering Lead Retainer — $4,200/mo</option>
+                        </optgroup>
+                        <optgroup label="2. Secondary Offer • Intelligent Visibility (AI + Search)">
+                          <option value="⭐ All-In Intelligent Visibility (SEO + AEO + GEO) — $950/mo">⭐ All-In Intelligent Visibility (SEO + AEO + GEO) — $950/mo</option>
+                          <option value="GEO: Generative Engine Optimization — $550/mo">GEO: Generative Engine Optimization — $550/mo</option>
+                          <option value="AEO: Answer Engine Optimization — $450/mo">AEO: Answer Engine Optimization — $450/mo</option>
+                          <option value="SEO: Search Engine Optimization — $250/mo">SEO: Search Engine Optimization — $250/mo</option>
+                        </optgroup>
+                        <optgroup label="3. Third Layer • Intelligent Business Systems (Axorks Studio)">
+                          <option value="Campus & School ERP System (Turnkey) — From $8,000">Campus & School ERP System (Turnkey) — From $8,000</option>
+                          <option value="Clinical Healthcare & Hospital EHR System — From $10,000">Clinical Healthcare & Hospital EHR System — From $10,000</option>
+                          <option value="Custom Enterprise Business Automation System — From $6,000">Custom Enterprise Business Automation System — From $6,000</option>
+                          <option value="Custom System Architecture Audit & Diligence">Custom System Architecture Audit & Diligence</option>
+                        </optgroup>
                       </select>
                     </div>
 
@@ -299,13 +305,12 @@ I would like to initiate an engineering consultation.
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
-                        <option value="$950 / month (Full SEO + AEO + GEO Retainer)">$950 / month (Full Visibility Package)</option>
-                        <option value="$250 - $550 / month (Individual AI Search Retainer)">$250 - $550 / month (SEO / AEO / GEO)</option>
-                        <option value="$1,200 - $3,500 (Website Development)">$1,200 - $3,500 (Website Development)</option>
-                        <option value="$3,500 - $7,500 (MVP / Web Application)">$3,500 - $7,500 (MVP / Web App)</option>
-                        <option value="$8,000 - $12,000 (LMS / Custom Intelligent System)">$8,000 - $12,000 (LMS / Intelligent System)</option>
-                        <option value="$12,000 - $25,000 (Banking / Financial Core)">$12,000 - $25,000 (Banking / Financial System)</option>
-                        <option value="$25,000+ Enterprise Infrastructure">$25,000+ (Enterprise Platform)</option>
+                        <option value="$3,500 - $7,500 (Custom Web Platform / MVP)">$3,500 - $7,500 (Custom Web Platform / MVP)</option>
+                        <option value="$7,500 - $15,000 (Flagship Product / Scaled Platform)">$7,500 - $15,000 (Flagship Product / Scaled Platform)</option>
+                        <option value="$8,000 - $15,000 (Campus ERP / Healthcare EHR Turnkey)">$8,000 - $15,000 (Campus ERP / Healthcare EHR)</option>
+                        <option value="$250 - $950 / month (Intelligent Visibility SEO+AEO+GEO)">$250 - $950 / month (Intelligent Visibility Suite)</option>
+                        <option value="$4,200 / month (Fractional Engineering Lead Retainer)">$4,200 / month (Fractional Engineering Lead)</option>
+                        <option value="$20,000+ (Enterprise Custom System)">$20,000+ (Enterprise Custom System)</option>
                       </select>
                     </div>
                   </div>

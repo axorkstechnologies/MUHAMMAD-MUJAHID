@@ -36,24 +36,24 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative pt-20 pb-12 border-t border-white/[0.08] bg-[#050508]/85 backdrop-blur-2xl">
+    <footer className="relative pt-20 pb-12 border-t border-white/[0.06] bg-[#040407] backdrop-blur-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/[0.08]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/[0.06]">
           {/* Brand & Mission */}
           <div className="md:col-span-5 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center font-display font-black text-sm text-gradient">
+              <div className="w-9 h-9 rounded-xl bg-white/[0.04] border border-white/[0.08] flex items-center justify-center font-display font-black text-sm text-white">
                 M
               </div>
               <span className="font-display font-bold text-base text-white">
                 Muhammad Mujahid
               </span>
             </Link>
-            <p className="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed">
-              Principal Systems Architect & Founder of Axorks Studio. Specializing in Custom Web Platforms, Intelligent Visibility (SEO/AEO/GEO), and production enterprise systems with direct founder accountability.
+            <p className="text-xs sm:text-sm text-zinc-400 max-w-sm leading-relaxed font-light">
+              Principal Systems Architect & Founder of Axorks Studio. Three focused layers: Custom Web Platforms & Business Systems, Intelligent Visibility (SEO/AEO/GEO), and Turnkey Enterprise Systems (ERPs & Healthcare).
             </p>
-            <div className="flex items-center gap-2 text-xs font-mono text-zinc-400">
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+            <div className="flex items-center gap-2 text-xs font-mono text-zinc-500">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
               <span>Karachi, PK (UTC+5): {currentTime || 'Loading...'}</span>
             </div>
           </div>
@@ -65,37 +65,37 @@ export const Footer: React.FC = () => {
             </div>
             <ul className="space-y-2 text-xs text-zinc-400">
               <li>
-                <Link to="/" className="hover:text-cyan-300 transition-colors">
+                <Link to="/" className="hover:text-white transition-colors">
                   Overview
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-cyan-300 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/projects" className="hover:text-cyan-300 transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="hover:text-cyan-300 transition-colors">
+                <Link to="/services" className="hover:text-white transition-colors">
                   Services & Pricing
                 </Link>
               </li>
               <li>
-                <Link to="/experience" className="hover:text-cyan-300 transition-colors">
-                  Experience
+                <Link to="/projects" className="hover:text-white transition-colors">
+                  Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/axorks" className="hover:text-cyan-300 transition-colors">
+                <Link to="/axorks" className="hover:text-white transition-colors">
                   Axorks Studio
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-cyan-300 transition-colors">
+                <Link to="/experience" className="hover:text-white transition-colors">
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="hover:text-white transition-colors">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition-colors">
                   Contact & Brief
                 </Link>
               </li>
@@ -113,7 +113,7 @@ export const Footer: React.FC = () => {
                   href={CONTACT_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2 transition-colors"
+                  className="text-emerald-400 hover:text-emerald-300 flex items-center gap-2 transition-colors font-medium"
                 >
                   <MessageSquare className="w-3.5 h-3.5" />
                   <span>WhatsApp: {CONTACT_INFO.whatsapp}</span>
@@ -124,7 +124,7 @@ export const Footer: React.FC = () => {
                   href={CONTACT_INFO.linkedinUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-300 hover:text-cyan-300 flex items-center gap-2 transition-colors"
+                  className="text-zinc-400 hover:text-white flex items-center gap-2 transition-colors"
                 >
                   <LinkedinIcon className="w-3.5 h-3.5 text-cyan-400" />
                   <span>LinkedIn: {CONTACT_INFO.linkedin}</span>
@@ -135,7 +135,7 @@ export const Footer: React.FC = () => {
                   href={CONTACT_INFO.agencyUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-300 hover:text-cyan-300 flex items-center gap-2 transition-colors"
+                  className="text-zinc-400 hover:text-white flex items-center gap-2 transition-colors"
                 >
                   <Globe className="w-3.5 h-3.5 text-indigo-400" />
                   <span>Axorks Studio: axorks.com</span>

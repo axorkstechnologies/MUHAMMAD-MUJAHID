@@ -12,8 +12,8 @@ export const CONTACT_INFO = {
   email: 'mujahidaryan222149@gmail.com',
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
-  availabilityStatus: 'Available for Q2/Q3 Projects • Direct Founder Delivery',
-  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in two core areas: custom web platforms and intelligent visibility systems (SEO, AEO, and GEO). I also architect production enterprise systems (campus ERPs, healthcare platforms, and e-commerce) delivered through Axorks Studio. When you hire me, you work directly with the founder writing the code.'
+  availabilityStatus: 'Available for Q2 Projects • Direct Founder Delivery',
+  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in three structured layers: Primary: Custom Web Platforms & Business Systems (founder-led custom development). Secondary: Intelligent Visibility (SEO + AEO + GEO). Third Layer: Intelligent Business Systems (Campus ERPs, Healthcare Platforms, and Business Automations delivered through Axorks Studio). You work directly with the founder writing the code.'
 };
 
 export const EXECUTIVE_METRICS: MetricHighlight[] = [
