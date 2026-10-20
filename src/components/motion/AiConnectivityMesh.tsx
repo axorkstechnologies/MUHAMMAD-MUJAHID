@@ -65,9 +65,9 @@ export const AiConnectivityMesh: React.FC = () => {
       />
 
       {/* ------------------------------------------------------------- */}
-      {/* MOBILE VIEW (sm:hidden) — Completely Unclipped, Clean List     */}
+      {/* MOBILE & PORTRAIT TABLET VIEW (md:hidden) — Clean Unclipped List */}
       {/* ------------------------------------------------------------- */}
-      <div className="sm:hidden flex flex-col items-center space-y-4 relative z-10 py-1">
+      <div className="md:hidden flex flex-col items-center space-y-4 relative z-10 py-1">
         {/* Central Core */}
         <motion.div
           animate={{ scale: [1, 1.02, 1] }}
@@ -95,7 +95,7 @@ export const AiConnectivityMesh: React.FC = () => {
             return (
               <div
                 key={node.id}
-                className="p-3 rounded-2xl glass-panel border border-white/10 bg-zinc-950/85 flex items-center justify-between gap-3 shadow-md"
+                className="p-3.5 rounded-2xl glass-panel border border-white/10 bg-zinc-950/85 flex items-center justify-between gap-3 shadow-md"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <div
@@ -125,9 +125,9 @@ export const AiConnectivityMesh: React.FC = () => {
       </div>
 
       {/* ------------------------------------------------------------- */}
-      {/* DESKTOP & TABLET VIEW (hidden sm:flex) — 5-Node Constellation   */}
+      {/* DESKTOP & LANDSCAPE VIEW (hidden md:flex) — 5-Node Constellation */}
       {/* ------------------------------------------------------------- */}
-      <div className="hidden sm:flex relative w-full h-[470px] lg:h-[490px] items-center justify-center">
+      <div className="hidden md:flex relative w-full h-[470px] lg:h-[490px] items-center justify-center">
         {/* SVG Connecting Vector Paths & Radar Circles */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
           <defs>

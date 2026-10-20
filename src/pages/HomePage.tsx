@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
 import { 
   ArrowRight, 
   TrendingUp, 
@@ -17,17 +17,22 @@ import {
   Search,
   Brain,
   Shield,
-  Workflow
+  Workflow,
+  Star,
+  Quote,
+  BadgeCheck
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { HeroSection } from '../components/HeroSection.tsx';
 import { Card3D } from '../components/Card3D.tsx';
 import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
-import { CONTACT_INFO, PROJECTS_DATA } from '../data/portfolioData.ts';
+import { CONTACT_INFO, PROJECTS_DATA, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
 import { RollingCounter } from '../components/motion/RollingCounter.tsx';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const testimonialsRef = React.useRef<HTMLDivElement>(null);
+  const testimonialsInView = useInView(testimonialsRef, { once: true, margin: '-80px' });
 
   const handleHeroNavigate = (sectionId: string) => {
     switch (sectionId) {
@@ -66,258 +71,227 @@ export const HomePage: React.FC = () => {
       {/* 1. Hero Section */}
       <HeroSection onNavigate={handleHeroNavigate} />
 
-      {/* 2. Asymmetric Bento Grid System */}
-      <section className="py-20 border-y border-white/[0.08] bg-[#050508]/80 relative overflow-hidden">
-        {/* Subtle Engineering Blueprint Grid */}
-        <div className="absolute inset-0 blueprint-grid opacity-10 pointer-events-none" />
+      {/* 2. Services Bento Grid — Elevated Surface Rhythm */}
+      <section className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
+        {/* Ultra-subtle ambient depth */}
+        <div className="absolute top-1/4 left-1/5 w-[700px] h-[400px] bg-cyan-500/[0.04] blur-[180px] pointer-events-none rounded-full" />
+        <div className="absolute bottom-1/3 right-1/5 w-[600px] h-[400px] bg-indigo-500/[0.03] blur-[180px] pointer-events-none rounded-full" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Section Engineering Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-white/[0.06]">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                <span className="text-[11px] font-mono text-cyan-400 font-semibold tracking-wider uppercase">
-                  TWO WAYS TO WORK TOGETHER
-                </span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-                Direct Specialist Engagements & Vertical Studio Systems
-              </h2>
-              <p className="text-xs sm:text-sm text-zinc-400 font-light max-w-2xl">
-                Choose direct founder execution for custom software and modern AI search visibility, or deploy proven vertical platforms through Axorks Studio.
-              </p>
-            </div>
-            <div className="text-xs font-mono text-zinc-400 flex items-center gap-2">
-              <span className="text-emerald-400 flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                ACCEPTING Q2 CLIENTS
+          {/* Section Header — Refined */}
+          <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-8 h-px bg-cyan-400/60" />
+              <span className="text-[11px] font-mono text-cyan-400 font-medium tracking-widest uppercase">
+                How We Work Together
               </span>
-              <span className="text-zinc-600">•</span>
-              <span className="text-zinc-300">FOUNDER-DIRECT</span>
             </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white font-display tracking-tight leading-[1.15]">
+              Choose your engagement model.
+              <br />
+              <span className="text-zinc-400 font-normal">Direct specialist work, or turnkey studio systems.</span>
+            </h2>
           </div>
 
-          {/* Asymmetric 7-Col vs 5-Col Bento Architecture */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Asymmetric 7-Col vs 5-Col Bento */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
             
-            {/* Primary Focal Anchor (7 Cols): Custom Web Platforms & Intelligent Systems (Direct with Muhammad) */}
+            {/* Primary: Custom Platforms (7 Cols) */}
             <div className="lg:col-span-7">
-              <Card3D maxTilt={3} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
-                <div className="rounded-3xl p-7 sm:p-9 glass-panel-glow border border-cyan-500/30 bg-gradient-to-b from-cyan-950/25 via-zinc-950/90 to-zinc-950 flex flex-col justify-between h-full shadow-[0_20px_60px_rgba(56,189,248,0.15)] group hover:border-cyan-400/50 transition-all duration-500 relative overflow-hidden">
+              <Card3D maxTilt={3} glowColor="rgba(56, 189, 248, 0.15)" className="h-full">
+                <div className="rounded-[1.75rem] p-8 sm:p-10 bg-gradient-to-b from-cyan-950/20 via-[#07070f] to-[#07070f] border border-white/[0.08] hover:border-cyan-500/25 flex flex-col justify-between h-full transition-all duration-500 relative overflow-hidden group">
                   
-                  {/* Subtle Background Circuit Glow */}
-                  <div className="absolute top-0 right-0 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-72 h-72 bg-cyan-500/[0.06] rounded-full blur-[100px] pointer-events-none group-hover:bg-cyan-500/[0.1] transition-colors duration-700" />
 
-                  <div className="space-y-6 relative z-10">
-                    <div className="flex items-center justify-between pb-4 border-b border-white/10">
-                      <div className="flex items-center gap-2">
-                        <div className="p-2 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400">
+                  <div className="space-y-8 relative z-10">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
                           <Cpu className="w-5 h-5" />
                         </div>
                         <div>
-                          <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider block">
-                            DIRECT ENGAGEMENT • FOUNDER-LED
+                          <span className="text-[10px] font-mono text-cyan-300/80 font-medium uppercase tracking-wider block">
+                            Direct with Muhammad Mujahid
                           </span>
-                          <span className="text-xs font-mono text-zinc-400">Fixed-Scope Sprints • 3-6 Weeks</span>
+                          <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3–6 weeks</span>
                         </div>
                       </div>
-                      <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold">
+                      <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono">
                         From $3,500
                       </span>
                     </div>
 
-                    <div className="space-y-2">
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight group-hover:text-cyan-200 transition-colors">
-                        Custom Web Platforms & Intelligent Software Systems
+                    <div className="space-y-3">
+                      <h3 className="text-2xl sm:text-[1.75rem] font-bold text-white font-display tracking-tight leading-tight">
+                        Custom Web Platforms &amp; Intelligent Software Systems
                       </h3>
-                      <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
-                        Purpose-built web applications, SaaS platforms, and internal business operating engines that off-the-shelf software cannot solve. Engineered directly with strict TypeScript, clean architecture, and rapid deployment.
+                      <p className="text-sm text-zinc-400 leading-relaxed max-w-lg">
+                        Purpose-built web applications and internal operating systems for businesses that have outgrown off-the-shelf tools. Strict TypeScript, clean architecture, rapid deployment.
                       </p>
                     </div>
 
-                    {/* Architectural Specifications Readout */}
-                    <div className="p-4 rounded-2xl bg-black/50 border border-white/10 space-y-3 font-mono">
-                      <div className="flex items-center justify-between text-[11px] text-zinc-400 border-b border-white/[0.06] pb-2">
-                        <span className="text-indigo-300 font-semibold">System Performance Standards</span>
-                        <span className="text-emerald-400">100% Code Ownership</span>
+                    {/* Performance Standards — Quieter */}
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-[11px] font-mono">
+                      <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
+                        <div className="text-[9px] text-zinc-500 mb-1">CAPACITY</div>
+                        <div className="font-semibold text-white">10K+ Users</div>
                       </div>
-                      
-                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
-                        <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">CAPACITY</div>
-                          <div className="font-bold text-white">10K+ Seats</div>
-                        </div>
-                        <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">SPEED</div>
-                          <div className="font-bold text-cyan-400">&lt; 40ms RPC</div>
-                        </div>
-                        <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">INTEGRITY</div>
-                          <div className="font-bold text-emerald-400">Zero Loss</div>
-                        </div>
-                        <div className="p-2 rounded-lg bg-white/[0.02]">
-                          <div className="text-[9px] text-zinc-500">STACK</div>
-                          <div className="font-bold text-indigo-300">TypeScript / Postgres</div>
-                        </div>
+                      <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
+                        <div className="text-[9px] text-zinc-500 mb-1">SPEED</div>
+                        <div className="font-semibold text-cyan-400">&lt; 40ms</div>
+                      </div>
+                      <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
+                        <div className="text-[9px] text-zinc-500 mb-1">INTEGRITY</div>
+                        <div className="font-semibold text-emerald-400">Zero Loss</div>
+                      </div>
+                      <div className="p-3 rounded-xl bg-white/[0.025] border border-white/[0.05]">
+                        <div className="text-[9px] text-zinc-500 mb-1">STACK</div>
+                        <div className="font-semibold text-zinc-300">TS / Postgres</div>
                       </div>
                     </div>
 
-                    {/* Systems Included List */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300">
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                        <span>Custom Web Applications & Portals</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                        <span>SaaS Platforms & Internal Operations</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                        <span>Strict TypeScript & Modular Test Suites</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-                        <span>100% Repository & Database Ownership</span>
-                      </div>
+                    {/* Capabilities */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[13px] text-zinc-300">
+                      {[
+                        'Custom Web Applications & Portals',
+                        'SaaS Platforms & Internal Ops',
+                        'Strict TypeScript & Modular Tests',
+                        '100% Repository & IP Ownership'
+                      ].map((item) => (
+                        <div key={item} className="flex items-center gap-2.5">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400/70 shrink-0" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  {/* Bottom Action Strip */}
-                  <div className="pt-6 mt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                  {/* Bottom Action */}
+                  <div className="pt-8 mt-8 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
                     <Link
                       to="/services"
-                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition-all cursor-pointer"
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white text-zinc-950 font-semibold text-sm flex items-center justify-center gap-2 hover:bg-zinc-100 transition shadow-sm cursor-pointer"
                     >
                       <span>Explore Custom Platforms</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-
-                    <span className="text-[11px] font-mono text-zinc-400 text-center sm:text-right">
-                      Fixed sprints: 3 - 6 weeks
+                    <span className="text-[11px] font-mono text-zinc-500">
+                      Founder-led · Zero handoffs
                     </span>
                   </div>
                 </div>
               </Card3D>
             </div>
 
-            {/* Secondary Staggered Modules (5 Cols) */}
+            {/* Secondary Stacked Modules (5 Cols) */}
             <div className="lg:col-span-5 flex flex-col justify-between gap-6">
               
-              {/* Module 1: AI Search & Answer Visibility (SEO/AEO/GEO) */}
-              <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.25)" className="flex-1">
-                <div className="rounded-3xl p-6 sm:p-7 glass-panel-glow border border-emerald-500/30 bg-gradient-to-b from-emerald-950/30 via-zinc-950/90 to-zinc-950 h-full flex flex-col justify-between shadow-[0_16px_40px_rgba(16,185,129,0.12)] hover:border-emerald-400/50 transition-all">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                      <div className="flex items-center gap-2">
-                        <div className="p-1.5 rounded-lg bg-emerald-500/20 text-emerald-400">
+              {/* AI Visibility Suite */}
+              <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.15)" className="flex-1">
+                <div className="rounded-[1.75rem] p-7 sm:p-8 bg-gradient-to-b from-emerald-950/15 via-[#07070f] to-[#07070f] border border-white/[0.08] hover:border-emerald-500/25 h-full flex flex-col justify-between transition-all duration-500">
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                           <TrendingUp className="w-4 h-4" />
                         </div>
-                        <span className="text-[10px] font-mono text-emerald-300 font-bold uppercase tracking-wider">
-                          Search & AI Discovery
+                        <span className="text-[10px] font-mono text-emerald-300/80 font-medium uppercase tracking-wider">
+                          Search &amp; AI Discovery
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
-                        SAVE $300/MO
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300/80 border border-emerald-500/20">
+                        Save $300/mo
                       </span>
                     </div>
 
-                    <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-white font-display">
-                        Search Engine & AI Discovery Suite
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-bold text-white font-display tracking-tight">
+                        Intelligent Visibility Suite
                       </h4>
-                      <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                        Don't just rank on Google. Make sure modern AI assistants (ChatGPT, Perplexity, Gemini, Claude) actively recommend your company by name to prospective buyers.
+                      <p className="text-xs text-zinc-400 leading-relaxed">
+                        Make sure AI assistants (ChatGPT, Perplexity, Gemini) actively recommend your company by name to prospective buyers.
                       </p>
                     </div>
 
-                    {/* Micro Pricing Tiers */}
-                    <div className="grid grid-cols-4 gap-2 text-center font-mono py-2 bg-black/40 rounded-xl border border-white/[0.06]">
-                      <div className="p-1.5">
-                        <div className="text-[9px] text-zinc-500">SEO</div>
-                        <div className="text-xs font-bold text-white">$250</div>
-                      </div>
-                      <div className="p-1.5">
-                        <div className="text-[9px] text-zinc-500">AEO</div>
-                        <div className="text-xs font-bold text-white">$450</div>
-                      </div>
-                      <div className="p-1.5">
-                        <div className="text-[9px] text-zinc-500">GEO</div>
-                        <div className="text-xs font-bold text-white">$550</div>
-                      </div>
-                      <div className="p-1.5 bg-emerald-500/15 rounded-lg border border-emerald-500/30">
-                        <div className="text-[9px] text-emerald-300 font-bold">ALL-IN</div>
-                        <div className="text-xs font-black text-emerald-400">$950</div>
-                      </div>
+                    {/* Pricing Grid */}
+                    <div className="grid grid-cols-4 gap-1.5 text-center font-mono py-2">
+                      {[
+                        { label: 'SEO', price: '$250', accent: false },
+                        { label: 'AEO', price: '$450', accent: false },
+                        { label: 'GEO', price: '$550', accent: false },
+                        { label: 'ALL-IN', price: '$950', accent: true }
+                      ].map((tier) => (
+                        <div key={tier.label} className={`p-2.5 rounded-xl ${tier.accent ? 'bg-emerald-500/10 border border-emerald-500/20' : 'bg-white/[0.02] border border-white/[0.04]'}`}>
+                          <div className={`text-[9px] ${tier.accent ? 'text-emerald-300 font-bold' : 'text-zinc-500'}`}>{tier.label}</div>
+                          <div className={`text-xs font-bold ${tier.accent ? 'text-emerald-400' : 'text-white'}`}>{tier.price}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-5 border-t border-white/[0.06] flex items-center justify-between">
                     <Link
                       to="/services"
-                      className="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1.5 transition-colors"
+                      className="text-xs font-mono text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-1.5 transition-colors"
                     >
                       <span>See How AI Search Works</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
-                    <span className="text-[10px] font-mono text-zinc-500">Monthly Retainer</span>
+                    <span className="text-[10px] font-mono text-zinc-500">Monthly retainer</span>
                   </div>
                 </div>
               </Card3D>
 
-              {/* Module 2: Axorks Studio Vertical Systems */}
-              <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.2)" className="flex-1">
-                <div className="rounded-3xl p-6 sm:p-7 glass-panel border border-indigo-500/30 bg-zinc-950/85 h-full flex flex-col justify-between shadow-lg hover:border-indigo-400/50 transition-all">
-                  <div className="space-y-4">
-                    <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                      <div className="flex items-center gap-2">
-                        <div className="p-1.5 rounded-lg bg-indigo-500/15 text-indigo-400">
+              {/* Axorks Studio Systems */}
+              <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.12)" className="flex-1">
+                <div className="rounded-[1.75rem] p-7 sm:p-8 bg-[#07070f] border border-white/[0.08] hover:border-indigo-500/20 h-full flex flex-col justify-between transition-all duration-500">
+                  <div className="space-y-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <div className="p-2 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
                           <Layers className="w-4 h-4" />
                         </div>
-                        <span className="text-[10px] font-mono text-indigo-300 font-semibold uppercase tracking-wider">
+                        <span className="text-[10px] font-mono text-indigo-300/80 font-medium uppercase tracking-wider">
                           Axorks Studio Systems
                         </span>
                       </div>
-                      <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/15 text-indigo-300 border border-indigo-500/30">
-                        TURNKEY PLATFORMS
+                      <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-300/80 border border-indigo-500/20">
+                        Turnkey
                       </span>
                     </div>
 
-                    <div className="space-y-1">
-                      <h4 className="text-xl font-bold text-white font-display">
-                        Proven Industry Systems Architected for Scale
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-bold text-white font-display tracking-tight">
+                        Proven Vertical Platforms
                       </h4>
-                      <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                        Turnkey operating systems deployed through Axorks Studio: PHSS Campus ERP (3,200+ students), MediVerse Healthcare EHR (FHIR R4), and AgroTrace IoT.
+                      <p className="text-xs text-zinc-400 leading-relaxed">
+                        Turnkey systems for schools, clinics, and commerce — deployed through Axorks Studio.
                       </p>
                     </div>
 
-                    <div className="space-y-2 pt-1 text-xs font-mono text-zinc-300">
-                      <div className="flex items-center justify-between py-1 border-b border-white/[0.04]">
-                        <span className="text-zinc-400">School & Campus ERPs</span>
-                        <span className="text-indigo-300 font-bold">From $8,000</span>
-                      </div>
-                      <div className="flex items-center justify-between py-1 border-b border-white/[0.04]">
-                        <span className="text-zinc-400">Clinical Healthcare EHRs</span>
-                        <span className="text-indigo-300 font-bold">From $10,000</span>
-                      </div>
-                      <div className="flex items-center justify-between py-1">
-                        <span className="text-zinc-400">IoT & Commerce Platforms</span>
-                        <span className="text-indigo-300 font-bold">From $5,000</span>
-                      </div>
+                    <div className="space-y-0 text-xs font-mono">
+                      {[
+                        { label: 'School & Campus ERPs', price: 'From $8,000' },
+                        { label: 'Clinical Healthcare EHRs', price: 'From $10,000' },
+                        { label: 'IoT & Commerce Platforms', price: 'From $5,000' }
+                      ].map((item, i) => (
+                        <div key={item.label} className={`flex items-center justify-between py-3 ${i < 2 ? 'border-b border-white/[0.04]' : ''}`}>
+                          <span className="text-zinc-400">{item.label}</span>
+                          <span className="text-indigo-300/80 font-medium">{item.price}</span>
+                        </div>
+                      ))}
                     </div>
 
-                    <div className="text-[10px] font-mono text-zinc-400 pt-1">
-                      <span className="text-cyan-400">Architected by Muhammad Mujahid</span> • Delivered through Axorks Studio
+                    <div className="text-[10px] font-mono text-zinc-500">
+                      <span className="text-cyan-400/70">Architected by Muhammad Mujahid</span> · Delivered through Axorks Studio
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                  <div className="pt-5 border-t border-white/[0.06] flex items-center justify-between">
                     <Link
                       to="/services"
-                      className="text-xs font-mono text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-1.5 transition-colors"
+                      className="text-xs font-mono text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1.5 transition-colors"
                     >
                       <span>Explore Studio Platforms</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -331,140 +305,132 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Featured Flagship Projects Monograph (Asymmetric Editorial Rhythm) */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      {/* 3. Case Studies — Editorial Rhythm */}
+      <section className="py-28 sm:py-36 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
           
           {/* Section Header */}
-          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 border-b border-white/[0.08] pb-8">
-            <div className="space-y-2">
-              <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                <span className="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">
-                  Production Case Studies
+          <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-8">
+            <div className="max-w-2xl space-y-4">
+              <div className="flex items-center gap-2.5">
+                <span className="w-8 h-px bg-cyan-400/60" />
+                <span className="text-[11px] font-mono text-cyan-400 font-medium uppercase tracking-widest">
+                  Case Studies
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
-                Production Systems & Proven Case Studies
+              <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white font-display tracking-tight leading-[1.15]">
+                Real systems. Real outcomes.
+                <br />
+                <span className="text-zinc-400 font-normal">Tested under daily production load.</span>
               </h2>
-              <p className="text-sm text-zinc-400 max-w-2xl font-light">
-                Real platforms solving real operational problems across agriculture, healthcare, and education. Tested under daily production load.
-              </p>
             </div>
 
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/15 text-white text-xs font-mono transition group cursor-pointer"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.08] text-white text-xs font-mono transition group cursor-pointer"
             >
-              <span>Explore All Case Studies ({PROJECTS_DATA.length})</span>
+              <span>All Case Studies ({PROJECTS_DATA.length})</span>
               <ArrowRight className="w-3.5 h-3.5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          {/* SPOTLIGHT 01: Panoramic Flagship System (AgroTrace) */}
-          <Card3D maxTilt={3} glowColor="rgba(16, 185, 129, 0.2)">
-            <article className="glass-panel glass-panel-glow rounded-3xl p-7 sm:p-10 border border-emerald-500/25 relative overflow-hidden group shadow-[0_24px_70px_rgba(0,0,0,0.7)]">
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                {/* Left: System Monograph */}
-                <div className="lg:col-span-5 space-y-5">
-                  <div className="flex items-center justify-between">
-                    <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-semibold">
-                      Flagship Case Study • AI Agronomy
+          {/* SPOTLIGHT: AgroTrace — Panoramic */}
+          <Card3D maxTilt={2.5} glowColor="rgba(16, 185, 129, 0.12)">
+            <article className="rounded-[1.75rem] p-8 sm:p-10 bg-gradient-to-b from-emerald-950/10 via-[#050508] to-[#050508] border border-white/[0.08] hover:border-emerald-500/20 relative overflow-hidden group transition-all duration-500">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                {/* Left: Narrative */}
+                <div className="lg:col-span-5 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <span className="px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300/80 text-[11px] font-mono">
+                      Flagship · AI Agronomy
                     </span>
-                    <span className="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      Live in Production
+                    <span className="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                      Live
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-2xl sm:text-4xl font-extrabold text-white font-display tracking-tight">
+                    <h3 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight">
                       {agrotrace.title}
                     </h3>
-                    <p className="text-xs sm:text-sm font-mono text-cyan-300 mt-1">
+                    <p className="text-xs font-mono text-zinc-500 mt-1.5">
                       {agrotrace.subtitle}
                     </p>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/10 text-[10px] font-mono text-zinc-300 mt-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                      <span>Architected by Muhammad Mujahid • Axorks Studio Delivery</span>
+                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/[0.03] border border-white/[0.06] text-[10px] font-mono text-zinc-500 mt-3">
+                      <span className="w-1 h-1 rounded-full bg-cyan-400" />
+                      <span>Architected by Muhammad Mujahid · Axorks Studio</span>
                     </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-light">
+                  <p className="text-sm text-zinc-400 leading-relaxed">
                     {agrotrace.description}
                   </p>
 
-                  {/* 3-Part Operational Architecture Monograph */}
-                  <div className="space-y-2 py-3 px-3.5 rounded-2xl bg-black/50 border border-white/[0.08] text-xs font-mono">
-                    <div className="flex items-start gap-2 text-zinc-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 mt-1.5 shrink-0" />
-                      <span><strong className="text-amber-300 font-medium">Challenge:</strong> 28% spoilage in post-harvest transit from silent refrigeration failure.</span>
+                  {/* Challenge → System → Impact */}
+                  <div className="space-y-3 py-4 px-4 rounded-2xl bg-white/[0.02] border border-white/[0.05] text-[13px]">
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400/80 mt-2 shrink-0" />
+                      <span className="text-zinc-400"><span className="text-amber-300/80 font-medium">Challenge:</span> 28% post-harvest spoilage from silent cold-chain failure.</span>
                     </div>
-                    <div className="flex items-start gap-2 text-zinc-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 shrink-0" />
-                      <span><strong className="text-cyan-300 font-medium">System:</strong> Edge sensor telemetry handling 12,500+ events/sec with offline-first buffer.</span>
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400/80 mt-2 shrink-0" />
+                      <span className="text-zinc-400"><span className="text-cyan-300/80 font-medium">System:</span> Edge IoT telemetry processing 12,500+ events/sec with offline-first buffering.</span>
                     </div>
-                    <div className="flex items-start gap-2 text-zinc-300">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
-                      <span><strong className="text-emerald-300 font-medium">Impact:</strong> 34% spoilage reduction · $380,000+ perishable inventory saved.</span>
+                    <div className="flex items-start gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/80 mt-2 shrink-0" />
+                      <span className="text-zinc-400"><span className="text-emerald-300/80 font-medium">Impact:</span> 34% spoilage reduction · $380K+ perishable inventory saved annually.</span>
                     </div>
                   </div>
 
-                  {/* Production Metrics */}
-                  <div className="grid grid-cols-3 gap-2 py-3 border-y border-white/10 font-mono">
+                  {/* Metrics */}
+                  <div className="grid grid-cols-3 gap-3 font-mono">
                     {agrotrace.metrics.map((m, idx) => (
-                      <div key={idx} className="p-2 rounded-xl bg-white/[0.02] text-center">
-                        <div className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                      <div key={idx} className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.04] text-center">
+                        <div className="text-base font-bold text-white">
                           <RollingCounter value={m.value} />
                         </div>
-                        <div className="text-[10px] text-zinc-400 truncate mt-0.5">{m.label}</div>
+                        <div className="text-[10px] text-zinc-500 mt-0.5">{m.label}</div>
                       </div>
                     ))}
                   </div>
 
-                  <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-3 pt-2">
                     <Link
                       to="/projects"
-                      className="px-5 py-2.5 rounded-xl bg-white text-zinc-950 font-bold text-xs flex items-center gap-2 hover:bg-zinc-100 transition shadow cursor-pointer"
+                      className="px-5 py-2.5 rounded-xl bg-white text-zinc-950 font-semibold text-xs flex items-center gap-2 hover:bg-zinc-100 transition cursor-pointer"
                     >
-                      <span>Explore Case Study</span>
+                      <span>Read Full Case Study</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </Link>
-                    <span className="text-xs font-mono text-zinc-500">140+ Distributed IoT Clusters</span>
+                    <span className="text-[11px] font-mono text-zinc-500">140+ Distributed Clusters</span>
                   </div>
                 </div>
 
-                {/* Right: Panoramic Interactive Visual */}
+                {/* Right: Browser Chrome Frame */}
                 <div className="lg:col-span-7">
-                  <div className="relative aspect-[16/10] rounded-2xl overflow-hidden border border-white/15 shadow-2xl bg-zinc-950">
-                    
-                    <img
-                      src="/Images/Agrotrace.jpeg"
-                      alt="AgroTrace AI Agricultural Platform"
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-transparent" />
-
-                    {/* Clean Status Overlay */}
-                    <div className="absolute top-4 left-4 right-4 z-20 flex items-center justify-between text-[11px] font-mono">
-                      <span className="px-2.5 py-1 rounded bg-black/70 border border-white/15 text-emerald-400 backdrop-blur-md flex items-center gap-1.5">
-                        <Activity className="w-3.5 h-3.5 animate-pulse" />
-                        LIVE • 12.5K Events/sec
-                      </span>
-                      <span className="px-2.5 py-1 rounded bg-black/70 border border-white/15 text-zinc-300 backdrop-blur-md">
-                        Response: &lt; 24ms
-                      </span>
+                  <div className="browser-frame relative aspect-[16/10] flex flex-col">
+                    <div className="h-9 bg-[#0a0b14] border-b border-white/[0.06] px-4 flex items-center justify-between text-xs font-mono shrink-0 select-none">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-zinc-700" />
+                        <span className="text-zinc-600 text-[10px] ml-2 hidden sm:inline">agrotrace.network/monitoring</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        <span className="text-emerald-400/70 text-[10px]">Live</span>
+                      </div>
                     </div>
 
-                    <div className="absolute bottom-4 left-4 right-4 z-20 flex items-end justify-between">
-                      <div className="space-y-1">
-                        <div className="text-[10px] font-mono text-zinc-400 uppercase">Platform</div>
-                        <div className="text-sm font-bold text-white font-mono">IoT Agronomy & AI Yield Prediction</div>
-                      </div>
-                      <span className="text-xs font-mono text-emerald-400 font-semibold px-2.5 py-1 rounded-lg bg-black/60 border border-emerald-500/30">
-                        98.4% Accuracy
-                      </span>
+                    <div className="relative flex-1 overflow-hidden">
+                      <img
+                        src="/Images/Agrotrace.jpeg"
+                        alt="AgroTrace AI Agricultural Platform"
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b14] via-transparent to-transparent opacity-60" />
                     </div>
                   </div>
                 </div>
@@ -472,56 +438,58 @@ export const HomePage: React.FC = () => {
             </article>
           </Card3D>
 
-          {/* SECONDARY SYSTEMS: Asymmetric 2-Column Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+          {/* SECONDARY: MediVerse + PHSS */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             
             {/* MediVerse */}
-            <Card3D maxTilt={4} glowColor="rgba(99, 102, 241, 0.2)">
-              <article className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between h-full group hover:border-indigo-400/40 transition-all shadow-xl">
-                <div className="space-y-4">
+            <Card3D maxTilt={3} glowColor="rgba(99, 102, 241, 0.12)">
+              <article className="rounded-[1.75rem] p-7 sm:p-8 bg-[#07070f] border border-white/[0.08] hover:border-indigo-500/20 flex flex-col justify-between h-full group transition-all duration-500">
+                <div className="space-y-5">
                   <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-[11px] font-mono">
+                    <span className="px-2.5 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/15 text-indigo-300/70 text-[11px] font-mono">
                       {mediverse.category}
                     </span>
-                    <span className="text-[11px] font-mono text-emerald-400">{mediverse.status}</span>
+                    <span className="text-[11px] font-mono text-emerald-400/70">{mediverse.status}</span>
                   </div>
 
-                  <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-zinc-950">
-                    <img
-                      src="/Images/Mediverse.jpeg"
-                      alt={mediverse.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-                    <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
-                      <span>{mediverse.title}</span>
-                      <span className="text-indigo-400">FHIR R4 Compliant</span>
+                  {/* Browser Frame */}
+                  <div className="browser-frame relative aspect-[16/9] flex flex-col">
+                    <div className="h-8 bg-[#0a0b14] border-b border-white/[0.06] px-3 flex items-center gap-1.5 shrink-0 select-none">
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="text-zinc-600 text-[9px] font-mono ml-1.5 hidden sm:inline">mediverse.health/triage</span>
+                    </div>
+                    <div className="relative flex-1 overflow-hidden">
+                      <img
+                        src="/Images/Mediverse.jpeg"
+                        alt={mediverse.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b14] via-transparent to-transparent opacity-50" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold text-white font-display group-hover:text-indigo-300 transition-colors">
+                    <h4 className="text-lg font-bold text-white font-display group-hover:text-indigo-300 transition-colors">
                       {mediverse.title}
                     </h4>
-                    <p className="text-xs text-zinc-400 font-mono mt-0.5">{mediverse.subtitle}</p>
-                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.04] border border-white/10 text-[9px] font-mono text-zinc-400 mt-2">
+                    <p className="text-[11px] text-zinc-500 font-mono mt-0.5">{mediverse.subtitle}</p>
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.05] text-[9px] font-mono text-zinc-500 mt-2">
                       <span className="w-1 h-1 rounded-full bg-indigo-400" />
-                      <span>Architected by Muhammad Mujahid • Axorks Studio</span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
-                      {mediverse.description}
-                    </p>
-
-                    {/* Operational Summary */}
-                    <div className="space-y-1.5 p-3 rounded-xl bg-black/40 border border-white/[0.06] text-[11px] font-mono mt-3">
-                      <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Bottleneck:</span> 18-min manual lookup delay per patient visit</div>
-                      <div className="text-zinc-300"><span className="text-indigo-400 font-semibold">• Solution:</span> FHIR R4 encrypted event bus & 0.2s ER queue</div>
-                      <div className="text-emerald-400 font-medium"><span>• Impact:</span> -1.8 hrs/shift saved · 100% security audit pass</div>
+                      <span>Architected by Muhammad Mujahid · Axorks Studio</span>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.06] text-center font-mono">
+                  {/* Challenge → System → Impact */}
+                  <div className="space-y-2 p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] text-[11px] font-mono">
+                    <div className="text-zinc-400"><span className="text-amber-300/70 font-medium">Challenge:</span> 18-min manual lookup delay per patient visit</div>
+                    <div className="text-zinc-400"><span className="text-indigo-300/70 font-medium">System:</span> FHIR R4 encrypted event bus & 0.2s ER queue</div>
+                    <div className="text-emerald-400/80"><span className="font-medium">Impact:</span> 1.8 hrs/shift saved · 100% security audit pass</div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.04] text-center font-mono">
                     {mediverse.metrics.map((m, idx) => (
                       <div key={idx} className="p-1.5">
                         <div className="text-xs font-bold text-white">{m.value}</div>
@@ -531,66 +499,68 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-white/[0.06] flex items-center justify-between">
+                <div className="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between">
                   <Link
                     to="/projects"
-                    className="text-xs font-mono text-indigo-400 hover:text-indigo-300 flex items-center gap-1 font-semibold"
+                    className="text-xs font-mono text-indigo-400/80 hover:text-indigo-300 flex items-center gap-1 font-medium transition-colors"
                   >
-                    <span>Explore Healthcare Case Study</span>
+                    <span>Healthcare Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                  <span className="text-[10px] font-mono text-zinc-500">180K+ Encounters</span>
+                  <span className="text-[10px] font-mono text-zinc-600">180K+ Encounters</span>
                 </div>
               </article>
             </Card3D>
 
-            {/* PHSS School ERP */}
-            <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.2)">
-              <article className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 flex flex-col justify-between h-full group hover:border-cyan-400/40 transition-all shadow-xl">
-                <div className="space-y-4">
+            {/* PHSS */}
+            <Card3D maxTilt={3} glowColor="rgba(56, 189, 248, 0.12)">
+              <article className="rounded-[1.75rem] p-7 sm:p-8 bg-[#07070f] border border-white/[0.08] hover:border-cyan-500/20 flex flex-col justify-between h-full group transition-all duration-500">
+                <div className="space-y-5">
                   <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-[11px] font-mono">
+                    <span className="px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/15 text-cyan-300/70 text-[11px] font-mono">
                       {phss.category}
                     </span>
-                    <span className="text-[11px] font-mono text-emerald-400">{phss.status}</span>
+                    <span className="text-[11px] font-mono text-emerald-400/70">{phss.status}</span>
                   </div>
 
-                  <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-zinc-950">
-                    <img
-                      src="/Images/PHSS Homepage.jpg"
-                      alt={phss.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-                    <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-mono text-white">
-                      <span>{phss.title}</span>
-                      <span className="text-cyan-400">Institutional ERP</span>
+                  {/* Browser Frame */}
+                  <div className="browser-frame relative aspect-[16/9] flex flex-col">
+                    <div className="h-8 bg-[#0a0b14] border-b border-white/[0.06] px-3 flex items-center gap-1.5 shrink-0 select-none">
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="w-2 h-2 rounded-full bg-zinc-700" />
+                      <span className="text-zinc-600 text-[9px] font-mono ml-1.5 hidden sm:inline">campus.phss.edu.pk/portal</span>
+                    </div>
+                    <div className="relative flex-1 overflow-hidden">
+                      <img
+                        src="/Images/PHSS Homepage.jpg"
+                        alt={phss.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b14] via-transparent to-transparent opacity-50" />
                     </div>
                   </div>
 
                   <div>
-                    <h4 className="text-xl font-bold text-white font-display group-hover:text-cyan-300 transition-colors">
+                    <h4 className="text-lg font-bold text-white font-display group-hover:text-cyan-300 transition-colors">
                       {phss.title}
                     </h4>
-                    <p className="text-xs text-zinc-400 font-mono mt-0.5">{phss.subtitle}</p>
-                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.04] border border-white/10 text-[9px] font-mono text-zinc-400 mt-2">
+                    <p className="text-[11px] text-zinc-500 font-mono mt-0.5">{phss.subtitle}</p>
+                    <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.03] border border-white/[0.05] text-[9px] font-mono text-zinc-500 mt-2">
                       <span className="w-1 h-1 rounded-full bg-cyan-400" />
-                      <span>Architected by Muhammad Mujahid • Axorks Studio</span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-zinc-300 font-light mt-2 line-clamp-2">
-                      {phss.description}
-                    </p>
-
-                    {/* Operational Summary */}
-                    <div className="space-y-1.5 p-3 rounded-xl bg-black/40 border border-white/[0.06] text-[11px] font-mono mt-3">
-                      <div className="text-zinc-300"><span className="text-amber-400 font-semibold">• Bottleneck:</span> 3 weeks overtime on manual report cards & fee loss</div>
-                      <div className="text-zinc-300"><span className="text-cyan-400 font-semibold">• Solution:</span> Instant GPA engine + biometric parent WhatsApp alerts</div>
-                      <div className="text-emerald-400 font-medium"><span>• Impact:</span> 3,200+ students · 92% faster grading · 99.4% fee recovery</div>
+                      <span>Architected by Muhammad Mujahid · Axorks Studio</span>
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.06] text-center font-mono">
+                  {/* Challenge → System → Impact */}
+                  <div className="space-y-2 p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.04] text-[11px] font-mono">
+                    <div className="text-zinc-400"><span className="text-amber-300/70 font-medium">Challenge:</span> 3 weeks overtime on manual report cards & fee loss</div>
+                    <div className="text-zinc-400"><span className="text-cyan-300/70 font-medium">System:</span> Instant GPA engine + biometric WhatsApp alerts</div>
+                    <div className="text-emerald-400/80"><span className="font-medium">Impact:</span> 92% faster grading · 99.4% fee recovery</div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-2 py-2 border-y border-white/[0.04] text-center font-mono">
                     {phss.metrics.map((m, idx) => (
                       <div key={idx} className="p-1.5">
                         <div className="text-xs font-bold text-white">{m.value}</div>
@@ -600,15 +570,15 @@ export const HomePage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-white/[0.06] flex items-center justify-between">
+                <div className="pt-5 mt-4 border-t border-white/[0.04] flex items-center justify-between">
                   <Link
                     to="/projects"
-                    className="text-xs font-mono text-cyan-400 hover:text-cyan-300 flex items-center gap-1 font-semibold"
+                    className="text-xs font-mono text-cyan-400/80 hover:text-cyan-300 flex items-center gap-1 font-medium transition-colors"
                   >
-                    <span>Explore Campus ERP Case Study</span>
+                    <span>Campus ERP Case Study</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
-                  <span className="text-[10px] font-mono text-zinc-500">3,200+ Active Seats</span>
+                  <span className="text-[10px] font-mono text-zinc-600">3,200+ Active Seats</span>
                 </div>
               </article>
             </Card3D>
@@ -616,54 +586,139 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 4. AEO & GEO Direct Knowledge & FAQ Section */}
-      <AeoGeoSection />
-
-      {/* 5. Direct Executive Technical Consultation Hook */}
-      <section className="py-24 border-t border-white/[0.08] relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-            <MessageSquare className="w-3.5 h-3.5" />
-            <span>Direct Founder Consultation</span>
+      {/* 4. Executive Proof & Testimonials — Elevated Surface */}
+      <section ref={testimonialsRef} className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
+        <div className="absolute top-1/3 right-1/4 w-[500px] h-[400px] bg-indigo-500/[0.03] blur-[180px] pointer-events-none rounded-full" />
+        
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
+          
+          {/* Section Header */}
+          <div className="max-w-2xl space-y-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-8 h-px bg-emerald-400/60" />
+              <span className="text-[11px] font-mono text-emerald-400 font-medium uppercase tracking-widest">
+                Client Proof
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white font-display tracking-tight leading-[1.15]">
+              What clients say after launch.
+            </h2>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight max-w-3xl mx-auto">
-            Have a project in mind? Let's discuss it directly.
-          </h2>
+          {/* Testimonial Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {TESTIMONIALS_DATA.map((testimonial, idx) => (
+              <motion.div
+                key={testimonial.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={testimonialsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: idx * 0.15, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <div className="rounded-[1.75rem] p-7 sm:p-8 bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] h-full flex flex-col justify-between transition-all duration-500 group">
+                  <div className="space-y-5">
+                    {/* Stars */}
+                    <div className="flex items-center gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                      ))}
+                    </div>
+                    
+                    <blockquote className="text-sm text-zinc-300 leading-relaxed font-light italic">
+                      "{testimonial.quote}"
+                    </blockquote>
+                  </div>
 
-          <p className="text-sm sm:text-base text-zinc-300 max-w-xl mx-auto font-light leading-relaxed">
-            No sales reps, no discovery decks. Send me a quick WhatsApp message to discuss your timeline, scope, and ballpark budget.
-          </p>
+                  <div className="pt-6 mt-6 border-t border-white/[0.04] flex items-center justify-between">
+                    <div>
+                      <div className="text-sm font-semibold text-white">{testimonial.clientName}</div>
+                      <div className="text-[11px] text-zinc-500">{testimonial.clientRole}, {testimonial.company}</div>
+                    </div>
+                    <span className="text-[10px] font-mono text-emerald-400/70 px-2 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/15">
+                      {testimonial.verifiedMetric}
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          {/* Institutional Guarantees */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { icon: Shield, label: '100% IP Ownership', detail: 'Every repo, every asset' },
+              { icon: ShieldCheck, label: '30-Day Hypercare', detail: 'Post-launch stability' },
+              { icon: Terminal, label: 'Strict TypeScript', detail: 'Zero any, zero runtime errors' },
+              { icon: MessageSquare, label: '< 2h Response', detail: 'Direct founder access' }
+            ].map((guarantee) => (
+              <div key={guarantee.label} className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.04] text-center space-y-2.5">
+                <guarantee.icon className="w-5 h-5 text-cyan-400/60 mx-auto" />
+                <div className="text-xs font-semibold text-white">{guarantee.label}</div>
+                <div className="text-[10px] text-zinc-500 font-mono">{guarantee.detail}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. AEO & GEO Section */}
+      <AeoGeoSection />
+
+      {/* 6. Final Conversion — Calm Close */}
+      <section className="py-28 sm:py-36 relative overflow-hidden">
+        {/* Subtle radial glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-emerald-500/[0.04] blur-[200px] pointer-events-none rounded-full" />
+        
+        <div className="max-w-3xl mx-auto px-5 sm:px-6 text-center space-y-8 relative z-10">
+          <div className="space-y-5">
+            <div className="flex items-center justify-center gap-2.5">
+              <span className="w-8 h-px bg-emerald-400/60" />
+              <span className="text-[11px] font-mono text-emerald-400 font-medium uppercase tracking-widest">
+                Start a conversation
+              </span>
+              <span className="w-8 h-px bg-emerald-400/60" />
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-display tracking-tight leading-[1.15]">
+              Have a project in mind?
+              <br />
+              <span className="text-zinc-400 font-normal">Let's discuss it directly.</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-zinc-400 max-w-xl mx-auto leading-relaxed">
+              No sales reps, no discovery decks. Send a quick WhatsApp message to discuss timeline, scope, and ballpark budget.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <a
               href={CONTACT_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.5)] transition-all duration-300 hover:scale-105 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.4)] transition-all duration-300 cursor-pointer"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>Message Muhammad on WhatsApp: {CONTACT_INFO.whatsapp}</span>
+              <span>Message on WhatsApp</span>
+              <ArrowRight className="w-4 h-4" />
             </a>
 
             <Link
               to="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/[0.05] hover:bg-white/[0.1] border border-white/20 text-white font-semibold text-sm flex items-center justify-center gap-2 transition cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/[0.08] text-white font-medium text-sm flex items-center justify-center gap-2 transition cursor-pointer"
             >
               <span>Submit Project Brief</span>
-              <ArrowRight className="w-4 h-4 text-cyan-400" />
+              <ArrowRight className="w-4 h-4 text-cyan-400/70" />
             </Link>
           </div>
 
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-zinc-400">
-            <span className="flex items-center gap-1.5 text-emerald-400">
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 text-[11px] font-mono text-zinc-500">
+            <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-              Guaranteed Response &lt; 2h
+              <span className="text-emerald-400/70">Response within 2 hours</span>
             </span>
-            <span>•</span>
-            <span>100% Code & Repository Handover</span>
-            <span>•</span>
-            <span>Milestone-Based Escrow</span>
+            <span className="text-zinc-700">·</span>
+            <span>100% Code & IP Ownership</span>
+            <span className="text-zinc-700">·</span>
+            <span>Milestone-Based Billing</span>
           </div>
         </div>
       </section>

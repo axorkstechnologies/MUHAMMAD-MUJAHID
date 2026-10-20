@@ -117,16 +117,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
     <section 
       ref={sectionRef}
       id="hero" 
-      className="relative min-h-[90vh] pt-28 sm:pt-32 pb-16 sm:pb-20 flex flex-col justify-center overflow-hidden"
+      className="relative min-h-[92vh] pt-32 sm:pt-40 pb-20 sm:pb-28 flex flex-col justify-center overflow-hidden surface-base"
     >
       {/* Subtle Parallax Background Glows */}
       <motion.div 
         style={{ y: parallaxBg1, opacity: parallaxOpacity }}
-        className="absolute top-1/4 -left-48 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/4 -left-48 w-96 h-96 bg-cyan-500/[0.06] rounded-full blur-[100px] pointer-events-none"
       />
       <motion.div 
         style={{ y: parallaxBg2, opacity: parallaxOpacity }}
-        className="absolute top-1/3 -right-48 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"
+        className="absolute top-1/3 -right-48 w-96 h-96 bg-indigo-500/[0.05] rounded-full blur-[100px] pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
@@ -143,7 +143,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               variants={itemFadeUp}
               className="flex flex-wrap items-center gap-3"
             >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md text-xs font-mono shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.07] backdrop-blur-md text-xs font-mono">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span className="text-zinc-200 font-medium">Muhammad Mujahid</span>
                 <span className="text-zinc-600">•</span>
@@ -153,7 +153,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 <span className="text-zinc-600">|</span>
                 <span>Karachi (UTC+5)</span>
                 <span className="text-zinc-600">|</span>
-                <span className="text-emerald-400 font-medium">40k+ Active Users Supported</span>
+                <span className="text-zinc-300">40K+ Users Supported</span>
               </div>
             </motion.div>
 
@@ -164,12 +164,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   text="Custom Web Platforms & Intelligent AI Visibility."
                   className="block text-white"
                   highlightWords={['Custom', 'Web', 'Platforms', 'Intelligent', 'Visibility.']}
-                  highlightClassName="text-gradient block"
+                  highlightClassName="text-white block"
                   delay={0.1}
                 />
                 <motion.span 
                   variants={headlineLineVariants} 
-                  className="text-zinc-400 font-normal text-2xl sm:text-3xl lg:text-4xl block mt-2"
+                  className="text-zinc-500 font-light text-xl sm:text-2xl lg:text-3xl block mt-3"
                 >
                   Engineered to Run Your Business.
                 </motion.span>
@@ -196,7 +196,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                   href={CONTACT_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 via-teal-400 to-cyan-400 hover:from-emerald-400 hover:to-cyan-300 text-black font-extrabold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_30px_rgba(16,185,129,0.45)] hover:shadow-[0_0_40px_rgba(16,185,129,0.6)] transition-all duration-300 group cursor-pointer"
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black font-bold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_35px_rgba(16,185,129,0.45)] transition-all duration-300 group cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
                   <span>Message on WhatsApp</span>
@@ -211,7 +211,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     whileTap={{ scale: 0.98 }}
                     type="button"
                     onClick={() => onNavigate('services')}
-                    className="w-full px-5 py-3.5 rounded-2xl bg-white text-zinc-950 font-bold text-xs sm:text-sm hover:bg-zinc-100 hover:shadow-[0_0_25px_rgba(255,255,255,0.35)] transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                    className="w-full px-5 py-3.5 rounded-2xl bg-white text-zinc-950 font-semibold text-xs sm:text-sm hover:bg-zinc-100 transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
                   >
                     <span>Services & Pricing</span>
                   </motion.button>
@@ -223,7 +223,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     whileTap={{ scale: 0.98 }}
                     type="button"
                     onClick={() => onNavigate('projects')}
-                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 text-zinc-300 hover:text-white font-medium text-xs sm:text-sm backdrop-blur-xl transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-white/[0.14] text-zinc-400 hover:text-white font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
                   >
                     <span>Case Studies</span>
                   </motion.button>
@@ -260,7 +260,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                 <motion.span
                   whileHover={{ y: -2, borderColor: 'rgba(56, 189, 248, 0.4)' }}
                   key={tech}
-                  className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/[0.07] text-zinc-300 transition-colors"
+                  className="px-2.5 py-1 rounded-lg bg-white/[0.02] border border-white/[0.05] text-zinc-400 transition-colors"
                 >
                   {tech}
                 </motion.span>
@@ -278,8 +278,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             <div className="w-full max-w-sm sm:max-w-md">
               {/* View Mode Switcher */}
               <div className="flex items-center justify-between mb-3 px-2">
-                <span className="text-xs font-mono text-zinc-400">
-                  Perspective
+                <span className="text-[11px] font-mono text-zinc-500">
+                  View
                 </span>
                 <div className="flex items-center gap-1 p-1 rounded-xl bg-black/60 border border-white/10 backdrop-blur-md">
                   <button
@@ -358,7 +358,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </Card3D>
               
               {/* Quick Info Under Card */}
-              <div className="mt-4 px-4 py-3 rounded-2xl bg-white/[0.02] border border-white/[0.06] backdrop-blur-md flex items-center justify-between text-xs font-mono text-zinc-400">
+              <div className="mt-5 px-4 py-3 rounded-2xl bg-white/[0.015] border border-white/[0.04] flex items-center justify-between text-xs font-mono text-zinc-500">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400" />
                   <span>Karachi, PK (UTC+5)</span>
@@ -382,22 +382,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
           variants={metricsContainerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-12 sm:mt-16 pt-8 sm:pt-10 border-t border-white/[0.08] grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6"
+          className="mt-16 sm:mt-24 pt-10 sm:pt-14 border-t border-white/[0.06] grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           {EXECUTIVE_METRICS.map((metric, idx) => (
             <motion.div key={idx} variants={metricCardVariants}>
-              <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.15)">
-                <div className="glass-panel p-3.5 sm:p-5 rounded-2xl border border-white/[0.06] relative overflow-hidden group hover:border-white/20 transition-all duration-300 h-full">
-                  <div className="text-2xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors">
+              <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.12)">
+                <div className="surface-card surface-card-hover p-4 sm:p-6 rounded-2xl relative overflow-hidden group h-full">
+                  <div className="text-2xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors tracking-tight">
                     <RollingCounter value={metric.value} />
                   </div>
-                  <div className="text-sm font-semibold text-zinc-200 mt-1">
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-200 mt-1.5">
                     {metric.label}
                   </div>
-                  <div className="text-xs text-zinc-400 font-mono mt-0.5">
+                  <div className="text-[11px] sm:text-xs text-zinc-400 font-mono mt-0.5 leading-snug">
                     {metric.caption}
                   </div>
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/15 transition-colors pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors pointer-events-none" />
                 </div>
               </Card3D>
             </motion.div>

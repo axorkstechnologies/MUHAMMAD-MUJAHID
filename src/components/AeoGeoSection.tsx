@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Card3D } from './Card3D.tsx';
 import { CONTACT_INFO } from '../data/portfolioData.ts';
+import { AiConnectivityMesh } from './motion/AiConnectivityMesh.tsx';
 
 interface FaqItem {
   question: string;
@@ -54,23 +55,27 @@ export const AeoGeoSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-16 sm:py-24 border-t border-white/[0.08]" aria-labelledby="aeo-geo-heading">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section className="relative py-28 sm:py-36 surface-elevated" aria-labelledby="aeo-geo-heading">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-20">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-            <Brain className="w-3.5 h-3.5" />
-            <span>AI Discovery & Search Intelligence</span>
+          <div className="flex items-center justify-center gap-2.5">
+            <span className="w-8 h-px bg-emerald-400/60" />
+            <span className="text-[11px] font-mono text-emerald-400 font-medium uppercase tracking-widest">
+              Intelligent Visibility
+            </span>
+            <span className="w-8 h-px bg-emerald-400/60" />
           </div>
 
-          <h2 id="aeo-geo-heading" className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-display tracking-tight">
-            How Your Customers Find You in 2026: <br className="hidden sm:inline" />
-            <span className="text-gradient-emerald">Search Engines Meet Modern AI</span>
+          <h2 id="aeo-geo-heading" className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white font-display tracking-tight leading-[1.15]">
+            How your customers find you in 2026.
+            <br />
+            <span className="text-zinc-400 font-normal">Search engines meet modern AI.</span>
           </h2>
 
-          <p className="text-sm sm:text-base text-zinc-300 font-light leading-relaxed">
-            Over 40% of buying decisions now happen inside AI summaries and conversational assistants. Here is how we ensure your business gets recommended.
+          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl mx-auto">
+            Over 40% of buying decisions now happen inside AI summaries and conversational assistants. Here's how we ensure your business gets recommended.
           </p>
         </div>
 
@@ -78,13 +83,13 @@ export const AeoGeoSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Pillar 1: SEO */}
           <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.15)">
-            <article className="p-6 rounded-3xl glass-panel border border-white/10 h-full flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
+            <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
+                  <div className="p-2.5 rounded-xl bg-cyan-500/8 border border-cyan-500/15 text-cyan-400/80">
                     <Search className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-mono text-cyan-400 font-bold">$250 / mo</span>
+                  <span className="text-xs font-mono text-zinc-300">$250 / mo</span>
                 </div>
                 <h3 className="text-lg font-bold text-white font-display">1. SEO (Search Engine)</h3>
                 <div className="text-[11px] font-mono text-zinc-400">Target: Google & Bing Search</div>
@@ -101,13 +106,13 @@ export const AeoGeoSection: React.FC = () => {
 
           {/* Pillar 2: AEO */}
           <Card3D maxTilt={4} glowColor="rgba(129, 140, 248, 0.15)">
-            <article className="p-6 rounded-3xl glass-panel border border-white/10 h-full flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
+            <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400">
+                  <div className="p-2.5 rounded-xl bg-indigo-500/8 border border-indigo-500/15 text-indigo-400/80">
                     <Brain className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-mono text-indigo-400 font-bold">$450 / mo</span>
+                  <span className="text-xs font-mono text-zinc-300">$450 / mo</span>
                 </div>
                 <h3 className="text-lg font-bold text-white font-display">2. AEO (Answer Engine)</h3>
                 <div className="text-[11px] font-mono text-zinc-400">Target: Perplexity & AI Overviews</div>
@@ -124,13 +129,13 @@ export const AeoGeoSection: React.FC = () => {
 
           {/* Pillar 3: GEO */}
           <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.2)">
-            <article className="p-6 rounded-3xl glass-panel border border-emerald-500/25 bg-emerald-950/10 h-full flex flex-col justify-between space-y-4">
-              <div className="space-y-3">
+            <article className="p-7 rounded-[1.75rem] bg-emerald-950/[0.06] border border-emerald-500/15 hover:border-emerald-500/25 h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-emerald-400">
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400/80">
                     <Bot className="w-5 h-5" />
                   </div>
-                  <span className="text-xs font-mono text-emerald-400 font-bold">$550 / mo</span>
+                  <span className="text-xs font-mono text-emerald-300/80">$550 / mo</span>
                 </div>
                 <h3 className="text-lg font-bold text-white font-display">3. GEO (Generative Engine)</h3>
                 <div className="text-[11px] font-mono text-emerald-300/80">Target: ChatGPT, Gemini & Claude</div>
@@ -146,14 +151,62 @@ export const AeoGeoSection: React.FC = () => {
           </Card3D>
         </div>
 
+        {/* All-In Full Visibility Suite Callout Banner */}
+        <div className="p-8 sm:p-10 rounded-[1.75rem] bg-gradient-to-r from-emerald-950/10 via-[#07070f] to-cyan-950/10 border border-emerald-500/15 hover:border-emerald-500/25 flex flex-col md:flex-row items-center justify-between gap-8 transition-all duration-500">
+          <div className="space-y-1.5 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/35 text-emerald-300 text-xs font-mono font-bold">
+              <span>ALL-IN BUNDLE • SAVE $300/MONTH</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
+              The Full Cross-Platform Visibility Suite (SEO + AEO + GEO)
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-300 font-light max-w-2xl">
+              Complete organic domination across traditional search (Google/Bing) and conversational AI platforms (ChatGPT, Perplexity, Gemini, Claude). Includes continuous JSON-LD schema engineering, entity citation tracking, and monthly AI visibility audits.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
+            <div className="text-center md:text-right">
+              <div className="text-3xl font-black text-white font-display">$950<span className="text-sm text-zinc-400 font-normal"> / mo</span></div>
+              <div className="text-[11px] font-mono text-zinc-400 line-through">Value: $1,250 / mo</div>
+            </div>
+            <a
+              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent('Hello Muhammad, I want to discuss the All-In Visibility Suite ($950/mo) for my company.')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.4)] transition shrink-0"
+            >
+              <MessageSquare className="w-3.5 h-3.5" />
+              <span>Enroll in Full Suite</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Interactive 5-Engine AI Connectivity Mesh */}
+        <div className="space-y-6 pt-4">
+          <div className="text-center space-y-2 max-w-2xl mx-auto">
+            <span className="text-[11px] font-mono text-emerald-400/70 uppercase tracking-widest">
+              How It Works
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight">
+              Your brand, recommended by AI.
+            </h3>
+            <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              We connect your brand into the knowledge and reasoning systems of all major AI platforms — so they recommend you by name.
+            </p>
+          </div>
+
+          <AiConnectivityMesh />
+        </div>
+
         {/* Structured Q&A Accordion (AEO Direct Answers) */}
         <div className="max-w-4xl mx-auto space-y-4">
           <div className="text-center space-y-2 mb-8">
-            <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">
-              AUTHORITATIVE DIRECT ANSWERS
+            <span className="text-[11px] font-mono text-zinc-500 uppercase tracking-widest">
+              Common Questions
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white font-display">
-              Frequently Asked Questions (AEO & GEO Reference)
+            <h3 className="text-2xl sm:text-3xl font-bold text-white font-display tracking-tight">
+              Frequently asked questions
             </h3>
           </div>
 
@@ -163,7 +216,7 @@ export const AeoGeoSection: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="rounded-2xl glass-panel border border-white/10 overflow-hidden transition-all duration-300"
+                  className="rounded-2xl bg-white/[0.015] border border-white/[0.05] overflow-hidden transition-all duration-300"
                 >
                   <button
                     type="button"
@@ -203,7 +256,7 @@ export const AeoGeoSection: React.FC = () => {
         </div>
 
         {/* Action Hook */}
-        <div className="p-6 sm:p-8 rounded-3xl glass-panel border border-emerald-500/30 bg-emerald-950/10 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+        <div className="p-7 sm:p-9 rounded-[1.75rem] bg-emerald-950/[0.06] border border-emerald-500/12 hover:border-emerald-500/20 flex flex-col sm:flex-row items-center justify-between gap-6 max-w-4xl mx-auto transition-all duration-500">
           <div className="space-y-1 text-center sm:text-left">
             <h4 className="text-base sm:text-lg font-bold text-white font-display">
               Ready to Audit Your Brand's AI & Google Visibility?
@@ -216,7 +269,7 @@ export const AeoGeoSection: React.FC = () => {
             href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent('Hello Muhammad, I would like to request an AI & Google Visibility Audit for my business.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.35)] shrink-0 transition"
+            className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.25)] shrink-0 transition-all duration-300"
           >
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Request Visibility Audit</span>
