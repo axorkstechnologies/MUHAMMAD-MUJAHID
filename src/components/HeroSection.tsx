@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, Suspense, lazy } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import { 
   ArrowRight, 
@@ -9,11 +9,15 @@ import {
 } from 'lucide-react';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { PhotoPlaceholder } from './PhotoPlaceholder.tsx';
-import { FloatingMonolith3D } from './FloatingMonolith3D.tsx';
 import { Card3D } from './Card3D.tsx';
 import { KineticText } from './motion/KineticText.tsx';
 import { RollingCounter } from './motion/RollingCounter.tsx';
 import { MagneticWrapper } from './motion/MagneticWrapper.tsx';
+
+// Lazy load 3D monolith so Three.js doesn't bloat the initial critical bundle
+const FloatingMonolith3D = lazy(() =>
+  import('./FloatingMonolith3D.tsx').then((m) => ({ default: m.FloatingMonolith3D }))
+);
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
 }
@@ -341,7 +345,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                       </div>
 
                       <div className="w-full h-full flex items-center justify-center">
-                        <FloatingMonolith3D />
+                        <Suspense fallback={
+                          <div className="flex flex-col items-center gap-2">
+                            <div className="w-6 h-6 rounded-full border-2 border-cyan-400/20 border-t-cyan-400 animate-spin" />
+                            <span className="text-[10px] font-mono text-zinc-500">Initializing 3D Canvas...</span>
+                          </div>
+                        }>
+                          <FloatingMonolith3D />
+                        </Suspense>
                       </div>
 
                       <div className="text-center z-10">

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { motion, AnimatePresence, useScroll, useSpring } from 'motion/react';
 import { MessageSquare, ArrowUpRight } from 'lucide-react';
@@ -6,16 +6,28 @@ import { CONTACT_INFO } from './data/portfolioData.ts';
 import { LiquidBackground } from './components/LiquidBackground.tsx';
 import { Navbar } from './components/Navbar.tsx';
 import { Footer } from './components/Footer.tsx';
-
-// Page Imports
-import { HomePage } from './pages/HomePage.tsx';
-import { AboutPage } from './pages/AboutPage.tsx';
-import { ProjectsPage } from './pages/ProjectsPage.tsx';
-import { ServicesPage } from './pages/ServicesPage.tsx';
-import { ExperiencePage } from './pages/ExperiencePage.tsx';
-import { AxorksPage } from './pages/AxorksPage.tsx';
-import { ContactPage } from './pages/ContactPage.tsx';
 import { SEOHead } from './components/SEOHead.tsx';
+
+// Primary Landing Route (eager load for instant First Contentful Paint)
+import { HomePage } from './pages/HomePage.tsx';
+
+// Code-split secondary routes for rapid initial bundle size
+const AboutPage = lazy(() => import('./pages/AboutPage.tsx').then((m) => ({ default: m.AboutPage })));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage.tsx').then((m) => ({ default: m.ProjectsPage })));
+const ServicesPage = lazy(() => import('./pages/ServicesPage.tsx').then((m) => ({ default: m.ServicesPage })));
+const ExperiencePage = lazy(() => import('./pages/ExperiencePage.tsx').then((m) => ({ default: m.ExperiencePage })));
+const AxorksPage = lazy(() => import('./pages/AxorksPage.tsx').then((m) => ({ default: m.AxorksPage })));
+const ContactPage = lazy(() => import('./pages/ContactPage.tsx').then((m) => ({ default: m.ContactPage })));
+
+// Sleek fallback loader matching dark theme aesthetic
+const RouteFallback: React.FC = () => (
+  <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="flex flex-col items-center gap-3">
+      <div className="w-7 h-7 rounded-full border-2 border-cyan-500/20 border-t-cyan-400 animate-spin" />
+      <span className="text-[11px] font-mono text-zinc-500 tracking-wider">LOADING</span>
+    </div>
+  </div>
+);
 
 // Reset scroll position on route change
 function ScrollToTop() {
@@ -50,23 +62,25 @@ function AnimatedAppContent() {
       {/* Interactive Liquid Canvas & Ambient Lighting (persistent across all pages) */}
       <LiquidBackground />
 
-      {/* Floating Liquid Glass Navigation */}
+      {/* Navigation */}
       <Navbar />
 
       {/* Animated Multi-Page Routes */}
       <main className="relative z-10 flex flex-col">
-        <AnimatePresence mode="wait">
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/experience" element={<ExperiencePage />} />
-            <Route path="/axorks" element={<AxorksPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </AnimatePresence>
+        <Suspense fallback={<RouteFallback />}>
+          <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/experience" element={<ExperiencePage />} />
+              <Route path="/axorks" element={<AxorksPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </AnimatePresence>
+        </Suspense>
       </main>
 
       {/* Floating High-Conversion WhatsApp Channel */}
@@ -95,7 +109,7 @@ function AnimatedAppContent() {
         </div>
       </motion.a>
 
-      {/* Global Cinematic Footer */}
+      {/* Global Footer */}
       <Footer />
     </div>
   );

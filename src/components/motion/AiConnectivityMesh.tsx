@@ -150,7 +150,7 @@ export const AiConnectivityMesh: React.FC = () => {
           <circle cx="50" cy="50" r="38" fill="none" stroke="rgba(129, 140, 248, 0.1)" strokeWidth="0.2" strokeDasharray="3 3" />
         </svg>
 
-        {/* Central Core: The Sovereign Visibility Hub */}
+        {/* Central Core: The Central Visibility Hub */}
         <motion.div
           animate={{ scale: [1, 1.03, 1] }}
           transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
