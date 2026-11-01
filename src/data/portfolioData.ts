@@ -14,7 +14,7 @@ export const CONTACT_INFO = {
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
   availabilityStatus: 'Available for Q4 / Q1 Projects • Direct Founder Delivery',
-  bio: 'Founder of Axorks Studio & Principal Systems Architect. Founder-direct execution across three layers: Custom Web Platforms (from $900–$3,750+, entry web presence $450), Intelligent Visibility (SEO + AEO + GEO: Foundation at $300 or $99/mo, All-In at $475/mo), and Enterprise Turnkey Systems. Zero junior handoffs. 100% code ownership.'
+  bio: 'Founder of Axorks Studio & Principal Systems Architect. Founder-direct execution across three layers: Custom Web Platforms (from $499 to $1,499+, entry web presence $199), Intelligent Visibility (SEO + AEO + GEO: Foundation at $99/mo, All-In at $299/mo), and Enterprise Turnkey Systems (from $1,999). Zero junior handoffs. 100% code ownership.'
 };
 
 export const CLIENT_TRUST_MARKS = [

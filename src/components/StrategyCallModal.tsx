@@ -26,7 +26,7 @@ export const StrategyCallModal: React.FC<StrategyCallModalProps> = ({
 }) => {
   const [topic, setTopic] = useState<string>(defaultTopic);
   const [timeline, setTimeline] = useState<string>('Immediate (within 2-3 weeks)');
-  const [budgetTier, setBudgetTier] = useState<string>('$900 - $1,750 (Custom Web App / MVP)');
+  const [budgetTier, setBudgetTier] = useState<string>('$499 (Custom Web Platform / Strategic MVP)');
   const [clientName, setClientName] = useState<string>('');
   const [contactHandle, setContactHandle] = useState<string>('');
   const [preferredSlot, setPreferredSlot] = useState<string>('Morning (PKT / EU friendly)');
@@ -94,7 +94,7 @@ ${projectBrief ? `- Context / Objectives: ${projectBrief.trim()}` : ''}`;
                 Book a Technical Strategy Call
               </h3>
               <p className="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
-                Direct dialogue with Muhammad Mujahid. We review your architecture, evaluate scope feasibility, and provide honest ballpark budgets—zero sales pitches.
+                Direct dialogue with Muhammad Mujahid. We review your architecture, evaluate scope feasibility, and provide honest ballpark budgets. Zero sales pitches.
               </p>
             </div>
 
@@ -140,13 +140,14 @@ ${projectBrief ? `- Context / Objectives: ${projectBrief.trim()}` : ''}`;
                     onChange={(e) => setTopic(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400 cursor-pointer transition"
                   >
-                    <option value="Custom Web Platform & Strategic MVP (From $900 - $1,750)">Custom Web Platform & MVP ($900 - $1,750)</option>
-                    <option value="Flagship Digital Product Sprint ($3,750)">Flagship Digital Product ($3,750)</option>
-                    <option value="Professional Web Presence & Landing Asset ($450)">Professional Web Presence & Landing Asset ($450)</option>
-                    <option value="Intelligent Visibility Suite: SEO + AEO + GEO ($475/mo)">All-In Visibility Suite: SEO + AEO + GEO ($475/mo)</option>
-                    <option value="AI Visibility Foundation Setup ($300 one-time / $99/mo)">Visibility Foundation Setup ($300 / $99/mo)</option>
-                    <option value="Campus / School ERP Platform (Turnkey from $4,000)">Campus / School ERP Platform (From $4,000)</option>
-                    <option value="Clinical Healthcare EHR Platform (Turnkey from $5,000)">Clinical Healthcare EHR (From $5,000)</option>
+                    <option value="Custom Web Platform & Strategic MVP ($499)">Custom Web Platform & Strategic MVP ($499)</option>
+                    <option value="Flagship Digital Product System (From $1,499)">Flagship Digital Product System (From $1,499)</option>
+                    <option value="Professional Web Presence ($199)">Professional Web Presence ($199)</option>
+                    <option value="All-In Visibility Suite: SEO + AEO + GEO ($299/mo)">All-In Visibility Suite: SEO + AEO + GEO ($299/mo)</option>
+                    <option value="AEO + GEO Growth Engine ($199/mo)">AEO + GEO Growth Engine ($199/mo)</option>
+                    <option value="AI Visibility Foundation Setup ($99/mo)">Visibility Foundation Setup ($99/mo)</option>
+                    <option value="Campus / School ERP Platform (From $1,999)">Campus / School ERP Platform (From $1,999)</option>
+                    <option value="Clinical Healthcare EHR Platform (From $1,999)">Clinical Healthcare EHR (From $1,999)</option>
                     <option value="Fractional Systems Architect Retainer ($2,100/mo)">Fractional Systems Architect ($2,100/mo)</option>
                     <option value="Technical Architecture Review & Feasibility Audit">Architecture Review & Feasibility Audit</option>
                   </select>
@@ -161,11 +162,11 @@ ${projectBrief ? `- Context / Objectives: ${projectBrief.trim()}` : ''}`;
                     onChange={(e) => setBudgetTier(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400 cursor-pointer transition"
                   >
-                    <option value="$450 - $800 (Entry Web Presence / Landing Asset)">$450 - $800 (Entry Web Presence / Landing Asset)</option>
-                    <option value="$900 - $1,750 (Custom Web App / Strategic MVP)">$900 - $1,750 (Custom Web App / MVP)</option>
-                    <option value="$3,750 - $7,500 (Flagship Product / Scaled Platform)">$3,750 - $7,500 (Flagship Product / Scaled Platform)</option>
-                    <option value="$300 setup or $99/mo - $475/mo (Intelligent Visibility Suite)">$300 or $99/mo - $475/mo (AI Visibility Retainer)</option>
-                    <option value="$4,000 - $10,000+ (Institutional Campus ERP / Clinical EHR)">$4,000 - $10,000+ (Institutional ERP / EHR)</option>
+                    <option value="$199 (Professional Web Presence)">$199 (Professional Web Presence)</option>
+                    <option value="$499 (Custom Web Platform / Strategic MVP)">$499 (Custom Web Platform / Strategic MVP)</option>
+                    <option value="$1,499+ (Flagship Digital Product System)">$1,499+ (Flagship Digital Product System)</option>
+                    <option value="$99/mo - $299/mo (Intelligent Visibility Engine)">$99/mo - $299/mo (Intelligent Visibility Engine)</option>
+                    <option value="From $1,999 (Institutional Campus ERP / Clinical EHR)">From $1,999 (Institutional Campus ERP / Clinical EHR)</option>
                     <option value="$2,100 / month (Fractional Systems Architect Retainer)">$2,100 / month (Fractional CTO Retainer)</option>
                   </select>
                 </div>

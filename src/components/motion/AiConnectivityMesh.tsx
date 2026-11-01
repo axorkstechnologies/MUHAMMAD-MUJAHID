@@ -65,7 +65,7 @@ export const AiConnectivityMesh: React.FC = () => {
       />
 
       {/* ------------------------------------------------------------- */}
-      {/* MOBILE & PORTRAIT TABLET VIEW (md:hidden) — Clean Unclipped List */}
+      {/* MOBILE & PORTRAIT TABLET VIEW (md:hidden): Clean Unclipped List */}
       {/* ------------------------------------------------------------- */}
       <div className="md:hidden flex flex-col items-center space-y-4 relative z-10 py-1">
         {/* Central Core */}
@@ -125,7 +125,7 @@ export const AiConnectivityMesh: React.FC = () => {
       </div>
 
       {/* ------------------------------------------------------------- */}
-      {/* DESKTOP & LANDSCAPE VIEW (hidden md:flex) — 5-Node Constellation */}
+      {/* DESKTOP & LANDSCAPE VIEW (hidden md:flex): 5-Node Constellation */}
       {/* ------------------------------------------------------------- */}
       <div className="hidden md:flex relative w-full h-[470px] lg:h-[490px] items-center justify-center">
         {/* SVG Connecting Vector Paths & Radar Circles */}

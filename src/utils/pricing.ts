@@ -37,10 +37,10 @@ export interface VisibilityTier {
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'entry_web',
-    name: 'Professional Web Presence & Landing Asset',
+    name: 'Professional Web Presence',
     tagline: 'High-conversion founder portfolio, brand marketing site, or brochure conversion asset',
-    basePrice: 450,
-    baseWeeks: 1.5,
+    basePrice: 199,
+    baseWeeks: 1,
     scopeCategory: 'entry',
     badge: 'Entry Web Presence',
     deliverables: [
@@ -58,8 +58,8 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: 'mvp',
     name: 'Custom Web Platform & Strategic MVP',
     tagline: 'Bespoke full-stack web application engineered for rapid market traction and operational scale',
-    basePrice: 900,
-    baseWeeks: 3.5,
+    basePrice: 499,
+    baseWeeks: 3,
     scopeCategory: 'core_app',
     deliverables: [
       'Full-Stack Architecture (React/Next.js + Node.js / PostgreSQL)',
@@ -75,12 +75,12 @@ export const PRICING_PLANS: PricingPlan[] = [
   },
   {
     id: 'flagship',
-    name: 'Flagship Digital Product & Business System',
+    name: 'Flagship Digital Product System',
     tagline: 'End-to-end custom operating system engineered for enterprise performance, scale, and high conversion',
-    basePrice: 3750,
+    basePrice: 1499,
     baseWeeks: 5,
     isPopular: true,
-    badge: 'Best Commercial ROI',
+    badge: 'Starting from $1,499',
     scopeCategory: 'flagship',
     deliverables: [
       'Bespoke Enterprise UI/UX Design System with 60fps Micro-interactions',
@@ -119,9 +119,9 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
     id: 'foundation_audit',
     name: 'Foundation Audit & Setup',
     tagline: 'Complete technical SEO, schema architecture, and AI readiness audit',
-    priceDisplay: '$300 one-time (or $99/mo ongoing)',
+    priceDisplay: '$99 / month (or single month)',
     billingType: 'flexible',
-    numericPrice: 300,
+    numericPrice: 99,
     badge: 'Zero-Risk Entry',
     deliverables: [
       'Comprehensive Technical SEO & Web Vitals Audit',
@@ -137,9 +137,9 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
     id: 'growth_aeo_geo',
     name: 'AEO + GEO Growth Engine',
     tagline: 'Targeted Answer & Generative Engine optimization for Perplexity & ChatGPT',
-    priceDisplay: '$225 / month',
+    priceDisplay: '$199 / month',
     billingType: 'subscription',
-    numericPrice: 225,
+    numericPrice: 199,
     badge: 'Modern AI Search',
     deliverables: [
       'Everything in Foundation Setup plus continuous monthly optimization',
@@ -153,13 +153,13 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
   },
   {
     id: 'all_in_suite',
-    name: 'All-In Full Visibility Suite',
+    name: 'All-In Visibility Engine',
     tagline: 'Complete omni-channel dominance across Google, ChatGPT, Perplexity, Gemini & Claude',
-    priceDisplay: '$475 / month',
+    priceDisplay: '$299 / month',
     billingType: 'subscription',
-    numericPrice: 475,
+    numericPrice: 299,
     isPopular: true,
-    badge: 'Recommended · Save $150/mo',
+    badge: 'Recommended',
     deliverables: [
       'Omni-Channel Coverage: Traditional SEO + AEO + GEO',
       'Page-One Google/Bing Organic Rank Engineering',
@@ -169,7 +169,7 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
       'Direct WhatsApp Advisory Channel with Muhammad Mujahid'
     ],
     idealFor: 'Enterprises and funded founders demanding total brand dominance across both search engines and AI models',
-    tradeOffs: 'Best value overall ($625 individual value bundled at $475/mo) with complete cross-platform coverage.'
+    tradeOffs: 'Complete cross-platform coverage across Google and top AI reasoning engines.'
   }
 ];
 
@@ -177,35 +177,35 @@ export const PRICING_ADDONS: PricingAddon[] = [
   {
     id: 'ai_visibility_suite',
     name: 'All-In AI Visibility Suite (SEO + AEO + GEO)',
-    price: 475,
+    price: 299,
     weeks: 1,
     description: 'Knowledge Graph integration, Schema JSON-LD markup, and ChatGPT/Perplexity citation pipeline'
   },
   {
     id: 'ai_engine',
     name: 'Proprietary AI / LLM Workflows',
-    price: 900,
+    price: 499,
     weeks: 1,
     description: 'Custom embeddings, automated agents, or RAG pipeline integration'
   },
   {
     id: 'realtime_sync',
     name: 'Real-Time Sync & WebSocket Layer',
-    price: 600,
+    price: 350,
     weeks: 1,
     description: 'Instant collaborative state, live data dashboards or streaming notifications'
   },
   {
     id: 'pwa_offline',
     name: 'Offline-First PWA & Mobile Web',
-    price: 550,
+    price: 250,
     weeks: 0.5,
     description: 'Service workers, offline caching and app-store-ready installability'
   },
   {
     id: 'enterprise_security',
     name: 'Enterprise Security & Compliance',
-    price: 750,
+    price: 400,
     weeks: 1,
     description: 'SOC2 readiness, audit logging, rate-limiting & automated penetration audits'
   }

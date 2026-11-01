@@ -82,7 +82,7 @@ export const HomePage: React.FC = () => {
       {/* 1.5 Institutional Trust Bar */}
       <TrustBar />
 
-      {/* 2. Services Bento Grid — Elevated Surface Rhythm */}
+      {/* 2. Services Bento Grid: Elevated Surface Rhythm */}
       <section className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
         {/* Ultra-subtle ambient depth */}
         <div className="absolute top-1/4 left-1/5 w-[700px] h-[400px] bg-cyan-500/[0.04] blur-[180px] pointer-events-none rounded-full" />
@@ -90,7 +90,7 @@ export const HomePage: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Section Header — Refined & Focused on Locked Positioning */}
+          {/* Section Header: Refined & Focused on Locked Positioning */}
           <div className="max-w-3xl mb-16 sm:mb-20 space-y-4">
             <div className="flex items-center gap-2.5">
               <span className="w-8 h-px bg-cyan-400/60" />
@@ -128,15 +128,15 @@ export const HomePage: React.FC = () => {
                           <span className="text-[10px] font-mono text-cyan-300 font-semibold uppercase tracking-wider block">
                             PRIMARY OFFER • DIRECT WITH MUHAMMAD
                           </span>
-                          <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3–6 weeks delivery</span>
+                          <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3 to 6 weeks delivery</span>
                         </div>
                       </div>
                       <div className="text-right">
                         <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono block">
-                          From $900
+                          From $499
                         </span>
                         <span className="text-[10px] font-mono text-zinc-500 mt-1 block">
-                          Web presence from $450
+                          Web presence from $199
                         </span>
                       </div>
                     </div>
@@ -220,7 +220,7 @@ export const HomePage: React.FC = () => {
                         </span>
                       </div>
                       <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
-                        Save $150/mo
+                        Save $100/mo
                       </span>
                     </div>
 
@@ -236,10 +236,10 @@ export const HomePage: React.FC = () => {
                     {/* Pricing Grid */}
                     <div className="grid grid-cols-4 gap-1.5 text-center font-mono py-2">
                       {[
-                        { label: 'AUDIT', price: '$300', accent: false },
+                        { label: 'AUDIT', price: '$99', accent: false },
                         { label: 'ENTRY', price: '$99/mo', accent: false },
-                        { label: 'GROWTH', price: '$225/mo', accent: false },
-                        { label: 'ALL-IN', price: '$475/mo', accent: true }
+                        { label: 'GROWTH', price: '$199/mo', accent: false },
+                        { label: 'ALL-IN', price: '$299/mo', accent: true }
                       ].map((tier) => (
                         <div key={tier.label} className={`p-2.5 rounded-xl ${tier.accent ? 'bg-emerald-500/10 border border-emerald-500/20' : 'bg-white/[0.02] border border-white/[0.04]'}`}>
                           <div className={`text-[9px] ${tier.accent ? 'text-emerald-300 font-bold' : 'text-zinc-500'}`}>{tier.label}</div>
@@ -291,9 +291,9 @@ export const HomePage: React.FC = () => {
 
                     <div className="space-y-0 text-xs font-mono">
                       {[
-                        { label: 'Campus & School ERPs', price: 'From $4,000' },
-                        { label: 'Clinical Healthcare EHRs', price: 'From $5,000' },
-                        { label: 'Business Automations & IoT', price: 'From $3,000' }
+                        { label: 'Campus & School ERPs', price: 'From $1,999' },
+                        { label: 'Clinical Healthcare EHRs', price: 'From $1,999' },
+                        { label: 'Business Automations & IoT', price: 'From $1,999' }
                       ].map((item, i) => (
                         <div key={item.label} className={`flex items-center justify-between py-3 ${i < 2 ? 'border-b border-white/[0.04]' : ''}`}>
                           <span className="text-zinc-400">{item.label}</span>
@@ -324,7 +324,7 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* 3. Case Studies — Editorial Rhythm */}
+      {/* 3. Case Studies: Editorial Rhythm */}
       <section className="py-28 sm:py-36 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-16">
           
@@ -353,7 +353,7 @@ export const HomePage: React.FC = () => {
             </Link>
           </div>
 
-          {/* SPOTLIGHT: AgroTrace — Panoramic */}
+          {/* SPOTLIGHT: AgroTrace: Panoramic */}
           <Card3D maxTilt={2.5} glowColor="rgba(16, 185, 129, 0.12)">
             <article className="rounded-[1.75rem] p-8 sm:p-10 bg-gradient-to-b from-emerald-950/10 via-[#050508] to-[#050508] border border-white/[0.08] hover:border-emerald-500/20 relative overflow-hidden group transition-all duration-500">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -608,7 +608,7 @@ export const HomePage: React.FC = () => {
       {/* 3.5 Execution Process & Milestone Roadmap */}
       <MilestoneRoadmap onOpenStrategyCall={() => setStrategyCallOpen(true)} />
 
-      {/* 4. Executive Proof & Testimonials — Elevated Surface */}
+      {/* 4. Executive Proof & Testimonials: Elevated Surface */}
       <section ref={testimonialsRef} className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[400px] bg-indigo-500/[0.03] blur-[180px] pointer-events-none rounded-full" />
         
@@ -685,7 +685,7 @@ export const HomePage: React.FC = () => {
       {/* 5. AEO & GEO Section */}
       <AeoGeoSection />
 
-      {/* 6. Final Conversion — Calm Close */}
+      {/* 6. Final Conversion: Calm Close */}
       <section className="py-28 sm:py-36 relative overflow-hidden">
         {/* Subtle radial glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-emerald-500/[0.04] blur-[200px] pointer-events-none rounded-full" />

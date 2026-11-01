@@ -35,7 +35,7 @@ export const MilestoneRoadmap: React.FC<MilestoneRoadmapProps> = ({ onOpenStrate
     },
     {
       phase: 'Phase 02',
-      timeline: 'Weeks 2–3',
+      timeline: 'Weeks 2 to 3',
       title: 'Typed Foundations & Core Engineering',
       objective: 'Stand up the core database, authentication, and primary platform workflows.',
       deliverables: [
@@ -44,11 +44,11 @@ export const MilestoneRoadmap: React.FC<MilestoneRoadmapProps> = ({ onOpenStrate
         'Database migrations, indexing & high-throughput API endpoints',
         'Initial responsive layout with mobile-first usability standards'
       ],
-      checkpoint: 'Live Staging URL v1.0 — Testable every Friday'
+      checkpoint: 'Live Staging URL v1.0: Testable every Friday'
     },
     {
       phase: 'Phase 03',
-      timeline: 'Weeks 3–4',
+      timeline: 'Weeks 3 to 4',
       title: 'Interactive Polish & Feature Velocity',
       objective: 'Complete core features, micro-interactions, and AI/real-time integrations.',
       deliverables: [
@@ -61,7 +61,7 @@ export const MilestoneRoadmap: React.FC<MilestoneRoadmapProps> = ({ onOpenStrate
     },
     {
       phase: 'Phase 04',
-      timeline: 'Weeks 5–6',
+      timeline: 'Weeks 5 to 6',
       title: 'Hardening, CI/CD & Production Launch',
       objective: 'Optimize for speed, audit security, and execute zero-downtime go-live.',
       deliverables: [
@@ -92,7 +92,7 @@ export const MilestoneRoadmap: React.FC<MilestoneRoadmapProps> = ({ onOpenStrate
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-white font-display tracking-tight leading-[1.15]">
-              Predictable 4–6 week delivery.
+              Predictable 4 to 6 week delivery.
               <br />
               <span className="text-zinc-400 font-normal">Working software you can verify every Friday.</span>
             </h2>

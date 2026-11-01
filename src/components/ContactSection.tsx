@@ -23,8 +23,8 @@ export const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: 'Custom Web Platform / SaaS MVP — $900 to $1,750+',
-    budget: '$900 - $1,750 (Custom Web Platform / MVP)',
+    projectType: 'Custom Web Platform & Strategic MVP: $499',
+    budget: '$499 (Custom Web Platform / Strategic MVP)',
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
@@ -276,21 +276,21 @@ I would like to initiate an engineering consultation.
                         className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
                         <optgroup label="1. Primary Offer • Custom Web Platforms & Systems">
-                          <option value="Entry Professional Web Presence — $450">Entry Professional Web Presence — $450</option>
-                          <option value="Custom Web Platform / SaaS MVP — $900 to $1,750+">Custom Web Platform / SaaS MVP — $900–$1,750+</option>
-                          <option value="Flagship Digital Product Sprint — $3,750+">Flagship Digital Product Sprint — $3,750+</option>
-                          <option value="Fractional Engineering Lead Retainer — $2,100/mo">Fractional Engineering Lead Retainer — $2,100/mo</option>
+                          <option value="Professional Web Presence: $199">Professional Web Presence: $199</option>
+                          <option value="Custom Web Platform & Strategic MVP: $499">Custom Web Platform & Strategic MVP: $499</option>
+                          <option value="Flagship Digital Product System: From $1,499">Flagship Digital Product System: From $1,499</option>
+                          <option value="Fractional Engineering Lead Retainer: $2,100/mo">Fractional Engineering Lead Retainer: $2,100/mo</option>
                         </optgroup>
                         <optgroup label="2. Intelligent Visibility (SEO + AEO + GEO)">
-                          <option value="Foundation Audit & Setup — $300 one-time or $99/mo">Foundation Audit & Setup — $300 one-time or $99/mo</option>
-                          <option value="AEO+GEO Growth — $225/mo">AEO+GEO Growth Engine — $225/mo</option>
-                          <option value="⭐ All-In Visibility Suite (SEO+AEO+GEO) — $475/mo">⭐ All-In Visibility Suite — $475/mo</option>
-                          <option value="Free AI Visibility Audit — No cost">Free AI Visibility Audit — No Cost</option>
+                          <option value="Foundation Audit & Setup: $99/mo (or one-time)">Foundation Audit & Setup: $99/mo (or one-time)</option>
+                          <option value="AEO+GEO Growth Engine: $199/mo">AEO+GEO Growth Engine: $199/mo</option>
+                          <option value="⭐ All-In Visibility Suite (SEO+AEO+GEO): $299/mo">⭐ All-In Visibility Suite: $299/mo</option>
+                          <option value="Free AI Visibility Audit: No Cost">Free AI Visibility Audit: No Cost</option>
                         </optgroup>
                         <optgroup label="3. Intelligent Business Systems (Axorks Studio)">
-                          <option value="Campus & School ERP System — From $4,000">Campus & School ERP System — From $4,000</option>
-                          <option value="Clinical Healthcare EHR System — From $5,000">Clinical Healthcare EHR System — From $5,000</option>
-                          <option value="Custom Enterprise Business Automation — From $3,000">Custom Enterprise Business Automation — From $3,000</option>
+                          <option value="Campus & School ERP System: From $1,999">Campus & School ERP System: From $1,999</option>
+                          <option value="Clinical Healthcare EHR System: From $1,999">Clinical Healthcare EHR System: From $1,999</option>
+                          <option value="Custom Enterprise Business Automation: From $1,999">Custom Enterprise Business Automation: From $1,999</option>
                           <option value="Custom System Architecture Audit & Diligence">Architecture Audit & Technical Diligence</option>
                         </optgroup>
                       </select>
@@ -305,15 +305,15 @@ I would like to initiate an engineering consultation.
                         onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
                         className="w-full px-4 py-3 rounded-xl bg-zinc-900 border border-white/15 text-base sm:text-xs text-white focus:outline-none focus:border-cyan-400 cursor-pointer"
                       >
-                        <option value="$450 (Entry Professional Web Presence)">$450 (Entry Professional Web Presence)</option>
-                        <option value="$900 - $1,750 (Custom Web Platform / MVP)">$900–$1,750 (Custom Web Platform / MVP)</option>
-                        <option value="$3,750+ (Flagship Digital Product)">$3,750+ (Flagship Digital Product)</option>
-                        <option value="$300 one-time or $99/mo (Visibility Foundation)">$300 one-time or $99/mo (Visibility Foundation)</option>
-                        <option value="$225/mo (AEO+GEO Growth)">$225/mo (AEO+GEO Growth)</option>
-                        <option value="$475/mo (All-In Visibility Suite)">$475/mo (All-In Visibility Suite)</option>
-                        <option value="$4,000 - $10,000 (Campus ERP / Healthcare EHR)">$4,000–$10,000 (Campus ERP / Healthcare EHR)</option>
+                        <option value="$199 (Professional Web Presence)">$199 (Professional Web Presence)</option>
+                        <option value="$499 (Custom Web Platform / Strategic MVP)">$499 (Custom Web Platform / Strategic MVP)</option>
+                        <option value="$1,499+ (Flagship Digital Product)">$1,499+ (Flagship Digital Product)</option>
+                        <option value="$99/mo (Visibility Foundation Audit & Setup)">$99/mo (Visibility Foundation Audit & Setup)</option>
+                        <option value="$199/mo (AEO+GEO Growth)">$199/mo (AEO+GEO Growth)</option>
+                        <option value="$299/mo (All-In Visibility Suite)">$299/mo (All-In Visibility Suite)</option>
+                        <option value="From $1,999 (Campus ERP / Healthcare EHR)">From $1,999 (Campus ERP / Healthcare EHR)</option>
                         <option value="$2,100/mo (Fractional Engineering Lead)">$2,100/mo (Fractional Engineering Lead)</option>
-                        <option value="$10,000+ (Enterprise Custom System)">$10,000+ (Enterprise Custom System)</option>
+                        <option value="$5,000+ (Enterprise Custom System)">$5,000+ (Enterprise Custom System)</option>
                       </select>
                     </div>
                   </div>

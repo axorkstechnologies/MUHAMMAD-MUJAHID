@@ -70,7 +70,7 @@ export const AxorksPage: React.FC = () => {
             <ul className="space-y-3 text-xs sm:text-sm text-zinc-300">
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                <span>Direct Slack/WhatsApp channel with the lead architect—no intermediaries.</span>
+                <span>Direct Slack/WhatsApp channel with the lead architect. No intermediaries.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />

@@ -152,7 +152,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
               </div>
             </motion.div>
 
-            {/* Headline — High-Impact & Concise */}
+            {/* Headline: High Impact and Concise */}
             <div className="space-y-1">
               <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[3.5rem] font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
@@ -171,7 +171,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
               </h1>
             </div>
 
-            {/* Subtext — Radical reduction, punchy outcome */}
+            {/* Subtext: Radical reduction, punchy outcome */}
             <motion.p 
               variants={itemFadeUp}
               className="text-sm sm:text-base text-zinc-300 max-w-xl font-light leading-relaxed"
@@ -245,16 +245,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
               <span className="text-zinc-300">Weekly Deploys</span>
             </motion.div>
 
-            {/* Pricing Anchors — Updated to New Rules */}
+            {/* Pricing Anchors: Transparent rates */}
             <motion.div
               variants={itemFadeUp}
               className="pt-0.5 text-[11px] font-mono text-zinc-500 flex flex-wrap items-center gap-x-2 gap-y-1"
             >
-              <span className="text-zinc-400 font-medium">Custom Platforms from $900</span>
+              <span className="text-zinc-400 font-medium">Custom Platforms from $499</span>
               <span>•</span>
-              <span className="text-zinc-400">Web Presence from $450</span>
+              <span className="text-zinc-400">Web Presence from $199</span>
               <span>•</span>
-              <span className="text-emerald-400/90 font-medium">AI Visibility setup $300 or $99/mo</span>
+              <span className="text-emerald-400/90 font-medium">AI Visibility from $99/mo</span>
             </motion.div>
           </motion.div>
 
@@ -271,7 +271,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
                   <PhotoPlaceholder
                     id="executive-hero-portrait"
                     variant="hero"
-                    label="Muhammad Mujahid - Systems Architect"
+                    label="Muhammad Mujahid: Systems Architect"
                     defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
                   />
                   
@@ -311,7 +311,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
           </motion.div>
         </div>
 
-        {/* Executive Metrics Bar — High Impact Scannable Counters */}
+        {/* Executive Metrics Bar: High Impact Scannable Counters */}
         <motion.div 
           variants={metricsContainerVariants}
           initial="hidden"
