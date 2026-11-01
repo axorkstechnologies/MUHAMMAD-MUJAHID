@@ -80,75 +80,123 @@ export const AeoGeoSection: React.FC = () => {
         </div>
 
         {/* 3 Pillars Comparison Grid (SEO vs AEO vs GEO) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Pillar 1: SEO */}
-          <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.15)">
-            <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-cyan-500/8 border border-cyan-500/15 text-cyan-400/80">
-                    <Search className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-mono text-zinc-300">$250 / mo</span>
-                </div>
-                <h3 className="text-lg font-bold text-white font-display">1. SEO (Search Engine)</h3>
-                <div className="text-[11px] font-mono text-zinc-400">Target: Google & Bing Search</div>
-                <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                  Captures prospects actively typing queries into traditional search bars. Focuses on keyword rankings, technical speed, crawl budgets, and backlink authority.
-                </p>
-              </div>
-              <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-400 space-y-1">
-                <div>Primary Metric: SERP Rank #1-#3</div>
-                <div>Format: Organic Blue Link + Snippet</div>
-              </div>
-            </article>
-          </Card3D>
+        <div className="space-y-6">
+          {/* Architectural Comparison Flow Diagram */}
+          <div className="p-6 sm:p-8 rounded-[1.75rem] bg-white/[0.015] border border-white/[0.06] space-y-4">
+            <div className="flex items-center justify-between pb-3 border-b border-white/[0.06]">
+              <span className="text-xs font-mono uppercase tracking-wider text-cyan-300 font-bold">
+                Discovery Architecture: 2026 Shift
+              </span>
+              <span className="text-[10px] font-mono text-zinc-500">How Buyers Find Vendors Today</span>
+            </div>
 
-          {/* Pillar 2: AEO */}
-          <Card3D maxTilt={4} glowColor="rgba(129, 140, 248, 0.15)">
-            <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-indigo-500/8 border border-indigo-500/15 text-indigo-400/80">
-                    <Brain className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-mono text-zinc-300">$450 / mo</span>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-xs font-mono">
+              <div className="p-4 rounded-xl bg-cyan-500/[0.04] border border-cyan-500/15 space-y-2">
+                <div className="text-cyan-400 font-bold flex items-center gap-1.5">
+                  <Search className="w-3.5 h-3.5" />
+                  <span>1. Traditional SEO (Google / Bing)</span>
                 </div>
-                <h3 className="text-lg font-bold text-white font-display">2. AEO (Answer Engine)</h3>
-                <div className="text-[11px] font-mono text-zinc-400">Target: Perplexity & AI Overviews</div>
-                <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                  Structures facts, Q&A schemas, and entity graphs so AI answer engines present your brand as the direct authoritative answer instead of competing links.
-                </p>
+                <div className="text-zinc-400 text-[11px] leading-relaxed">
+                  Prospect types keywords <span className="text-zinc-600">→</span> Google indexes crawl budget <span className="text-zinc-600">→</span> Shows 10 blue links.
+                </div>
+                <div className="text-[10px] text-zinc-500">Output: Blue Link Click-Through</div>
               </div>
-              <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-400 space-y-1">
-                <div>Primary Metric: Direct Citation & Source Box</div>
-                <div>Format: Synthesized Consensus Answer</div>
-              </div>
-            </article>
-          </Card3D>
 
-          {/* Pillar 3: GEO */}
-          <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.2)">
-            <article className="p-7 rounded-[1.75rem] bg-emerald-950/[0.06] border border-emerald-500/15 hover:border-emerald-500/25 h-full flex flex-col justify-between space-y-5 transition-all duration-500">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400/80">
-                    <Bot className="w-5 h-5" />
-                  </div>
-                  <span className="text-xs font-mono text-emerald-300/80">$550 / mo</span>
+              <div className="p-4 rounded-xl bg-indigo-500/[0.04] border border-indigo-500/15 space-y-2">
+                <div className="text-indigo-400 font-bold flex items-center gap-1.5">
+                  <Brain className="w-3.5 h-3.5" />
+                  <span>2. Answer Engine / AEO (Perplexity &amp; SGE)</span>
                 </div>
-                <h3 className="text-lg font-bold text-white font-display">3. GEO (Generative Engine)</h3>
-                <div className="text-[11px] font-mono text-emerald-300/80">Target: ChatGPT, Gemini & Claude</div>
-                <p className="text-xs text-zinc-300 leading-relaxed font-light">
-                  Builds semantic entity recognition across conversational LLMs so your business is recommended whenever prospects ask AI for solutions in your domain.
-                </p>
+                <div className="text-zinc-400 text-[11px] leading-relaxed">
+                  Prospect asks complex question <span className="text-zinc-600">→</span> AI extracts facts &amp; schemas <span className="text-zinc-600">→</span> Direct featured citation.
+                </div>
+                <div className="text-[10px] text-emerald-400">Output: Verified Direct Answer Badge</div>
               </div>
-              <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-emerald-400/90 space-y-1">
-                <div>Primary Metric: Conversational Recommendation</div>
-                <div>Format: Natural Language AI Endorsement</div>
+
+              <div className="p-4 rounded-xl bg-emerald-500/[0.04] border border-emerald-500/15 space-y-2">
+                <div className="text-emerald-400 font-bold flex items-center gap-1.5">
+                  <Bot className="w-3.5 h-3.5" />
+                  <span>3. Generative / GEO (ChatGPT, Gemini, Claude)</span>
+                </div>
+                <div className="text-zinc-400 text-[11px] leading-relaxed">
+                  Prospect prompts conversational assistant <span className="text-zinc-600">→</span> LLM semantic retrieval <span className="text-zinc-600">→</span> Recommends your brand by name.
+                </div>
+                <div className="text-[10px] text-cyan-300">Output: Natural Language AI Recommendation</div>
               </div>
-            </article>
-          </Card3D>
+            </div>
+          </div>
+
+          {/* 3 Pillars Comparison Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Pillar 1: Foundation Audit & Setup */}
+            <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.15)">
+              <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-cyan-500/8 border border-cyan-500/15 text-cyan-400/80">
+                      <Search className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono text-zinc-300">$300 once / $99/mo</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white font-display">1. Foundation Setup</h3>
+                  <div className="text-[11px] font-mono text-zinc-400">Target: Technical SEO &amp; Entity Schemas</div>
+                  <p className="text-xs text-zinc-300 leading-relaxed font-light">
+                    Complete technical foundation: Core Web Vitals optimization, JSON-LD Schema markup, and knowledge graph mapping so AI models can read your entity.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-400 space-y-1">
+                  <div>Model: $300 one-time setup (or $99/mo maintenance)</div>
+                  <div>Output: W3C &amp; Schema.org compliant entity footprint</div>
+                </div>
+              </article>
+            </Card3D>
+
+            {/* Pillar 2: AEO */}
+            <Card3D maxTilt={4} glowColor="rgba(129, 140, 248, 0.15)">
+              <article className="p-7 rounded-[1.75rem] bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.1] h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-indigo-500/8 border border-indigo-500/15 text-indigo-400/80">
+                      <Brain className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono text-zinc-300">$450 / mo</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white font-display">2. AEO (Answer Engine)</h3>
+                  <div className="text-[11px] font-mono text-zinc-400">Target: Perplexity &amp; Google AI Overviews</div>
+                  <p className="text-xs text-zinc-300 leading-relaxed font-light">
+                    Structures facts, Q&amp;A schemas, and entity graphs so AI answer engines present your brand as the direct authoritative answer instead of competing links.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-zinc-400 space-y-1">
+                  <div>Primary Metric: Direct Citation &amp; Source Box</div>
+                  <div>Format: Synthesized Consensus Answer</div>
+                </div>
+              </article>
+            </Card3D>
+
+            {/* Pillar 3: GEO */}
+            <Card3D maxTilt={4} glowColor="rgba(16, 185, 129, 0.2)">
+              <article className="p-7 rounded-[1.75rem] bg-emerald-950/[0.06] border border-emerald-500/15 hover:border-emerald-500/25 h-full flex flex-col justify-between space-y-5 transition-all duration-500">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400/80">
+                      <Bot className="w-5 h-5" />
+                    </div>
+                    <span className="text-xs font-mono text-emerald-300/80">$550 / mo</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white font-display">3. GEO (Generative Engine)</h3>
+                  <div className="text-[11px] font-mono text-emerald-300/80">Target: ChatGPT, Gemini &amp; Claude</div>
+                  <p className="text-xs text-zinc-300 leading-relaxed font-light">
+                    Builds semantic entity recognition across conversational LLMs so your business is recommended whenever prospects ask AI for solutions in your domain.
+                  </p>
+                </div>
+                <div className="pt-3 border-t border-white/[0.06] text-[11px] font-mono text-emerald-400/90 space-y-1">
+                  <div>Primary Metric: Conversational Recommendation</div>
+                  <div>Format: Natural Language AI Endorsement</div>
+                </div>
+              </article>
+            </Card3D>
+          </div>
         </div>
 
         {/* All-In Full Visibility Suite Callout Banner */}

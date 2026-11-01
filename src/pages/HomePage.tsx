@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, useInView } from 'motion/react';
 import { 
   ArrowRight, 
@@ -20,10 +20,14 @@ import {
   Workflow,
   Star,
   Quote,
-  BadgeCheck
+  BadgeCheck,
+  Calendar
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { HeroSection } from '../components/HeroSection.tsx';
+import { TrustBar } from '../components/TrustBar.tsx';
+import { MilestoneRoadmap } from '../components/MilestoneRoadmap.tsx';
+import { StrategyCallModal } from '../components/StrategyCallModal.tsx';
 import { Card3D } from '../components/Card3D.tsx';
 import { AeoGeoSection } from '../components/AeoGeoSection.tsx';
 import { CONTACT_INFO, PROJECTS_DATA, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
@@ -31,6 +35,7 @@ import { RollingCounter } from '../components/motion/RollingCounter.tsx';
 
 export const HomePage: React.FC = () => {
   const navigate = useNavigate();
+  const [isStrategyCallOpen, setStrategyCallOpen] = useState(false);
   const testimonialsRef = React.useRef<HTMLDivElement>(null);
   const testimonialsInView = useInView(testimonialsRef, { once: true, margin: '-80px' });
 
@@ -69,7 +74,13 @@ export const HomePage: React.FC = () => {
       className="relative"
     >
       {/* 1. Hero Section */}
-      <HeroSection onNavigate={handleHeroNavigate} />
+      <HeroSection 
+        onNavigate={handleHeroNavigate} 
+        onOpenStrategyCall={() => setStrategyCallOpen(true)} 
+      />
+
+      {/* 1.5 Institutional Trust Bar */}
+      <TrustBar />
 
       {/* 2. Services Bento Grid — Elevated Surface Rhythm */}
       <section className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
@@ -120,9 +131,14 @@ export const HomePage: React.FC = () => {
                           <span className="text-[11px] font-mono text-zinc-500">Fixed-scope · 3–6 weeks delivery</span>
                         </div>
                       </div>
-                      <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono">
-                        From $3,500
-                      </span>
+                      <div className="text-right">
+                        <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono block">
+                          From $1,800
+                        </span>
+                        <span className="text-[10px] font-mono text-zinc-500 mt-1 block">
+                          Web presence from $450
+                        </span>
+                      </div>
                     </div>
 
                     <div className="space-y-3">
@@ -220,10 +236,10 @@ export const HomePage: React.FC = () => {
                     {/* Pricing Grid */}
                     <div className="grid grid-cols-4 gap-1.5 text-center font-mono py-2">
                       {[
-                        { label: 'SEO', price: '$250', accent: false },
-                        { label: 'AEO', price: '$450', accent: false },
-                        { label: 'GEO', price: '$550', accent: false },
-                        { label: 'ALL-IN', price: '$950', accent: true }
+                        { label: 'AUDIT', price: '$300', accent: false },
+                        { label: 'ENTRY', price: '$99/mo', accent: false },
+                        { label: 'GROWTH', price: '$450/mo', accent: false },
+                        { label: 'ALL-IN', price: '$950/mo', accent: true }
                       ].map((tier) => (
                         <div key={tier.label} className={`p-2.5 rounded-xl ${tier.accent ? 'bg-emerald-500/10 border border-emerald-500/20' : 'bg-white/[0.02] border border-white/[0.04]'}`}>
                           <div className={`text-[9px] ${tier.accent ? 'text-emerald-300 font-bold' : 'text-zinc-500'}`}>{tier.label}</div>
@@ -589,6 +605,9 @@ export const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* 3.5 Execution Process & Milestone Roadmap */}
+      <MilestoneRoadmap onOpenStrategyCall={() => setStrategyCallOpen(true)} />
+
       {/* 4. Executive Proof & Testimonials — Elevated Surface */}
       <section ref={testimonialsRef} className="py-28 sm:py-36 surface-elevated relative overflow-hidden">
         <div className="absolute top-1/3 right-1/4 w-[500px] h-[400px] bg-indigo-500/[0.03] blur-[180px] pointer-events-none rounded-full" />
@@ -704,9 +723,18 @@ export const HomePage: React.FC = () => {
               <ArrowRight className="w-4 h-4" />
             </a>
 
+            <button
+              type="button"
+              onClick={() => setStrategyCallOpen(true)}
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.1] border border-white/[0.12] text-white font-medium text-sm flex items-center justify-center gap-2 transition cursor-pointer"
+            >
+              <Calendar className="w-4 h-4 text-cyan-400" />
+              <span>Book Strategy Call</span>
+            </button>
+
             <Link
               to="/contact"
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/[0.08] text-white font-medium text-sm flex items-center justify-center gap-2 transition cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white/[0.02] hover:bg-white/[0.05] border border-white/[0.06] text-zinc-300 hover:text-white font-medium text-sm flex items-center justify-center gap-2 transition cursor-pointer"
             >
               <span>Submit Project Brief</span>
               <ArrowRight className="w-4 h-4 text-cyan-400/70" />
@@ -725,6 +753,12 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* 20-Min Technical Strategy Call Modal */}
+      <StrategyCallModal
+        isOpen={isStrategyCallOpen}
+        onClose={() => setStrategyCallOpen(false)}
+      />
     </motion.div>
   );
 };

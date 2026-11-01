@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
           {/* Status Badge */}
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.02] border border-white/[0.06]">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-[11px] font-mono text-zinc-400">Available for Q2</span>
+            <span className="text-[11px] font-mono text-zinc-400">Available for Q4 / Q1</span>
           </div>
 
           {/* WhatsApp Direct Action */}

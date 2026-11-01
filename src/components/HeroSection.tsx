@@ -5,7 +5,8 @@ import {
   MessageSquare, 
   ExternalLink, 
   Box, 
-  User 
+  User,
+  Calendar
 } from 'lucide-react';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { PhotoPlaceholder } from './PhotoPlaceholder.tsx';
@@ -20,9 +21,10 @@ const FloatingMonolith3D = lazy(() =>
 );
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
+  onOpenStrategyCall?: () => void;
 }
 
-export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
+export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStrategyCall }) => {
   const [heroMode, setHeroMode] = useState<'portrait' | 'monolith3d'>('portrait');
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-40px' });
@@ -189,6 +191,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               variants={itemFadeUp}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full"
             >
+              {/* Primary: WhatsApp Direct */}
               <MagneticWrapper strength={0.25} className="w-full sm:w-auto">
                 <motion.a
                   whileHover={{ scale: 1.02 }}
@@ -205,18 +208,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </MagneticWrapper>
 
               <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 w-full sm:w-auto">
+                {/* Secondary: Book Strategy Call */}
                 <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     type="button"
-                    onClick={() => onNavigate('services')}
-                    className="w-full px-5 py-3.5 rounded-2xl bg-white text-zinc-950 font-semibold text-xs sm:text-sm hover:bg-zinc-100 transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                    onClick={() => onOpenStrategyCall ? onOpenStrategyCall() : onNavigate('contact')}
+                    className="w-full px-5 py-3.5 rounded-2xl bg-white text-zinc-950 font-semibold text-xs sm:text-sm hover:bg-zinc-100 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer text-center shadow-md"
                   >
-                    <span>Services & Pricing</span>
+                    <Calendar className="w-3.5 h-3.5 text-zinc-900" />
+                    <span>Book Strategy Call</span>
                   </motion.button>
                 </MagneticWrapper>
 
+                {/* Tertiary: Case Studies */}
                 <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
@@ -225,7 +231,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
                     onClick={() => onNavigate('projects')}
                     className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-white/[0.14] text-zinc-400 hover:text-white font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
                   >
-                    <span>Case Studies</span>
+                    <span>View Case Studies</span>
                   </motion.button>
                 </MagneticWrapper>
               </div>
@@ -242,12 +248,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
               </div>
               <div className="flex items-center gap-1.5 text-zinc-300">
                 <span className="w-1 h-1 rounded-full bg-cyan-400" />
-                <span>100% Code & IP Ownership</span>
+                <span>100% Code &amp; IP Ownership</span>
               </div>
               <div className="flex items-center gap-1.5 text-zinc-300">
                 <span className="w-1 h-1 rounded-full bg-indigo-400" />
                 <span>Direct Founder Delivery</span>
               </div>
+            </motion.div>
+
+            {/* Tier Anchors */}
+            <motion.div
+              variants={itemFadeUp}
+              className="pt-1 text-[11px] font-mono text-zinc-500 flex flex-wrap items-center gap-x-2 gap-y-1"
+            >
+              <span className="text-zinc-400">Fixed-scope sprints from $1,800</span>
+              <span>•</span>
+              <span className="text-zinc-400">Web presence from $450</span>
+              <span>•</span>
+              <span className="text-emerald-400/80">AI visibility setup $300 or $99/mo</span>
             </motion.div>
 
             {/* Core Tech Stack Badges */}

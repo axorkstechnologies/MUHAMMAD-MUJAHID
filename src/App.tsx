@@ -96,7 +96,7 @@ function AnimatedAppContent() {
       >
         <div className="relative">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 block" />
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping absolute inset-0 opacity-75" />
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400/60 animate-pulse absolute inset-0 rounded-full" />
         </div>
         <div className="flex flex-col text-left">
           <span className="text-[10px] font-mono text-emerald-400 font-semibold tracking-wider uppercase leading-none">

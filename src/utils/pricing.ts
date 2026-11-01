@@ -13,59 +13,163 @@ export interface PricingPlan {
   basePrice: number;
   baseWeeks: number;
   isPopular?: boolean;
+  badge?: string;
   deliverables: string[];
   idealFor: string;
+  notFor?: string;
+  scopeCategory: 'entry' | 'core_app' | 'flagship' | 'retainer';
+}
+
+export interface VisibilityTier {
+  id: string;
+  name: string;
+  tagline: string;
+  priceDisplay: string;
+  billingType: 'one-time' | 'subscription' | 'flexible';
+  numericPrice: number;
+  isPopular?: boolean;
+  badge?: string;
+  deliverables: string[];
+  idealFor: string;
+  tradeOffs: string;
 }
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
-    id: 'mvp',
-    name: 'Strategic MVP',
-    tagline: 'Rapid market validation with robust engineering fundamentals',
-    basePrice: 3500,
-    baseWeeks: 3,
+    id: 'entry_web',
+    name: 'Professional Web Presence & Landing Asset',
+    tagline: 'High-conversion founder portfolio, brand marketing site, or brochure conversion asset',
+    basePrice: 450,
+    baseWeeks: 1.5,
+    scopeCategory: 'entry',
+    badge: 'Entry Web Presence',
     deliverables: [
-      'Full-Stack Architecture (React/Next.js + Node/Postgres)',
-      'Responsive Modern UI with Micro-interactions',
-      'Core Authentication, Roles & RBAC',
-      'Essential API Integrations & Database Schema',
-      'Production Deployment with CI/CD Pipeline',
+      '100% Custom Responsive Interface (React 19 / Modern Tailwind CSS)',
+      'Lighthouse 95+ Performance, Speed & Core Web Vitals Optimization',
+      'Polished Micro-Interactions & Refined Typographic Craft',
+      'Direct Lead Capture Form & Pre-Filled WhatsApp Hook Integration',
+      '100% Source Code Repository & Intellectual Property Ownership',
       '14-Day Post-Launch Hypercare Support'
     ],
-    idealFor: 'Funded founders & startups seeking immediate market entry'
+    idealFor: 'Founders, consultants, boutiques & agencies needing an authoritative digital presence without custom backend databases',
+    notFor: 'Multi-tenant database systems, complex user auth/RBAC, or custom backend API workflows (see Custom Web Platform)'
+  },
+  {
+    id: 'mvp',
+    name: 'Custom Web Platform & Strategic MVP',
+    tagline: 'Bespoke full-stack web application engineered for rapid market traction and operational scale',
+    basePrice: 1800,
+    baseWeeks: 3.5,
+    scopeCategory: 'core_app',
+    deliverables: [
+      'Full-Stack Architecture (React/Next.js + Node.js / PostgreSQL)',
+      'User Authentication, Role-Based Access Control (RBAC) & Secure Sessions',
+      'Relational Database Modeling, Indexing & Automated Schema Migrations',
+      'Custom Internal Dashboards, Operational Workflows & Webhooks',
+      'Third-Party API Integrations (Stripe / Twilio / SendGrid / Custom APIs)',
+      'Automated CI/CD Pipeline & Production Cloud Deployment',
+      '30-Day Post-Launch Hypercare Support with 100% IP Transfer'
+    ],
+    idealFor: 'Funded founders, startups & growing SMEs replacing fragmented spreadsheets or off-the-shelf software limitations',
+    notFor: 'Simple 3-page brochure sites (see Professional Web Presence) or high-frequency banking cores'
   },
   {
     id: 'flagship',
-    name: 'Flagship Digital Product',
-    tagline: 'End-to-end custom system engineered for performance and scale',
+    name: 'Flagship Digital Product & Business System',
+    tagline: 'End-to-end custom operating system engineered for enterprise performance, scale, and high conversion',
     basePrice: 7500,
     baseWeeks: 5,
     isPopular: true,
+    badge: 'Best Commercial ROI',
+    scopeCategory: 'flagship',
     deliverables: [
-      'Custom UI/UX Design with Motion & Micro-interactions',
-      'Enterprise-Grade Modular Architecture & Strict Typing',
-      'Custom AI/LLM Workflow or Real-Time Engine Integration',
-      'Comprehensive Data Layer, Caching & Search Engine Indexing',
-      'Automated Test Suite & Lighthouse 95+ Performance Tuning',
-      '30-Day SLA & Production Guarantee with Full Code Ownership'
+      'Bespoke Enterprise UI/UX Design System with 60fps Micro-interactions',
+      'Enterprise-Grade Modular Architecture & Strict TypeScript Typing',
+      'Custom AI/LLM Workflow, RAG Pipeline or Real-Time WebSocket Engine',
+      'Comprehensive Data Layer, Redis Caching & Search Engine Indexing',
+      'Automated Test Suite (Unit & E2E) & 95+ Lighthouse Performance Guarantee',
+      'Zero-Downtime Deployment Pipeline & Cloud Infrastructure Hardening',
+      '30-Day SLA & Production Guarantee with Full Code Ownership Handover'
     ],
-    idealFor: 'Scale-ups, established enterprises & high-tier direct-to-consumer brands'
+    idealFor: 'Scale-ups, established enterprises & high-tier direct-to-consumer brands scaling past 10,000+ active users',
+    notFor: 'Early exploratory landing tests with unverified product-market fit'
   },
   {
     id: 'retainer',
-    name: 'Fractional Engineering Lead',
-    tagline: 'Continuous elite technical direction and high-velocity delivery',
+    name: 'Fractional Systems Architect Retainer',
+    tagline: 'Continuous elite technical direction and high-velocity sprint delivery directly with Muhammad',
     basePrice: 4200,
     baseWeeks: 4,
+    scopeCategory: 'retainer',
+    badge: 'Direct Founder Partnership',
     deliverables: [
-      'Dedicated Weekly Engineering Sprints & Direct WhatsApp Access',
-      'Continuous Feature Velocity & Architecture Reviews',
-      'Performance Optimization & Cloud Cost Rationalization',
-      'Tech Debt Remediation & Security Hardening',
+      'Dedicated Weekly Engineering Sprints & Direct WhatsApp/Slack Access',
+      'Continuous Feature Velocity, Code Profiling & Architecture Reviews',
+      'Performance Optimization & Cloud Infrastructure Cost Rationalization',
+      'Tech Debt Remediation, Automated Testing & Security Hardening',
       'Direct Stakeholder Alignment & Priority Roadmap Execution',
       'Cancel or Pause Anytime with 14-Day Notice'
     ],
-    idealFor: 'Organizations needing executive-level execution without full-time overhead'
+    idealFor: 'Organizations needing executive-level execution and architectural guidance without full-time CTO overhead'
+  }
+];
+
+export const VISIBILITY_TIERS: VisibilityTier[] = [
+  {
+    id: 'foundation_audit',
+    name: 'Foundation Audit & Setup',
+    tagline: 'Complete technical SEO, schema architecture, and AI readiness audit',
+    priceDisplay: '$300 one-time (or $99/mo ongoing)',
+    billingType: 'flexible',
+    numericPrice: 300,
+    badge: 'Zero-Risk Entry',
+    deliverables: [
+      'Comprehensive Technical SEO & Web Vitals Audit',
+      'JSON-LD Schema Markup Architecture (Person, Org, Service, FAQ)',
+      'Entity Graph Alignment for LLM Knowledge Retrieval',
+      'Search Console & Indexation Pipeline Optimization',
+      'Actionable Remediation Blueprint & AI Citation Roadmap'
+    ],
+    idealFor: 'Businesses wanting a rapid one-time foundation fix or low-friction entry point',
+    tradeOffs: 'One-time setup fixes the foundation; ongoing monthly citation tracking & new model prompt tuning require the monthly retainer.'
+  },
+  {
+    id: 'growth_aeo_geo',
+    name: 'AEO + GEO Growth Engine',
+    tagline: 'Targeted Answer & Generative Engine optimization for Perplexity & ChatGPT',
+    priceDisplay: '$450 / month',
+    billingType: 'subscription',
+    numericPrice: 450,
+    badge: 'Modern AI Search',
+    deliverables: [
+      'Everything in Foundation Setup plus continuous monthly optimization',
+      'Perplexity AI & Google AI Overviews (SGE) Answer Engine Optimization',
+      'ChatGPT, Gemini & Claude Semantic Citation Engineering',
+      'Monthly Entity Authority & AI Citation Footprint Reports',
+      'Bi-weekly schema updates & entity graph expansion'
+    ],
+    idealFor: 'High-growth brands looking to capture modern conversational search buyers',
+    tradeOffs: 'Focuses heavily on conversational AI discovery; traditional Google SERP backlink building is secondary.'
+  },
+  {
+    id: 'all_in_suite',
+    name: 'All-In Full Visibility Suite',
+    tagline: 'Complete omni-channel dominance across Google, ChatGPT, Perplexity, Gemini & Claude',
+    priceDisplay: '$950 / month',
+    billingType: 'subscription',
+    numericPrice: 950,
+    isPopular: true,
+    badge: 'Recommended · Save $300/mo',
+    deliverables: [
+      'Omni-Channel Coverage: Traditional SEO + AEO + GEO',
+      'Page-One Google/Bing Organic Rank Engineering',
+      'Direct-Answer Consensus Citation in Perplexity & Google SGE',
+      'Brand Entity Recommended by ChatGPT, Gemini & Claude by Name',
+      'Bi-weekly Telemetry Reports & Knowledge Graph Synchronizations',
+      'Direct WhatsApp Advisory Channel with Muhammad Mujahid'
+    ],
+    idealFor: 'Enterprises and funded founders demanding total brand dominance across both search engines and AI models',
+    tradeOffs: 'Best value overall ($1,250 individual value bundled at $950/mo) with complete cross-platform coverage.'
   }
 ];
 
@@ -116,7 +220,7 @@ export function calculateCustomEstimate(
   selectedPlan: PricingPlan;
   addonsList: PricingAddon[];
 } {
-  const plan = PRICING_PLANS.find((p) => p.id === planId) || PRICING_PLANS[1];
+  const plan = PRICING_PLANS.find((p) => p.id === planId) || PRICING_PLANS[2]; // Default to flagship if not found
   const addons = PRICING_ADDONS.filter((addon) => selectedAddonIds.includes(addon.id));
 
   const addonPrice = addons.reduce((sum, item) => sum + item.price, 0);

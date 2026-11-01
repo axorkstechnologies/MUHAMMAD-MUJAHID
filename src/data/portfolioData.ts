@@ -7,14 +7,48 @@ export const CONTACT_INFO = {
   agencyUrl: 'https://axorks.com',
   whatsapp: '+92 308 2789210',
   whatsappUrl: 'https://wa.me/923082789210',
+  calendlyUrl: 'https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20schedule%20a%2020-minute%20Technical%20Strategy%20Call.',
   linkedin: 'linkedin.com/in/muhammad-mujahid-dev',
   linkedinUrl: 'https://www.linkedin.com/in/muhammad-mujahid-dev',
   email: 'mujahidaryan222149@gmail.com',
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
-  availabilityStatus: 'Available for Q2 Projects • Direct Founder Delivery',
-  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in three structured layers: Primary: Custom Web Platforms & Business Systems (founder-led custom development). Secondary: Intelligent Visibility (SEO + AEO + GEO). Third Layer: Intelligent Business Systems (Campus ERPs, Healthcare Platforms, and Business Automations delivered through Axorks Studio). You work directly with the founder writing the code.'
+  availabilityStatus: 'Available for Q4 / Q1 Projects • Direct Founder Delivery',
+  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in three structured layers: Primary: Custom Web Platforms & Business Systems (founder-led custom development from $1,800–$7,500+, with entry web presence from $450). Secondary: Intelligent Visibility (SEO + AEO + GEO: Foundation setup at $300 or $99/mo up to $950/mo All-In). Third Layer: Intelligent Business Systems (Campus ERPs, Healthcare EHRs, and Enterprise Automations delivered through Axorks Studio). You work directly with the founder writing the code.'
 };
+
+export const CLIENT_TRUST_MARKS = [
+  {
+    name: 'AgroTrace Network',
+    sector: 'Agronomy IoT & Edge AI',
+    scale: '140+ Distributed Clusters',
+    badge: '12.5K events/sec'
+  },
+  {
+    name: 'MediVerse Health',
+    sector: 'Clinical EHR & FHIR Protocol',
+    scale: '180,000+ Encounters',
+    badge: '100% Security SLA'
+  },
+  {
+    name: 'FUME Haute Parfumerie',
+    sector: 'Luxury Headless Commerce',
+    scale: '+42% Sales Conversion',
+    badge: 'Lighthouse 98'
+  },
+  {
+    name: 'PHSS Campus',
+    sector: 'Institutional EdTech ERP',
+    scale: '3,200+ Active Seats',
+    badge: '99.4% Fee Recovery'
+  },
+  {
+    name: 'Axorks Studio',
+    sector: 'Digital Engineering Venture',
+    scale: 'Global Remote Delivery',
+    badge: 'Direct Founder Led'
+  }
+];
 
 export const EXECUTIVE_METRICS: MetricHighlight[] = [
   {

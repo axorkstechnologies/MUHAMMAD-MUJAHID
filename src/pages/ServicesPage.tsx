@@ -31,7 +31,7 @@ export const ServicesPage: React.FC = () => {
           </h1>
 
           <p className="text-sm sm:text-base text-zinc-400 leading-relaxed font-light max-w-2xl mx-auto">
-            Fixed milestone pricing, weekly deployable progress, and direct founder leadership. Three structured layers: Custom Web Platforms &amp; Business Systems (primary), Intelligent Visibility (SEO + AEO + GEO), and Turnkey Enterprise Systems.
+            Fixed milestone pricing, weekly deployable progress, and direct founder leadership. Transparent scope from entry web assets ($450) and custom platforms ($1,800–$3,500+) to AI discovery engines ($300 setup / $99/mo) and institutional enterprise systems.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

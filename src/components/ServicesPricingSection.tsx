@@ -30,7 +30,8 @@ import {
   CheckCheck,
   DollarSign,
   Quote,
-  HeartPulse
+  HeartPulse,
+  Sparkles
 } from 'lucide-react';
 import { PRICING_PLANS, PRICING_ADDONS, calculateCustomEstimate, formatWhatsAppQuoteMessage } from '../utils/pricing.ts';
 import { CONTACT_INFO, TESTIMONIALS_DATA } from '../data/portfolioData.ts';
@@ -216,158 +217,247 @@ export const ServicesPricingSection: React.FC = () => {
                   Custom Web Platforms &amp; Business Systems
                 </h3>
                 <p className="text-zinc-400 text-xs sm:text-sm mt-1 max-w-2xl font-light">
-                  Founder-led custom software for businesses that have outgrown off-the-shelf tools. 100% direct founder execution, strict TypeScript, and complete IP ownership.
+                  Founder-led software engineering from single conversion assets to mission-critical operational systems. 100% direct founder execution, strict TypeScript, and complete IP ownership.
                 </p>
               </div>
               <div className="text-left md:text-right shrink-0">
-                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing & Zero Junior Handoffs</span>
-                <span className="text-[11px] text-zinc-500 font-mono">From $1,200 to $7,500+</span>
+                <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing &amp; Zero Junior Handoffs</span>
+                <span className="text-[11px] text-zinc-500 font-mono">From $450 to $7,500+</span>
               </div>
             </div>
 
-            {/* Asymmetric Grid: 7-col Web App vs 5-col Professional Site */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Three-Tier Cards Grid with Clear Hierarchy */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mb-8">
               
-              {/* 3. Custom Web Application Development (7 cols) */}
-              <div className="lg:col-span-7 h-full">
-                <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-cyan-500/25 bg-gradient-to-b from-cyan-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(6,182,212,0.12)] hover:border-cyan-400/40 transition-all duration-300">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs font-mono">
-                          <Code className="w-3.5 h-3.5 text-cyan-400" />
-                          <span>CATEGORY 03 // FULL-STACK</span>
-                        </div>
-                        <span className="text-xs font-mono text-zinc-400">~4-6 Weeks</span>
-                      </div>
-
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
-                        Custom Web Application Development
-                      </h3>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        Custom SaaS platforms, real-time analytics dashboards, and multi-tenant operational applications built on modern typed architectures with high-velocity deployment.
-                      </p>
-
-                      <div className="my-6 p-4 rounded-2xl bg-cyan-500/[0.06] border border-cyan-500/20 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-cyan-300 uppercase tracking-wider block">Custom Application Scope</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $3,500</span>
-                            <span className="text-xs font-mono text-zinc-400">fixed sprint delivery</span>
-                          </div>
-                        </div>
-                        <span className="px-2.5 py-1 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-[10px] font-mono">
-                          React + Node/Postgres
-                        </span>
-                      </div>
-
-                      <div className="space-y-3 mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                          {[
-                            'Modern interactive UI with smooth animations and responsive design',
-                            'Full-Stack API architecture (Node.js/Express, REST/GraphQL, WebSockets)',
-                            'Robust PostgreSQL database schema design with automated migrations',
-                            'Authentication with Role-Based Access Control (RBAC) & session security',
-                            'Automated CI/CD deployment pipelines & cloud hosting configuration',
-                            '100% intellectual property transfer & complete clean repository'
-                          ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                              <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+              {/* TIER 1: Entry Web Presence ($450) */}
+              <Card3D maxTilt={4} glowColor="rgba(244, 114, 182, 0.15)" className="h-full">
+                <div className="relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-pink-500/20 bg-gradient-to-b from-pink-950/15 via-zinc-950/80 to-zinc-950 shadow-lg hover:border-pink-400/35 transition-all duration-300">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2.5 py-1 rounded-md bg-pink-500/15 border border-pink-500/30 text-pink-300 text-[10px] font-mono font-semibold">
+                        TIER 01 • ENTRY WEB PRESENCE
+                      </span>
+                      <span className="text-[11px] font-mono text-zinc-400">~7–10 Days</span>
                     </div>
 
-                    <div className="pt-6 border-t border-white/[0.08]">
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Application%20Development%20(From%20%243%2C500)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3.5 px-5 rounded-2xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition-all duration-300 cursor-pointer"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        <span>Discuss Web Application Build</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
+                    <h4 className="text-xl font-extrabold text-white font-display">
+                      Professional Web Presence
+                    </h4>
+                    <p className="text-xs text-zinc-400 mt-1.5 font-light leading-relaxed">
+                      High-conversion founder portfolio, marketing site, or brochure landing asset crafted with 60fps micro-interactions and 95+ Lighthouse speed.
+                    </p>
+
+                    <div className="my-5 p-3.5 rounded-2xl bg-pink-500/[0.05] border border-pink-500/20">
+                      <span className="text-[10px] font-mono text-pink-300 uppercase tracking-wider block">Investment Anchor</span>
+                      <div className="flex items-baseline gap-2 mt-0.5">
+                        <span className="text-3xl font-black font-display text-white">Starting from $450</span>
+                      </div>
+                      <div className="text-[10px] font-mono text-zinc-400 mt-1">Value anchor: $1,200 traditional agency rate</div>
+                    </div>
+
+                    <div className="space-y-2 mb-4">
+                      <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                      {[
+                        '100% custom responsive interface (React 19 / Modern Tailwind)',
+                        'Lighthouse 95+ performance, speed & SEO technical baseline',
+                        'Polished micro-interactions & refined typographic hierarchy',
+                        'Direct lead capture form & pre-filled WhatsApp lead hook',
+                        '100% source code repository & IP ownership handover',
+                        '14-day post-launch hypercare support'
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-pink-400 shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3 border-t border-white/[0.06] space-y-1.5 text-[11px] font-mono">
+                      <div className="text-zinc-400">
+                        <strong className="text-zinc-200">Ideal for:</strong> Consultants, boutiques &amp; founders needing a premier digital presence.
+                      </div>
+                      <div className="text-amber-400/80">
+                        <strong className="text-amber-300">Not for:</strong> Custom databases, user auth/RBAC, or SaaS logic.
+                      </div>
                     </div>
                   </div>
-                </Card3D>
-              </div>
 
-              {/* 4. Professional Website Development (5 cols) */}
-              <div className="lg:col-span-5 h-full">
-                <Card3D maxTilt={5} glowColor="rgba(244, 114, 182, 0.2)" className="h-full">
-                  <div className="relative rounded-3xl p-7 sm:p-9 flex flex-col justify-between h-full glass-panel border border-pink-500/25 bg-gradient-to-b from-pink-950/20 via-zinc-950/80 to-zinc-950 shadow-[0_20px_50px_rgba(244,114,182,0.12)] hover:border-pink-400/40 transition-all duration-300">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs font-mono">
-                          <Globe className="w-3.5 h-3.5 text-pink-400" />
-                          <span>CATEGORY 04 // WEB PRESENCE</span>
-                        </div>
-                        <span className="text-xs font-mono text-zinc-400">~2-3 Weeks</span>
-                      </div>
+                  <div className="pt-5 mt-4 border-t border-white/[0.06]">
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20Professional%20Web%20Presence%20(Starting%20from%20%24450)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-pink-500/20 hover:bg-pink-500/30 text-pink-200 border border-pink-500/40 font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>Inquire Web Presence ($450)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </Card3D>
 
-                      <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display">
-                        Professional Website Development
-                      </h3>
-                      <p className="text-xs sm:text-sm text-zinc-400 mt-2 font-light leading-relaxed">
-                        High-conversion corporate websites, portfolio showcases, and brand platforms crafted with polished visual design, 60fps micro-interactions, and 95+ Lighthouse speed.
-                      </p>
-
-                      <div className="my-6 p-4 rounded-2xl bg-pink-500/[0.06] border border-pink-500/20 flex items-baseline justify-between">
-                        <div>
-                          <span className="text-[11px] font-mono text-pink-300 uppercase tracking-wider block">Professional Web Build</span>
-                          <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $1,200</span>
-                            <span className="text-xs font-mono text-zinc-400">rapid turnaround</span>
-                          </div>
-                        </div>
-                        <span className="px-2.5 py-1 rounded-md bg-pink-500/15 border border-pink-500/30 text-pink-300 text-[10px] font-mono">
-                          Lighthouse 95+
-                        </span>
-                      </div>
-
-                      <div className="space-y-3 mb-8">
-                        <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">Engineering Inclusions:</div>
-                        {[
-                          '100% custom UI/UX design (zero boilerplate or cookie-cutter templates)',
-                          'Fluid micro-interactions and smooth scroll motion physics',
-                          'Lighthouse 95+ performance, mobile responsiveness & accessibility tuning',
-                          'On-page technical SEO & OpenGraph social preview configuration',
-                          'Integrated contact forms, WhatsApp lead hooks & analytics setup',
-                          'Domain routing, SSL certificate setup & 30 days post-launch support'
-                        ].map((item, idx) => (
-                          <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300 leading-snug">
-                            <CheckCircle2 className="w-4 h-4 text-pink-400 shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </div>
-                        ))}
-                      </div>
+              {/* TIER 2: Custom Web Platform & MVP ($1,800 - $3,500+) */}
+              <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.2)" className="h-full">
+                <div className="relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border-2 border-cyan-500/30 bg-gradient-to-b from-cyan-950/25 via-zinc-950/80 to-zinc-950 shadow-xl hover:border-cyan-400/50 transition-all duration-300 ring-2 ring-cyan-500/10">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2.5 py-1 rounded-md bg-cyan-500/20 border border-cyan-500/40 text-cyan-300 text-[10px] font-mono font-bold">
+                        TIER 02 • MOST POPULAR FOR STARTUPS
+                      </span>
+                      <span className="text-[11px] font-mono text-zinc-400">~3–4 Weeks</span>
                     </div>
 
-                    <div className="pt-6 border-t border-white/[0.08]">
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Professional%20Website%20Development%20(From%20%241%2C200)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3.5 px-5 rounded-2xl bg-pink-500 hover:bg-pink-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(244,114,182,0.35)] transition-all duration-300 cursor-pointer"
-                      >
-                        <MessageSquare className="w-4 h-4" />
-                        <span>Discuss Website Project</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </a>
+                    <h4 className="text-xl font-extrabold text-white font-display">
+                      Custom Web Platform &amp; Strategic MVP
+                    </h4>
+                    <p className="text-xs text-zinc-400 mt-1.5 font-light leading-relaxed">
+                      Bespoke full-stack web application engineered for rapid market traction, user roles, relational database schemas, and operational automation.
+                    </p>
+
+                    <div className="my-5 p-3.5 rounded-2xl bg-cyan-500/[0.08] border border-cyan-500/25">
+                      <span className="text-[10px] font-mono text-cyan-300 uppercase tracking-wider block">Investment Range</span>
+                      <div className="flex items-baseline gap-2 mt-0.5">
+                        <span className="text-3xl font-black font-display text-white">From $1,800</span>
+                        <span className="text-xs font-mono text-zinc-400">to $3,500+</span>
+                      </div>
+                      <div className="text-[10px] font-mono text-zinc-400 mt-1">Sprint-based delivery with weekly deployable increments</div>
+                    </div>
+
+                    <div className="space-y-2 mb-4">
+                      <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                      {[
+                        'Full-Stack Architecture (React/Next.js + Node.js / PostgreSQL)',
+                        'Authentication with Role-Based Access Control (RBAC)',
+                        'Relational database schema modeling & automated migrations',
+                        'Custom internal operational dashboards & client portals',
+                        'Third-party integrations (Stripe, Twilio, SendGrid, custom APIs)',
+                        '30-day post-launch hypercare with 100% IP ownership handover'
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3 border-t border-white/[0.06] space-y-1.5 text-[11px] font-mono">
+                      <div className="text-zinc-400">
+                        <strong className="text-zinc-200">Ideal for:</strong> Funded founders &amp; growing SMEs replacing spreadsheets.
+                      </div>
+                      <div className="text-zinc-400">
+                        <strong className="text-cyan-300">Deliverable:</strong> Production-ready full-stack custom application.
+                      </div>
                     </div>
                   </div>
-                </Card3D>
-              </div>
 
+                  <div className="pt-5 mt-4 border-t border-white/[0.06]">
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Platform%20%26%20Strategic%20MVP%20(From%20%241%2C800%20-%20%243%2C500)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition cursor-pointer"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>Start Web Platform ($1.8k–$3.5k)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </Card3D>
+
+              {/* TIER 3: Flagship Digital Product & Business System ($7,500+) */}
+              <Card3D maxTilt={4} glowColor="rgba(129, 140, 248, 0.2)" className="h-full">
+                <div className="relative rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-indigo-500/25 bg-gradient-to-b from-indigo-950/20 via-zinc-950/80 to-zinc-950 shadow-lg hover:border-indigo-400/40 transition-all duration-300">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-2.5 py-1 rounded-md bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-[10px] font-mono font-semibold">
+                        TIER 03 • BEST COMMERCIAL ROI
+                      </span>
+                      <span className="text-[11px] font-mono text-zinc-400">~5–6 Weeks</span>
+                    </div>
+
+                    <h4 className="text-xl font-extrabold text-white font-display">
+                      Flagship Digital Product System
+                    </h4>
+                    <p className="text-xs text-zinc-400 mt-1.5 font-light leading-relaxed">
+                      End-to-end custom operating system engineered for enterprise performance, scale, high concurrency, and complete intellectual property ownership.
+                    </p>
+
+                    <div className="my-5 p-3.5 rounded-2xl bg-indigo-500/[0.06] border border-indigo-500/20">
+                      <span className="text-[10px] font-mono text-indigo-300 uppercase tracking-wider block">Turnkey Product Sprint</span>
+                      <div className="flex items-baseline gap-2 mt-0.5">
+                        <span className="text-3xl font-black font-display text-white">$7,500+</span>
+                      </div>
+                      <div className="text-[10px] font-mono text-zinc-400 mt-1">Full IP handover &amp; enterprise performance tuning</div>
+                    </div>
+
+                    <div className="space-y-2 mb-4">
+                      <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                      {[
+                        'Bespoke enterprise UI/UX design system with 60fps motion',
+                        'Enterprise-grade modular architecture & strict TypeScript typing',
+                        'Custom AI/LLM workflow, RAG pipeline or real-time engine',
+                        'Comprehensive data layer, Redis caching & search indexing',
+                        'Automated test suite (unit + E2E) & 95+ Lighthouse guarantee',
+                        '30-day SLA & production guarantee with full code ownership'
+                      ].map((item, idx) => (
+                        <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400 shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-3 border-t border-white/[0.06] space-y-1.5 text-[11px] font-mono">
+                      <div className="text-zinc-400">
+                        <strong className="text-zinc-200">Ideal for:</strong> Scale-ups &amp; established enterprises serving 10,000+ active users.
+                      </div>
+                      <div className="text-zinc-400">
+                        <strong className="text-indigo-300">Deliverable:</strong> Mission-critical production system with automated testing.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-5 mt-4 border-t border-white/[0.06]">
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Flagship%20Digital%20Product%20Build%20(%247%2C500%2B)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(99,102,241,0.35)] transition cursor-pointer"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      <span>Inquire Flagship Build ($7,500+)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </Card3D>
+            </div>
+
+            {/* Optional Retainer Bar */}
+            <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-xs font-mono text-zinc-400 uppercase">Need Continuous Senior Direction?</div>
+                  <div className="text-sm font-bold text-white">Fractional Systems Architect Retainer — $4,200 / month</div>
+                </div>
+              </div>
+              <a
+                href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Fractional%20Systems%20Architect%20Retainer%20(%244%2C200%2Fmo)."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono flex items-center justify-center gap-2 transition"
+              >
+                <span>Inquire Retainer Terms</span>
+                <ArrowRight className="w-3.5 h-3.5 text-cyan-400" />
+              </a>
             </div>
           </div>
         </MotionSection>
-
 
         {/* ========================================================================= */}
         {/* 2. HIGH-PRIORITY: AI & SEARCH VISIBILITY SERVICES (SEO / AEO / GEO) */}
@@ -467,7 +557,7 @@ export const ServicesPricingSection: React.FC = () => {
                     {/* Glowing Top Banner Pill */}
                     <div className="absolute top-0 right-0 sm:right-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-black px-5 py-1.5 rounded-b-2xl font-mono text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg">
                       <Zap className="w-3.5 h-3.5 text-black fill-current" />
-                      <span>FLAGSHIP HERO PACKAGE • SAVE $300/MONTH</span>
+                      <span>RECOMMENDED FLAGSHIP • SAVE $300/MONTH</span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4 sm:pt-0">
@@ -475,15 +565,15 @@ export const ServicesPricingSection: React.FC = () => {
                       <div className="lg:col-span-7 space-y-4">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-xs font-mono">
                           <CheckCheck className="w-3.5 h-3.5 text-emerald-400" />
-                          <span>UNIFIED OMNICHANNEL VISIBILITY SUITE</span>
+                          <span>TIER 03 • ALL-IN OMNICHANNEL VISIBILITY SUITE</span>
                         </div>
                         
                         <h4 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display">
-                          Full Visibility Package (SEO + AEO + GEO)
+                          All-In Full Visibility Suite (SEO + AEO + GEO)
                         </h4>
 
                         <p className="text-zinc-300 text-xs sm:text-sm font-light leading-relaxed">
-                          The ultimate omni-channel search dominance machine. We ensure your business is discovered, cited, and recommended whenever high-intent prospects search on Google, query Perplexity, or prompt ChatGPT, Claude, and Gemini.
+                          The ultimate omni-channel search dominance machine. We ensure your business is discovered on Google Search and actively recommended whenever prospective buyers ask ChatGPT, Perplexity, Gemini, and Claude for vendor solutions.
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
@@ -500,6 +590,10 @@ export const ServicesPricingSection: React.FC = () => {
                               <span>{item}</span>
                             </div>
                           ))}
+                        </div>
+
+                        <div className="pt-2 text-[11px] font-mono text-zinc-400">
+                          <strong className="text-emerald-300">Trade-off &amp; Value:</strong> Complete omni-channel coverage bundling SEO ($250), AEO ($450), and GEO ($550) into one cohesive $950/mo retainer.
                         </div>
                       </div>
 
@@ -522,13 +616,13 @@ export const ServicesPricingSection: React.FC = () => {
 
                           <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
                             <CheckCheck className="w-3.5 h-3.5 text-emerald-400" />
-                            <span>Includes Complete SEO ($250) + AEO ($450) + GEO ($550)</span>
+                            <span>Save $300/mo vs individual retainers</span>
                           </div>
                         </div>
 
                         <div className="space-y-3">
                           <a
-                            href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20want%20to%20enroll%20in%20the%20Full%20Visibility%20Package%20(SEO%20%2B%20AEO%20%2B%20GEO)%20for%20%24950%2Fmonth."
+                            href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20want%20to%20enroll%20in%20the%20All-In%20Visibility%20Suite%20(SEO%20%2B%20AEO%20%2B%20GEO)%20for%20%24950%2Fmonth."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 hover:from-emerald-300 hover:to-cyan-300 text-black font-black text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-[0_0_35px_rgba(16,185,129,0.45)] transition-all duration-300 cursor-pointer"
@@ -539,7 +633,7 @@ export const ServicesPricingSection: React.FC = () => {
                           </a>
 
                           <div className="text-center text-[11px] font-mono text-zinc-400">
-                            Month-to-month retainer • Cancel or upgrade anytime with 14-day notice
+                            Month-to-month retainer • Cancel or pause anytime with 14-day notice
                           </div>
                         </div>
                       </div>
@@ -548,188 +642,216 @@ export const ServicesPricingSection: React.FC = () => {
                 </Card3D>
               </div>
 
-              {/* Individual AI & Search Services Grid (Asymmetric 3-col / 4-col / 5-col split) */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+              {/* Three Structured Visibility Tier Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-10">
                 
-                {/* Service 1: SEO (3 cols) */}
-                <div className="lg:col-span-3 h-full">
-                  <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.15)" className="h-full">
-                    <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-cyan-500/20 bg-zinc-950/70 hover:border-cyan-400/40 transition-all duration-300">
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="p-2.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-400">
-                            <Search className="w-4 h-4" />
-                          </div>
-                          <span className="text-[11px] font-mono text-cyan-400 px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20">
-                            Google & Bing
-                          </span>
+                {/* Tier 1: Foundation Setup ($300 one-time OR $99/mo) */}
+                <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.15)" className="h-full">
+                  <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-cyan-500/20 bg-zinc-950/70 hover:border-cyan-400/40 transition-all duration-300">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-2.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/25 text-cyan-400">
+                          <Search className="w-4 h-4" />
                         </div>
-
-                        <h4 className="text-lg font-bold text-white font-display">
-                          SEO (Search Engine)
-                        </h4>
-                        <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
-                          Dominate traditional Google page-one search results with technical rigor and authority.
-                        </p>
-
-                        <div className="my-5 pb-5 border-b border-white/[0.08]">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-3xl font-black font-display text-white">$250</span>
-                            <span className="text-xs font-mono text-zinc-400">/ month</span>
-                          </div>
-                        </div>
-
-                        <div className="space-y-2.5 mb-6">
-                          <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">What it covers:</div>
-                          {[
-                            'Core Web Vitals & technical crawl audit',
-                            'On-page Schema.org semantic tagging',
-                            'Keyword research & topical clustering',
-                            'High-authority backlink profiling',
-                            'Google Search Console & analytics tracking'
-                          ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
-                              <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                        <span className="text-[10px] font-mono text-cyan-400 px-2 py-0.5 rounded bg-cyan-500/10 border border-cyan-500/20 font-semibold">
+                          TIER 01 • ZERO-RISK ENTRY
+                        </span>
                       </div>
 
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20SEO%20Service%20(%24250%2Fmonth)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3 px-4 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/10 transition cursor-pointer"
-                      >
-                        <span>Start SEO ($250/mo)</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
-                    </div>
-                  </Card3D>
-                </div>
+                      <h4 className="text-lg font-bold text-white font-display">
+                        Foundation Audit &amp; Setup
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
+                        Full technical SEO, Schema JSON-LD architecture, and AI discovery readiness foundation.
+                      </p>
 
-                {/* Service 2: AEO (4 cols) */}
-                <div className="lg:col-span-4 h-full">
-                  <Card3D maxTilt={5} glowColor="rgba(16, 185, 129, 0.15)" className="h-full">
-                    <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-emerald-500/20 bg-zinc-950/70 hover:border-emerald-400/40 transition-all duration-300">
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="p-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
-                            <Bot className="w-4 h-4" />
-                          </div>
-                          <span className="text-[11px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20">
-                            Perplexity & SGE
-                          </span>
+                      <div className="my-5 pb-5 border-b border-white/[0.08]">
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-3xl font-black font-display text-white">$300</span>
+                          <span className="text-xs font-mono text-zinc-400">one-time</span>
                         </div>
-
-                        <h4 className="text-lg font-bold text-white font-display">
-                          AEO (Answer Engine)
-                        </h4>
-                        <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
-                          Capture featured snippet answers on voice assistants, Perplexity, and AI Overviews.
-                        </p>
-
-                        <div className="my-5 pb-5 border-b border-white/[0.08]">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-3xl font-black font-display text-white">$450</span>
-                            <span className="text-xs font-mono text-zinc-400">/ month</span>
-                          </div>
-                        </div>
-
-                        <div className="space-y-2.5 mb-6">
-                          <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">What it covers:</div>
-                          {[
-                            'Perplexity & Google AI Overview citation targeting',
-                            'Direct-answer syntax & structured Q&A schemas',
-                            'Knowledge graph node creation & entity link',
-                            'Conversational query & voice snippet capture',
-                            'Real-time answer engine citation scoring'
-                          ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
-                              <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                        <div className="text-[11px] font-mono text-emerald-400 mt-1">or $99 / month ongoing maintenance</div>
                       </div>
 
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20AEO%20(Answer%20Engine%20Optimization)%20Service%20(%24450%2Fmonth)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3 px-4 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/10 transition cursor-pointer"
-                      >
-                        <span>Start AEO ($450/mo)</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
-                    </div>
-                  </Card3D>
-                </div>
-
-                {/* Service 3: GEO (5 cols - High Demand AI Paradigm) */}
-                <div className="lg:col-span-5 h-full">
-                  <Card3D maxTilt={5} glowColor="rgba(168, 85, 247, 0.2)" className="h-full">
-                    <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel-glow border border-purple-500/30 bg-zinc-950/80 hover:border-purple-400/50 transition-all duration-300">
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="p-2.5 rounded-2xl bg-purple-500/10 border border-purple-500/25 text-purple-400">
-                            <Brain className="w-4 h-4" />
+                      <div className="space-y-2.5 mb-6">
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                        {[
+                          'Comprehensive Technical SEO & Web Vitals audit',
+                          'Full JSON-LD Schema markup (Person, Org, Service, FAQ)',
+                          'Entity Graph alignment for LLM knowledge retrieval',
+                          'Search Console & indexation pipeline optimization',
+                          'Actionable AI citation roadmap & blueprint'
+                        ].map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                            <Check className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                            <span>{item}</span>
                           </div>
-                          <span className="text-[11px] font-mono text-purple-300 px-2.5 py-0.5 rounded bg-purple-500/15 border border-purple-500/30 font-semibold">
-                            ChatGPT • Claude • Gemini
-                          </span>
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                          <h4 className="text-lg sm:text-xl font-bold text-white font-display">
-                            GEO (Generative Engine Optimization)
-                          </h4>
-                        </div>
-                        <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
-                          Position your business inside LLM synthesis so AI chatbots directly recommend you in generated responses.
-                        </p>
-
-                        <div className="my-5 pb-5 border-b border-white/[0.08] flex items-baseline justify-between">
-                          <div className="flex items-baseline gap-2">
-                            <span className="text-3xl font-black font-display text-white">$550</span>
-                            <span className="text-xs font-mono text-zinc-400">/ month</span>
-                          </div>
-                          <span className="text-[10px] font-mono text-purple-400 px-2 py-0.5 rounded bg-purple-500/10 border border-purple-500/20">
-                            HIGH-GROWTH DEMAND
-                          </span>
-                        </div>
-
-                        <div className="space-y-2.5 mb-6">
-                          <div className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider">What it covers:</div>
-                          {[
-                            'LLM citation insertion & RAG corpus indexing',
-                            'Multi-modal authority signals in AI datasets',
-                            'Consensus prompt testing across ChatGPT, Claude & Gemini',
-                            'Synthetic brand sentiment & entity calibration',
-                            'Competitive AI recommendation positioning'
-                          ].map((item, idx) => (
-                            <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
-                              <Check className="w-3.5 h-3.5 text-purple-400 shrink-0 mt-0.5" />
-                              <span>{item}</span>
-                            </div>
-                          ))}
-                        </div>
+                        ))}
                       </div>
 
-                      <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20GEO%20(Generative%20Engine%20Optimization)%20Service%20(%24550%2Fmonth)."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full py-3 px-4 rounded-xl bg-purple-500/20 hover:bg-purple-500/30 text-purple-200 border border-purple-500/40 font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer"
-                      >
-                        <span>Start GEO ($550/mo)</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
+                      <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[10px] font-mono text-zinc-400 mb-6">
+                        <strong className="text-zinc-300">Trade-off:</strong> One-time setup creates the clean foundation; ongoing citation tracking requires monthly retainer ($99/mo or $450/mo).
+                      </div>
                     </div>
-                  </Card3D>
-                </div>
 
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20Foundation%20Audit%20%26%20Setup%20(%24300%20one-time%20or%20%2499%2Fmo)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-white font-bold text-xs flex items-center justify-center gap-2 border border-white/10 transition cursor-pointer"
+                    >
+                      <span>Inquire Foundation ($300 / $99)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </Card3D>
+
+                {/* Tier 2: AEO + GEO Growth Engine ($450/mo) */}
+                <Card3D maxTilt={5} glowColor="rgba(16, 185, 129, 0.15)" className="h-full">
+                  <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-emerald-500/20 bg-zinc-950/70 hover:border-emerald-400/40 transition-all duration-300">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-2.5 rounded-2xl bg-emerald-500/10 border border-emerald-500/25 text-emerald-400">
+                          <Bot className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-emerald-400 px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/20 font-semibold">
+                          TIER 02 • MODERN AI SEARCH
+                        </span>
+                      </div>
+
+                      <h4 className="text-lg font-bold text-white font-display">
+                        AEO + GEO Growth Engine
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
+                        Targeted Answer &amp; Generative Engine optimization for Perplexity, Google SGE, and ChatGPT.
+                      </p>
+
+                      <div className="my-5 pb-5 border-b border-white/[0.08]">
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-3xl font-black font-display text-white">$450</span>
+                          <span className="text-xs font-mono text-zinc-400">/ month</span>
+                        </div>
+                        <div className="text-[11px] font-mono text-zinc-400 mt-1">Dedicated AI citation engineering</div>
+                      </div>
+
+                      <div className="space-y-2.5 mb-6">
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                        {[
+                          'Everything in Foundation Setup plus continuous maintenance',
+                          'Perplexity AI & Google AI Overview citation targeting',
+                          'ChatGPT, Gemini & Claude semantic citation engineering',
+                          'Monthly entity authority & AI citation footprint reports',
+                          'Bi-weekly schema updates & entity graph expansion'
+                        ].map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                            <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[10px] font-mono text-zinc-400 mb-6">
+                        <strong className="text-zinc-300">Trade-off:</strong> Focuses heavily on conversational AI discovery; traditional Google SERP backlink building is handled in the All-In Suite.
+                      </div>
+                    </div>
+
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20AEO%20%2B%20GEO%20Growth%20Engine%20(%24450%2Fmonth)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer"
+                    >
+                      <span>Start AEO + GEO ($450/mo)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </Card3D>
+
+                {/* Tier 3: All-In Full Visibility Suite ($950/mo) */}
+                <Card3D maxTilt={5} glowColor="rgba(129, 140, 248, 0.2)" className="h-full">
+                  <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-indigo-500/25 bg-zinc-950/70 hover:border-indigo-400/40 transition-all duration-300">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="p-2.5 rounded-2xl bg-indigo-500/10 border border-indigo-500/25 text-indigo-400">
+                          <Cpu className="w-4 h-4" />
+                        </div>
+                        <span className="text-[10px] font-mono text-indigo-300 px-2 py-0.5 rounded bg-indigo-500/10 border border-indigo-500/20 font-semibold">
+                          TIER 03 • COMPLETE DOMINANCE
+                        </span>
+                      </div>
+
+                      <h4 className="text-lg font-bold text-white font-display">
+                        All-In Visibility Engine
+                      </h4>
+                      <p className="text-xs text-zinc-400 mt-1 min-h-[36px] font-light">
+                        Omni-channel dominance across Google organic search AND ChatGPT, Perplexity, Claude &amp; Gemini.
+                      </p>
+
+                      <div className="my-5 pb-5 border-b border-white/[0.08]">
+                        <div className="flex items-baseline gap-2">
+                          <span className="text-3xl font-black font-display text-white">$950</span>
+                          <span className="text-xs font-mono text-zinc-400">/ month</span>
+                        </div>
+                        <div className="text-[11px] font-mono text-indigo-400 mt-1">Full cross-platform authority · Save $300/mo</div>
+                      </div>
+
+                      <div className="space-y-2.5 mb-6">
+                        <div className="text-[10px] font-mono text-zinc-400 uppercase tracking-wider">What&apos;s Included:</div>
+                        {[
+                          'Full Traditional SEO (Google #1 ranking engineering)',
+                          'AEO Consensus Answer Snippets in Perplexity & SGE',
+                          'GEO LLM Training & RAG Corpus Optimization',
+                          'Knowledge Graph & Wikidata Entity Mapping',
+                          'Bi-weekly Telemetry Reports & direct founder WhatsApp channel'
+                        ].map((item, idx) => (
+                          <div key={idx} className="flex items-start gap-2 text-xs text-zinc-300 leading-snug">
+                            <Check className="w-3.5 h-3.5 text-indigo-400 shrink-0 mt-0.5" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[10px] font-mono text-zinc-400 mb-6">
+                        <strong className="text-zinc-300">Trade-off:</strong> Highest commercial value ($1,250 individual value bundled at $950/mo) with complete cross-platform coverage.
+                      </div>
+                    </div>
+
+                    <a
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20All-In%20Visibility%20Engine%20(%24950%2Fmonth)."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.3)] transition cursor-pointer"
+                    >
+                      <span>Enroll in Full Suite ($950/mo)</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </Card3D>
+              </div>
+
+              {/* High-Converting Free AI Visibility Audit Banner */}
+              <div className="p-6 sm:p-8 rounded-3xl bg-emerald-950/20 border border-emerald-500/25 flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div className="space-y-1.5 text-center sm:text-left">
+                  <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-mono">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>COMPLIMENTARY AUDIT</span>
+                  </div>
+                  <h4 className="text-lg sm:text-xl font-bold text-white font-display">
+                    Want to see what AI models say about your business right now?
+                  </h4>
+                  <p className="text-xs text-zinc-300 font-light max-w-xl">
+                    Request a free 10-point AI Visibility Audit. We prompt ChatGPT, Perplexity, and Gemini to reveal your current citation footprint and identify where competitors are winning answers.
+                  </p>
+                </div>
+                <a
+                  href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20request%20a%20Free%20AI%20Visibility%20Audit%20for%20my%20business."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.35)] shrink-0 transition"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  <span>Request Free Audit</span>
+                </a>
               </div>
             </div>
           </div>
@@ -989,7 +1111,13 @@ export const ServicesPricingSection: React.FC = () => {
             </div>
           </div>
 
-          <div className={`grid grid-cols-1 ${visiblePlans.length === 1 ? 'max-w-xl mx-auto' : 'lg:grid-cols-12'} gap-8 items-stretch`}>
+          <div className={`grid grid-cols-1 ${
+            visiblePlans.length === 1 
+              ? 'max-w-xl mx-auto' 
+              : visiblePlans.length === 4 
+              ? 'sm:grid-cols-2 lg:grid-cols-4' 
+              : 'lg:grid-cols-12'
+          } gap-6 items-stretch`}>
             {visiblePlans.map((plan) => {
               const isFeatured = plan.isPopular;
               const isSelectedInCalc = selectedPlanId === plan.id;
@@ -997,8 +1125,10 @@ export const ServicesPricingSection: React.FC = () => {
               const colSpanClass = visiblePlans.length === 1
                 ? 'w-full'
                 : visiblePlans.length === 2
-                ? (plan.id === 'mvp' ? 'lg:col-span-5' : 'lg:col-span-7')
-                : (plan.id === 'mvp' ? 'lg:col-span-3' : plan.id === 'flagship' ? 'lg:col-span-5' : 'lg:col-span-4');
+                ? 'lg:col-span-6'
+                : visiblePlans.length === 3
+                ? (plan.id === 'flagship' ? 'lg:col-span-6' : 'lg:col-span-3')
+                : 'w-full';
 
               return (
                 <div key={plan.id} className={`${colSpanClass} h-full`}>
@@ -1142,7 +1272,7 @@ export const ServicesPricingSection: React.FC = () => {
                     <label className="block text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2">
                       1. Select Base Architecture Plan
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                       {PRICING_PLANS.map((plan) => (
                         <button
                           key={plan.id}
