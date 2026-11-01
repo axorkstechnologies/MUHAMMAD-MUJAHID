@@ -282,7 +282,7 @@ export const AboutPage: React.FC = () => {
                         { label: 'Executive Role', value: 'Founder & Principal Full-Stack Software Architect' },
                         { label: 'Operating Studio', value: 'Axorks (Axorks Technologies • axorks.com)' },
                         { label: 'Primary Base', value: 'Karachi, Sindh, Pakistan (UTC+5) • 100% Global Remote Delivery' },
-                        { label: 'Core System Specialties', value: 'Custom Web Platforms ($3,500+), Intelligent Visibility (SEO+AEO+GEO from $250/mo), Campus ERPs ($8k+), Healthcare Platforms ($10k+)' },
+                        { label: 'Core System Specialties', value: 'Custom Web Platforms ($900+, entry $450), Intelligent Visibility (Foundation $300 or $99/mo, All-In $475/mo), Campus ERPs ($4k+), Healthcare ($5k+)' },
                         { label: 'Flagship Deliveries', value: 'AgroTrace (AgriTech AI), MediVerse (FHIR R4 EHR), FUME (Luxury Commerce), PHSS (Institutional ERP)' },
                         { label: 'Intellectual Property', value: '100% Client Source Code & Database Ownership (Zero Vendor Lock-in)' },
                         { label: 'Direct Official Channels', value: 'WhatsApp (+92 308 2789210), LinkedIn (/in/muhammad-mujahid-axorks)' }
@@ -317,7 +317,7 @@ export const AboutPage: React.FC = () => {
                 },
                 {
                   q: 'What are his personal core offers?',
-                  a: 'Directly with Muhammad: 1) Custom Web Platforms & SaaS development (founder-led, from $3,500), and 2) Intelligent Visibility Systems (getting your brand cited across Google Search, ChatGPT, Perplexity, Gemini, and Claude from $250-$950/mo).'
+                  a: 'Directly with Muhammad: 1) Custom Web Platforms & SaaS development (from $900, entry web presence $450), and 2) Intelligent Visibility Systems (getting your brand cited across Google Search, ChatGPT, Perplexity, Gemini, and Claude: Foundation $300 or $99/mo, All-In $475/mo).'
                 },
                 {
                   q: 'What systems are delivered through Axorks Studio?',

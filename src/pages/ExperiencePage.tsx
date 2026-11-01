@@ -23,12 +23,12 @@ export const ExperiencePage: React.FC = () => {
             <span>Career Track Record & Leadership</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white font-display tracking-tight">
-            Engineering Leadership & <span className="text-gradient">Experience</span>
+          <h1 className="text-3xl sm:text-5xl font-black text-white font-display tracking-tight">
+            Engineering Leadership &amp; <span className="text-gradient">Experience</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
-            A battle-tested track record architecting complex platforms across EdTech, Healthcare, Agriculture, and Luxury Commerce. Founded on strict engineering discipline and high-reliability standards.
+          <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-light max-w-2xl mx-auto">
+            Battle-tested systems architect across EdTech, Healthcare, Agriculture, and Commerce. Strict engineering rigor, zero downtime regressions, and over 40,000 active users.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-3 pt-2">

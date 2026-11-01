@@ -58,7 +58,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: 'mvp',
     name: 'Custom Web Platform & Strategic MVP',
     tagline: 'Bespoke full-stack web application engineered for rapid market traction and operational scale',
-    basePrice: 1800,
+    basePrice: 900,
     baseWeeks: 3.5,
     scopeCategory: 'core_app',
     deliverables: [
@@ -77,7 +77,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: 'flagship',
     name: 'Flagship Digital Product & Business System',
     tagline: 'End-to-end custom operating system engineered for enterprise performance, scale, and high conversion',
-    basePrice: 7500,
+    basePrice: 3750,
     baseWeeks: 5,
     isPopular: true,
     badge: 'Best Commercial ROI',
@@ -98,7 +98,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: 'retainer',
     name: 'Fractional Systems Architect Retainer',
     tagline: 'Continuous elite technical direction and high-velocity sprint delivery directly with Muhammad',
-    basePrice: 4200,
+    basePrice: 2100,
     baseWeeks: 4,
     scopeCategory: 'retainer',
     badge: 'Direct Founder Partnership',
@@ -137,9 +137,9 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
     id: 'growth_aeo_geo',
     name: 'AEO + GEO Growth Engine',
     tagline: 'Targeted Answer & Generative Engine optimization for Perplexity & ChatGPT',
-    priceDisplay: '$450 / month',
+    priceDisplay: '$225 / month',
     billingType: 'subscription',
-    numericPrice: 450,
+    numericPrice: 225,
     badge: 'Modern AI Search',
     deliverables: [
       'Everything in Foundation Setup plus continuous monthly optimization',
@@ -155,11 +155,11 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
     id: 'all_in_suite',
     name: 'All-In Full Visibility Suite',
     tagline: 'Complete omni-channel dominance across Google, ChatGPT, Perplexity, Gemini & Claude',
-    priceDisplay: '$950 / month',
+    priceDisplay: '$475 / month',
     billingType: 'subscription',
-    numericPrice: 950,
+    numericPrice: 475,
     isPopular: true,
-    badge: 'Recommended · Save $300/mo',
+    badge: 'Recommended · Save $150/mo',
     deliverables: [
       'Omni-Channel Coverage: Traditional SEO + AEO + GEO',
       'Page-One Google/Bing Organic Rank Engineering',
@@ -169,7 +169,7 @@ export const VISIBILITY_TIERS: VisibilityTier[] = [
       'Direct WhatsApp Advisory Channel with Muhammad Mujahid'
     ],
     idealFor: 'Enterprises and funded founders demanding total brand dominance across both search engines and AI models',
-    tradeOffs: 'Best value overall ($1,250 individual value bundled at $950/mo) with complete cross-platform coverage.'
+    tradeOffs: 'Best value overall ($625 individual value bundled at $475/mo) with complete cross-platform coverage.'
   }
 ];
 
@@ -177,35 +177,35 @@ export const PRICING_ADDONS: PricingAddon[] = [
   {
     id: 'ai_visibility_suite',
     name: 'All-In AI Visibility Suite (SEO + AEO + GEO)',
-    price: 950,
+    price: 475,
     weeks: 1,
     description: 'Knowledge Graph integration, Schema JSON-LD markup, and ChatGPT/Perplexity citation pipeline'
   },
   {
     id: 'ai_engine',
     name: 'Proprietary AI / LLM Workflows',
-    price: 1800,
+    price: 900,
     weeks: 1,
     description: 'Custom embeddings, automated agents, or RAG pipeline integration'
   },
   {
     id: 'realtime_sync',
     name: 'Real-Time Sync & WebSocket Layer',
-    price: 1200,
+    price: 600,
     weeks: 1,
     description: 'Instant collaborative state, live data dashboards or streaming notifications'
   },
   {
     id: 'pwa_offline',
     name: 'Offline-First PWA & Mobile Web',
-    price: 1100,
+    price: 550,
     weeks: 0.5,
     description: 'Service workers, offline caching and app-store-ready installability'
   },
   {
     id: 'enterprise_security',
     name: 'Enterprise Security & Compliance',
-    price: 1500,
+    price: 750,
     weeks: 1,
     description: 'SOC2 readiness, audit logging, rate-limiting & automated penetration audits'
   }

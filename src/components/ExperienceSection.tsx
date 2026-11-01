@@ -40,22 +40,22 @@ export const ExperienceSection: React.FC = () => {
                   <div className="absolute -inset-1.5 bg-gradient-to-tr from-cyan-500/25 via-indigo-500/15 to-purple-500/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition duration-700 pointer-events-none" />
 
                   {/* Main Container */}
-                  <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/15 shadow-[0_24px_60px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center">
+                  <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel border border-white/15 shadow-[0_24px_60px_rgba(0,0,0,0.85)] flex flex-col items-center justify-center bg-zinc-950">
                     <img
-                      src="/Images/Focused Work in a Moody Tech Office.png"
-                      alt="Muhammad Mujahid - Executive Portrait"
+                      src="/Images/Founder passport size pic.jpeg"
+                      alt="Muhammad Mujahid - Systems Architect & Founder"
                       className="w-full h-full object-cover object-top transition duration-700 group-hover:scale-105"
                       loading="lazy"
                     />
 
                     {/* Ambient Dark Bottom Fade */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/20 to-transparent opacity-85 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#050508] via-[#050508]/30 to-transparent opacity-90 pointer-events-none" />
 
                     {/* Top status indicator */}
                     <div className="absolute top-4 left-4 z-10 pointer-events-none">
-                      <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 border border-white/15 text-[10px] font-mono text-cyan-300 backdrop-blur-md">
+                      <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/70 border border-white/15 text-[10px] font-mono text-cyan-300 backdrop-blur-md">
                         <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                        <span>ARCHITECT HQ</span>
+                        <span>FOUNDER &amp; ARCHITECT</span>
                       </div>
                     </div>
 
@@ -63,11 +63,11 @@ export const ExperienceSection: React.FC = () => {
                     <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between text-xs z-10 pointer-events-none">
                       <div>
                         <div className="font-bold text-white font-display text-base tracking-tight">Muhammad Mujahid</div>
-                        <div className="text-[11px] font-mono text-cyan-300">Founder • Axorks</div>
+                        <div className="text-[11px] font-mono text-cyan-300">Principal Systems Architect</div>
                       </div>
-                      <span className="px-2.5 py-1 rounded-full bg-black/70 border border-emerald-500/30 text-[10px] font-mono text-emerald-400 backdrop-blur-md flex items-center gap-1.5 shadow-md">
+                      <span className="px-2.5 py-1 rounded-full bg-black/75 border border-emerald-500/40 text-[10px] font-mono text-emerald-400 backdrop-blur-md flex items-center gap-1.5 shadow-md">
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                        Active Lead
+                        Verified Lead
                       </span>
                     </div>
 

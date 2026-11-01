@@ -38,8 +38,8 @@ export const AeoGeoSection: React.FC = () => {
       category: 'GEO'
     },
     {
-      question: 'What is included in the Full Visibility Package ($950 / month)?',
-      answer: 'The Full Visibility Package unites traditional SEO ($250/mo), Answer Engine Optimization ($450/mo), and Generative Engine Optimization ($550/mo) into an all-in-one monthly plan for $950/month (saving $300/month). It provides complete cross-platform authority across Google Search, Perplexity AI, ChatGPT, Gemini, and Claude with monthly ranking and AI citation reporting.',
+      question: 'What is included in the All-In Visibility Suite ($475 / month)?',
+      answer: 'The All-In Visibility Suite unites traditional SEO ($125/mo), Answer Engine Optimization ($225/mo), and Generative Engine Optimization ($275/mo) into an all-in-one monthly plan for $475/month (saving $150/month). It provides complete cross-platform authority across Google Search, Perplexity AI, ChatGPT, Gemini, and Claude with monthly ranking and AI citation reporting.',
       category: 'Pricing'
     },
     {
@@ -159,7 +159,7 @@ export const AeoGeoSection: React.FC = () => {
                     <div className="p-2.5 rounded-xl bg-indigo-500/8 border border-indigo-500/15 text-indigo-400/80">
                       <Brain className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-mono text-zinc-300">$450 / mo</span>
+                    <span className="text-xs font-mono text-zinc-300">$225 / mo</span>
                   </div>
                   <h3 className="text-lg font-bold text-white font-display">2. AEO (Answer Engine)</h3>
                   <div className="text-[11px] font-mono text-zinc-400">Target: Perplexity &amp; Google AI Overviews</div>
@@ -182,7 +182,7 @@ export const AeoGeoSection: React.FC = () => {
                     <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400/80">
                       <Bot className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-mono text-emerald-300/80">$550 / mo</span>
+                    <span className="text-xs font-mono text-emerald-300/80">$275 / mo</span>
                   </div>
                   <h3 className="text-lg font-bold text-white font-display">3. GEO (Generative Engine)</h3>
                   <div className="text-[11px] font-mono text-emerald-300/80">Target: ChatGPT, Gemini &amp; Claude</div>
@@ -203,7 +203,7 @@ export const AeoGeoSection: React.FC = () => {
         <div className="p-8 sm:p-10 rounded-[1.75rem] bg-gradient-to-r from-emerald-950/10 via-[#07070f] to-cyan-950/10 border border-emerald-500/15 hover:border-emerald-500/25 flex flex-col md:flex-row items-center justify-between gap-8 transition-all duration-500">
           <div className="space-y-1.5 text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/35 text-emerald-300 text-xs font-mono font-bold">
-              <span>ALL-IN BUNDLE • SAVE $300/MONTH</span>
+              <span>ALL-IN BUNDLE • SAVE $150/MONTH</span>
             </div>
             <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
               The Full Cross-Platform Visibility Suite (SEO + AEO + GEO)
@@ -215,11 +215,11 @@ export const AeoGeoSection: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full md:w-auto">
             <div className="text-center md:text-right">
-              <div className="text-3xl font-black text-white font-display">$950<span className="text-sm text-zinc-400 font-normal"> / mo</span></div>
-              <div className="text-[11px] font-mono text-zinc-400 line-through">Value: $1,250 / mo</div>
+              <div className="text-3xl font-black text-white font-display">$475<span className="text-sm text-zinc-400 font-normal"> / mo</span></div>
+              <div className="text-[11px] font-mono text-zinc-400 line-through">Value: $625 / mo</div>
             </div>
             <a
-              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent('Hello Muhammad, I want to discuss the All-In Visibility Suite ($950/mo) for my company.')}`}
+              href={`${CONTACT_INFO.whatsappUrl}?text=${encodeURIComponent('Hello Muhammad, I want to discuss the All-In Visibility Suite ($475/mo) for my company.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-zinc-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(16,185,129,0.4)] transition shrink-0"

@@ -121,7 +121,7 @@ export const ServicesPricingSection: React.FC = () => {
             <span className="text-gradient-cyan">Intelligent Visibility</span>
           </h2>
           <p className="text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
-            Direct founder execution with Muhammad Mujahid for custom software platforms and modern AI search visibility (SEO, AEO, GEO from $250 – $950/mo), supported by enterprise-grade vertical platforms deployed through Axorks Studio.
+            Direct founder execution with Muhammad Mujahid for custom software platforms and modern AI search visibility (SEO, AEO, GEO: Foundation $300 or $99/mo up to $475/mo All-In), supported by enterprise-grade vertical platforms deployed through Axorks Studio.
           </p>
         </MotionSection>
 
@@ -222,7 +222,7 @@ export const ServicesPricingSection: React.FC = () => {
               </div>
               <div className="text-left md:text-right shrink-0">
                 <span className="text-xs font-mono text-cyan-400/90 block">Strict Typing &amp; Zero Junior Handoffs</span>
-                <span className="text-[11px] text-zinc-500 font-mono">From $450 to $7,500+</span>
+                <span className="text-[11px] text-zinc-500 font-mono">From $450 to $3,750+</span>
               </div>
             </div>
 
@@ -318,8 +318,8 @@ export const ServicesPricingSection: React.FC = () => {
                     <div className="my-5 p-3.5 rounded-2xl bg-cyan-500/[0.08] border border-cyan-500/25">
                       <span className="text-[10px] font-mono text-cyan-300 uppercase tracking-wider block">Investment Range</span>
                       <div className="flex items-baseline gap-2 mt-0.5">
-                        <span className="text-3xl font-black font-display text-white">From $1,800</span>
-                        <span className="text-xs font-mono text-zinc-400">to $3,500+</span>
+                        <span className="text-3xl font-black font-display text-white">From $900</span>
+                        <span className="text-xs font-mono text-zinc-400">to $1,750+</span>
                       </div>
                       <div className="text-[10px] font-mono text-zinc-400 mt-1">Sprint-based delivery with weekly deployable increments</div>
                     </div>
@@ -353,13 +353,13 @@ export const ServicesPricingSection: React.FC = () => {
 
                   <div className="pt-5 mt-4 border-t border-white/[0.06]">
                     <a
-                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Platform%20%26%20Strategic%20MVP%20(From%20%241%2C800%20-%20%243%2C500)."
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20Custom%20Web%20Platform%20%26%20Strategic%20MVP%20(From%20%24900%20-%20%241%2C750)."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 px-4 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(56,189,248,0.35)] transition cursor-pointer"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
-                      <span>Start Web Platform ($1.8k–$3.5k)</span>
+                      <span>Start Web Platform ($900–$1,750)</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -387,7 +387,7 @@ export const ServicesPricingSection: React.FC = () => {
                     <div className="my-5 p-3.5 rounded-2xl bg-indigo-500/[0.06] border border-indigo-500/20">
                       <span className="text-[10px] font-mono text-indigo-300 uppercase tracking-wider block">Turnkey Product Sprint</span>
                       <div className="flex items-baseline gap-2 mt-0.5">
-                        <span className="text-3xl font-black font-display text-white">$7,500+</span>
+                        <span className="text-3xl font-black font-display text-white">$3,750+</span>
                       </div>
                       <div className="text-[10px] font-mono text-zinc-400 mt-1">Full IP handover &amp; enterprise performance tuning</div>
                     </div>
@@ -421,13 +421,13 @@ export const ServicesPricingSection: React.FC = () => {
 
                   <div className="pt-5 mt-4 border-t border-white/[0.06]">
                     <a
-                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Flagship%20Digital%20Product%20Build%20(%247%2C500%2B)."
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Flagship%20Digital%20Product%20Build%20(%243%2C750%2B)."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_25px_rgba(99,102,241,0.35)] transition cursor-pointer"
                     >
                       <MessageSquare className="w-3.5 h-3.5" />
-                      <span>Inquire Flagship Build ($7,500+)</span>
+                      <span>Inquire Flagship Build ($3,750+)</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -443,11 +443,11 @@ export const ServicesPricingSection: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-xs font-mono text-zinc-400 uppercase">Need Continuous Senior Direction?</div>
-                  <div className="text-sm font-bold text-white">Fractional Systems Architect Retainer — $4,200 / month</div>
+                  <div className="text-sm font-bold text-white">Fractional Systems Architect Retainer — $2,100 / month</div>
                 </div>
               </div>
               <a
-                href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Fractional%20Systems%20Architect%20Retainer%20(%244%2C200%2Fmo)."
+                href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20a%20Fractional%20Systems%20Architect%20Retainer%20(%242%2C100%2Fmo)."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-white text-xs font-mono flex items-center justify-center gap-2 transition"
@@ -557,7 +557,7 @@ export const ServicesPricingSection: React.FC = () => {
                     {/* Glowing Top Banner Pill */}
                     <div className="absolute top-0 right-0 sm:right-8 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 text-black px-5 py-1.5 rounded-b-2xl font-mono text-xs font-black tracking-wider uppercase flex items-center gap-2 shadow-lg">
                       <Zap className="w-3.5 h-3.5 text-black fill-current" />
-                      <span>RECOMMENDED FLAGSHIP • SAVE $300/MONTH</span>
+                      <span>RECOMMENDED FLAGSHIP • SAVE $150/MONTH</span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-4 sm:pt-0">
@@ -593,7 +593,7 @@ export const ServicesPricingSection: React.FC = () => {
                         </div>
 
                         <div className="pt-2 text-[11px] font-mono text-zinc-400">
-                          <strong className="text-emerald-300">Trade-off &amp; Value:</strong> Complete omni-channel coverage bundling SEO ($250), AEO ($450), and GEO ($550) into one cohesive $950/mo retainer.
+                          <strong className="text-emerald-300">Trade-off &amp; Value:</strong> Complete omni-channel coverage bundling SEO ($125), AEO ($225), and GEO ($275) into one cohesive $475/mo retainer.
                         </div>
                       </div>
 
@@ -603,32 +603,32 @@ export const ServicesPricingSection: React.FC = () => {
                           <div className="flex items-center justify-between">
                             <span className="text-xs font-mono text-zinc-400 uppercase tracking-wider">All-Inclusive Retainer</span>
                             <span className="px-2.5 py-0.5 rounded-full bg-rose-500/15 border border-rose-500/30 text-rose-400 font-mono text-[11px] line-through">
-                              $1,250 / month
+                              $625 / month
                             </span>
                           </div>
 
                           <div className="mt-3 flex items-baseline gap-2">
                             <span className="text-4xl sm:text-5xl font-black font-display text-white text-gradient-cyan">
-                              $950
+                              $475
                             </span>
                             <span className="text-xs font-mono text-zinc-400">/ month retainer</span>
                           </div>
 
                           <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
                             <CheckCheck className="w-3.5 h-3.5 text-emerald-400" />
-                            <span>Save $300/mo vs individual retainers</span>
+                            <span>Save $150/mo vs individual retainers</span>
                           </div>
                         </div>
 
                         <div className="space-y-3">
                           <a
-                            href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20want%20to%20enroll%20in%20the%20All-In%20Visibility%20Suite%20(SEO%20%2B%20AEO%20%2B%20GEO)%20for%20%24950%2Fmonth."
+                            href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20want%20to%20enroll%20in%20the%20All-In%20Visibility%20Suite%20(SEO%20%2B%20AEO%20%2B%20GEO)%20for%20%24475%2Fmonth."
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 hover:from-emerald-300 hover:to-cyan-300 text-black font-black text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-[0_0_35px_rgba(16,185,129,0.45)] transition-all duration-300 cursor-pointer"
                           >
                             <MessageSquare className="w-4 h-4" />
-                            <span>Lock In Full Visibility Package ($950/mo)</span>
+                            <span>Lock In Full Visibility Package ($475/mo)</span>
                             <ArrowRight className="w-4 h-4" />
                           </a>
 
@@ -690,7 +690,7 @@ export const ServicesPricingSection: React.FC = () => {
                       </div>
 
                       <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[10px] font-mono text-zinc-400 mb-6">
-                        <strong className="text-zinc-300">Trade-off:</strong> One-time setup creates the clean foundation; ongoing citation tracking requires monthly retainer ($99/mo or $450/mo).
+                        <strong className="text-zinc-300">Trade-off:</strong> One-time setup creates the clean foundation; ongoing citation tracking requires monthly retainer ($99/mo or $225/mo).
                       </div>
                     </div>
 
@@ -706,7 +706,7 @@ export const ServicesPricingSection: React.FC = () => {
                   </div>
                 </Card3D>
 
-                {/* Tier 2: AEO + GEO Growth Engine ($450/mo) */}
+                {/* Tier 2: AEO + GEO Growth Engine ($225/mo) */}
                 <Card3D maxTilt={5} glowColor="rgba(16, 185, 129, 0.15)" className="h-full">
                   <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-emerald-500/20 bg-zinc-950/70 hover:border-emerald-400/40 transition-all duration-300">
                     <div>
@@ -728,7 +728,7 @@ export const ServicesPricingSection: React.FC = () => {
 
                       <div className="my-5 pb-5 border-b border-white/[0.08]">
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl font-black font-display text-white">$450</span>
+                          <span className="text-3xl font-black font-display text-white">$225</span>
                           <span className="text-xs font-mono text-zinc-400">/ month</span>
                         </div>
                         <div className="text-[11px] font-mono text-zinc-400 mt-1">Dedicated AI citation engineering</div>
@@ -756,18 +756,18 @@ export const ServicesPricingSection: React.FC = () => {
                     </div>
 
                     <a
-                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20AEO%20%2B%20GEO%20Growth%20Engine%20(%24450%2Fmonth)."
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20AEO%20%2B%20GEO%20Growth%20Engine%20(%24225%2Fmonth)."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 px-4 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/40 font-bold text-xs flex items-center justify-center gap-2 transition cursor-pointer"
                     >
-                      <span>Start AEO + GEO ($450/mo)</span>
+                      <span>Start AEO + GEO ($225/mo)</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </Card3D>
 
-                {/* Tier 3: All-In Full Visibility Suite ($950/mo) */}
+                {/* Tier 3: All-In Full Visibility Suite ($475/mo) */}
                 <Card3D maxTilt={5} glowColor="rgba(129, 140, 248, 0.2)" className="h-full">
                   <div className="rounded-3xl p-6 sm:p-7 flex flex-col justify-between h-full glass-panel border border-indigo-500/25 bg-zinc-950/70 hover:border-indigo-400/40 transition-all duration-300">
                     <div>
@@ -789,10 +789,10 @@ export const ServicesPricingSection: React.FC = () => {
 
                       <div className="my-5 pb-5 border-b border-white/[0.08]">
                         <div className="flex items-baseline gap-2">
-                          <span className="text-3xl font-black font-display text-white">$950</span>
+                          <span className="text-3xl font-black font-display text-white">$475</span>
                           <span className="text-xs font-mono text-zinc-400">/ month</span>
                         </div>
-                        <div className="text-[11px] font-mono text-indigo-400 mt-1">Full cross-platform authority · Save $300/mo</div>
+                        <div className="text-[11px] font-mono text-indigo-400 mt-1">Full cross-platform authority · Save $150/mo</div>
                       </div>
 
                       <div className="space-y-2.5 mb-6">
@@ -812,17 +812,17 @@ export const ServicesPricingSection: React.FC = () => {
                       </div>
 
                       <div className="p-3 rounded-xl bg-white/[0.02] border border-white/[0.05] text-[10px] font-mono text-zinc-400 mb-6">
-                        <strong className="text-zinc-300">Trade-off:</strong> Highest commercial value ($1,250 individual value bundled at $950/mo) with complete cross-platform coverage.
+                        <strong className="text-zinc-300">Trade-off:</strong> Highest commercial value ($625 individual value bundled at $475/mo) with complete cross-platform coverage.
                       </div>
                     </div>
 
                     <a
-                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20All-In%20Visibility%20Engine%20(%24950%2Fmonth)."
+                      href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20am%20interested%20in%20the%20All-In%20Visibility%20Engine%20(%24475%2Fmonth)."
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full py-3 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.3)] transition cursor-pointer"
                     >
-                      <span>Enroll in Full Suite ($950/mo)</span>
+                      <span>Enroll in Full Suite ($475/mo)</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
@@ -920,7 +920,7 @@ export const ServicesPricingSection: React.FC = () => {
                         <div>
                           <span className="text-[11px] font-mono text-indigo-300 uppercase tracking-wider block">Institutional Package</span>
                           <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $8,000</span>
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $4,000</span>
                             <span className="text-xs font-mono text-zinc-400">turnkey build</span>
                           </div>
                         </div>
@@ -956,7 +956,7 @@ export const ServicesPricingSection: React.FC = () => {
                     {/* Card CTA */}
                     <div className="pt-6 border-t border-white/[0.08]">
                       <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Custom%20LMS%20for%20our%20School%20%2F%20University%20(Starting%20at%20%248%2C000)."
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Custom%20LMS%20for%20our%20School%20%2F%20University%20(Starting%20at%20%244%2C000)."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-3.5 px-5 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(99,102,241,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(99,102,241,0.5)]"
@@ -1012,7 +1012,7 @@ export const ServicesPricingSection: React.FC = () => {
                         <div>
                           <span className="text-[11px] font-mono text-emerald-300 uppercase tracking-wider block">Enterprise Healthcare Core</span>
                           <div className="flex items-baseline gap-2 mt-0.5">
-                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $10,000</span>
+                            <span className="text-3xl sm:text-4xl font-black font-display text-white">From $5,000</span>
                             <span className="text-xs font-mono text-zinc-400">custom architecture</span>
                           </div>
                         </div>
@@ -1050,7 +1050,7 @@ export const ServicesPricingSection: React.FC = () => {
                     {/* Card CTA */}
                     <div className="pt-6 border-t border-white/[0.08]">
                       <a
-                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Clinical%20Healthcare%20or%20Hospital%20EHR%20Platform%20(Starting%20at%20%2410%2C000)."
+                        href="https://wa.me/923082789210?text=Hi%20Muhammad%2C%20I%20would%20like%20to%20discuss%20a%20Clinical%20Healthcare%20or%20Hospital%20EHR%20Platform%20(Starting%20at%20%245%2C000)."
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-4 px-5 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-black font-bold text-xs flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(16,185,129,0.35)] transition-all duration-300 cursor-pointer group-hover:shadow-[0_0_40px_rgba(16,185,129,0.5)]"

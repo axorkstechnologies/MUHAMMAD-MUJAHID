@@ -1,12 +1,13 @@
-import React, { useState, useRef, Suspense, lazy } from 'react';
+import React, { useRef } from 'react';
 import { motion, useInView, useScroll, useTransform } from 'motion/react';
 import { 
   ArrowRight, 
   MessageSquare, 
   ExternalLink, 
-  Box, 
-  User,
-  Calendar
+  Calendar,
+  ShieldCheck,
+  Zap,
+  CheckCircle2
 } from 'lucide-react';
 import { CONTACT_INFO, EXECUTIVE_METRICS } from '../data/portfolioData.ts';
 import { PhotoPlaceholder } from './PhotoPlaceholder.tsx';
@@ -15,17 +16,12 @@ import { KineticText } from './motion/KineticText.tsx';
 import { RollingCounter } from './motion/RollingCounter.tsx';
 import { MagneticWrapper } from './motion/MagneticWrapper.tsx';
 
-// Lazy load 3D monolith so Three.js doesn't bloat the initial critical bundle
-const FloatingMonolith3D = lazy(() =>
-  import('./FloatingMonolith3D.tsx').then((m) => ({ default: m.FloatingMonolith3D }))
-);
 interface HeroSectionProps {
   onNavigate: (section: string) => void;
   onOpenStrategyCall?: () => void;
 }
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStrategyCall }) => {
-  const [heroMode, setHeroMode] = useState<'portrait' | 'monolith3d'>('portrait');
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-40px' });
 
@@ -39,53 +35,52 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
   const parallaxBg2 = useTransform(scrollYProgress, [0, 1], [0, -80]);
   const parallaxOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0.2]);
 
-  // Motion variants for staged entrance
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.12,
+        staggerChildren: 0.1,
         delayChildren: 0.05,
       },
     },
   };
 
   const itemFadeUp = {
-    hidden: { opacity: 0, y: 22, filter: 'blur(6px)' },
+    hidden: { opacity: 0, y: 18, filter: 'blur(4px)' },
     visible: {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
       transition: {
-        duration: 0.7,
+        duration: 0.6,
         ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
 
   const headlineLineVariants = {
-    hidden: { opacity: 0, y: 30, filter: 'blur(8px)' },
+    hidden: { opacity: 0, y: 24, filter: 'blur(6px)' },
     visible: {
       opacity: 1,
       y: 0,
       filter: 'blur(0px)',
       transition: {
-        duration: 0.8,
+        duration: 0.7,
         ease: [0.16, 1, 0.3, 1] as const,
       },
     },
   };
 
   const rightColumnVariants = {
-    hidden: { opacity: 0, x: 50, filter: 'blur(8px)' },
+    hidden: { opacity: 0, scale: 0.96, filter: 'blur(6px)' },
     visible: {
       opacity: 1,
-      x: 0,
+      scale: 1,
       filter: 'blur(0px)',
       transition: {
-        duration: 0.9,
-        delay: 0.35,
+        duration: 0.8,
+        delay: 0.25,
         ease: [0.22, 1, 0.36, 1] as const,
       },
     },
@@ -96,20 +91,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.6,
+        staggerChildren: 0.08,
+        delayChildren: 0.5,
       },
     },
   };
 
   const metricCardVariants = {
-    hidden: { opacity: 0, y: 35, scale: 0.96 },
+    hidden: { opacity: 0, y: 25, scale: 0.97 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.65,
+        duration: 0.55,
         ease: [0.22, 1, 0.36, 1] as const,
       },
     },
@@ -119,9 +114,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
     <section 
       ref={sectionRef}
       id="hero" 
-      className="relative min-h-[92vh] pt-32 sm:pt-40 pb-20 sm:pb-28 flex flex-col justify-center overflow-hidden surface-base"
+      className="relative min-h-[90vh] pt-32 sm:pt-36 pb-16 sm:pb-24 flex flex-col justify-center overflow-hidden surface-base"
     >
-      {/* Subtle Parallax Background Glows */}
+      {/* Ambient Parallax Glows */}
       <motion.div 
         style={{ y: parallaxBg1, opacity: parallaxOpacity }}
         className="absolute top-1/4 -left-48 w-96 h-96 bg-cyan-500/[0.06] rounded-full blur-[100px] pointer-events-none"
@@ -132,74 +127,72 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-          {/* Left Column: Executive Copy & Actions */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+          
+          {/* Left Column: Sharp Executive Copy & Actions */}
           <motion.div 
             variants={containerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="lg:col-span-7 flex flex-col items-start space-y-6"
+            className="lg:col-span-7 flex flex-col items-start space-y-5"
           >
-            {/* Refined Executive Status & Identity Indicator */}
-            <motion.div 
-              variants={itemFadeUp}
-              className="flex flex-wrap items-center gap-3"
-            >
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.07] backdrop-blur-md text-xs font-mono">
+            {/* Status Pill */}
+            <motion.div variants={itemFadeUp} className="flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] backdrop-blur-md text-xs font-mono">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-zinc-200 font-medium">Muhammad Mujahid</span>
+                <span className="text-zinc-200 font-semibold">Muhammad Mujahid</span>
                 <span className="text-zinc-600">•</span>
-                <span className="text-cyan-400">Founder & Systems Architect</span>
+                <span className="text-cyan-400">Systems Architect</span>
               </div>
-              <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-zinc-400">
+              <div className="hidden sm:inline-flex items-center gap-2 text-xs font-mono text-zinc-400">
                 <span className="text-zinc-600">|</span>
-                <span>Karachi (UTC+5)</span>
+                <span className="text-zinc-300">40K+ Production Users</span>
                 <span className="text-zinc-600">|</span>
-                <span className="text-zinc-300">40K+ Users Supported</span>
+                <span className="text-emerald-400 font-medium">Direct Delivery</span>
               </div>
             </motion.div>
 
-            {/* Main Headline with 2026 Kinetic Text Reveal */}
+            {/* Headline — High-Impact & Concise */}
             <div className="space-y-1">
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.08] font-display break-words">
+              <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-[3.5rem] font-black tracking-tight leading-[1.08] font-display break-words">
                 <KineticText
                   text="Custom Web Platforms & Business Systems."
                   className="block text-white"
                   highlightWords={['Custom', 'Web', 'Platforms', 'Business', 'Systems.']}
                   highlightClassName="text-white block"
-                  delay={0.1}
+                  delay={0.08}
                 />
                 <motion.span 
                   variants={headlineLineVariants} 
-                  className="text-zinc-400 font-normal text-xl sm:text-2xl lg:text-3xl block mt-3"
+                  className="text-zinc-400 font-normal text-lg sm:text-2xl block mt-2.5"
                 >
-                  Engineered to run your company with founder-direct precision.
+                  Architected with founder-direct precision. Zero junior handoffs.
                 </motion.span>
               </h1>
             </div>
 
-            {/* Subtext - Clear Strategic Positioning */}
+            {/* Subtext — Radical reduction, punchy outcome */}
             <motion.p 
               variants={itemFadeUp}
-              className="text-base sm:text-lg text-zinc-300 max-w-2xl font-light leading-relaxed"
+              className="text-sm sm:text-base text-zinc-300 max-w-xl font-light leading-relaxed"
             >
-              I architect high-performance custom web platforms and modern AI search visibility for companies ready to scale. You work directly with me—from initial database schema to production deployment, with 100% code ownership.
+              I build bespoke web applications, SaaS operating engines, and AI discovery systems for founders ready to scale. You get 100% repository ownership, strict TypeScript, and weekly live deployments.
             </motion.p>
 
-            {/* Primary Action Buttons - Optimized for High Client Conversion with Magnetic Physics */}
+            {/* Primary Action Buttons */}
             <motion.div 
               variants={itemFadeUp}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 w-full"
             >
               {/* Primary: WhatsApp Direct */}
-              <MagneticWrapper strength={0.25} className="w-full sm:w-auto">
+              <MagneticWrapper strength={0.2} className="w-full sm:w-auto">
                 <motion.a
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   href={CONTACT_INFO.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black font-bold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(16,185,129,0.3)] hover:shadow-[0_0_35px_rgba(16,185,129,0.45)] transition-all duration-300 group cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-black font-bold text-sm flex items-center justify-center gap-2.5 shadow-[0_0_25px_rgba(16,185,129,0.35)] hover:shadow-[0_0_35px_rgba(16,185,129,0.5)] transition-all duration-300 group cursor-pointer"
                 >
                   <MessageSquare className="w-4 h-4 text-black group-hover:scale-110 transition-transform" />
                   <span>Message on WhatsApp</span>
@@ -207,9 +200,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
                 </motion.a>
               </MagneticWrapper>
 
-              <div className="grid grid-cols-2 gap-2.5 sm:flex sm:items-center sm:gap-3 w-full sm:w-auto">
+              <div className="grid grid-cols-2 gap-2 sm:flex sm:items-center sm:gap-2.5 w-full sm:w-auto">
                 {/* Secondary: Book Strategy Call */}
-                <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                <MagneticWrapper strength={0.15} className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -223,70 +216,49 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
                 </MagneticWrapper>
 
                 {/* Tertiary: Case Studies */}
-                <MagneticWrapper strength={0.18} className="w-full sm:w-auto">
+                <MagneticWrapper strength={0.15} className="w-full sm:w-auto">
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     type="button"
                     onClick={() => onNavigate('projects')}
-                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.07] hover:border-white/[0.14] text-zinc-400 hover:text-white font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
+                    className="w-full px-4 py-3.5 rounded-2xl bg-white/[0.03] hover:bg-white/[0.06] border border-white/[0.08] hover:border-white/[0.15] text-zinc-300 hover:text-white font-medium text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-1.5 cursor-pointer text-center"
                   >
-                    <span>View Case Studies</span>
+                    <span>Case Studies</span>
                   </motion.button>
                 </MagneticWrapper>
               </div>
             </motion.div>
 
-            {/* Verified Trust Signals */}
+            {/* Verified Trust Strip */}
             <motion.div 
               variants={itemFadeUp}
-              className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-mono text-zinc-400"
+              className="pt-1 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs font-mono text-zinc-400"
             >
               <div className="flex items-center gap-1.5 text-emerald-400 font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                <span>Direct reply within 2 hours</span>
+                <span>Reply &lt; 2 hours</span>
               </div>
-              <div className="flex items-center gap-1.5 text-zinc-300">
-                <span className="w-1 h-1 rounded-full bg-cyan-400" />
-                <span>100% Code &amp; IP Ownership</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-zinc-300">
-                <span className="w-1 h-1 rounded-full bg-indigo-400" />
-                <span>Direct Founder Delivery</span>
-              </div>
+              <span className="text-zinc-700">·</span>
+              <span className="text-zinc-300">100% Code &amp; IP Ownership</span>
+              <span className="text-zinc-700">·</span>
+              <span className="text-zinc-300">Weekly Deploys</span>
             </motion.div>
 
-            {/* Tier Anchors */}
+            {/* Pricing Anchors — Updated to New Rules */}
             <motion.div
               variants={itemFadeUp}
-              className="pt-1 text-[11px] font-mono text-zinc-500 flex flex-wrap items-center gap-x-2 gap-y-1"
+              className="pt-0.5 text-[11px] font-mono text-zinc-500 flex flex-wrap items-center gap-x-2 gap-y-1"
             >
-              <span className="text-zinc-400">Fixed-scope sprints from $1,800</span>
+              <span className="text-zinc-400 font-medium">Custom Platforms from $900</span>
               <span>•</span>
-              <span className="text-zinc-400">Web presence from $450</span>
+              <span className="text-zinc-400">Web Presence from $450</span>
               <span>•</span>
-              <span className="text-emerald-400/80">AI visibility setup $300 or $99/mo</span>
-            </motion.div>
-
-            {/* Core Tech Stack Badges */}
-            <motion.div 
-              variants={itemFadeUp}
-              className="pt-4 flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-400"
-            >
-              <span className="text-zinc-500 text-[11px] uppercase tracking-wider mr-1">Stack:</span>
-              {['TypeScript', 'React / Next.js', 'Node.js', 'PostgreSQL', 'AI Pipelines', 'Cloud Infra'].map((tech) => (
-                <motion.span
-                  whileHover={{ y: -2, borderColor: 'rgba(56, 189, 248, 0.4)' }}
-                  key={tech}
-                  className="px-2.5 py-1 rounded-lg bg-white/[0.02] border border-white/[0.05] text-zinc-400 transition-colors"
-                >
-                  {tech}
-                </motion.span>
-              ))}
+              <span className="text-emerald-400/90 font-medium">AI Visibility setup $300 or $99/mo</span>
             </motion.div>
           </motion.div>
 
-          {/* Right Column: 3D Depth Card with Portrait & 3D Monolith Switcher */}
+          {/* Right Column: Clean Static Executive Founder Portrait (No Toggle, No 3D Switcher) */}
           <motion.div 
             variants={rightColumnVariants}
             initial="hidden"
@@ -294,92 +266,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
             className="lg:col-span-5 flex flex-col items-center"
           >
             <div className="w-full max-w-sm sm:max-w-md">
-              {/* View Mode Switcher */}
-              <div className="flex items-center justify-between mb-3 px-2">
-                <span className="text-[11px] font-mono text-zinc-500">
-                  View
-                </span>
-                <div className="flex items-center gap-1 p-1 rounded-xl bg-black/60 border border-white/10 backdrop-blur-md">
-                  <button
-                    type="button"
-                    onClick={() => setHeroMode('portrait')}
-                    className={`px-3 py-1 rounded-lg text-xs font-mono transition cursor-pointer flex items-center gap-1.5 ${
-                      heroMode === 'portrait'
-                        ? 'bg-white/15 text-white font-medium shadow-sm'
-                        : 'text-zinc-400 hover:text-white'
-                    }`}
-                  >
-                    <User className="w-3.5 h-3.5 text-cyan-400" />
-                    <span>Portrait</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setHeroMode('monolith3d')}
-                    className={`px-3 py-1 rounded-lg text-xs font-mono transition cursor-pointer flex items-center gap-1.5 ${
-                      heroMode === 'monolith3d'
-                        ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-medium shadow-sm'
-                        : 'text-zinc-400 hover:text-white'
-                    }`}
-                  >
-                    <Box className="w-3.5 h-3.5 text-cyan-400" />
-                    <span>3D</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Viewport Frame with Soft 3D Perspective */}
-              <Card3D maxTilt={6} glowColor="rgba(56, 189, 248, 0.25)">
-                <div className="relative rounded-3xl overflow-hidden border border-white/15">
-                  {heroMode === 'portrait' ? (
-                    <div className="relative">
-                      <PhotoPlaceholder
-                        id="executive-hero-portrait"
-                        variant="hero"
-                        label="Muhammad Mujahid - Systems Architect"
-                        defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
-                      />
-                      <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-zinc-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs z-20 shadow-xl">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                          <span className="text-white font-medium">Muhammad Mujahid</span>
-                        </div>
-                        <span className="text-[11px] font-mono text-cyan-300">Founder & Systems Architect</span>
+              <Card3D maxTilt={5} glowColor="rgba(56, 189, 248, 0.2)">
+                <div className="relative rounded-3xl overflow-hidden border border-white/15 bg-zinc-950 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
+                  <PhotoPlaceholder
+                    id="executive-hero-portrait"
+                    variant="hero"
+                    label="Muhammad Mujahid - Systems Architect"
+                    defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
+                  />
+                  
+                  {/* Subtle Founder Identity Badge on Portrait */}
+                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-zinc-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs z-20 shadow-xl">
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                      <div>
+                        <div className="text-white font-semibold text-xs leading-none">Muhammad Mujahid</div>
+                        <div className="text-[10px] font-mono text-cyan-300 mt-1">Founder &amp; Principal Architect</div>
                       </div>
                     </div>
-                  ) : (
-                    <div className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden glass-panel-glow border border-cyan-500/20 flex flex-col justify-between p-6 bg-gradient-to-b from-cyan-950/20 via-zinc-950 to-indigo-950/20">
-                      <div className="flex items-center justify-between text-xs font-mono text-zinc-400 z-10">
-                        <span className="px-2.5 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-300">
-                          WebGL Canvas
-                        </span>
-                        <span>Interactive 3D</span>
-                      </div>
-
-                      <div className="w-full h-full flex items-center justify-center">
-                        <Suspense fallback={
-                          <div className="flex flex-col items-center gap-2">
-                            <div className="w-6 h-6 rounded-full border-2 border-cyan-400/20 border-t-cyan-400 animate-spin" />
-                            <span className="text-[10px] font-mono text-zinc-500">Initializing 3D Canvas...</span>
-                          </div>
-                        }>
-                          <FloatingMonolith3D />
-                        </Suspense>
-                      </div>
-
-                      <div className="text-center z-10">
-                        <div className="text-xs font-mono text-cyan-400">Interactive Spatial Model</div>
-                        <div className="text-[10px] text-zinc-500 font-mono mt-0.5">Move cursor to rotate perspective</div>
-                      </div>
-                    </div>
-                  )}
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
+                      Direct Delivery
+                    </span>
+                  </div>
                 </div>
               </Card3D>
               
-              {/* Quick Info Under Card */}
-              <div className="mt-5 px-4 py-3 rounded-2xl bg-white/[0.015] border border-white/[0.04] flex items-center justify-between text-xs font-mono text-zinc-500">
+              {/* Quick Info Under Portrait */}
+              <div className="mt-3.5 px-4 py-2.5 rounded-2xl bg-white/[0.02] border border-white/[0.05] flex items-center justify-between text-xs font-mono text-zinc-500">
                 <span className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span>Karachi, PK (UTC+5)</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  <span className="text-zinc-400">Karachi (UTC+5) • Global Remote</span>
                 </span>
                 <a
                   href={CONTACT_INFO.linkedinUrl}
@@ -387,7 +303,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
                   rel="noopener noreferrer"
                   className="text-cyan-400 hover:text-cyan-300 flex items-center gap-1 transition-colors"
                 >
-                  <span>LinkedIn Profile</span>
+                  <span>LinkedIn</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
@@ -395,27 +311,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
           </motion.div>
         </div>
 
-        {/* Executive Metrics Bar with 3D Soft Tilt Cards & 2026 Rolling Numbers */}
+        {/* Executive Metrics Bar — High Impact Scannable Counters */}
         <motion.div 
           variants={metricsContainerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="mt-16 sm:mt-24 pt-10 sm:pt-14 border-t border-white/[0.06] grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+          className="mt-14 sm:mt-20 pt-8 sm:pt-12 border-t border-white/[0.06] grid grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {EXECUTIVE_METRICS.map((metric, idx) => (
             <motion.div key={idx} variants={metricCardVariants}>
               <Card3D maxTilt={4} glowColor="rgba(56, 189, 248, 0.12)">
-                <div className="surface-card surface-card-hover p-4 sm:p-6 rounded-2xl relative overflow-hidden group h-full">
-                  <div className="text-2xl sm:text-4xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors tracking-tight">
+                <div className="surface-card surface-card-hover p-4 sm:p-5 rounded-2xl relative overflow-hidden group h-full">
+                  <div className="text-2xl sm:text-3xl font-extrabold font-display text-white group-hover:text-cyan-300 transition-colors tracking-tight">
                     <RollingCounter value={metric.value} />
                   </div>
-                  <div className="text-xs sm:text-sm font-semibold text-zinc-200 mt-1.5">
+                  <div className="text-xs sm:text-sm font-semibold text-zinc-200 mt-1">
                     {metric.label}
                   </div>
-                  <div className="text-[11px] sm:text-xs text-zinc-400 font-mono mt-0.5 leading-snug">
+                  <div className="text-[10px] sm:text-[11px] text-zinc-400 font-mono mt-0.5 leading-snug">
                     {metric.caption}
                   </div>
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors pointer-events-none" />
                 </div>
               </Card3D>
             </motion.div>

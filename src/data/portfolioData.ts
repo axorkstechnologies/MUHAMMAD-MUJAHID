@@ -14,7 +14,7 @@ export const CONTACT_INFO = {
   location: 'Karachi, Pakistan (Global Remote)',
   timezone: 'PKT (UTC+5)',
   availabilityStatus: 'Available for Q4 / Q1 Projects • Direct Founder Delivery',
-  bio: 'Founder of Axorks Studio and Principal Systems Architect. I specialize in three structured layers: Primary: Custom Web Platforms & Business Systems (founder-led custom development from $1,800–$7,500+, with entry web presence from $450). Secondary: Intelligent Visibility (SEO + AEO + GEO: Foundation setup at $300 or $99/mo up to $950/mo All-In). Third Layer: Intelligent Business Systems (Campus ERPs, Healthcare EHRs, and Enterprise Automations delivered through Axorks Studio). You work directly with the founder writing the code.'
+  bio: 'Founder of Axorks Studio & Principal Systems Architect. Founder-direct execution across three layers: Custom Web Platforms (from $900–$3,750+, entry web presence $450), Intelligent Visibility (SEO + AEO + GEO: Foundation at $300 or $99/mo, All-In at $475/mo), and Enterprise Turnkey Systems. Zero junior handoffs. 100% code ownership.'
 };
 
 export const CLIENT_TRUST_MARKS = [

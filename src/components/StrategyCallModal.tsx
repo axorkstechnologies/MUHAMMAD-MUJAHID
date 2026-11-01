@@ -26,7 +26,7 @@ export const StrategyCallModal: React.FC<StrategyCallModalProps> = ({
 }) => {
   const [topic, setTopic] = useState<string>(defaultTopic);
   const [timeline, setTimeline] = useState<string>('Immediate (within 2-3 weeks)');
-  const [budgetTier, setBudgetTier] = useState<string>('$1,800 - $3,500 (Custom Web App / MVP)');
+  const [budgetTier, setBudgetTier] = useState<string>('$900 - $1,750 (Custom Web App / MVP)');
   const [clientName, setClientName] = useState<string>('');
   const [contactHandle, setContactHandle] = useState<string>('');
   const [preferredSlot, setPreferredSlot] = useState<string>('Morning (PKT / EU friendly)');
@@ -140,14 +140,14 @@ ${projectBrief ? `- Context / Objectives: ${projectBrief.trim()}` : ''}`;
                     onChange={(e) => setTopic(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400 cursor-pointer transition"
                   >
-                    <option value="Custom Web Platform & Strategic MVP (From $1,800 - $3,500)">Custom Web Platform & MVP ($1,800 - $3,500)</option>
-                    <option value="Flagship Digital Product Sprint ($7,500)">Flagship Digital Product ($7,500)</option>
+                    <option value="Custom Web Platform & Strategic MVP (From $900 - $1,750)">Custom Web Platform & MVP ($900 - $1,750)</option>
+                    <option value="Flagship Digital Product Sprint ($3,750)">Flagship Digital Product ($3,750)</option>
                     <option value="Professional Web Presence & Landing Asset ($450)">Professional Web Presence & Landing Asset ($450)</option>
-                    <option value="Intelligent Visibility Suite: SEO + AEO + GEO ($950/mo)">All-In Visibility Suite: SEO + AEO + GEO ($950/mo)</option>
+                    <option value="Intelligent Visibility Suite: SEO + AEO + GEO ($475/mo)">All-In Visibility Suite: SEO + AEO + GEO ($475/mo)</option>
                     <option value="AI Visibility Foundation Setup ($300 one-time / $99/mo)">Visibility Foundation Setup ($300 / $99/mo)</option>
-                    <option value="Campus / School ERP Platform (Turnkey from $8,000)">Campus / School ERP Platform (From $8,000)</option>
-                    <option value="Clinical Healthcare EHR Platform (Turnkey from $10,000)">Clinical Healthcare EHR (From $10,000)</option>
-                    <option value="Fractional Systems Architect Retainer ($4,200/mo)">Fractional Systems Architect ($4,200/mo)</option>
+                    <option value="Campus / School ERP Platform (Turnkey from $4,000)">Campus / School ERP Platform (From $4,000)</option>
+                    <option value="Clinical Healthcare EHR Platform (Turnkey from $5,000)">Clinical Healthcare EHR (From $5,000)</option>
+                    <option value="Fractional Systems Architect Retainer ($2,100/mo)">Fractional Systems Architect ($2,100/mo)</option>
                     <option value="Technical Architecture Review & Feasibility Audit">Architecture Review & Feasibility Audit</option>
                   </select>
                 </div>
@@ -161,12 +161,12 @@ ${projectBrief ? `- Context / Objectives: ${projectBrief.trim()}` : ''}`;
                     onChange={(e) => setBudgetTier(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900/90 border border-white/10 text-white text-xs focus:outline-none focus:border-cyan-400 cursor-pointer transition"
                   >
-                    <option value="$450 - $1,200 (Entry Web Presence / Landing Asset)">$450 - $1,200 (Entry Web Presence / Landing Asset)</option>
-                    <option value="$1,800 - $3,500 (Custom Web App / Strategic MVP)">$1,800 - $3,500 (Custom Web App / MVP)</option>
-                    <option value="$7,500 - $15,000 (Flagship Product / Scaled Platform)">$7,500 - $15,000 (Flagship Product / Scaled Platform)</option>
-                    <option value="$300 setup or $99/mo - $950/mo (Intelligent Visibility Suite)">$300 or $99/mo - $950/mo (AI Visibility Retainer)</option>
-                    <option value="$8,000 - $20,000+ (Institutional Campus ERP / Clinical EHR)">$8,000 - $20,000+ (Institutional ERP / EHR)</option>
-                    <option value="$4,200 / month (Fractional Systems Architect Retainer)">$4,200 / month (Fractional CTO Retainer)</option>
+                    <option value="$450 - $800 (Entry Web Presence / Landing Asset)">$450 - $800 (Entry Web Presence / Landing Asset)</option>
+                    <option value="$900 - $1,750 (Custom Web App / Strategic MVP)">$900 - $1,750 (Custom Web App / MVP)</option>
+                    <option value="$3,750 - $7,500 (Flagship Product / Scaled Platform)">$3,750 - $7,500 (Flagship Product / Scaled Platform)</option>
+                    <option value="$300 setup or $99/mo - $475/mo (Intelligent Visibility Suite)">$300 or $99/mo - $475/mo (AI Visibility Retainer)</option>
+                    <option value="$4,000 - $10,000+ (Institutional Campus ERP / Clinical EHR)">$4,000 - $10,000+ (Institutional ERP / EHR)</option>
+                    <option value="$2,100 / month (Fractional Systems Architect Retainer)">$2,100 / month (Fractional CTO Retainer)</option>
                   </select>
                 </div>
               </div>

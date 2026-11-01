@@ -133,7 +133,7 @@ export const HomePage: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <span className="px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-zinc-300 text-xs font-mono block">
-                          From $1,800
+                          From $900
                         </span>
                         <span className="text-[10px] font-mono text-zinc-500 mt-1 block">
                           Web presence from $450
@@ -146,7 +146,7 @@ export const HomePage: React.FC = () => {
                         Custom Web Platforms &amp; Business Systems
                       </h3>
                       <p className="text-sm text-zinc-300 leading-relaxed max-w-xl font-light">
-                        Purpose-built web platforms, SaaS applications, and internal operating engines for companies that have outgrown off-the-shelf software. Architected with strict TypeScript, resilient databases, and rapid weekly milestones.
+                        Purpose-built web platforms, SaaS apps, and internal ops engines. Built with strict TypeScript, resilient relational schemas, and weekly milestone delivery.
                       </p>
                     </div>
 
@@ -220,7 +220,7 @@ export const HomePage: React.FC = () => {
                         </span>
                       </div>
                       <span className="text-[10px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
-                        Save $300/mo
+                        Save $150/mo
                       </span>
                     </div>
 
@@ -229,7 +229,7 @@ export const HomePage: React.FC = () => {
                         Intelligent Visibility (SEO + AEO + GEO)
                       </h4>
                       <p className="text-xs text-zinc-400 leading-relaxed font-light">
-                        Make sure conversational AI assistants (ChatGPT, Perplexity, Gemini, Claude) actively recommend your company by name to prospective buyers.
+                        Make ChatGPT, Perplexity, Gemini, and Claude actively recommend your company by name to prospective buyers.
                       </p>
                     </div>
 
@@ -238,8 +238,8 @@ export const HomePage: React.FC = () => {
                       {[
                         { label: 'AUDIT', price: '$300', accent: false },
                         { label: 'ENTRY', price: '$99/mo', accent: false },
-                        { label: 'GROWTH', price: '$450/mo', accent: false },
-                        { label: 'ALL-IN', price: '$950/mo', accent: true }
+                        { label: 'GROWTH', price: '$225/mo', accent: false },
+                        { label: 'ALL-IN', price: '$475/mo', accent: true }
                       ].map((tier) => (
                         <div key={tier.label} className={`p-2.5 rounded-xl ${tier.accent ? 'bg-emerald-500/10 border border-emerald-500/20' : 'bg-white/[0.02] border border-white/[0.04]'}`}>
                           <div className={`text-[9px] ${tier.accent ? 'text-emerald-300 font-bold' : 'text-zinc-500'}`}>{tier.label}</div>
@@ -291,9 +291,9 @@ export const HomePage: React.FC = () => {
 
                     <div className="space-y-0 text-xs font-mono">
                       {[
-                        { label: 'Campus & School ERPs', price: 'From $8,000' },
-                        { label: 'Clinical Healthcare EHRs', price: 'From $10,000' },
-                        { label: 'Business Automations & IoT', price: 'From $6,000' }
+                        { label: 'Campus & School ERPs', price: 'From $4,000' },
+                        { label: 'Clinical Healthcare EHRs', price: 'From $5,000' },
+                        { label: 'Business Automations & IoT', price: 'From $3,000' }
                       ].map((item, i) => (
                         <div key={item.label} className={`flex items-center justify-between py-3 ${i < 2 ? 'border-b border-white/[0.04]' : ''}`}>
                           <span className="text-zinc-400">{item.label}</span>
