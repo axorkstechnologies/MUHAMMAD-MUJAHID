@@ -274,20 +274,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate, onOpenStra
                     label="Muhammad Mujahid: Systems Architect"
                     defaultPhoto="/Images/Founder and CEO SOFTWARE ENGINEER.jpeg"
                   />
-                  
-                  {/* Subtle Founder Identity Badge on Portrait */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-2xl bg-zinc-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs z-20 shadow-xl">
-                    <div className="flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                      <div>
-                        <div className="text-white font-semibold text-xs leading-none">Muhammad Mujahid</div>
-                        <div className="text-[10px] font-mono text-cyan-300 mt-1">Founder &amp; Principal Architect</div>
-                      </div>
-                    </div>
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-300">
-                      Direct Delivery
-                    </span>
-                  </div>
                 </div>
               </Card3D>
               
